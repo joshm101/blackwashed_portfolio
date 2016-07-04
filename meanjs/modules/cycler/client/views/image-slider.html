@@ -1,0 +1,12 @@
+<div class="content">
+  <div class="slider" layout-align="center center">
+    <div class="slide"  style="height: 300px;" ng-repeat="image in images" ng-show="image.visible">
+      <img ng-src="{{image.the_src}}" height="100%" width="45%"/>
+    </div>
+    <div class="arrows">
+      <i class="material-icons" ng-click="prev()">keyboard_arrow_left</i>
+      <i class="material-icons" ng-click="next()">keyboard_arrow_right</i>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,40 @@
+<section>
+  <div layout-align="center center" flex="100">
+    <!--
+    <h2>Single Item</h2>
+    <slick class="slider single-item" current-index="index" responsive="breakpoints" slides-to-show=1 slides-to-scroll=1>
+      asdgsadgasdgasdg
+      <div ng-repeat="i in [1,2,3,4]"><h1>{{ i }}</h1></div>
+      <p>Current index: {{ index }}</p>
+    </slick>
+
+    -->
+    <div ng-controller="SliderController">
+      <h1>Slider</h1>
+      <image-slider images="images"></image-slider>
+    </div>
+  </div>
+
+  <div flow-init="{target: '/upload'}"
+       flow-files-submitted="$flow.upload()"
+       flow-file-success="$file.msg = $message">
+
+    <input type="file" flow-btn/>
+    <input type="file" flow-btn flow-directory />
+    Input OR Other element as upload button
+    <span class="btn" flow-btn>Upload File</span>
+
+    <span class="btn" flow-btn flow-directory >Upload Folder</span>
+
+    <table>
+      <tr ng-repeat="file in $flow.files">
+        <td>{{$index+1}}</td>
+        <td>{{file.name}}</td>
+        <td>{{file.msg}}</td>
+      </tr>
+    </table>
+  </div>
+
+
+
+</section>
