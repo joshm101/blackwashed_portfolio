@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34662935-5a07-46a3-b620-329138995bb0" name="Default" comment="" />
+    <list default="true" id="34662935-5a07-46a3-b620-329138995bb0" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/cycler/client/css/cycler.css" afterPath="$PROJECT_DIR$/meanjs/modules/cycler/client/css/cycler.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/cycler/client/views/image-slider.html" afterPath="$PROJECT_DIR$/meanjs/modules/cycler/client/views/image-slider.html" />
+    </list>
     <ignored path="oscar_portfolio.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cycler.client.directives.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cycler.client.directives.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/meanjs/modules/cycler/client/directives/cycler.client.directives.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5423542">
-              <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -74,20 +77,20 @@
       <file leaf-file-name="cycler.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/meanjs/modules/cycler/client/css/cycler.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.576923">
-              <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+            <state vertical-scroll-proportion="-15.692307">
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="image-slider.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="image-slider.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/meanjs/modules/cycler/client/views/image-slider.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.9615384">
-              <caret line="3" column="61" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
+            <state vertical-scroll-proportion="0.15246637">
+              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -170,10 +173,10 @@
         <option value="$PROJECT_DIR$/meanjs/modules/core/client/css/core.css" />
         <option value="$PROJECT_DIR$/meanjs/config/assets/default.js" />
         <option value="$PROJECT_DIR$/meanjs/modules/core/client/views/home.client.view.html" />
-        <option value="$PROJECT_DIR$/meanjs/modules/cycler/client/views/image-slider.html" />
-        <option value="$PROJECT_DIR$/meanjs/modules/cycler/client/directives/cycler.client.directives.js" />
         <option value="$PROJECT_DIR$/meanjs/modules/cycler/client/controllers/SliderController.js" />
         <option value="$PROJECT_DIR$/meanjs/modules/cycler/client/css/cycler.css" />
+        <option value="$PROJECT_DIR$/meanjs/modules/cycler/client/directives/cycler.client.directives.js" />
+        <option value="$PROJECT_DIR$/meanjs/modules/cycler/client/views/image-slider.html" />
       </list>
     </option>
   </component>
@@ -183,9 +186,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -1022,10 +1026,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36430064" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18177083" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1358,14 +1362,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/core/server/views/index.server.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2692308">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/meanjs/modules/core/server/views/layout.server.view.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.346154">
@@ -1406,10 +1402,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/core/server/views/index.server.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2692308">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/meanjs/modules/cycler/client/css/cycler.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.576923">
-          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+        <state vertical-scroll-proportion="-15.692307">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1422,21 +1426,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/cycler/client/views/image-slider.html">
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/cycler/client/directives/cycler.client.directives.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384">
-          <caret line="3" column="61" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/cycler/client/directives/cycler.client.directives.js">
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/cycler/client/views/image-slider.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5423542">
-          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
-          <folding />
+        <state vertical-scroll-proportion="0.15246637">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

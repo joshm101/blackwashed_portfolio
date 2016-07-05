@@ -22,6 +22,10 @@
 
 .slide{
 	position: absolute;
+
+	height: 100%;
+	width: 100%;
+
 }
 
 .slide img{
@@ -32,4 +36,5 @@
 
 .arrows{
 	position: absolute;
+	top: 20px;
 }
