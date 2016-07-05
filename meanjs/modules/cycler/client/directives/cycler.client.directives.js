@@ -34,6 +34,20 @@
           scope.images[scope.currentIndex].visible = true; // make the current image visible
 
         });
+
+        var timer;
+        var sliderFunc = function() {
+          timer = $timeout(function() {
+            scope.next();
+            timer = $timeout(sliderFunc, 3000);
+          }, 1000);
+        };
+
+        sliderFunc();
+
+        scope.$on('$destroy', function() {
+          $timeout.cancel(timer); // when the scope is getting destroyed, cancel the timer
+        });
       },
       templateUrl: 'modules/cycler/client/views/image-slider.html'
     };
