@@ -33,6 +33,10 @@
         controller: 'HomeController',
         controllerAs: 'vm'
       })
+      .state('bw-interface', {
+        url: '/bw/interface',
+        templateUrl: 'modules/bw-interface/client/views/bw-interface.client.view.html'
+      })
       .state('not-found', {
         url: '/not-found',
         templateUrl: 'modules/core/client/views/404.client.view.html',
