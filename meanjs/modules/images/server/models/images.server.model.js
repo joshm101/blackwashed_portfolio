@@ -6,6 +6,9 @@ var mongoose = require('mongoose'),
 var CyclerImagesSchema = new Schema ({
   path: {
     type: String
+  },
+  owner: {
+    type: String
   }
 });
 

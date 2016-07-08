@@ -24,6 +24,7 @@ module.exports = {
         'public/lib/angular-slick/dist/slick.js',
         'public/lib/slick-carousel/slick/slick.js',
         'public/lib/flow.js/dist/flow.js',
+        'public/lib/ng-file-upload/ng-file-upload.js',
         'public/lib/ng-flow/dist/ng-flow.js',
         'public/lib/angular-ui-router/release/angular-ui-router.js',
         'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
