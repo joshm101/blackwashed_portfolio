@@ -26,13 +26,15 @@
         };
 
         scope.$watch('currentIndex', function () {
-          scope.images.forEach(function(image) {
-            console.log("here");
-            image.visible = false; // make every image invisible
-          });
+          if (typeof scope.images !== 'undefined') {
+            console.log("scope.images: ", scope.images);
+            scope.images.forEach(function(image) {
+              console.log("here");
+              image.visible = false; // make every image invisible
+            });
 
-          scope.images[scope.currentIndex].visible = true; // make the current image visible
-
+            scope.images[scope.currentIndex].visible = true; // make the current image visible
+          }
         });
 
         var timer;

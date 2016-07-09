@@ -2,25 +2,31 @@
   'use strict';
 
   angular
-    .module('bw-interface', ['ngFileUpload', 'ngMaterial'])
+    .module('bw-interface', ['ngFileUpload', 'ngMaterial', 'core'])
     .controller('InterfaceController', InterfaceController);
 
-  InterfaceController.$inject = ['$scope', '$rootScope', 'Upload', '$mdDialog', '$http'];
+  InterfaceController.$inject = ['$scope', '$rootScope', 'Upload', '$mdDialog', '$http', 'CyclerImages'];
 
-  function InterfaceController ($scope, $rootScope, Upload, $mdDialog, $http) {
+  function InterfaceController ($scope, $rootScope, Upload, $mdDialog, $http, CyclerImages) {
     $scope.upload = function (file) {
-      console.log("$scope.upload");
-      Upload.upload({
-        url: '/api/images/upload_cycler_image',
-        data: {file: file}
-      }).then (function (resp) {
-        console.log('Success: ' + resp.config.data.file.name + 'uploaded. Response: ' +resp.data);
-      }, function (resp) {
-        console.log('Error status:  ' + resp.status);
-      }, function (evt) {
-        var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
-        console.log("progress: " + progressPercentage + '% ' + evt.config.data.file.name);
-      });
+      CyclerImages.uploadCyclerImage(file);
     };
+
+    $scope.getCyclerImages = function () {
+      CyclerImages.getCyclerImages();
+
+    };
+
+    $scope.deleteImage = function () {
+
+    };
+
+    $scope.$on( 'images.update', function(event) {
+      var temp = CyclerImages.images;
+      $scope.cyclerImages = temp;
+      console.log("temp!: ", temp);
+
+      console.log("cyclerImages: " + JSON.stringify($scope.cyclerImages));
+    });
   }
 }());

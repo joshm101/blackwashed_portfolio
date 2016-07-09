@@ -1,0 +1,20 @@
+.each-image-div{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 25%;
+	margin-right: 15px;
+
+}
+
+.images-wrapper{
+	width: 100%;
+}
+
+.ind-image{
+	width: 100%;
+
+}
+
+md-card-content{
+	padding: 10px !important;
+}

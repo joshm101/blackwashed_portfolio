@@ -1,4 +1,4 @@
-<section>
+
 
   <div layout-align="center center" flex="100">
     <!--
@@ -10,9 +10,9 @@
     </slick>
 
     -->
-    <div ng-controller="SliderController">
-      <image-slider images="images"></image-slider>
+    <div ng-controller="SliderController" ng-init="getCyclerImages()">
+      <image-slider images="cyclerImages"></image-slider>
     </div>
   </div>
 
-</section>
+
