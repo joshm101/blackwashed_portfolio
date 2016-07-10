@@ -1,17 +1,20 @@
 <div ng-controller="InterfaceController" ng-init="getCyclerImages()" layout-fill>
-  Upload <input type="file" ngf-select="upload($file)">
+
 
   <div class="images-wrapper" layout="row" layout-align="center center">
-    <div class="each-image-div" ng-repeat="image in cyclerImages">
-      <md-card>
-        <md-card-content>
-          <img class="ind-image" ng-src="{{image.path}}"/>
-        </md-card-content>
-        <md-card-actions>
-          <md-button style="height: 36px !important;">Delete</md-button>
-        </md-card-actions>
-      </md-card>
+    <interface-cycler-image class="each-image-div" ng-repeat="image in cyclerImages" image="image">
+    </interface-cycler-image>
+  </div>
+  <div layout="row" layout-align="end center">
+    <div layout="column" class="upload-column" layout-align="center center">
+      <md-button class="md-primary" style="height: 15px !important;" layout-align="center center">
+        <label for="picToUpload">
+          Upload Banner Image
+        </label>
+      </md-button>
+      <input layout-align="center center" type="file" id="picToUpload" style="display: none;" ngf-select="upload($file)">
     </div>
   </div>
+
 
 </div>

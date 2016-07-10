@@ -13,6 +13,7 @@ module.exports = function (app) {
   // API for interface
   app.route('/api/images/upload_cycler_image').post(inter.uploadCyclerImage);
   app.route('/api/images/get_cycler_images').get(inter.getCyclerImages);
+  app.route('/api/images/delete_cycler_image').delete(inter.deleteCyclerImage);
 
 
 
