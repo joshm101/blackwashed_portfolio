@@ -25,6 +25,7 @@
 
       uploadCyclerImage: function (file) {
         console.log("$scope.upload");
+        console.log("file: " + JSON.stringify(file));
         Upload.upload({
           url: '/api/images/upload_cycler_image',
           data: {file: file}
@@ -38,7 +39,9 @@
           console.log('Error status:  ' + resp.status);
         }, function (evt) {
           var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
-          console.log("progress: " + progressPercentage + '% ' + evt.config.data.file.name);
+          if (evt.config.data.file !== null){
+            console.log("progress: " + progressPercentage + '% ' + evt.config.data.file.name);
+          }
         });
       },
 

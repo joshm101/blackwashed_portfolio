@@ -41,6 +41,13 @@ exports.deleteCyclerImage = function (req, res) {
       console.log("error: ", err);
     } else {
       console.log("result: " + result);
+      fs.unlink(path.resolve(imagePath), function (err) {
+        if (err) {
+          console.log("file delete error: " + err);
+        } else {
+          console.log("successfully deleted image at " + imagePath);
+        }
+      });
     }
   });
   res.status(200).send();
