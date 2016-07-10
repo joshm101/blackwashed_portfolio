@@ -22,3 +22,11 @@ md-card-content{
 .upload-column{
 	margin-right: 55px;
 }
+
+.upload-btn{
+	font-weight: 500 !important;
+}
+
+.upload-btn-label{
+	font-weight: 500 !important;
+}

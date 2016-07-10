@@ -1,5 +1,7 @@
 <div ng-controller="InterfaceController" ng-init="getCyclerImages()" layout-fill>
-
+  <div layout="row" layout-align="center center">
+    <img ng-src="modules/images/client/img/logo/blackwashed_logo.png"/>
+  </div>
 
   <div class="images-wrapper" layout="row" layout-align="center center">
     <interface-cycler-image class="each-image-div" ng-repeat="image in cyclerImages" image="image">
@@ -7,8 +9,8 @@
   </div>
   <div layout="row" layout-align="end center">
     <div layout="column" class="upload-column" layout-align="center center">
-      <md-button class="md-primary" style="height: 15px !important;" layout-align="center center">
-        <label for="picToUpload">
+      <md-button class="md-primary upload-btn" style="height: 15px !important;" layout-align="center center">
+        <label for="picToUpload" class="upload-btn-label">
           Upload Banner Image
         </label>
       </md-button>
