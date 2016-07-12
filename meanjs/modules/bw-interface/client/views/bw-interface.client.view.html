@@ -7,16 +7,66 @@
     <interface-cycler-image class="each-image-div" ng-repeat="image in cyclerImages" image="image">
     </interface-cycler-image>
   </div>
-  <div layout="row" layout-align="end center">
-    <div layout="column" class="upload-column" layout-align="center center">
+  <div layout="row" flex="100" style="margin-right: 50px; margin-left: 50px;">
+    <div layout="row" flex="50" layout-align="start center" class="interface-fab" ng-controller="fabController as fab" ng-cloak>
+      <md-fab-speed-dial ng-hide="fab.hidden" md-direction="down" md-open="fab.isOpen"
+                         class="md-scale" ng-class="{ 'md-hover-full': fab.hover }"
+                         ng-click="fab.isOpen=true" ng-mouseleave="fab.isOpen=false">
+        <md-fab-trigger>
+          <md-button aria-label="menu" class="md-fab md-primary">
+            <md-tooltip md-direction="top" md-visible="tooltipVisible">Add Work</md-tooltip>
+            <md-icon class="material-icons">add</md-icon>
+          </md-button>
+        </md-fab-trigger>
+        <md-fab-actions>
+          <div ng-repeat="item in fab.items">
+            <md-button aria-label="{{item.name}}" ng-click="addPhotoWorkDialog($event)" class="md-fab md-raised md-mini">
+              <md-tooltip md-direction="{{item.direction}}" md-visible="tooltipVisible"
+                          md-autohide="false">
+                {{item.name}}
+              </md-tooltip>
+              <md-icon class="material-icons">{{item.icon}}</md-icon>
+            </md-button>
+          </div>
+        </md-fab-actions>
+      </md-fab-speed-dial>
+    </div>
+
+    <div layout="column" flex="50" class="upload-column" layout-align="start end">
       <md-button class="md-primary upload-btn" style="height: 15px !important;" layout-align="center center">
-        <label for="picToUpload" class="upload-btn-label">
+        <label class="upload-btn-label" for="picToUpload">
           Upload Banner Image
         </label>
       </md-button>
       <input layout-align="center center" type="file" id="picToUpload" style="display: none;" ngf-select="upload($file)">
     </div>
+
+
   </div>
+
+    <!--
+    <md-button>Create Photo Work&nbsp;<md-icon class="material-icons">insert_photo</md-icon></md-button>
+    <md-button>Create Video Work </md-button> -->
+
+    <div style="visibility: hidden">
+      <div class="md-dialog-container" id="myDialog">
+        <md-dialog layout-padding>
+          <h2>Pre-Rendered Dialog</h2>
+          <p>
+            This is a pre-rendered dialog, which means that <code>$mdDialog</code> doesn't compile its
+            template on each opening.
+            <br/><br/>
+            The Dialog Element is a static element in the DOM, which is just visually hidden.<br/>
+            Once the dialog opens, we just fetch the element from the DOM into our dialog and upon close
+            we restore the element back into its old DOM position.
+          </p>
+        </md-dialog>
+      </div>
+    </div>
+
+
+
+
 
 
 </div>

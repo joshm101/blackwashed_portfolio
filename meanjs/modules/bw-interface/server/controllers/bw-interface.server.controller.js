@@ -1,12 +1,12 @@
 'use strict';
 
-var validator = require('validator'),
-    multiparty = require('multiparty'),
-    uuid = require('uuid'),
-    fs = require ('fs'),
-    path = require ('path'),
-    mongoose = require('mongoose'),
-    CyclerImages = mongoose.model('CyclerImages');
+var validator     = require('validator'),
+    multiparty    = require('multiparty'),
+    uuid          = require('uuid'),
+    fs            = require ('fs'),
+    path          = require ('path'),
+    mongoose      = require('mongoose'),
+    CyclerImages  = mongoose.model('CyclerImages');
 
 exports.getCyclerImages = function (req, res) {
   console.log("okay getCyclerImages()");

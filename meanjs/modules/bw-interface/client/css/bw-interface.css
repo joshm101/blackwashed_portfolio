@@ -20,7 +20,7 @@ md-card-content{
 }
 
 .upload-column{
-	margin-right: 55px;
+
 }
 
 .upload-btn{
@@ -29,4 +29,7 @@ md-card-content{
 
 .upload-btn-label{
 	font-weight: 500 !important;
+}
+
+.interface-fab{
 }
