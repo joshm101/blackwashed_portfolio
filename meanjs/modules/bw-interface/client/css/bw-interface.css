@@ -25,11 +25,17 @@ md-card-content{
 
 .upload-btn{
 	font-weight: 500 !important;
+	margin-top: 17px;
 }
 
 .upload-btn-label{
 	font-weight: 500 !important;
+
 }
 
 .interface-fab{
+}
+
+.select-photos-label{
+	font-weight: normal !important;
 }

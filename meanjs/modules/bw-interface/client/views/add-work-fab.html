@@ -1,0 +1,23 @@
+<div layout="row" flex="50" layout-align="start center" class="interface-fab" ng-cloak>
+  <md-fab-speed-dial ng-hide="fab.hidden" md-direction="down" md-open="fab.isOpen"
+                     class="md-scale" ng-class="{ 'md-hover-full': fab.hover }"
+                     ng-click="fab.isOpen=true" ng-mouseleave="fab.isOpen=false">
+    <md-fab-trigger>
+      <md-button aria-label="menu" class="md-fab md-primary">
+        <md-tooltip md-direction="top" md-visible="tooltipVisible">Add Work</md-tooltip>
+        <md-icon class="material-icons">add</md-icon>
+      </md-button>
+    </md-fab-trigger>
+    <md-fab-actions>
+      <div ng-repeat="item in items">
+        <md-button aria-label="{{item.name}}" ng-click="addPhotoWorkDialog($event)" class="md-fab md-raised md-mini">
+          <md-tooltip md-direction="{{item.direction}}" md-visible="tooltipVisible"
+                      md-autohide="false">
+            {{item.name}}
+          </md-tooltip>
+          <md-icon class="material-icons">{{item.icon}}</md-icon>
+        </md-button>
+      </div>
+    </md-fab-actions>
+  </md-fab-speed-dial>
+</div>

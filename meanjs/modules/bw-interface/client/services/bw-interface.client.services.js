@@ -3,9 +3,24 @@
 
   angular
     .module('bw-interface')
-    .service('CyclerImages', CyclerImages);
+    .service('CyclerImages', CyclerImages)
+    .service('SelectedImages', SelectedImages);
 
   CyclerImages.$inject = ['$rootScope', '$http', 'Upload'];
+  SelectedImages.$inject = ['$rootScope', '$http', 'Upload'];
+
+  function SelectedImages ($rootScope, $http, Upload) {
+    var service = {
+      images: [],
+      addImage: function(file) {
+        console.log("addImage service function");
+        service.images.push(file);
+        // console.log("file is: " + JSON.stringify(file));
+
+      }
+    };
+    return service;
+  }
 
   function CyclerImages ($rootScope, $http, Upload) {
     var service = {

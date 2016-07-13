@@ -1,0 +1,16 @@
+<input type="file" id="uploadPhotosInput" style="display: none;" ngf-select="selected($files, $invalidFiles)" multiple accept="image/*" ngf-max-height="4000" ngf-max-size="10MB">
+
+<md-button class="md-primary" style="height: 15px !important; font-weight: normal !important;">
+  <label class="select-photos-label" for="uploadPhotosInput">Choose Images</label>
+</md-button>
+
+
+<div layout="column">
+  <div layout="row" ng-repeat="image in serviceImages track by $index" ng-if="$index % 3 == 0">
+    <div layout="column" ng-repeat="i in [$index, $index + 1, $index + 2]" ng-if="serviceImages[i] != null">
+      <image-thumbnail image-url="serviceImages[i].$ngfBlobUrl"></image-thumbnail>
+    </div>
+  </div>
+</div>
+
+
