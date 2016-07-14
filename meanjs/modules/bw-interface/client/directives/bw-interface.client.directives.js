@@ -7,13 +7,35 @@
     .directive('addWorkFab', addWorkFab)
     .directive('addPhotoWorkForm', addPhotoWorkForm)
     .directive('uploadPicsModule', uploadPicsModule)
-    .directive('imageThumbnail', imageThumbnail);
+    .directive('imageThumbnail', imageThumbnail)
+    .directive('modelsInput', modelsInput);
 
   interfaceCyclerImage.$inject = ['$rootScope', '$state', 'CyclerImages'];
   addWorkFab.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'CyclerImages'];
   addPhotoWorkForm.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog'];
   uploadPicsModule.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'SelectedImages'];
   imageThumbnail.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'SelectedImages'];
+  modelsInput. $inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'SelectedImages'];
+
+  function modelsInput($rootScope, $state, $timoue, $mdDialog, SelectedImages){
+    var directive = {
+      restrict: 'E',
+      scope: {
+        modelsFormInput: '='
+      },
+      transclude: true,
+      link: function (scope) {
+        scope.modelNumber = 0;
+        scope.models = [{name: 'model_' + scope.modelNumber}];
+        scope.addModel = function (event) {
+          scope.models.push({name: 'model ' + ++scope.modelNumber});
+          console.log(scope.modelsFormInput);
+        };
+      },
+      templateUrl: 'modules/bw-interface/client/views/models-input.html'
+    };
+    return directive;
+  }
 
   function imageThumbnail ($rootScope, $state, $timeout, Upload, SelectedImages) {
     var directive = {
@@ -72,7 +94,11 @@
   function addPhotoWorkForm ($rootScope, $state) {
     var directive = {
       restrict: 'E',
-      scope: {},
+      scope: {
+        modelsFormInput: '=',
+        copyright: '=',
+        photoWorkTitle: '='
+      },
       link: function(scope) {
         console.log("ok");
       },
@@ -112,13 +138,15 @@
         //};
 
         function DialogController($rootScope, $mdDialog) {
-          scope.hide = function() {
+          $rootScope.hide = function() {
+            console.log("$mdDialog: " + JSON.stringify($mdDialog));
             $mdDialog.hide();
           };
-          scope.cancel = function() {
+          $rootScope.cancel = function() {
             $mdDialog.cancel();
           };
-          scope.answer = function(answer) {
+          $rootScope.answer = function(answer) {
+            console.log("answer: " + answer);
             $mdDialog.hide(answer);
           };
         }

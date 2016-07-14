@@ -3,15 +3,17 @@
     <form name="addPhotoWorkForm" layout="column">
       <md-input-container>
         <label>Title</label>
-        <input>
+        <input ng-model="photoWorkTitle">
       </md-input-container>
-      <md-input-container>
-        <label>Model</label>
-        <input>
+      <models-input models-form-input="modelsFormInput"></models-input>
+      <!--
+      <md-input-container style="margin-top: 0px !important;">
+        <md-button ng-click="addModel($event)">Add Model</md-button>
       </md-input-container>
+      -->
       <md-input-container>
         <label>Copyright</label>
-        <input>
+        <input ng-model="copyright">
       </md-input-container>
       <upload-pics-module></upload-pics-module>
     </form>

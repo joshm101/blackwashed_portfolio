@@ -30,8 +30,15 @@
     <div style="visibility: hidden">
       <div class="md-dialog-container" id="myDialog">
         <md-dialog layout-padding flex="70" style="max-height: 80%;">
-          <h3>Add Photo Work</h3>
-          <add-photo-work-form ></add-photo-work-form>
+          <h3 style="margin-bottom: 20px;">Add Photo Work</h3>
+          <md-dialog-content>
+            <add-photo-work-form models-form-input="modelsFormInput"
+                                 copyright="copyright"
+                                 photo-work-title="photoWorkTitle"></add-photo-work-form>
+          </md-dialog-content>
+          <md-dialog-actions>
+            <md-button class="md-primary" ng-click="submitPhotoWork()">Submit</md-button>
+          </md-dialog-actions>
         </md-dialog>
       </div>
     </div>

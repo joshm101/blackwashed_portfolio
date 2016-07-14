@@ -1,0 +1,8 @@
+<div ng-repeat="model in models">
+  <md-input-container style="width: 100% !important;">
+    <label>Model</label>
+    <input ng-model="modelsFormInput[model.name]">
+  </md-input-container>
+</div>
+
+<md-button style="margin-bottom: 23px;" ng-click="addModel($event)">Add another model</md-button>
