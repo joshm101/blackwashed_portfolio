@@ -46,6 +46,12 @@
       link: function (scope) {
         console.log("okay");
 
+        scope.removeImage = function (imgUrl) {
+          console.log("imgUrl is: " + imgUrl);
+
+          SelectedImages.removeImage(imgUrl);
+        }
+
       },
       templateUrl: 'modules/bw-interface/client/views/image-thumbnail.html'
     };

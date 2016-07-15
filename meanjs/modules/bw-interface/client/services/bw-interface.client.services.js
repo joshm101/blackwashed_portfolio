@@ -16,7 +16,19 @@
         console.log("addImage service function");
         service.images.push(file);
         // console.log("file is: " + JSON.stringify(file));
+      },
 
+      removeImage: function (imgUrl) {
+        console.log("imgUrl is: " + imgUrl);
+        console.log("service.images: " + JSON.stringify(service.images));
+
+        for (var i = 0; i < service.images.length; ++i) {
+          if (service.images[i]['$ngfBlobUrl'] === imgUrl) {
+            service.images.splice(i, 1);
+            console.log('imgUrl: ' + imgUrl);
+            console.log('service.images: ' + service.images);
+          }
+        }
       }
     };
     return service;

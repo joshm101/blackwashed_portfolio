@@ -1,4 +1,4 @@
-<div ng-controller="InterfaceController" ng-init="getCyclerImages()" layout-fill>
+<div ng-controller="InterfaceController" ng-init="initializePage()" layout-fill>
   <div layout="row" layout-align="center center">
     <img ng-src="modules/images/client/img/logo/blackwashed_logo.png"/>
   </div>
@@ -23,26 +23,32 @@
 
   </div>
 
-    <!--
-    <md-button>Create Photo Work&nbsp;<md-icon class="material-icons">insert_photo</md-icon></md-button>
-    <md-button>Create Video Work </md-button> -->
+  <!--
+  <md-button>Create Photo Work&nbsp;<md-icon class="material-icons">insert_photo</md-icon></md-button>
+  <md-button>Create Video Work </md-button> -->
 
-    <div style="visibility: hidden">
-      <div class="md-dialog-container" id="myDialog">
-        <md-dialog layout-padding flex="70" style="max-height: 80%;">
-          <h3 style="margin-bottom: 20px;">Add Photo Work</h3>
-          <md-dialog-content>
-            <add-photo-work-form models-form-input="modelsFormInput"
-                                 copyright="copyright"
-                                 photo-work-title="photoWorkTitle"></add-photo-work-form>
-          </md-dialog-content>
-          <md-dialog-actions>
-            <md-button class="md-primary" ng-click="submitPhotoWork()">Submit</md-button>
-          </md-dialog-actions>
-        </md-dialog>
-      </div>
+  <div style="visibility: hidden">
+    <div class="md-dialog-container" id="myDialog">
+      <md-dialog layout-padding flex="70" style="max-height: 80%;">
+        <h3 style="margin-bottom: 20px;">Add Photo Work</h3>
+        <md-dialog-content>
+          <add-photo-work-form models-form-input="modelsFormInput"
+                               copyright="copyright"
+                               photo-work-title="photoWorkTitle"></add-photo-work-form>
+        </md-dialog-content>
+        <md-dialog-actions>
+          <md-button class="md-primary" ng-click="submitPhotoWork()">Submit</md-button>
+        </md-dialog-actions>
+      </md-dialog>
     </div>
+  </div>
 
+
+  <div layout="row" layout-align="center center">
+    <div ng-repeat="work in photoWorksArray">
+      <photo-work></photo-work>
+    </div>
+  </div>
 
 
 
