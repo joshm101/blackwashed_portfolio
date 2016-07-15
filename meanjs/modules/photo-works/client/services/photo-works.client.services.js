@@ -19,6 +19,11 @@
               $rootScope.$broadcast ( 'photoWorks.update' );
             }
           });
+      },
+
+      addPhotoWork: function (work) {
+        service.photoWorks.push(work);
+        $rootScope.$broadcast ( 'photoWorks.update' );
       }
     };
 

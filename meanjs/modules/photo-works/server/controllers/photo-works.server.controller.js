@@ -131,7 +131,7 @@ exports.addPhotoWork = function (req, res) {
                   console.log("error saving to DB: " + err);
                 } else {
                   console.log("successfully saved work to DB!");
-                  return res.status(200).send();
+                  return res.status(200).send(work);
                 }
               });
             }

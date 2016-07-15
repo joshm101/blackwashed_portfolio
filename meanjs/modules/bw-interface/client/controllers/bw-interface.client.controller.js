@@ -120,6 +120,7 @@
       }).then (function (resp) {
         console.log("Success: " + resp);
         console.log(JSON.stringify(resp.data));
+        PhotoWorks.addPhotoWork(resp.data);
 
       }, function (resp) {
         console.log("error status: " + resp.status);
