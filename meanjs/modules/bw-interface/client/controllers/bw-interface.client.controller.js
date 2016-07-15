@@ -35,14 +35,43 @@
       console.log("copyright: " + $scope.copyright);
       console.log("photoWorkTitle: " + $scope.photoWorkTitle);
       console.log("SelectedImages: " + JSON.stringify(SelectedImages.images));
+
+
+
+      var models = $scope.modelsFormInput;
+
+      var modelsArray = [];
+
+      var modelsJson;
+
+      for (var model in models) {
+        console.log("models: " + models[model]);
+        modelsArray.push(models[model]);
+      }
+
+      var modelsObject = {
+        models: modelsArray
+      };
+
+      modelsJson = angular.toJson(modelsArray);
+
+      console.log("json stringify models array: " + JSON.stringify(modelsArray));
+
+      console.log("modelsJson: " + modelsJson);
+
+      console.log("modelsObject: " + modelsObject);
+
+      console.log("modelsArray: " + modelsArray);
+      console.log("modelsArray at length - 1: " + modelsArray[modelsArray.length - 1]);
       $mdDialog.hide();
       Upload.upload({
         url: '/api/photo_works/add_photo_work',
+        arrayKey: '',
         data: {
           file: SelectedImages.images,
           workTitle: $scope.photoWorkTitle,
-          models: $scope.modelsFormInput,
-          copyright: $scope.copyright
+          copyright: $scope.copyright,
+          models: modelsArray
         }
       }).then (function (resp) {
         console.log("Success: " + resp);

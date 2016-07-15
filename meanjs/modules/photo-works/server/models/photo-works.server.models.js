@@ -12,6 +12,9 @@ var photoWorksSchema = new Schema ({
   },
   copyright: {
     type: String
+  },
+  images: {
+    type: [String]
   }
 });
 
