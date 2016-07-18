@@ -19,7 +19,17 @@ exports.addPhotoWork = function (req, res) {
   // copyright information as well as the
   // pictures.
   form.parse(req, function (err, fields, files) {
-    var theFiles = files.file;
+    var theFiles = files['file[file]'];
+
+    console.log("files: ", util.inspect(theFiles));
+
+    console.log("fields: " + util.inspect(fields));
+
+    console.log("coverImages: ", fields['file[coverImage]']);
+
+    // PhotoWorks.find({}).remove().exec();
+
+    var coverImages = fields['file[coverImage]'];
     console.log("the files: " + theFiles);
     if (typeof files !== 'undefined') {
       var models = fields['models'];
@@ -38,6 +48,8 @@ exports.addPhotoWork = function (req, res) {
 
       var imagesWritten = [];
 
+
+      /*
       // create the directory for the submitted photo work.
       // the directory is named according to the photo work's title.
       fs.mkdir (workImagesPath, function (err) {
@@ -50,9 +62,9 @@ exports.addPhotoWork = function (req, res) {
           console.log("successfully created the images directory");
           // once the directory has been created, enter the recursive
           // function syncWrites to write the images to workImagesPath
-          syncWrites(theFiles, workImagesPath, workTitle, models, copyright);
+          syncWrites(theFiles, workImagesPath, workTitle, models, copyright, coverImages);
         }
-      });
+      }); */
     }
   });
 
@@ -79,8 +91,13 @@ exports.addPhotoWork = function (req, res) {
    *
    **/
 
-  function syncWrites(filesToWrite, workingPath, workTitle, models, copyright) {
+  function syncWrites(filesToWrite, workingPath, workTitle, models, copyright, coverImages) {
     var currentFile = filesToWrite.pop();
+    var currentCover = coverImages.pop();
+    var imageObject = {
+      imageUrl: '',
+      coverImage: currentCover
+    };
     var oldPath = currentFile.path;
     var fileExtension = currentFile.path.substring(currentFile.path.lastIndexOf('.'));
     console.log("file Extension is: " + fileExtension);
@@ -103,15 +120,15 @@ exports.addPhotoWork = function (req, res) {
             // get the relative path of the written image because
             // <img src = " "> will need the relative path to display
             // the image, not absolute.
-            var writtenRelativePath = 'modules/images/client/img/photo_works/' +
-                                      workTitle + '/' + destFile;
-            imagesWritten.push(writtenRelativePath);
+            imageObject.imageUrl = 'modules/images/client/img/photo_works/' +
+                                    workTitle + '/' + destFile;
+            imagesWritten.push(imageObject);
             if (filesToWrite.length > 0) {
               console.log('another call');
 
               // the array filesToWrite is not empty,
               // so continue recursion
-              syncWrites(filesToWrite, workingPath, workTitle, models, copyright);
+              syncWrites(filesToWrite, workingPath, workTitle, models, copyright, coverImages);
             } else {
               console.log("imagesWritten: " + imagesWritten);
               console.log("workTitle: " + workTitle);

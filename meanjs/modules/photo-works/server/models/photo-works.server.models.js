@@ -13,9 +13,10 @@ var photoWorksSchema = new Schema ({
   copyright: {
     type: String
   },
-  images: {
-    type: [String]
-  }
+  images: [{
+    imageUrl: String,
+    coverImage: Boolean
+  }]
 });
 
 mongoose.model('photoWorks', photoWorksSchema);

@@ -41,7 +41,8 @@
     var directive = {
       restrict: 'E',
       scope: {
-        imageUrl: '='
+        imageUrl: '=',
+        coverImage: '='
       },
       link: function (scope) {
         console.log("okay");
@@ -50,6 +51,10 @@
           console.log("imgUrl is: " + imgUrl);
 
           SelectedImages.removeImage(imgUrl);
+        };
+
+        scope.setCoverImage = function (imgUrl) {
+          SelectedImages.setCoverImage (imgUrl);
         }
 
       },

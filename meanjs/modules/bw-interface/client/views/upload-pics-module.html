@@ -8,7 +8,8 @@
 <div layout="column">
   <div layout="row" ng-repeat="image in serviceImages track by $index" ng-if="$index % 3 == 0">
     <div layout="column" ng-repeat="i in [$index, $index + 1, $index + 2]" ng-if="serviceImages[i] != null">
-      <image-thumbnail image-url="serviceImages[i].$ngfBlobUrl"></image-thumbnail>
+      <image-thumbnail cover-image="serviceImages[i].coverImage"
+                       image-url="serviceImages[i].file.$ngfBlobUrl"></image-thumbnail>
     </div>
   </div>
 </div>

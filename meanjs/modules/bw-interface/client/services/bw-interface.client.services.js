@@ -14,8 +14,31 @@
       images: [],
       addImage: function(file) {
         console.log("addImage service function");
-        service.images.push(file);
+        var imageToPush;
+        if (service.images.length === 0) {
+          imageToPush = {
+            file: file,
+            coverImage: true
+          };
+        } else {
+          imageToPush = {
+            file: file,
+            coverImage: false
+          };
+        }
+        service.images.push(imageToPush);
         // console.log("file is: " + JSON.stringify(file));
+      },
+
+      setCoverImage: function (imgUrl) {
+        console.log("setCoverImage()");
+        for (var i = 0; i < service.images.length; ++i) {
+          if (service.images[i].file['$ngfBlobUrl'] === imgUrl) {
+            service.images[i].coverImage = true;
+          } else {
+            service.images[i].coverImage = false;
+          }
+        }
       },
 
       removeImage: function (imgUrl) {
@@ -23,7 +46,25 @@
         console.log("service.images: " + JSON.stringify(service.images));
 
         for (var i = 0; i < service.images.length; ++i) {
-          if (service.images[i]['$ngfBlobUrl'] === imgUrl) {
+          if (service.images[i].file['$ngfBlobUrl'] === imgUrl) {
+            if (service.images.length > 1) {
+              if (i === 0) {
+
+                // if we are removing the first image from the
+                // image array and if there is more than 1 item
+                // currently in the image array, set the second
+                // image (soon to be first) in the array as
+                // the new cover image after removal
+                service.images[1].coverImage = true;
+              } else {
+
+                // if we are not removing the first image
+                // in the image array and the image array has more
+                // than 1 item, set the first item in the image
+                // array as the cover image.
+                service.images[0].coverImage = true;
+              }
+            }
             service.images.splice(i, 1);
             console.log('imgUrl: ' + imgUrl);
             console.log('service.images: ' + service.images);
