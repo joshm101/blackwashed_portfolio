@@ -49,7 +49,7 @@ exports.addPhotoWork = function (req, res) {
       var imagesWritten = [];
 
 
-      /*
+
       // create the directory for the submitted photo work.
       // the directory is named according to the photo work's title.
       fs.mkdir (workImagesPath, function (err) {
@@ -64,7 +64,7 @@ exports.addPhotoWork = function (req, res) {
           // function syncWrites to write the images to workImagesPath
           syncWrites(theFiles, workImagesPath, workTitle, models, copyright, coverImages);
         }
-      }); */
+      });
     }
   });
 
