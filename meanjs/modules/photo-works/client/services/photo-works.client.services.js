@@ -16,6 +16,8 @@
             if (response.status === 200) {
               console.log("response.data photo works: " + JSON.stringify(response.data));
               service.photoWorks = response.data;
+              console.log(service.photoWorks);
+              // console.log("json stringify images: ", service.photoWorks[4]);
               $rootScope.$broadcast ( 'photoWorks.update' );
             }
           });

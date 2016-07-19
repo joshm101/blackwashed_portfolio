@@ -39,3 +39,8 @@ md-card-content{
 .select-photos-label{
 	font-weight: normal !important;
 }
+
+html{
+	background-color: white;
+}
+

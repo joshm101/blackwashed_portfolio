@@ -69,6 +69,7 @@ exports.addPhotoWork = function (req, res) {
   });
 
   var imagesWritten = [];
+  var coverImageUrl;
 
   /**
    * Recursive function used to synchronize
@@ -98,6 +99,7 @@ exports.addPhotoWork = function (req, res) {
       imageUrl: '',
       coverImage: currentCover
     };
+
     var oldPath = currentFile.path;
     var fileExtension = currentFile.path.substring(currentFile.path.lastIndexOf('.'));
     console.log("file Extension is: " + fileExtension);
@@ -122,6 +124,12 @@ exports.addPhotoWork = function (req, res) {
             // the image, not absolute.
             imageObject.imageUrl = 'modules/images/client/img/photo_works/' +
                                     workTitle + '/' + destFile;
+            console.log("current cover is: ", currentCover);
+            if (currentCover === 'true') {
+              console.log('current cover true');
+              coverImageUrl = imageObject.imageUrl;
+              console.log("coverImageUrl: ", coverImageUrl);
+            }
             imagesWritten.push(imageObject);
             if (filesToWrite.length > 0) {
               console.log('another call');
@@ -134,6 +142,7 @@ exports.addPhotoWork = function (req, res) {
               console.log("workTitle: " + workTitle);
               console.log("models: " + models);
               console.log("copyright: " + copyright);
+              console.log("coverImageUrl: ", coverImageUrl);
 
               // file array filesToWrite is empty,
               // all files have been written, create
@@ -141,7 +150,8 @@ exports.addPhotoWork = function (req, res) {
               var work = new PhotoWorks( {title: workTitle,
                                           models: models,
                                           copyright: copyright,
-                                          images: imagesWritten} );
+                                          images: imagesWritten,
+                                          coverImageUrl: coverImageUrl} );
 
               work.save (function (err) {
                 if (err) {

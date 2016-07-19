@@ -9,9 +9,11 @@
   function photoWork ($rootScope, $http, PhotoWorks) {
     var directive = {
       restrict: 'E',
-      scope: {},
+      scope: {
+        coverImageUrl: '='
+      },
       link: function (scope) {
-
+        scope.coverImage = PhotoWorks.coverImage;
       },
       templateUrl: 'modules/photo-works/client/views/photo-work.html'
     };
