@@ -48,15 +48,12 @@
     <div layout="column" layout-align="center start">
       <div layout="row" ng-repeat="work in photoWorksArray track by $index" ng-if="$index % 2 === 0">
         <div layout="column" ng-repeat="i in [$index, $index + 1]" ng-if="photoWorksArray[i] != null">
-          <photo-work cover-image-url="photoWorksArray[i].coverImageUrl"></photo-work>
+          <photo-work work="photoWorksArray[i]" cover-image-url="photoWorksArray[i].coverImageUrl"></photo-work>
         </div>
       </div>
     </div>
   </div>
 
-
-
-
-
+  <div id="viewPhotoWorkContainer" ng-cloak></div>
 
 </div>

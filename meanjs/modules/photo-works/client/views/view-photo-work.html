@@ -1,0 +1,26 @@
+<md-dialog aria-label="showPhotoWork" style="width: 79% !important; height: 85%;">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>{{work.title}}</h2>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="cancel()">
+        <md-icon>close</md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+  <md-dialog-content style="height: 85%; width: 100%;" class="view-photo-work-dialog-content">
+      <div class="md-dialog-content" >
+        <div style=" height: 100%;">
+          <div layout="column" style="height: 100%;" layout-align="center start">
+            <div layout="row" style="min-height: 25%; width: 100%; margin-bottom: 15px;" ng-repeat="image in work.images track by $index" ng-if="$index % 5 == 0">
+              <div layout="column"
+                   ng-repeat="i in [$index, $index + 1, $index + 2, $index + 3, $index + 4]"
+                   ng-if="work.images[i] != null">
+                <work-image ng-click="viewImage($event, work.images[i].imageUrl)" image-url="work.images[i].imageUrl"></work-image>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </md-dialog-content>
+</md-dialog>

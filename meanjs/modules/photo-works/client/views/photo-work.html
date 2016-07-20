@@ -1,9 +1,8 @@
 <md-card>
   <md-card-content style="max-width: 400px; overflow: hidden;" layout-align="center center">
-    <img layout-align="center center" style="max-width: 80%;
-                                             height: auto;
-                                             display: block;
-                                             margin: 0 auto;" ng-src="{{coverImageUrl}}"/>
+    <a href="#" class="photo-work-card-img" ng-click="showPhotoWork($event)">
+      <figure><img layout-align="center center" style="height: auto;" ng-src="{{coverImageUrl}}"/></figure>
+    </a>
   </md-card-content>
   <md-card-actions>
     <md-button>photo work</md-button>

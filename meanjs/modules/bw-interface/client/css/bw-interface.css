@@ -44,3 +44,24 @@ html{
 	background-color: white;
 }
 
+.photo-work-card-img{
+	max-width: 80%;
+	display: block;
+	margin: 0 auto;
+}
+
+.photo-work-card-img img{
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.photo-work-card-img figure:hover img{
+
+	opacity: 0.65;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translateZ(0) scale(1.0, 1.0);
+
+}
+
+

@@ -8,16 +8,17 @@
     .directive('addPhotoWorkForm', addPhotoWorkForm)
     .directive('uploadPicsModule', uploadPicsModule)
     .directive('imageThumbnail', imageThumbnail)
-    .directive('modelsInput', modelsInput);
+    .directive('modelsInput', modelsInput)
 
   interfaceCyclerImage.$inject = ['$rootScope', '$state', 'CyclerImages'];
   addWorkFab.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'CyclerImages'];
   addPhotoWorkForm.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog'];
   uploadPicsModule.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'SelectedImages'];
   imageThumbnail.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'SelectedImages'];
-  modelsInput. $inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'SelectedImages'];
+  modelsInput.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'SelectedImages'];
 
-  function modelsInput($rootScope, $state, $timoue, $mdDialog, SelectedImages){
+
+  function modelsInput($rootScope, $state, $timeout, $mdDialog, SelectedImages){
     var directive = {
       restrict: 'E',
       scope: {
