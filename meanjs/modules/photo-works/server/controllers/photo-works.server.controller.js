@@ -371,30 +371,32 @@ exports.editPhotoWork = function (req, res) {
 
     var serverImageObjects = [];
 
-    // serverImages array only contains the URLs
-    // of the server images. Need to iterate over
-    // this array of URLs so that we can recreate the
-    // original image objects of the server images.
-    // This is necessary when we create the final
-    // images array (of image objects) consisting
-    // of both old server images (that were not deleted)
-    // and new images that were uploaded on edit.
-    for (var i = 0; i < serverImages.length; ++i) {
-      console.log (util.inspect (fields['serverImages[coverImage]'][i]));
-      var coverImageBool;
-      if (fields['serverImages[coverImage]'][i] === 'true') {
-        coverImageBool = true;
-        chosenCoverImage = fields['serverImages[imageUrl]'][i];
-        console.log("chosenCoverImage: ", chosenCoverImage);
-      } else {
-        coverImageBool = false;
+    if (typeof serverImages !== 'undefined') {
+      // serverImages array only contains the URLs
+      // of the server images. Need to iterate over
+      // this array of URLs so that we can recreate the
+      // original image objects of the server images.
+      // This is necessary when we create the final
+      // images array (of image objects) consisting
+      // of both old server images (that were not deleted)
+      // and new images that were uploaded on edit.
+      for (var i = 0; i < serverImages.length; ++i) {
+        console.log (util.inspect (fields['serverImages[coverImage]'][i]));
+        var coverImageBool;
+        if (fields['serverImages[coverImage]'][i] === 'true') {
+          coverImageBool = true;
+          chosenCoverImage = fields['serverImages[imageUrl]'][i];
+          console.log("chosenCoverImage: ", chosenCoverImage);
+        } else {
+          coverImageBool = false;
+        }
+        var serverImageObject = {
+          imageUrl: serverImages[i],
+          coverImage: coverImageBool
+        };
+        console.log("serverImageObject: ", util.inspect (serverImageObject));
+        serverImageObjects.push (serverImageObject);
       }
-      var serverImageObject = {
-        imageUrl: serverImages[i],
-        coverImage: coverImageBool
-      };
-      console.log("serverImageObject: ", util.inspect (serverImageObject));
-      serverImageObjects.push (serverImageObject);
     }
 
     console.log("editImagesToSave before writes: ", util.inspect (editImagesToSave));
