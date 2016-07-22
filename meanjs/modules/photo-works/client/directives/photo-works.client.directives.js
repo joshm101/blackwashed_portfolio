@@ -157,6 +157,12 @@
                   }
                 }).then (function (resp) {
                   console.log("Success: ", resp);
+                  var newWork = resp.data;
+                  for (var i = 0; i < PhotoWorks.photoWorks.length; ++i) {
+                    if (PhotoWorks.photoWorks[i]._id === newWork._id) {
+                      PhotoWorks.photoWorks[i] = newWork;
+                    }
+                  }
                   $mdDialog.cancel();
                   EditImages.reset();
                 }, function (resp) {
