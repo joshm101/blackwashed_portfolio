@@ -41,16 +41,37 @@
       addNewImage: function (file, imageUrl, serverImage, coverImage) {
         console.log ('addNewImage EditImages service function');
 
+        // create the new image object
         var imageToPush = {
           imageUrl: imageUrl,
           serverImage: serverImage,
           coverImage: coverImage
         };
 
+        // maintain the new image on the general
+        // newImages service array
         service.newImages.push (imageToPush);
+
+        // maintain the new image on the overall
+        // service images array
         service.images.push (imageToPush);
+
+        // maintain the file information of the new image
+        // so that it is properly uploaded on edit submit
         service.newImageFiles.push (file);
       },
+
+      // this function will reinitialize the EditImages
+      // service. This reset function can either be done
+      // on edit dialog close or edit dialog open.
+      reset: function () {
+        service.images = [];
+        service.serverImages = [];
+        service.newImages = [];
+        service.newImageFiles =[];
+        service.imagesToDelete = [];
+      },
+
       addImage: function (imageUrl, serverImage, coverImage) {
         console.log("addImage EditImages service function");
 
@@ -71,17 +92,45 @@
 
         service.images.push(imageToPush);
       },
+
+      // set cover image to the image
+      // with passed in imgUrl
       setCoverImage: function (imgUrl) {
         console.log("setCoverImage EditImages: ", imgUrl);
         console.log("service.images.length: ", service.images.length);
         console.log("service.images: ", service.images);
+
+        // iterate through all the images currently in the
+        // edit form, both new (to be uploaded) and old (server images)
         for (var i = 0; i < service.images.length; ++i) {
+
+          // if we have a match
           if (service.images[i].imageUrl === imgUrl) {
             console.log("match");
+            // set coverImage field of current image
+            // in overall images array to true.
             service.images[i].coverImage = true;
-            service.chosenCoverImage = images[i].imageUrl;
+
+            // set the chosenCoverImage field to the matched
+            // image's url.
+            service.chosenCoverImage = service.images[i].imageUrl;
+
+            // if the coverImage we are setting is a new image
+            // that will need to be uploaded, set the coverImage
+            // field in newImages service array. This
+            // needs to be done to maintain consistency
+            if (service.images[i].serverImage === false) {
+              for (var j = 0; j < service.newImages.length; ++j) {
+                if (service.newImages[j].imageUrl === imgUrl) {
+                  service.newImages[j].coverImage = true;
+                } else {
+                  service.newImages[j].coverImage = false;
+                }
+              }
+            }
           } else {
             service.images[i].coverImage = false;
+
           }
         }
       },
@@ -100,6 +149,22 @@
                   // image (soon to be first) in the array as
                   // the new cover image after removal
                   service.images[1].coverImage = true;
+                  for (var j = 0; j < service.serverImages.length; ++j) {
+                    if (service.serverImages[j].imageUrl === service.images[1].imageUrl) {
+                      console.log ('server cover image true');
+                      console.log ('url: ', service.serverImages[j].imageUrl);
+                      service.chosenCoverImage = service.ServerImages[j].imageUrl;
+                      service.serverImages[j].coverImage = true;
+
+                    }
+                  }
+                  for (var j = 0; j < service.newImages.length; ++j) {
+                    if (service.newImages[j].imageUrl === service.images[1].imageUrl) {
+                      service.chosenCoverImage = service.newImages[j].imageUrl;
+                      service.newImages[j].coverImage = true;
+                      service.chosenCoverImage = service.newImages[j].imageUrl;
+                    }
+                  }
                 } else {
 
                   // if we are not removing the first image
@@ -107,9 +172,26 @@
                   // has more than 1 item, set the first item
                   // in the image array as the cover image.
                   service.images[0].coverImage = true;
+                  for (var j = 0; j < service.serverImages.length; ++j) {
+                    if (service.serverImages[j].imageUrl === service.images[0].imageUrl) {
+                      service.serverImages[j].coverImage = true;
+                      console.log ('server cover image true');
+                      console.log ('url: ', service.serverImages[j].imageUrl);
+                      service.chosenCoverImage = service.serverImages[j].coverImage;
+                    }
+                  }
+                  for (var j = 0; j < service.newImages.length; ++j) {
+                    if (service.newImages[j].imageUrl === service.images[0].imageUrl) {
+                      service.newImages[j].coverImage = true;
+                      service.chosenCoverImage = service.newImages[j].imageUrl;
+                    }
+                  }
                 }
               }
             }
+
+            // if we are removing a server image that
+            // was set to cover image
             if (service.images[i].serverImage === true) {
               service.imagesToDelete.push(service.images[i]);
               console.log("imagesToDelete");
@@ -118,6 +200,16 @@
                 if (service.images[i].imageUrl === service.serverImages[j].imageUrl) {
                   service.serverImages.splice (j, 1);
                   console.log("spliced server image");
+                }
+              }
+            }
+            // if we are removing a new image
+            // but the user now wants to remove
+            // it, splice it from newImages service array
+            if (service.images[i].serverImage === false) {
+              for (var j = 0; j < service.newImages.length; ++j) {
+                if (service.newImages[j].imageUrl === imgUrl) {
+                  service.newImages.splice(j, 1);
                 }
               }
             }

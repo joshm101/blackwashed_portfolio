@@ -8,8 +8,10 @@ var validator    =  require ('validator'),
     path         =  require ('path'),
     util         =  require ('util'),
     mongoose     =  require ('mongoose'),
+    ncp          =  require ('ncp').ncp,
     PhotoWorks   =  mongoose.model('photoWorks');
 
+ncp.limit = 16;
 
 exports.addPhotoWork = function (req, res) {
   var form = new multiparty.Form();
@@ -137,6 +139,7 @@ function syncWrites(filesToWrite, workingPath, workTitle, models, copyright, cov
           if (currentCover === 'true') {
             console.log('current cover true');
             coverImageUrl = imageObject.imageUrl;
+            chosenCoverImage = imageObject.imageUrl;
             console.log("coverImageUrl: ", coverImageUrl);
           }
           imagesWritten.push(imageObject);
@@ -173,39 +176,6 @@ function syncWrites(filesToWrite, workingPath, workTitle, models, copyright, cov
                 }
               });
             } else {
-              console.log("imagesWritten: " + imagesWritten);
-              console.log("workTitle: " + workTitle);
-              console.log("models: " + models);
-              console.log("copyright: " + copyright);
-              console.log("coverImageUrl: ", coverImageUrl);
-
-              for (var i = 0; i < imagesWritten.length; ++i) {
-                editImagesToSave.push (imagesWritten[i]);
-              }
-
-              PhotoWorks.findById (identifier, function (err, work) {
-                if (err) {
-                  console.log("error finding document: ", err);
-                } else {
-                  work.title = workTitle;
-                  work.models = models;
-                  work.copyright = copyright;
-                  work.coverImageUrl = coverImageUrl;
-                  work.images = editImagesToSave;
-                  work.coverImageUrl = chosenCoverImage;
-                  work.save (function (err) {
-                    if (err) {
-                      console.log("error saving edit to DB: ", err);
-                    } else {
-                      console.log ("successfully saved edit to DB");
-                      chosenCoverImage = '';
-                      editImagesToSave = [];
-                      coverImageUrl = '';
-                      imagesWritten = [];
-                    }
-                  });
-                }
-              });
 
             }
           }
@@ -229,9 +199,104 @@ function syncDeletes (filesToDelete) {
         syncDeletes (filesToDelete);
       } else {
         console.log ("done deleting files");
+        return;
       }
     }
   })
+}
+
+function syncEditWrites (filesToWrite, workingPath, workTitle, models, copyright, coverImages, res) {
+  // no new images to write.
+  if (filesToWrite.length === 0 || typeof filesToWrite === 'undefined') {
+    PhotoWorks.findById (identifier, function (err, work) {
+      if (err) {
+        console.log ("error finding work: ", err);
+      } else {
+        for (var i = 0; i < imagesWritten.length; ++i) {
+          editImagesToSave.push (imagesWritten[i]);
+        }
+        var oldWorkTitle = work.title;
+        work.title = workTitle;
+        work.models = models;
+        work.copyright = copyright;
+        work.images = editImagesToSave;
+        work.coverImageUrl = chosenCoverImage;
+        work.save (function (err) {
+          if (err) {
+            console.log("error saving work to DB: ", err);
+          } else {
+            console.log ("successfully saved edit to DB");
+
+            // if work title was edited, remove old directory
+            // of work.
+            if (oldWorkTitle !== workTitle) {
+              var oldWorkPath = path.resolve (process.cwd (), 'modules');
+              oldWorkPath = path.resolve (oldWorkPath, 'images/client/img/photo_works');
+              oldWorkPath = path.resolve (oldWorkPath, oldWorkTitle);
+              rmdir (oldWorkPath, fs, function (err) {
+                if (err) {
+                  console.log ("error deleting old work path: ", err);
+                } else {
+                  console.log ("successfully removed old work directory.");
+                  imagesWritten = [];
+                  editImagesToSave = [];
+                  coverImageUrl = '';
+                  return res.status (200).send (work);
+                }
+              });
+            } else {
+              imagesWritten = [];
+              editImagesToSave = [];
+              coverImageUrl = '';
+              return res.status (200).send (work);
+            }
+          }
+        })
+      }
+    });
+  } else {
+    var currentFile = filesToWrite.pop();
+    var currentCover = coverImages.pop();
+
+    var imageObject = {
+      imageUrl: '',
+      coverImage: currentCover
+    };
+
+    var oldPath = currentFile.path;
+    var fileExtension = currentFile.path.substring(currentFile.path.lastIndexOf('.'));
+    var destFile = uuid.v4() + fileExtension;
+    var fullDestFile = workingPath + '/' + destFile;
+    fs.readFile (oldPath, function (err, data) {
+      if (err) {
+        console.log ("error reading file: ", err);
+      } else {
+        fs.writeFile (fullDestFile, data, function (err) {
+          if (err) {
+            console.log ("error writing file: ", err);
+          } else {
+            console.log("successfully wrote image file");
+
+            // get the relative path of the written image because
+            // <img src = " "> will need the relative path to display
+            // the image, not absolute.
+            imageObject.imageUrl = 'modules/images/client/img/photo_works/' +
+              workTitle + '/' + destFile;
+            console.log("current cover is: ", currentCover);
+            if (currentCover === 'true') {
+              console.log('current cover true');
+              coverImageUrl = imageObject.imageUrl;
+              chosenCoverImage = imageObject.imageUrl;
+              console.log("coverImageUrl: ", coverImageUrl);
+            }
+            imagesWritten.push(imageObject);
+            syncEditWrites (filesToWrite, workingPath, workTitle, models, copyright, coverImages, res);
+          }
+        });
+      }
+    });
+
+  }
 }
 
 exports.deletePhotoWork = function (req, res) {
@@ -286,10 +351,17 @@ exports.editPhotoWork = function (req, res) {
   form.parse (req, function (err, fields, files) {
     console.log (util.inspect (files));
     console.log (util.inspect (fields));
+
+    // get the passed in coverImage
     chosenCoverImage = fields['chosenCoverImage'][0];
     console.log("chosenCoverImage: ", chosenCoverImage);
+
+    // get URLs of passed in server images
     serverImages = fields['serverImages[imageUrl]'];
     console.log("serverImages: ", util.inspect (serverImages));
+
+    // if the user specified an image/images to delete that was on the server
+    // at time of editing, remove it/them
     if (typeof fields['imagesToDelete[imageUrl]'] !== 'undefined') {
       console.log ('images to delete');
       var imagesToDelete = fields['imagesToDelete[imageUrl]'];
@@ -298,11 +370,22 @@ exports.editPhotoWork = function (req, res) {
     }
 
     var serverImageObjects = [];
+
+    // serverImages array only contains the URLs
+    // of the server images. Need to iterate over
+    // this array of URLs so that we can recreate the
+    // original image objects of the server images.
+    // This is necessary when we create the final
+    // images array (of image objects) consisting
+    // of both old server images (that were not deleted)
+    // and new images that were uploaded on edit.
     for (var i = 0; i < serverImages.length; ++i) {
       console.log (util.inspect (fields['serverImages[coverImage]'][i]));
       var coverImageBool;
       if (fields['serverImages[coverImage]'][i] === 'true') {
         coverImageBool = true;
+        chosenCoverImage = fields['serverImages[imageUrl]'][i];
+        console.log("chosenCoverImage: ", chosenCoverImage);
       } else {
         coverImageBool = false;
       }
@@ -313,24 +396,27 @@ exports.editPhotoWork = function (req, res) {
       console.log("serverImageObject: ", util.inspect (serverImageObject));
       serverImageObjects.push (serverImageObject);
     }
-    editImagesToSave = serverImageObjects;
+
     console.log("editImagesToSave before writes: ", util.inspect (editImagesToSave));
 
-    // new images to write
+    // if there are newly uploaded images to write to server FS               // **********
     if (typeof fields['newImages[imageUrl]'] !== 'undefined') {
       console.log("okay");
       var newImages = [];
-      for (var i = 0; i < fields['newImages[imageUrl]'].length; ++i) {
-        console.log("fields: ", fields['newImages[imageUrl]'][i]);
-        var newImage = {
-          coverImage: fields['newImages[coverImage]'][i],
-          imageUrl: fields['newImages[imageUrl]'][i]
-        };
-        console.log(newImage);
-        newImages.push (newImage);
+
+      // create the proper image objects of the newly passed in images
+      // in the same way that we did for the passed server images above.
+      for (var i = 0; i < fields['newImages[imageUrl]'].length; ++i) {          // this entire section
+        console.log("fields: ", fields['newImages[imageUrl]'][i]);              // might be unnecessary
+        var newImage = {                                                        // as final newImages
+          coverImage: fields['newImages[coverImage]'][i],                       // array does not
+          imageUrl: fields['newImages[imageUrl]'][i]                            // appear to be used
+      };                                                                        // after this section
+        console.log(newImage);                                                  // of code where it is
+        newImages.push (newImage);                                              // populated.
 
         console.log (util.inspect (newImages));
-      }
+    }                                                                         // ***********
       var theFiles = files ['file'];
       console.log("theFiles: ", util.inspect (theFiles));
 
@@ -350,15 +436,201 @@ exports.editPhotoWork = function (req, res) {
       console.log("coverImages: ", coverImages);
       console.log ('serverImages: ', util.inspect (serverImages));
 
-      syncWrites (theFiles, workImagesPath, workTitle, models, copyright, coverImages, edit, res);
+      PhotoWorks.findById (identifier, function (err, work) {
+        if (err) {
+          console.log("error finding work: ", err);
+        } else {
+
+          // if the user edited the title of the photo work
+          // we need to move contents of old photo work's folder
+          // to new photo work folder by creating new directory.
+          // after copying, rmdir -rf old folder.
+          // This also means that DB references to saved images
+          // will need to be updated.
+          if (work.title !== workTitle) {
+            var oldTitle = work.title;
+            var newDirectory = workImagesPath;
+            var callback = function (result) {
+              if (result === 'directory exists') {
+                return res.status (400).send ();
+              }
+
+              if (result === 'success') {
+                syncEditWrites (theFiles, workImagesPath, workTitle, models, copyright, coverImages, res);
+              }
+            };
+
+            changePhotoWorkTitle (newDirectory, workImagesPath, imagesPath,
+                                  oldTitle, workTitle, serverImageObjects, callback);
+
+          } else {
+            // editImagesToSave will contain both the old server images
+            // that were not deleted on edit and the new images
+            // that were uploaded (if any). Newly uploaded images
+            // will be pushed onto editImagesToSave array on write
+            editImagesToSave = serverImageObjects;
+            syncEditWrites (theFiles, workImagesPath, workTitle, models, copyright, coverImages, res);
+          }
+        }
+      });
+
 
 
 
     } else {
-      console.log ('undefined');
+      // no new images to write
+
+      console.log("workImagesPath: ", workImagesPath);
+      console.log("workTitle is: ", workTitle);
+      identifier = fields['identifier'];
+      console.log ("identifier: ", identifier);
+      console.log ("no new images to write");
+      PhotoWorks.findById (identifier, function (err, work) {
+        var modulesPath = path.resolve(process.cwd(), 'modules');
+        var imagesPath = path.resolve(modulesPath, 'images/client/img/photo_works');
+        var workTitle = fields['workTitle'][0];
+        console.log ('workTitle before constructing workImagesPath: ', workTitle);
+        var workImagesPath = path.resolve (imagesPath, workTitle);
+        if (err) {
+          console.log ('error finding work: ', err);
+        } else {
+          console.log ('work: ', util.inspect (work));
+          // if the user edited the title of the photo work
+          // we need to move contents of old photo work's folder
+          // to new photo work folder by creating new directory.
+          // after copying, rmdir -rf old folder.
+          // This also means that DB references to saved images
+          // will need to be updated.
+          console.log("workTitle is: ", workTitle);
+          console.log("work.title is: ", work.title);
+          var oldTitle = work.title;
+          if (work.title !== workTitle) {
+            var newDirectory = workImagesPath;
+            console.log ('newDirectory: ', newDirectory);
+            var callback = function (result) {
+              if (result === 'directory exists') {
+                return res.status (400).send ();
+              }
+
+              if (result === 'success') {
+
+                console.log ('theFiles: ', util.inspect (theFiles));
+                console.log ('changePhotoWorkTitle success');
+                var modulesPath = path.resolve(process.cwd(), 'modules');
+                var imagesPath = path.resolve(modulesPath, 'images/client/img/photo_works');
+                var workTitle = fields['workTitle'][0];
+                var workImagesPath = path.resolve (imagesPath, workTitle);
+                var coverImages = fields['newImages[coverImage]'];
+                var models = fields['models'];
+                var copyright = fields['copyright'][0];
+                if (typeof theFiles === 'undefined') {
+                  work.title = workTitle;
+                  work.models = models;
+                  work.copyright = copyright;
+                  work.images = serverImageObjects;
+                  work.coverImageUrl = chosenCoverImage;
+                  work.save (function (err) {
+                    if (err) {
+                      console.log ("error saving edit to DB: ", err);
+                    } else {
+                      console.log ("successfully saved edit to DB");
+                      return res.status (200).send ();
+                    }
+                  });
+                } else {
+                  syncEditWrites (theFiles, workImagesPath, workTitle, models, copyright, coverImages, res);
+                }
+              }
+            };
+            changePhotoWorkTitle (newDirectory, workImagesPath, imagesPath,
+                                  oldTitle, workTitle, serverImageObjects, callback);
+
+
+            console.log ("result is: ", result);
+
+          } else {
+
+            // work title is still the same and no new images
+            // to save. At this point, update the chosenCoverImage,
+            // models, copyright, and images in case those have changed.
+            // images would have changed if the user removed any images
+            // during the edit, which is handled earlier on
+            // in this editPhotoWork funtion.
+            var models = fields['models'];
+            var copyright = fields['copyright'][0];
+            work.models = models;
+            work.copyright = copyright;
+            work.images= serverImageObjects;
+            work.coverImageUrl = chosenCoverImage;
+            work.save (function (err) {
+              if (err) {
+                console.log ("error saving edit to DB: ", err);
+              } else {
+                console.log ("successfully saved edit to DB");
+                return res.status (200).send (work);
+              }
+            });
+          }
+        }
+      });
     }
   });
 };
+
+function changePhotoWorkTitle(newDirectory, workImagesPath, imagesPath,
+                              oldTitle, workTitle, serverImageObjects, callback) {
+  fs.stat (newDirectory, function (err, stats) {
+    if (err) {
+      // the directory does not exist so it can be
+      // created
+      fs.mkdir (workImagesPath, function (err) {
+        if (err) {
+          console.log("error creating new directory: ", err);
+        } else {
+          console.log ('successfully created new directory: ', newDirectory);
+          var oldDir = path.resolve (imagesPath, oldTitle);
+          ncp (oldDir, newDirectory, function (err) {
+            if (err) {
+              console.log("error copying files over to new directory: ", err);
+            } else {
+              console.log ('successfully copied images to new directory');
+
+              // extract image file names and update them so
+              // you have a correct reference to them in the DB
+              // (since we copied image files to a new specified
+              // directory)
+              for (var i = 0; i < serverImageObjects.length; ++i) {
+                var currentPath = serverImageObjects[i].imageUrl;
+                var lastSlashIndex = currentPath.lastIndexOf("/");
+                var fileName = currentPath.substring(lastSlashIndex + 1);
+                var newPath = 'modules/images/client/img/photo_works/' + workTitle + '/' + fileName;
+                serverImageObjects[i].imageUrl = newPath;
+                console.log("newPath: ", newPath);
+
+                // update the chosen cover image URL if the chosen
+                // cover image was a server image.
+                if (serverImageObjects[i].coverImage === true) {
+                  console.log ("if true");
+                  chosenCoverImage = serverImageObjects[i].imageUrl;
+                }
+              }
+              console.log("done for loop");
+              editImagesToSave = serverImageObjects;
+              console.log ('returning');
+              callback ('success');
+
+            }
+          });
+          console.log("returning 2");
+        }
+      })
+    } else {
+      console.log ('the directory ' + newDirectory +' already exists!');
+      console.log ('stats: ', util.inspect (stats));
+      callback ('directory exists');
+    }
+  });
+}
 
 exports.getPhotoWorks = function (req, res) {
   console.log('get photo works');

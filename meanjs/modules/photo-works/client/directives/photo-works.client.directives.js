@@ -55,31 +55,56 @@
           console.log("work is: ", work);
 
           EditImages.images = [];
+
           // on edit click, add images already apart
           // of the photo work to the EditImages service
           for (var i = 0; i < work.images.length; ++i) {
             console.log("work.images[i]: ", work.images[i]);
-            //EditImages.addImage()
+
+            // if the image we are currently look at
+            // is the cover image
             if (work.images[i].coverImage === true) {
+
+              // set the chosenCoverImage field of the
+              // EditImages service for the current
+              // photo work to edit.
               EditImages.chosenCoverImage = work.images[i].imageUrl;
             }
+                                // url of image                 // isCoverImage Boolean
             EditImages.addImage(work.images[i].imageUrl, true, work.images[i].coverImage);
-          }
+          }                                     // is serverImage Boolean
+
           scope.modelsModel = [];
+
+          // iterate through the currently set models for the photo work
           for (var i = 0; i < work.models.length; ++i) {
             console.log('work.models[i]: ', work.models[i]);
+
+            // push each model onto the data model for              // this for loop might be unnecessary
+            // models input on photo work
             scope.modelsModel.push({name: 'model_' + i});
             scope.modelNumber = i;
           }
 
+          // show edit dialog
           $mdDialog.show({
+
+            // inject scope variables to dialog controller
             locals: {
+
+              // current photo work object
               work: scope.work,
+
+              // photo work's models
               models: scope.work.models,
+
+              // models input data model
               modelsModel: scope.modelsModel,
               modelNumber: scope.modelNumber
             },
             controller: function ($scope, $mdDialog, work, modelsModel, modelNumber, models) {
+
+              // set up scope variables for controller/dialog scope.
               $scope.work = work;
               $scope.models = models;
               $scope.modelsModel = modelsModel;
@@ -94,6 +119,7 @@
                 $scope.modelsModel.push( {name: 'model_' + ++modelNumber} )
               };
 
+              // submit edits for updating photo work on back end.
               $scope.submitEditedWork = function (event) {
                 console.log("submit edited work");
                 console.log("work.models: ", work.models);
@@ -104,13 +130,26 @@
                 console.log("EditImages.imagesToDelete: ", EditImages.imagesToDelete);
                 Upload.upload({
                   url: '/api/photo_works/edit_photo_work',
+
+                  // arrayKey ensures that any submitted array fields
+                  // remain arrays when they are parsed on back end.
                   arrayKey: '',
                   data: {
+
+                    // file key needs to be set to any new image files
+                    // as new image files require an upload
                     file: EditImages.newImageFiles,
                     newImages: EditImages.newImages,
                     chosenCoverImage: EditImages.chosenCoverImage,
+
+                    // DB entry identifier for easy lookup
                     identifier: work._id,
+
+                    // photo work images that were already on server
                     serverImages: EditImages.serverImages,
+
+                    // any server images that need to be deleted after
+                    // the edit
                     imagesToDelete: EditImages.imagesToDelete,
                     workTitle: work.title,
                     copyright: work.copyright,
@@ -118,6 +157,8 @@
                   }
                 }).then (function (resp) {
                   console.log("Success: ", resp);
+                  $mdDialog.cancel();
+                  EditImages.reset();
                 }, function (resp) {
                   console.log("error status: ", resp.status);
                 }, function (evt) {
@@ -135,6 +176,9 @@
               }
             },
             controllerAs: 'editCtrl',
+            onRemoving: function () {
+              EditImages.reset();
+            },
             clickOutsideToClose: true,
             templateUrl: 'modules/bw-interface/client/views/edit-photo-work.html'
           });
