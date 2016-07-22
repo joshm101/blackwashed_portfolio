@@ -6,7 +6,7 @@
     .directive('viewPhotoWork', viewPhotoWork)
     .directive('workImage', workImage);
 
-  photoWork.$inject = ['$rootScope', '$http', '$mdDialog', '$mdMedia', 'PhotoWorks'];
+  photoWork.$inject = ['$rootScope', '$http', '$mdDialog', '$mdMedia', 'PhotoWorks', 'EditImages', 'Upload'];
   viewPhotoWork.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', '$mdMedia', 'SelectedImages', 'PhotoWorks'];
   workImage.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', '$mdMedia', 'SelectedImages', 'PhotoWorks'];
 
@@ -34,11 +34,6 @@
       },
       link: function (scope) {
 
-
-
-
-
-
       },
       templateUrl: 'modules/photo-works/client/views/view-photo-work.html'
     };
@@ -46,7 +41,7 @@
     return directive;
   }
 
-  function photoWork ($rootScope, $http, $mdDialog, $mdMedia, PhotoWorks) {
+  function photoWork ($rootScope, $http, $mdDialog, $mdMedia, PhotoWorks, EditImages, Upload) {
     var directive = {
       restrict: 'E',
       scope: {
@@ -56,6 +51,99 @@
       link: function (scope) {
         scope.coverImage = PhotoWorks.coverImage;
         scope.customFullscreen = $mdMedia('xs') || $mdMedia('sm');
+        scope.editPhotoWork = function (work) {
+          console.log("work is: ", work);
+
+          EditImages.images = [];
+          // on edit click, add images already apart
+          // of the photo work to the EditImages service
+          for (var i = 0; i < work.images.length; ++i) {
+            console.log("work.images[i]: ", work.images[i]);
+            //EditImages.addImage()
+            if (work.images[i].coverImage === true) {
+              EditImages.chosenCoverImage = work.images[i].imageUrl;
+            }
+            EditImages.addImage(work.images[i].imageUrl, true, work.images[i].coverImage);
+          }
+          scope.modelsModel = [];
+          for (var i = 0; i < work.models.length; ++i) {
+            console.log('work.models[i]: ', work.models[i]);
+            scope.modelsModel.push({name: 'model_' + i});
+            scope.modelNumber = i;
+          }
+
+          $mdDialog.show({
+            locals: {
+              work: scope.work,
+              models: scope.work.models,
+              modelsModel: scope.modelsModel,
+              modelNumber: scope.modelNumber
+            },
+            controller: function ($scope, $mdDialog, work, modelsModel, modelNumber, models) {
+              $scope.work = work;
+              $scope.models = models;
+              $scope.modelsModel = modelsModel;
+
+              console.log("modelsModel dialog show: ", modelsModel);
+
+              console.log("models is: ", models);
+
+              console.log("scope.models: ", $scope.models);
+
+              $scope.addModel = function (event) {
+                $scope.modelsModel.push( {name: 'model_' + ++modelNumber} )
+              };
+
+              $scope.submitEditedWork = function (event) {
+                console.log("submit edited work");
+                console.log("work.models: ", work.models);
+                console.log("work.title: ", work.title);
+                console.log("EditImages.chosenCoverImage: ", EditImages.chosenCoverImage);
+                console.log("EditImages.images: ", EditImages.images);
+                console.log("EditImages.newImages: ", EditImages.newImages);
+                console.log("EditImages.imagesToDelete: ", EditImages.imagesToDelete);
+                Upload.upload({
+                  url: '/api/photo_works/edit_photo_work',
+                  arrayKey: '',
+                  data: {
+                    file: EditImages.newImageFiles,
+                    newImages: EditImages.newImages,
+                    chosenCoverImage: EditImages.chosenCoverImage,
+                    identifier: work._id,
+                    serverImages: EditImages.serverImages,
+                    imagesToDelete: EditImages.imagesToDelete,
+                    workTitle: work.title,
+                    copyright: work.copyright,
+                    models: work.models
+                  }
+                }).then (function (resp) {
+                  console.log("Success: ", resp);
+                }, function (resp) {
+                  console.log("error status: ", resp.status);
+                }, function (evt) {
+                  console.log("evt: ", evt);
+                });
+
+              };
+
+              $scope.editSelected = function (files, badFiles) {
+
+              };
+
+              $scope.hide = function () {
+                $mdDialog.hide();
+              }
+            },
+            controllerAs: 'editCtrl',
+            clickOutsideToClose: true,
+            templateUrl: 'modules/bw-interface/client/views/edit-photo-work.html'
+          });
+        };
+
+        scope.deletePhotoWork = function (ev) {
+          console.log("scope.work: ", scope.work);
+          PhotoWorks.deletePhotoWork(scope.work);
+        };
 
         scope.showPhotoWork = function (ev) {
           console.log("showPhotoWork()");

@@ -1,0 +1,31 @@
+<div ng-if="coverImage === true">
+  <md-card style="max-width: 300px; overflow: hidden;">
+    <md-card-content style="max-width: 100%; max-height: 100%; height: auto;">
+      <img style="max-width: 100%; overflow:hidden;" ng-src="{{imageUrl}}"/>
+    </md-card-content>
+    <md-card-actions>
+      <md-button ng-disabled="true"
+                 style="color: black; font-weight: bolder">Cover Image</md-button>
+      <md-button style="color: #d7392c;"
+                 ng-click="removeImage(imageUrl)">Remove</md-button>
+    </md-card-actions>
+  </md-card>
+</div>
+
+<div ng-if="coverImage === false">
+  <md-card style="max-width: 300px; overflow: hidden;">
+    <md-card-content style="max-width: 100%; max-height: 100%; height: auto;">
+      <img style="max-width: 100%; overflow:hidden;" ng-src="{{imageUrl}}"/>
+    </md-card-content>
+    <md-card-actions>
+      <md-button class="md-primary"
+                 style="font-weight: bolder;"
+                 ng-click="setCoverImage(imageUrl)">Set as Cover Image</md-button>
+      <md-button style="color: #d7392c;"
+                 ng-click="removeImage(imageUrl)">Remove</md-button>
+    </md-card-actions>
+  </md-card>
+</div>
+
+
+

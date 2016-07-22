@@ -9,6 +9,10 @@
     .directive('uploadPicsModule', uploadPicsModule)
     .directive('imageThumbnail', imageThumbnail)
     .directive('modelsInput', modelsInput)
+    .directive('editModelsInput', editModelsInput)
+    .directive('editPhotoWorkForm', editPhotoWorkForm)
+    .directive('editUploadPicsModule', editUploadPicsModule)
+    .directive('editImageThumbnail', editImageThumbnail);
 
   interfaceCyclerImage.$inject = ['$rootScope', '$state', 'CyclerImages'];
   addWorkFab.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'CyclerImages'];
@@ -16,7 +20,102 @@
   uploadPicsModule.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'SelectedImages'];
   imageThumbnail.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'SelectedImages'];
   modelsInput.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'SelectedImages'];
+  editModelsInput.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'SelectedImages', 'EditImages'];
+  editPhotoWorkForm.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'SelectedImages', 'EditImages'];
+  editUploadPicsModule.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'SelectedImages', 'EditImages'];
+  editImageThumbnail.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'SelectedImages', 'EditImages'];
 
+
+  function editImageThumbnail ($rootScope, $state, $timeout, $mdDialog, SelectedImages, EditImages) {
+    var directive = {
+      restrict: 'E',
+      scope: {
+        coverImage: '=',
+        imageUrl: '='
+      },
+      link: function (scope) {
+        scope.setCoverImage = function (imageUrl) {
+          EditImages.setCoverImage(imageUrl);
+        };
+
+        scope.removeImage = function (imageUrl) {
+          EditImages.removeImage (imageUrl);
+        }
+      },
+      templateUrl: 'modules/bw-interface/client/views/edit-image-thumbnail.html'
+    };
+
+    return directive;
+  }
+
+  function editUploadPicsModule ($rootScope, $state, $timeout, $mdDialog, SelectedImages, EditImages) {
+    var directive = {
+      restrict: 'E',
+      scope: {
+        work: '='
+      },
+      link: function (scope) {
+        scope.serviceImages = EditImages.images;
+        scope.editSelected = function (files, badFiles) {
+          scope.files = files;
+          console.log("scope.files: ", scope.files);
+          for (var i = 0; i < scope.files.length; ++i) {
+            console.log("url: ", scope.files[i]['$ngfBlobUrl']);
+            EditImages.addNewImage(scope.files[i], scope.files[i]['$ngfBlobUrl'], false, false);
+          }
+        };
+      },
+      templateUrl: 'modules/bw-interface/client/views/edit-upload-pics-module.html'
+    };
+
+    return directive;
+  }
+
+  function editPhotoWorkForm ($rootScope, $state, $timeout, $mdDialog, SelectedImages, EditImages) {
+    var directive = {
+      restrict: 'E',
+      scope: {
+        work: '=',
+        editModelsInputModel: '='
+      },
+      link: function (scope) {
+        console.log("work is: ", scope.work);
+        console.log("editModelsInputModel is: ", scope.editModelsInputModel);
+
+      },
+      templateUrl: 'modules/bw-interface/client/views/edit-photo-work-form.html'
+    };
+
+    return directive;
+  }
+
+  function editModelsInput ($rootScope, $state, $timeout, $mdDialog, SelectedImages, EditImages) {
+    var directive = {
+      restrict: 'E',
+      scope: {
+        modelsFormInput: '=',
+        models: '='
+      },
+      link: function (scope) {
+        var i = 0;
+        scope.modelNumber = 0;
+        console.log("scope.models: " + scope.models);
+        console.log("scope.modelsFormInput: ", scope.modelsFormInput);
+        for (var model in scope.modelsFormInput) {
+          scope.modelsFormInput[model] = scope.models[i];
+          ++i;
+        }
+
+        scope.addModel = function () {
+          scope.models.push('');
+        }
+
+      },
+      templateUrl: 'modules/bw-interface/client/views/edit-models-input.html'
+    };
+
+    return directive;
+  }
 
   function modelsInput($rootScope, $state, $timeout, $mdDialog, SelectedImages){
     var directive = {

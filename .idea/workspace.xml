@@ -2,13 +2,100 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34662935-5a07-46a3-b620-329138995bb0" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Background Pictures/27c390a5-cab6-467f-9a17-e442d950d22b.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Background Pictures/5d45334b-1b78-468e-ba47-60a1c17ffd2f.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Background Pictures/6eb1c764-d97f-423e-a92e-56e8dca831b7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Background Pictures/7155ddcb-cb80-4c45-a907-ada9f9fbdff2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Background Pictures/bca7d372-dda9-4a29-b465-607771266713.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Background Pictures/e2ba4ec5-039b-4f90-9b60-3e9f8a9b1b8e.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Christian Matamoros Work/3a3bcf59-98c1-445c-b77d-f215df681543.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Christian Matamoros Work/497063f9-caff-4c02-89f2-5cb0bf50bef5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Christian Matamoros Work/78c7ed47-888b-41e3-a016-eaafc0a7aceb.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Christian Matamoros Work/a4299702-3923-44c8-8d88-09d667e0ff99.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Christy's 2nd Work/3cc23966-0c51-4bdf-a134-5367ae2eb774.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Christy's 2nd Work/52ff54cc-3884-404b-9c3d-6a6c6b2b1564.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Christy's 2nd Work/55a93992-a4d3-42e7-beb7-18881757f573.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Christy's 2nd Work/d91b3392-fab7-4cc7-a8c9-a362949265f1.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Christy's 2nd Work/e1dcf971-445a-4ac3-8f73-50cf963ddd30.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Christy's Work/6cb89013-a176-48df-a2bd-603b3bafe74f.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Christy's Work/83174ea6-417b-4714-af7d-ba7124bafb4f.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Christy's Work/95cb5b87-6321-4b3f-b5ba-eb1ac57c757c.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Christy's Work/a21f080f-6112-47bf-ba9c-a12836273c0f.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Josh's Work/14bff64d-ba50-426c-b8be-8419be27065a.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Josh's Work/821fa81e-e609-4c8d-ba53-c71f26c3be61.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Josh's Work/83b6b456-f196-42ae-875f-7b94bb463adc.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Josh's Work/88231986-201a-4988-aeaa-573b7c8b63d5.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Josh's Work/8f81138c-2879-441b-b80c-57f1b0f95c78.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Josh's Work/9c64a007-b405-4888-886c-af3180b4d4d9.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Josh's Work/c81f56a2-8e7c-4a20-93f1-12710a8621af.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Josh's Work/dd62a092-9293-4838-b4d3-04a3ecc21581.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Josh's Work/df2e0a32-08aa-483e-9647-32c21a1bc3a7.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Josh's Work/e317914e-b65a-421e-8e54-fddfeea48750.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/My new works/0f4b16eb-a02f-4f21-871f-029b19b0a4ca.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/My new works/39f62af1-5061-47e8-b24d-fb3921d46209.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/My new works/432f65ec-c91c-409e-b072-7c98f2eede6c.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/My photo work/1b5c9a49-1220-4693-950a-e708a1a0a83d.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/My photo work/6f5a0370-909c-4600-a329-2187183f2ac7.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/My photo work/a4b7f236-22c9-4dc3-bf68-4b55919e34c2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/My photo work/d70d9c2b-548d-4fbd-a710-f918b468b805.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/gdas/7f749be6-a3d6-4d4a-bb67-61c263ec0b59.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/gdas/c0732f99-2b36-4ac4-b810-17265683a4aa.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/gdas/d355c760-0222-4e43-a29c-b428259c558a.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/gdfsjjjyjyjyjyyj/13ba1d6a-f441-4856-a4ed-3bfee75c6c23.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/gdfsjjjyjyjyjyyj/b1d20845-0451-40d4-a6f0-28b549b93c53.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/gdfsjjjyjyjyjyyj/ed921a43-a0a0-4e6a-8493-a96d0a0bb758.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/gdsa/aa3b6221-8909-4806-88cd-6d58ad14183b.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/gdsa/d76db975-a375-4a5c-8070-60db42d19fe5.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/gdsa/dc937641-ebfc-4a7d-a4d9-763f06eee80b.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/gdsa/f29bda15-775d-44b6-ad98-08f4d08a664f.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/gdsahfghdfshfasasadsads/2304857f-c63c-4f59-bf88-0792362b674d.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/gdsahfghdfshfasasadsads/27baa5cf-96b1-474c-842c-0ee872ff6194.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/gdsahfghdfshfasasadsads/66681c1e-3e22-4b2b-8f2c-1b1bd75a8bf2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/gdsgregwsrtwertwertewrt/1f87a31c-d730-4892-82e8-806fa04585d8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/gdsgregwsrtwertwertewrt/5e039c6c-d71c-4c67-9c78-84b4182428e8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/gdsgregwsrtwertwertewrt/63d1a5de-7794-4104-8f48-27cc8584967d.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/gfdsh/35980ef6-6590-4198-9051-18db9fbcbc1f.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/gfdsh/738d90d6-b6c7-4afb-9033-5289a9e62179.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/gfdsh/82660b31-0caa-4e2a-8140-637f20b74d1c.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/gfdsh/f7ebed94-921b-4860-a9cb-a4ecccfcf975.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/ggdgdgwegawteaqwdgfearrg/4522f9ea-de93-45d7-9b24-b72f2bd99678.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/ggdgdgwegawteaqwdgfearrg/c1d48f04-ed9b-413c-93f6-d24e81d50fcf.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/ggdgdgwegawteaqwdgfearrg/cd443052-f3e7-490d-aaf0-91446773902f.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/gggg/11401c19-cbbf-4771-9472-33893c51d48e.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/gggg/2851c523-a4bc-4489-9df6-61703ab7241e.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/gggg/492680a9-bb75-467b-b14a-1ef021730548.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/gggg/4c1503eb-38d1-446b-9a7d-63ec885ece13.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/hfsdjjujujuuju/2d89c1eb-526c-4642-9673-726a8ab33e85.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/hfsdjjujujuuju/429d1f09-00b8-4762-8024-60d88ff4ddd1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/hfsdjjujujuuju/8a59b8fc-e52b-4a95-8b4b-2a19cc1d6522.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/hfsdjjujujuuju/f30e3c8b-97f2-4917-b024-c82a3ecb012b.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/hhghfdhewwweewwewewewe/34612af5-a47f-442f-aa7c-8c7100eb97bd.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/hhghfdhewwweewwewewewe/896140cc-710e-476b-9270-97d30eb6de35.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/hhghfdhewwweewwewewewe/d32c4cd2-8266-4587-9969-d47fb59ef553.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/hhghfdhewwweewwewewewe/e08e83ff-c07c-4c57-8d64-1f6fe07f10b3.PNG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/hhtyyhtyhyth/198d0c07-23bc-4c72-b7c0-4365df1dfb43.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/hhtyyhtyhyth/77df7f10-9d69-4b81-b8c7-a1bb3a95ee9d.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/hhtyyhtyhyth/88068c40-a49f-4263-9d76-06201441bc2c.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/qqqq/0d4dce60-ba3f-49b5-87d2-aa36ef2a2651.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/qqqq/d20f53c6-8a43-4515-82ba-5bc6a25b28c5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/qqqq/d97a3ec1-3ce1-4857-bddb-1941b6c728d3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/uuuuuuuuuuyy/50c66533-72cf-449b-adb5-069fbcda4601.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/uuuuuuuuuuyy/6730dc5a-5e1f-4903-8787-3339f130ead1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/uuuuuuuuuuyy/fc31b3de-d8bf-4909-97d4-b518ff3c963c.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/werer/2f4a2498-39c2-4f28-b185-b5618c22d93f.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/werer/35c9bec7-23eb-4417-8722-0db47ca2ad96.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/werer/8245fba3-9120-411a-a186-ca1a459d9007.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/bw-interface/client/css/bw-interface.css" afterPath="$PROJECT_DIR$/meanjs/modules/bw-interface/client/css/bw-interface.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/bw-interface/client/bw-interface.client.module.js" afterPath="$PROJECT_DIR$/meanjs/modules/bw-interface/client/bw-interface.client.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/bw-interface/client/controllers/bw-interface.client.controller.js" afterPath="$PROJECT_DIR$/meanjs/modules/bw-interface/client/controllers/bw-interface.client.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/bw-interface/client/directives/bw-interface.client.directives.js" afterPath="$PROJECT_DIR$/meanjs/modules/bw-interface/client/directives/bw-interface.client.directives.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/bw-interface/client/services/bw-interface.client.services.js" afterPath="$PROJECT_DIR$/meanjs/modules/bw-interface/client/services/bw-interface.client.services.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/bw-interface.client.view.html" afterPath="$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/bw-interface.client.view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/photo-works/client/directives/photo-works.client.directives.js" afterPath="$PROJECT_DIR$/meanjs/modules/photo-works/client/directives/photo-works.client.directives.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/photo-works/client/photo-works-client.module.js" afterPath="$PROJECT_DIR$/meanjs/modules/photo-works/client/photo-works-client.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/photo-works/client/services/photo-works.client.services.js" afterPath="$PROJECT_DIR$/meanjs/modules/photo-works/client/services/photo-works.client.services.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/photo-works/client/views/photo-work.html" afterPath="$PROJECT_DIR$/meanjs/modules/photo-works/client/views/photo-work.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/photo-works/server/controllers/photo-works.server.controller.js" afterPath="$PROJECT_DIR$/meanjs/modules/photo-works/server/controllers/photo-works.server.controller.js" />
     </list>
     <ignored path="oscar_portfolio.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,8 +118,8 @@
             <file leaf-file-name="bw-interface.server.controller.js" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/server/controllers/bw-interface.server.controller.js">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.7991407">
-                    <caret line="108" column="23" selection-start-line="108" selection-start-column="23" selection-end-line="108" selection-end-column="23" />
+                  <state vertical-scroll-proportion="0.06874329">
+                    <caret line="86" column="26" selection-start-line="86" selection-start-column="26" selection-end-line="86" selection-end-column="26" />
                     <folding />
                   </state>
                 </provider>
@@ -49,51 +136,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="photo-work.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/client/views/photo-work.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.9230769">
-              <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-              <folding>
-                <element signature="n#style#0;n#md-card-content#0;n#md-card#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#figure#0;n#a#0;n#md-card-content#0;n#md-card#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="photo-works.client.services.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/client/services/photo-works.client.services.js">
+      <file leaf-file-name="bw-interface.client.services.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/services/bw-interface.client.services.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+              <caret line="68" column="49" selection-start-line="68" selection-start-column="49" selection-end-line="68" selection-end-column="49" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="photo-works.client.controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/client/controllers/photo-works.client.controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view-photo-work.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/client/views/view-photo-work.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.115385">
-              <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
-              <folding>
-                <element signature="n#style#0;n#md-dialog#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#md-dialog-content#0;n#md-dialog#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#md-dialog-content#0;n#md-dialog#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#md-dialog-content#0;n#md-dialog#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#md-dialog-content#0;n#md-dialog#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -102,67 +150,101 @@
         <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/client/directives/photo-works.client.directives.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="90" column="118" selection-start-line="90" selection-start-column="118" selection-end-line="90" selection-end-column="118" />
+              <caret line="111" column="41" selection-start-line="111" selection-start-column="41" selection-end-line="111" selection-end-column="41" />
               <folding>
-                <marker date="1468974696746" expanded="true" signature="2823:3316" placeholder="..." />
-                <marker date="1468974696746" expanded="true" signature="2871:3272" placeholder="..." />
-                <marker date="1468974696746" expanded="true" signature="2875:3187" placeholder="..." />
+                <marker date="1469143195672" expanded="true" signature="6555:7048" placeholder="..." />
+                <marker date="1469143195672" expanded="true" signature="6603:7004" placeholder="..." />
+                <marker date="1469143195672" expanded="true" signature="6607:6919" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="photo-works-client.module.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/client/photo-works-client.module.js">
+      <file leaf-file-name="photo-works.server.controller.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/server/controllers/photo-works.server.controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.80748075">
+              <caret line="296" column="8" selection-start-line="296" selection-start-column="8" selection-end-line="296" selection-end-column="8" />
+              <folding>
+                <element signature="n#!!doc;n#syncWrites#0" expanded="false" />
+                <element signature="e#7752#9185#0" expanded="false" />
+                <element signature="e#10926#11264#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="photo-works.server.models.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/server/models/photo-works.server.models.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bw-interface.client.view.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/bw-interface.client.view.html">
+      <file leaf-file-name="photo-works.server.routes.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/server/routes/photo-works.server.routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-25.153847">
-              <caret line="51" column="14" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bw-interface.client.directives.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/directives/bw-interface.client.directives.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="58" column="53" selection-start-line="58" selection-start-column="53" selection-end-line="58" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit-models-input.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/edit-models-input.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.9615384">
+              <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
               <folding>
-                <element signature="n#style#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#md-button#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bw-interface.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/css/bw-interface.css">
+      <file leaf-file-name="edit-upload-pics-module.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/edit-upload-pics-module.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-29.076923">
-              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+            <state vertical-scroll-proportion="-7.1923075">
+              <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="work-image.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/client/views/work-image.html">
+      <file leaf-file-name="bw-interface.client.controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/controllers/bw-interface.client.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.65384614">
-              <caret line="1" column="56" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="101" column="48" selection-start-line="101" selection-start-column="48" selection-end-line="101" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit-photo-work.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/edit-photo-work.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.230769">
+              <caret line="8" column="68" selection-start-line="8" selection-start-column="68" selection-end-line="8" selection-end-column="68" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#md-dialog#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#md-dialog#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="photo-works.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/client/css/photo-works.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46636772">
-              <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -173,8 +255,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -184,11 +266,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/meanjs/public/lib/owasp-password-strength-test/owasp-password-strength-test.js" />
-        <option value="$PROJECT_DIR$/meanjs/modules/users/server/models/user.server.model.js" />
-        <option value="$PROJECT_DIR$/meanjs/modules/interface/client/views/interface.client.view.html" />
-        <option value="$PROJECT_DIR$/meanjs/modules/interface/client/config/interface.client.routes.js" />
-        <option value="$PROJECT_DIR$/meanjs/modules/interface/server/routes/interface.server.routes.js" />
         <option value="$PROJECT_DIR$/meanjs/modules/interface/server/controllers/interface.server.controller.js" />
         <option value="$PROJECT_DIR$/meanjs/modules/images/server/routes/images.server.routes.js" />
         <option value="$PROJECT_DIR$/meanjs/modules/interface/client/controllers/interface.client.controller.js" />
@@ -198,7 +275,6 @@
         <option value="$PROJECT_DIR$/meanjs/modules/images/client/images.client.module.js" />
         <option value="$PROJECT_DIR$/meanjs/config/assets/default.js" />
         <option value="$PROJECT_DIR$/meanjs/modules/core/client/core.client.module.js" />
-        <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/bw-interface.client.module.js" />
         <option value="$PROJECT_DIR$/meanjs/modules/cycler/client/controllers/SliderController.js" />
         <option value="$PROJECT_DIR$/meanjs/modules/cycler/client/views/image-slider.html" />
         <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/server/routes/bw-interface.server.routes.js" />
@@ -216,25 +292,31 @@
         <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/add-model-button.html" />
         <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/models-input.html" />
         <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/add-photo-work-form.html" />
-        <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/controllers/bw-interface.client.controller.js" />
         <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/upload-pics-module.html" />
-        <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/services/bw-interface.client.services.js" />
         <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/image-thumbnail.html" />
         <option value="$PROJECT_DIR$/meanjs/modules/photo-works/server/models/photo-works.server.models.js" />
-        <option value="$PROJECT_DIR$/meanjs/modules/photo-works/server/controllers/photo-works.server.controller.js" />
-        <option value="$PROJECT_DIR$/meanjs/modules/photo-works/client/services/photo-works.client.services.js" />
         <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/view-photo-work.html" />
-        <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/directives/bw-interface.client.directives.js" />
-        <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/bw-interface.client.view.html" />
         <option value="$PROJECT_DIR$/meanjs/modules/photo-works/client/controllers/photo-works.client.controller.js" />
         <option value="$PROJECT_DIR$/meanjs/modules/photo-works/client/views/work-images.html" />
         <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/css/bw-interface.css" />
-        <option value="$PROJECT_DIR$/meanjs/modules/photo-works/client/views/photo-work.html" />
-        <option value="$PROJECT_DIR$/meanjs/modules/photo-works/client/photo-works-client.module.js" />
         <option value="$PROJECT_DIR$/meanjs/modules/photo-works/client/views/work-image.html" />
         <option value="$PROJECT_DIR$/meanjs/modules/photo-works/client/views/view-photo-work.html" />
-        <option value="$PROJECT_DIR$/meanjs/modules/photo-works/client/directives/photo-works.client.directives.js" />
         <option value="$PROJECT_DIR$/meanjs/modules/photo-works/client/css/photo-works.css" />
+        <option value="$PROJECT_DIR$/meanjs/modules/photo-works/client/services/photo-works.client.services.js" />
+        <option value="$PROJECT_DIR$/meanjs/modules/photo-works/client/views/photo-work.html" />
+        <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/controllers/bw-interface.client.controller.js" />
+        <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/bw-interface.client.view.html" />
+        <option value="$PROJECT_DIR$/meanjs/modules/photo-works/client/photo-works-client.module.js" />
+        <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/bw-interface.client.module.js" />
+        <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/edit-image-thumbnail.html" />
+        <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/edit-upload-pics-module.html" />
+        <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/edit-photo-work-form.html" />
+        <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/edit-photo-work.html" />
+        <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/edit-models-input.html" />
+        <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/directives/bw-interface.client.directives.js" />
+        <option value="$PROJECT_DIR$/meanjs/modules/photo-works/client/directives/photo-works.client.directives.js" />
+        <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/services/bw-interface.client.services.js" />
+        <option value="$PROJECT_DIR$/meanjs/modules/photo-works/server/controllers/photo-works.server.controller.js" />
       </list>
     </option>
   </component>
@@ -244,10 +326,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-7" />
+    <option name="width" value="1179" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -366,7 +447,67 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="routes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oscar_portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oscar_portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meanjs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="photo-works" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oscar_portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oscar_portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meanjs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="photo-works" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -586,7 +727,281 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oscar_portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oscar_portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meanjs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="photo_works" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oscar_portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oscar_portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meanjs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="photo_works" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Background Pictures" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oscar_portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oscar_portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meanjs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oscar_portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oscar_portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meanjs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cycler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oscar_portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oscar_portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meanjs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cycler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oscar_portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oscar_portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meanjs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cycler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oscar_portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oscar_portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meanjs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cycler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oscar_portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oscar_portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meanjs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="bw-interface" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oscar_portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oscar_portfolio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meanjs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bw-interface" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -768,8 +1183,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -854,10 +1269,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="0" width="1179" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14739583" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2433362" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -882,72 +1297,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/controllers/bw-interface.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/services/bw-interface.client.services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="51" selection-start-line="62" selection-start-column="51" selection-end-line="62" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/directives/bw-interface.client.directives.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="56" column="48" selection-start-line="56" selection-start-column="48" selection-end-line="56" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/server/controllers/bw-interface.server.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/server/controllers/bw-interface.server.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/config/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/core/server/routes/core.server.routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/users/server/policies/admin.server.policy.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/meanjs/modules/users/server/routes/admin.server.routes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1060,24 +1414,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/cycler/client/views/image-slider.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/meanjs/modules/core/client/views/home.client.view.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.730769">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/cycler/client/controllers/SliderController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -1109,133 +1449,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/server/routes/photo-works.server.routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/image-thumbnail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384">
-          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/server/models/photo-works.server.models.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/server/controllers/photo-works.server.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/upload-pics-module.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075">
-          <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/add-photo-work-form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#md-content#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/controllers/bw-interface.client.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/directives/bw-interface.client.directives.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/services/bw-interface.client.services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="51" selection-start-line="62" selection-start-column="51" selection-end-line="62" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/client/views/photo-work.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9230769">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding>
-            <element signature="n#style#0;n#md-card-content#0;n#md-card#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#figure#0;n#a#0;n#md-card-content#0;n#md-card#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/client/services/photo-works.client.services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/bw-interface.client.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.153847">
-          <caret line="51" column="14" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#div#4;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/client/views/view-photo-work.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.115385">
-          <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
-          <folding>
-            <element signature="n#style#0;n#md-dialog#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-dialog-content#0;n#md-dialog#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#md-dialog-content#0;n#md-dialog#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#md-dialog-content#0;n#md-dialog#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#md-dialog-content#0;n#md-dialog#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/client/photo-works-client.module.js">
-      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
+          <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/css/bw-interface.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-29.076923">
+        <state vertical-scroll-proportion="0.0">
           <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1243,25 +1467,200 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.65384614">
           <caret line="1" column="56" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/client/css/photo-works.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.26923">
+          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/cycler/client/controllers/SliderController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/client/services/photo-works.client.services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="64" selection-start-line="33" selection-start-column="64" selection-end-line="33" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/cycler/client/views/image-slider.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8461537">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/client/views/photo-work.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.5">
+          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/cycler-image.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="62" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/client/photo-works-client.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="57" selection-start-line="3" selection-start-column="57" selection-end-line="3" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/models-input.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/bw-interface.client.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/bw-interface.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.0">
+          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-dialog#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#md-dialog#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-dialog#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#md-dialog#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/add-photo-work-form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.576923">
+          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/image-thumbnail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.423077">
+          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/client/controllers/photo-works.client.controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+          <caret line="16" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/server/controllers/bw-interface.server.controller.js">
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/upload-pics-module.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7991407">
-          <caret line="108" column="23" selection-start-line="108" selection-start-column="23" selection-end-line="108" selection-end-column="23" />
+        <state vertical-scroll-proportion="-7.1923075">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/edit-photo-work-form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="87" selection-start-line="0" selection-start-column="87" selection-end-line="0" selection-end-column="87" />
+          <folding>
+            <element signature="n#style#0;n#md-input-container#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#md-input-container#1;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/edit-image-thumbnail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.384615">
+          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/edit-photo-work.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.230769">
+          <caret line="8" column="68" selection-start-line="8" selection-start-column="68" selection-end-line="8" selection-end-column="68" />
+          <folding>
+            <element signature="n#style#0;n#md-dialog#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#md-dialog#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/edit-models-input.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9615384">
+          <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
+          <folding>
+            <element signature="n#style#0;n#md-button#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/controllers/bw-interface.client.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="101" column="48" selection-start-line="101" selection-start-column="48" selection-end-line="101" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/server/routes/photo-works.server.routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/edit-upload-pics-module.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.1923075">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/directives/bw-interface.client.directives.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="53" selection-start-line="58" selection-start-column="53" selection-end-line="58" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/server/models/photo-works.server.models.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -1269,20 +1668,40 @@
     <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/client/directives/photo-works.client.directives.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="90" column="118" selection-start-line="90" selection-start-column="118" selection-end-line="90" selection-end-column="118" />
+          <caret line="111" column="41" selection-start-line="111" selection-start-column="41" selection-end-line="111" selection-end-column="41" />
           <folding>
-            <marker date="1468974696746" expanded="true" signature="2823:3316" placeholder="..." />
-            <marker date="1468974696746" expanded="true" signature="2871:3272" placeholder="..." />
-            <marker date="1468974696746" expanded="true" signature="2875:3187" placeholder="..." />
+            <marker date="1469143195672" expanded="true" signature="6555:7048" placeholder="..." />
+            <marker date="1469143195672" expanded="true" signature="6603:7004" placeholder="..." />
+            <marker date="1469143195672" expanded="true" signature="6607:6919" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/client/css/photo-works.css">
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/services/bw-interface.client.services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46636772">
-          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="49" selection-start-line="68" selection-start-column="49" selection-end-line="68" selection-end-column="49" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/server/controllers/bw-interface.server.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06874329">
+          <caret line="86" column="26" selection-start-line="86" selection-start-column="26" selection-end-line="86" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/server/controllers/photo-works.server.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.80748075">
+          <caret line="296" column="8" selection-start-line="296" selection-start-column="8" selection-end-line="296" selection-end-column="8" />
+          <folding>
+            <element signature="n#!!doc;n#syncWrites#0" expanded="false" />
+            <element signature="e#7752#9185#0" expanded="false" />
+            <element signature="e#10926#11264#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

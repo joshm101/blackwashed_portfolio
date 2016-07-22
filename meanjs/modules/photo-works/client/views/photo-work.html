@@ -1,10 +1,16 @@
 <md-card>
+  <md-card-title>
+    <md-card-title-text>
+      <span class="md-headline">{{work.title}}</span>
+    </md-card-title-text>
+  </md-card-title>
   <md-card-content style="max-width: 400px; overflow: hidden;" layout-align="center center">
     <a href="#" class="photo-work-card-img" ng-click="showPhotoWork($event)">
       <figure><img layout-align="center center" style="height: auto;" ng-src="{{coverImageUrl}}"/></figure>
     </a>
   </md-card-content>
   <md-card-actions>
-    <md-button>photo work</md-button>
+    <md-button style="color: #d7392c;" ng-click="deletePhotoWork($event)">Delete</md-button>
+    <md-button style="color: #ffb300;" ng-click="editPhotoWork(work)">Edit</md-button>
   </md-card-actions>
 </md-card>

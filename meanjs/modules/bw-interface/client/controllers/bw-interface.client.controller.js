@@ -48,6 +48,8 @@
       }
     };
 
+    $scope.editedModelsFormInput = {};
+
     $scope.modelsFormInput = {};
     $scope.copyright = '';
     $scope.photoWorkTitle = '';

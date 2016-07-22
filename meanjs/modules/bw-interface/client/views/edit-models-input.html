@@ -1,0 +1,8 @@
+<div ng-repeat="model in models track by $index">
+  <md-input-container style="width: 100% !important;">
+    <label>Model</label>
+    <input type="text" ng-model="models[$index]">
+  </md-input-container>
+</div>
+
+<md-button ng-click="addModel()" style="margin-bottom: 35px;">Add Model</md-button>

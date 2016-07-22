@@ -1,0 +1,17 @@
+<input type="file" id="editUploadPhotosInput" style="display: none;" ngf-select="editSelected($files, $invalidFiles)" multiple accept="image/*" ngf-max-height="4000" ngf-max-size="10MB">
+
+<md-button class="md-primary" style="height: 15px !important; font-weight: normal !important;">
+  <label class="select-photos-label" for="editUploadPhotosInput">Choose Images</label>
+</md-button>
+
+
+<div layout="column">
+  <div layout="row" ng-repeat="image in serviceImages track by $index" ng-if="$index % 3 == 0">
+    <div layout="column" ng-repeat="i in [$index, $index + 1, $index + 2]" ng-if="serviceImages[i] != null">
+      <edit-image-thumbnail cover-image="serviceImages[i].coverImage"
+                            image-url="serviceImages[i].imageUrl"></edit-image-thumbnail>
+    </div>
+  </div>
+</div>
+
+
