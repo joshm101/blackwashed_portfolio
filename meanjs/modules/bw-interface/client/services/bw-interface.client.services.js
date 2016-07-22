@@ -152,8 +152,10 @@
                   for (var j = 0; j < service.serverImages.length; ++j) {
                     if (service.serverImages[j].imageUrl === service.images[1].imageUrl) {
                       console.log ('server cover image true');
+                      console.log ('j is: ', j);
                       console.log ('url: ', service.serverImages[j].imageUrl);
-                      service.chosenCoverImage = service.ServerImages[j].imageUrl;
+                      service.chosenCoverImage = service.serverImages[j].imageUrl;
+
                       service.serverImages[j].coverImage = true;
 
                     }

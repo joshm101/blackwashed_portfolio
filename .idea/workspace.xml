@@ -144,8 +144,8 @@
       <file leaf-file-name="bw-interface.client.services.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/services/bw-interface.client.services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44884488">
-              <caret line="164" column="79" selection-start-line="164" selection-start-column="79" selection-end-line="164" selection-end-column="79" />
+            <state vertical-scroll-proportion="0.5423542">
+              <caret line="172" column="59" selection-start-line="172" selection-start-column="59" selection-end-line="172" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -1593,8 +1593,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/services/bw-interface.client.services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44884488">
-          <caret line="164" column="79" selection-start-line="164" selection-start-column="79" selection-end-line="164" selection-end-column="79" />
+        <state vertical-scroll-proportion="0.5423542">
+          <caret line="172" column="59" selection-start-line="172" selection-start-column="59" selection-end-line="172" selection-end-column="59" />
           <folding />
         </state>
       </provider>
