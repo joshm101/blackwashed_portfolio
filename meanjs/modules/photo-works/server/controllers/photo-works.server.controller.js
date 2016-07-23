@@ -521,6 +521,8 @@ exports.editPhotoWork = function (req, res) {
 
               if (result === 'success') {
 
+
+
                 console.log ('theFiles: ', util.inspect (theFiles));
                 console.log ('changePhotoWorkTitle success');
                 var modulesPath = path.resolve(process.cwd(), 'modules');
@@ -543,7 +545,20 @@ exports.editPhotoWork = function (req, res) {
                       console.log ("error saving edit to DB: ", err);
                     } else {
                       console.log ("successfully saved edit to DB");
-                      return res.status (200).send ();
+                      var oldWorkPath = path.resolve (process.cwd (), 'modules');
+                      oldWorkPath = path.resolve (oldWorkPath, 'images/client/img/photo_works');
+                      oldWorkPath = path.resolve (oldWorkPath, oldTitle);
+                      rmdir (oldWorkPath, fs, function (err) {
+                        if (err) {
+                          console.log ("error dedleting old work path: ", err);
+                        } else {
+                          console.log ("successfully removed old work directory");
+                          imagesWritten = [];
+                          editImagesToSave = [];
+                          coverImageUrl = '';
+                          return res.status (200).send ();
+                        }
+                      });
                     }
                   });
                 } else {
@@ -554,8 +569,6 @@ exports.editPhotoWork = function (req, res) {
             changePhotoWorkTitle (newDirectory, workImagesPath, imagesPath,
                                   oldTitle, workTitle, serverImageObjects, callback);
 
-
-            console.log ("result is: ", result);
 
           } else {
 
