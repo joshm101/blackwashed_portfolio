@@ -2,58 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34662935-5a07-46a3-b620-329138995bb0" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work change/02692504-1e79-4288-9009-6579e8638129.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work change/42b91b0f-945a-41ab-87ca-02dbc51d7e0b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work change/6ad2cce2-421a-41b9-991c-0e05afafd5f9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work change/c5d43bc8-a356-4bd5-917b-68ab3634577f.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work/02692504-1e79-4288-9009-6579e8638129.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work/42b91b0f-945a-41ab-87ca-02dbc51d7e0b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work/6ad2cce2-421a-41b9-991c-0e05afafd5f9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work/c5d43bc8-a356-4bd5-917b-68ab3634577f.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work123124523525/02692504-1e79-4288-9009-6579e8638129.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work123124523525/42b91b0f-945a-41ab-87ca-02dbc51d7e0b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work123124523525/6ad2cce2-421a-41b9-991c-0e05afafd5f9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work123124523525/c5d43bc8-a356-4bd5-917b-68ab3634577f.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work1233243435/02692504-1e79-4288-9009-6579e8638129.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work1233243435/42b91b0f-945a-41ab-87ca-02dbc51d7e0b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work1233243435/6ad2cce2-421a-41b9-991c-0e05afafd5f9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work1233243435/c5d43bc8-a356-4bd5-917b-68ab3634577f.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work3213/02692504-1e79-4288-9009-6579e8638129.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work3213/42b91b0f-945a-41ab-87ca-02dbc51d7e0b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work3213/6ad2cce2-421a-41b9-991c-0e05afafd5f9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work3213/c5d43bc8-a356-4bd5-917b-68ab3634577f.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work324/02692504-1e79-4288-9009-6579e8638129.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work324/42b91b0f-945a-41ab-87ca-02dbc51d7e0b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work324/6ad2cce2-421a-41b9-991c-0e05afafd5f9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work324/c5d43bc8-a356-4bd5-917b-68ab3634577f.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work33/02692504-1e79-4288-9009-6579e8638129.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work33/42b91b0f-945a-41ab-87ca-02dbc51d7e0b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work33/6ad2cce2-421a-41b9-991c-0e05afafd5f9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work33/c5d43bc8-a356-4bd5-917b-68ab3634577f.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work451/02692504-1e79-4288-9009-6579e8638129.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work451/42b91b0f-945a-41ab-87ca-02dbc51d7e0b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work451/6ad2cce2-421a-41b9-991c-0e05afafd5f9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work451/c5d43bc8-a356-4bd5-917b-68ab3634577f.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work545232/02692504-1e79-4288-9009-6579e8638129.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work545232/42b91b0f-945a-41ab-87ca-02dbc51d7e0b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work545232/6ad2cce2-421a-41b9-991c-0e05afafd5f9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work545232/c5d43bc8-a356-4bd5-917b-68ab3634577f.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work55553/02692504-1e79-4288-9009-6579e8638129.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work55553/42b91b0f-945a-41ab-87ca-02dbc51d7e0b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work55553/6ad2cce2-421a-41b9-991c-0e05afafd5f9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work55553/c5d43bc8-a356-4bd5-917b-68ab3634577f.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work65437/02692504-1e79-4288-9009-6579e8638129.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work65437/42b91b0f-945a-41ab-87ca-02dbc51d7e0b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work65437/6ad2cce2-421a-41b9-991c-0e05afafd5f9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work65437/c5d43bc8-a356-4bd5-917b-68ab3634577f.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work77889890/02692504-1e79-4288-9009-6579e8638129.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work77889890/42b91b0f-945a-41ab-87ca-02dbc51d7e0b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work77889890/6ad2cce2-421a-41b9-991c-0e05afafd5f9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work77889890/c5d43bc8-a356-4bd5-917b-68ab3634577f.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work987654321/02692504-1e79-4288-9009-6579e8638129.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work987654321/42b91b0f-945a-41ab-87ca-02dbc51d7e0b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work987654321/6ad2cce2-421a-41b9-991c-0e05afafd5f9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Another work987654321/c5d43bc8-a356-4bd5-917b-68ab3634577f.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Background 3/28e3c1bd-d67c-475a-96ea-e175a2f11a4e.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Background 3/65fca046-c37e-49bb-80aa-5d845e8ee1ac.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Background 3/a181bcad-3e05-4248-9927-ed1dacc0a9a6.jpg" afterPath="" />
@@ -89,14 +37,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Christy's Work/a21f080f-6112-47bf-ba9c-a12836273c0f.PNG" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Christy's Work/a30dbf2f-3064-43d9-b1e9-c396bf331054.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Christy's Work/a8a10ac3-e166-4130-9037-07f2a4594d6b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Christy's Work1211211/4cf9be4e-7fce-4adf-8241-b41ec049dbe9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Christy's Work1211211/9d20eb05-7490-4ddf-a748-90e00ea56a89.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Josh's Work Christy Edit 1/3c9e8c7f-465e-4544-8826-360ba211d8d3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Josh's Work Christy Edit 1/42b882d8-a04d-4243-9a51-2aca32382211.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Josh's Work Christy Edit 1/9a803ed1-6251-4282-866d-ba7c4557bd1c.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Josh's Work Christy Edit 1/c7688984-6f19-4769-b404-743f298538e5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Josh's Work Christy Edit 1/caa7d369-77a8-43fd-ba00-b7d84f5ceb2d.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Josh's Work Christy Edit 1/f602971c-276e-4987-9f41-927946a6df40.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Josh's Work Christy Edit 1256/0a50e652-9b2a-4f77-bd22-f7701fe31f0e.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Josh's Work Christy Edit 1256/375eb7c4-9c26-40ad-9319-c395dcb568cb.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/photo_works/Josh's Work Christy Edit 1256/3a427fdc-e468-4b48-8163-62763a844ee3.jpg" afterPath="" />
@@ -317,11 +257,10 @@
       <file leaf-file-name="photo-works.server.controller.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/server/controllers/photo-works.server.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.82613635">
-              <caret line="546" column="48" selection-start-line="546" selection-start-column="48" selection-end-line="546" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.75795454">
+              <caret line="484" column="74" selection-start-line="484" selection-start-column="74" selection-end-line="484" selection-end-column="74" />
               <folding>
                 <element signature="n#!!doc;n#syncWrites#0" expanded="false" />
-                <element signature="e#10165#11598#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -855,40 +794,6 @@
               <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="photo_works" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="oscar_portfolio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="oscar_portfolio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="meanjs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1322,9 +1227,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="985" height="1047" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29205367" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29205367" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1731,11 +1636,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/server/controllers/photo-works.server.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.82613635">
-          <caret line="546" column="48" selection-start-line="546" selection-start-column="48" selection-end-line="546" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.75795454">
+          <caret line="484" column="74" selection-start-line="484" selection-start-column="74" selection-end-line="484" selection-end-column="74" />
           <folding>
             <element signature="n#!!doc;n#syncWrites#0" expanded="false" />
-            <element signature="e#10165#11598#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -258,6 +258,8 @@ function syncEditWrites (filesToWrite, workingPath, workTitle, postText, models,
       }
     });
   } else {
+    console.log("filesToWrite.length: ", filesToWrite.length);
+    console.log("coverImages.length: ", coverImages.length);
     var currentFile = filesToWrite.pop();
     var currentCover = coverImages.pop();
 
@@ -463,6 +465,8 @@ exports.editPhotoWork = function (req, res) {
               }
 
               if (result === 'success') {
+
+                console.log("coverImages right before syncEditWrites: ", coverImages);
                 syncEditWrites (theFiles, workImagesPath, workTitle, postText, models, copyright, coverImages, res);
               }
             };
@@ -476,7 +480,9 @@ exports.editPhotoWork = function (req, res) {
             // that were uploaded (if any). Newly uploaded images
             // will be pushed onto editImagesToSave array on write
             editImagesToSave = serverImageObjects;
-            syncEditWrites (theFiles, workImagesPath, workTitle, models, copyright, coverImages, res);
+            var coverImages = fields['newImages[coverImage]'];
+            console.log("coverImages right before syncEditWrites (no new title): ", coverImages);
+            syncEditWrites (theFiles, workImagesPath, workTitle, postText, models, copyright, coverImages, res);
           }
         }
       });
@@ -556,7 +562,7 @@ exports.editPhotoWork = function (req, res) {
                           imagesWritten = [];
                           editImagesToSave = [];
                           coverImageUrl = '';
-                          return res.status (200).send ();
+                          return res.status (200).send (work);
                         }
                       });
                     }
