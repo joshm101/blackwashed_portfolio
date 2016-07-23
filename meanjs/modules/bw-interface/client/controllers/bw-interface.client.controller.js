@@ -54,6 +54,8 @@
     $scope.copyright = '';
     $scope.photoWorkTitle = '';
 
+    $scope.postText = '';
+
 
     $scope.upload = function (file) {
       console.log("file is: " + JSON.stringify(file));
@@ -83,6 +85,7 @@
 
     $scope.submitPhotoWork = function (event) {
       console.log("submitting");
+      console.log("postText: ", $scope.postText);
       console.log("modeslFormInput: " + JSON.stringify($scope.modelsFormInput));
       console.log("copyright: " + $scope.copyright);
       console.log("photoWorkTitle: " + $scope.photoWorkTitle);
@@ -115,6 +118,7 @@
         arrayKey: '',
         data: {
           file: SelectedImages.images,
+          postText: $scope.postText,
           workTitle: $scope.photoWorkTitle,
           copyright: $scope.copyright,
           models: modelsArray

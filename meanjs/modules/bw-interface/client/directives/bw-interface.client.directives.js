@@ -208,7 +208,8 @@
       scope: {
         modelsFormInput: '=',
         copyright: '=',
-        photoWorkTitle: '='
+        photoWorkTitle: '=',
+        postText: '='
       },
       link: function(scope) {
         console.log("ok");

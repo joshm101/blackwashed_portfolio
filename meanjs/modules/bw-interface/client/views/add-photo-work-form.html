@@ -6,6 +6,11 @@
         <input ng-model="photoWorkTitle">
       </md-input-container>
       <models-input models-form-input="modelsFormInput"></models-input>
+
+      <md-input-container class="md-block">
+        <label>Work Info</label>
+        <textarea ng-model="postText" ng-maxlength="500" rows="4"></textarea>
+      </md-input-container>
       <!--
       <md-input-container style="margin-top: 0px !important;">
         <md-button ng-click="addModel($event)">Add Model</md-button>

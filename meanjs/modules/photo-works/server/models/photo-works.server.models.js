@@ -19,6 +19,9 @@ var photoWorksSchema = new Schema ({
   }],
   coverImageUrl: {
     type: String
+  },
+  postText : {
+    type: String
   }
 });
 

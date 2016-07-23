@@ -54,6 +54,8 @@ html{
 	opacity: 1;
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translateZ(0) scale(1.0, 1.0);
 }
 
 .photo-work-card-img figure:hover img{

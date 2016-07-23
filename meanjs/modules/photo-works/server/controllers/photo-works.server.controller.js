@@ -44,6 +44,7 @@ exports.addPhotoWork = function (req, res) {
       var imagesPath = path.resolve(modulesPath, 'images/client/img/photo_works');
       var workTitle = fields.workTitle[0];
       var copyright = fields.copyright[0];
+      var postText = fields.postText[0];
       var workImagesPath = path.resolve (imagesPath, workTitle);
 
       console.log('workImagesPath: ' + workImagesPath);
@@ -64,7 +65,7 @@ exports.addPhotoWork = function (req, res) {
           console.log("successfully created the images directory");
           // once the directory has been created, enter the recursive
           // function syncWrites to write the images to workImagesPath
-          syncWrites(theFiles, workImagesPath, workTitle, models, copyright, coverImages, false, res);
+          syncWrites(theFiles, workImagesPath, workTitle, postText, models, copyright, coverImages, false, res);
         }
       });
     }
@@ -101,7 +102,7 @@ var editImagesToSave = [];
  *
  **/
 
-function syncWrites(filesToWrite, workingPath, workTitle, models, copyright, coverImages, edit, res) {
+function syncWrites(filesToWrite, workingPath, workTitle, postText, models, copyright, coverImages, edit, res) {
   var currentFile = filesToWrite.pop();
   var currentCover = coverImages.pop();
   var imageObject = {
@@ -148,7 +149,7 @@ function syncWrites(filesToWrite, workingPath, workTitle, models, copyright, cov
 
             // the array filesToWrite is not empty,
             // so continue recursion
-            syncWrites(filesToWrite, workingPath, workTitle, models, copyright, coverImages, edit, res);
+            syncWrites(filesToWrite, workingPath, workTitle, postText, models, copyright, coverImages, edit, res);
           } else {
             if (edit === false) {
               console.log("imagesWritten: " + imagesWritten);
@@ -164,6 +165,7 @@ function syncWrites(filesToWrite, workingPath, workTitle, models, copyright, cov
                 models: models,
                 copyright: copyright,
                 images: imagesWritten,
+                postText: postText,
                 coverImageUrl: coverImageUrl} );
 
               work.save (function (err) {
@@ -205,7 +207,7 @@ function syncDeletes (filesToDelete) {
   })
 }
 
-function syncEditWrites (filesToWrite, workingPath, workTitle, models, copyright, coverImages, res) {
+function syncEditWrites (filesToWrite, workingPath, workTitle, postText, models, copyright, coverImages, res) {
   // no new images to write.
   if (filesToWrite.length === 0 || typeof filesToWrite === 'undefined') {
     PhotoWorks.findById (identifier, function (err, work) {
@@ -219,6 +221,7 @@ function syncEditWrites (filesToWrite, workingPath, workTitle, models, copyright
         work.title = workTitle;
         work.models = models;
         work.copyright = copyright;
+        work.postText = postText;
         work.images = editImagesToSave;
         work.coverImageUrl = chosenCoverImage;
         work.save (function (err) {
@@ -290,7 +293,7 @@ function syncEditWrites (filesToWrite, workingPath, workTitle, models, copyright
               console.log("coverImageUrl: ", coverImageUrl);
             }
             imagesWritten.push(imageObject);
-            syncEditWrites (filesToWrite, workingPath, workTitle, models, copyright, coverImages, res);
+            syncEditWrites (filesToWrite, workingPath, workTitle, postText, models, copyright, coverImages, res);
           }
         });
       }
@@ -430,9 +433,11 @@ exports.editPhotoWork = function (req, res) {
       var coverImages = fields['newImages[coverImage]'];
       var models = fields['models'];
       var copyright = fields['copyright'];
+      var postText = fields['postText'][0];
       var edit = true;
       identifier = fields['identifier'];
       console.log("copyright: ", copyright);
+      console.log("postText: ", postText);
       console.log ("models: ", models);
       console.log("workImagesPath: ", workImagesPath);
       console.log("coverImages: ", coverImages);
@@ -458,7 +463,7 @@ exports.editPhotoWork = function (req, res) {
               }
 
               if (result === 'success') {
-                syncEditWrites (theFiles, workImagesPath, workTitle, models, copyright, coverImages, res);
+                syncEditWrites (theFiles, workImagesPath, workTitle, postText, models, copyright, coverImages, res);
               }
             };
 
@@ -523,6 +528,7 @@ exports.editPhotoWork = function (req, res) {
                 var workTitle = fields['workTitle'][0];
                 var workImagesPath = path.resolve (imagesPath, workTitle);
                 var coverImages = fields['newImages[coverImage]'];
+                var postText = fields['postText'][0];
                 var models = fields['models'];
                 var copyright = fields['copyright'][0];
                 if (typeof theFiles === 'undefined') {
@@ -531,6 +537,7 @@ exports.editPhotoWork = function (req, res) {
                   work.copyright = copyright;
                   work.images = serverImageObjects;
                   work.coverImageUrl = chosenCoverImage;
+                  work.postText = postText;
                   work.save (function (err) {
                     if (err) {
                       console.log ("error saving edit to DB: ", err);
@@ -540,7 +547,7 @@ exports.editPhotoWork = function (req, res) {
                     }
                   });
                 } else {
-                  syncEditWrites (theFiles, workImagesPath, workTitle, models, copyright, coverImages, res);
+                  syncEditWrites (theFiles, workImagesPath, workTitle, postText, models, copyright, coverImages, res);
                 }
               }
             };
@@ -560,9 +567,12 @@ exports.editPhotoWork = function (req, res) {
             // in this editPhotoWork funtion.
             var models = fields['models'];
             var copyright = fields['copyright'][0];
+            var postText = fields['postText'][0];
+            console.log("postText title still the same: ", postText);
             work.models = models;
             work.copyright = copyright;
             work.images= serverImageObjects;
+            work.postText = postText;
             work.coverImageUrl = chosenCoverImage;
             work.save (function (err) {
               if (err) {

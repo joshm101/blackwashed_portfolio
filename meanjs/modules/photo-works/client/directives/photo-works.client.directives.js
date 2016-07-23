@@ -148,6 +148,7 @@
               var oldModels = $scope.work.models;
               var model = modelsModel;
               var workTitle = $scope.work.title;
+              var postText = $scope.work.postText;
               var copyright = $scope.work.copyright;
 
               console.log("modelsModel dialog show: ", modelsModel);
@@ -164,6 +165,7 @@
                 work.title = workTitle;
                 work.copyright = copyright;
                 work.models = oldModels;
+                work.postText = postText;
                 $scope.modelsModel = model;
                 $mdDialog.cancel();
               };
@@ -177,6 +179,7 @@
                 console.log("submit edited work");
                 console.log("work.models: ", work.models);
                 console.log("work.title: ", work.title);
+                console.log("work.postText: ", work.postText);
                 console.log("EditImages.chosenCoverImage: ", EditImages.chosenCoverImage);
                 console.log("EditImages.images: ", EditImages.images);
                 console.log("EditImages.newImages: ", EditImages.newImages);
@@ -205,6 +208,7 @@
                     // the edit
                     imagesToDelete: EditImages.imagesToDelete,
                     workTitle: work.title,
+                    postText: work.postText,
                     copyright: work.copyright,
                     models: work.models
                   }
