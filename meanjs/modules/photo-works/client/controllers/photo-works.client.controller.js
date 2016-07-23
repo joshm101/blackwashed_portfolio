@@ -12,8 +12,10 @@
   function PhotoWorksController ($scope, $rootScope, Upload, $mdDialog, $mdToast,
                                  $http, CyclerImages, SelectedImages, PhotoWorks) {
 
-    $scope.$on( 'photoWorks.update', function (event) {
+    $scope.$on('photoWorks.update', function (event) {
       $scope.photoWorks = PhotoWorks.photoWorks;
     });
+
+
   }
 }());

@@ -6,7 +6,7 @@
     .directive('viewPhotoWork', viewPhotoWork)
     .directive('workImage', workImage);
 
-  photoWork.$inject = ['$rootScope', '$http', '$mdDialog', '$mdMedia', 'PhotoWorks', 'EditImages', 'Upload'];
+  photoWork.$inject = ['$rootScope', '$http', '$mdDialog', '$mdMedia', '$mdToast', 'PhotoWorks', 'EditImages', 'Upload'];
   viewPhotoWork.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', '$mdMedia', 'SelectedImages', 'PhotoWorks'];
   workImage.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', '$mdMedia', 'SelectedImages', 'PhotoWorks'];
 
@@ -41,14 +41,17 @@
     return directive;
   }
 
-  function photoWork ($rootScope, $http, $mdDialog, $mdMedia, PhotoWorks, EditImages, Upload) {
+  function photoWork ($rootScope, $http, $mdDialog, $mdMedia, $mdToast, PhotoWorks, EditImages, Upload) {
     var directive = {
       restrict: 'E',
       scope: {
         coverImageUrl: '=',
         work: '='
       },
-      link: function (scope) {
+      link: function (scope, $mdToast) {
+
+
+
         scope.coverImage = PhotoWorks.coverImage;
         scope.customFullscreen = $mdMedia('xs') || $mdMedia('sm');
         scope.editPhotoWork = function (work) {
@@ -102,12 +105,50 @@
               modelsModel: scope.modelsModel,
               modelNumber: scope.modelNumber
             },
-            controller: function ($scope, $mdDialog, work, modelsModel, modelNumber, models) {
+            controller: function ($scope, $rootScope, $mdDialog, $mdToast, work, modelsModel, modelNumber, models) {
+
+              var last = {
+                bottom: false,
+                top: true,
+                left: false,
+                right: true
+              };
+              $scope.toastPosition = angular.extend({},last);
+              $scope.getToastPosition = function() {
+                sanitizePosition();
+                return Object.keys($scope.toastPosition)
+                  .filter(function(pos) { return $scope.toastPosition[pos]; })
+                  .join(' ');
+              };
+              function sanitizePosition() {
+                var current = $scope.toastPosition;
+                if ( current.bottom && last.top ) current.top = false;
+                if ( current.top && last.bottom ) current.bottom = false;
+                if ( current.right && last.left ) current.left = false;
+                if ( current.left && last.right ) current.right = false;
+                last = angular.extend({},current);
+              }
+              $scope.showSimpleToast = function(error) {
+                var pinTo = $scope.getToastPosition();
+                if (error === 'images') {
+                  $mdToast.show(
+                    $mdToast.simple()
+                      .textContent('Please add at least one image.')
+                      .position(pinTo )
+                      .hideDelay(3000)
+                  );
+                }
+              };
 
               // set up scope variables for controller/dialog scope.
               $scope.work = work;
               $scope.models = models;
               $scope.modelsModel = modelsModel;
+
+              var oldModels = $scope.work.models;
+              var model = modelsModel;
+              var workTitle = $scope.work.title;
+              var copyright = $scope.work.copyright;
 
               console.log("modelsModel dialog show: ", modelsModel);
 
@@ -119,8 +160,20 @@
                 $scope.modelsModel.push( {name: 'model_' + ++modelNumber} )
               };
 
+              $scope.cancelEdit = function (event) {
+                work.title = workTitle;
+                work.copyright = copyright;
+                work.models = oldModels;
+                $scope.modelsModel = model;
+                $mdDialog.cancel();
+              };
+
               // submit edits for updating photo work on back end.
               $scope.submitEditedWork = function (event) {
+                if (EditImages.images.length === 0) {
+                  $scope.showSimpleToast('images');
+                  return;
+                }
                 console.log("submit edited work");
                 console.log("work.models: ", work.models);
                 console.log("work.title: ", work.title);
