@@ -2,18 +2,18 @@
   'use strict';
 
   angular
-    .module('bw-interface', ['ngFileUpload', 'ngMaterial', 'core', 'photoWorks'])
+    .module('bw-interface', ['ngFileUpload', 'ngMaterial', 'core', 'photoWorks', 'videoWorks'])
     .controller('InterfaceController', InterfaceController);
     // .controller('fabController', fabController);
 
   InterfaceController.$inject = ['$scope', '$rootScope', 'Upload', '$mdDialog',
                                  '$mdToast', '$http', 'CyclerImages',
-                                 'SelectedImages', 'PhotoWorks'];
+                                 'SelectedImages', 'PhotoWorks', 'VideoWorks'];
   // fabController.$inject = ['$scope', '$rootScope', '$mdDialog', '$http', '$timeout'];
 
   function InterfaceController ($scope, $rootScope, Upload, $mdDialog,
                                 $mdToast, $http, CyclerImages,
-                                SelectedImages, PhotoWorks) {
+                                SelectedImages, PhotoWorks, VideoWorks) {
 
     var last = {
       bottom: false,
@@ -54,6 +54,13 @@
     $scope.copyright = '';
     $scope.photoWorkTitle = '';
 
+    $scope.castFormInput = {};
+    $scope.videoWorkTitle = '';
+    $scope.videoUrl = '';
+    $scope.directedByFormInput = {};
+    $scope.editedByFormInput = {};
+    $scope.videoCoverImage = [];
+
     $scope.postText = '';
 
 
@@ -71,9 +78,71 @@
       console.log("initializePage()");
       CyclerImages.getCyclerImages();
       PhotoWorks.getPhotoWorks();
+      VideoWorks.getVideoWorks();
     };
 
     $scope.deleteImage = function () {
+
+    };
+
+    $scope.submitVideoWork = function () {
+      console.log("submitting video work");
+      console.log ('postText: ', $scope.postText);
+      console.log ('castFormInput: ', $scope.castFormInput);
+      console.log ('copyright: ', $scope.copyright);
+      console.log ('videoWorkTitle: ', $scope.videoWorkTitle);
+      console.log ('editorFormInput: ', $scope.editedByFormInput);
+      console.log ('directorFormInput: ', $scope.directedByFormInput);
+      console.log ('videoUrl: ', $scope.videoUrl);
+
+      console.log ('videoCoverImage: ', $rootScope.videoCoverImage);
+
+
+
+
+
+      var castArray = [];
+      for (var member in $scope.castFormInput) {
+        castArray.push ($scope.castFormInput[member]);
+      }
+
+      var directorArray = [];
+      for (var director in $scope.directedByFormInput) {
+        directorArray.push ($scope.directedByFormInput[director]);
+      }
+
+      var editorArray = [];
+      for (var editor in $scope.editedByFormInput) {
+        editorArray.push ($scope.editedByFormInput[editor]);
+      }
+
+      var coverImageFile = $rootScope.videoCoverImage;
+
+
+      var videoWork = {
+        title: $scope.videoWorkTitle,
+        cast: castArray,
+        directedBy: directorArray,
+        editedBy: editorArray,
+        workInfo: $scope.postText,
+        copyright: $scope.copyright,
+        videoUrl: $scope.videoUrl
+      };
+      Upload.upload({
+        url: '/api/video_works/add_video_work',
+        arrayKey: '',
+        data: {
+          file: coverImageFile,
+          videoWork: JSON.stringify (videoWork)
+        }
+      }).then (function (resp) {
+        console.log("Success: ", resp);
+        $mdDialog.hide();
+      }, function (resp) {
+        console.log ("Error: ", resp);
+      }, function (evt) {
+        console.log ('progress: ', evt);
+      });
 
     };
 
@@ -106,8 +175,6 @@
         modelsArray.push(models[model]);
       }
 
-      $mdDialog.hide();
-
       // upload inputted fields including pictures
       Upload.upload({
         url: '/api/photo_works/add_photo_work',
@@ -127,6 +194,7 @@
         console.log("Success: " + resp);
         console.log(JSON.stringify(resp.data));
         PhotoWorks.addPhotoWork(resp.data);
+        $mdDialog.hide();
 
       }, function (resp) {
         console.log("error status: " + resp.status);
@@ -148,6 +216,13 @@
       var temp = PhotoWorks.photoWorks;
       $scope.photoWorksArray = temp;
       console.log('$scope.photoWorksArray = ' + $scope.photoWorksArray);
+    });
+
+    $scope.$on ( 'videoWorks.update', function (event) {
+      console.log ("scope.on videoWorks.update");
+      var temp = VideoWorks.videoWorks;
+      $scope.videoWorksArray = temp;
+      console.log ('$scope.videoWorksArray: ', $scope.videoWorksArray);
     });
   }
 

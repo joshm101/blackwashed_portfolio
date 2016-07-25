@@ -465,7 +465,15 @@ exports.editPhotoWork = function (req, res) {
               }
 
               if (result === 'success') {
-
+                var modulesPath = path.resolve(process.cwd(), 'modules');
+                var imagesPath = path.resolve(modulesPath, 'images/client/img/photo_works');
+                var workTitle = fields['workTitle'][0];
+                var workImagesPath = path.resolve (imagesPath, workTitle);
+                var coverImages = fields['newImages[coverImage]'];
+                var postText = fields['postText'][0];
+                var models = fields['models'];
+                var copyright = fields['copyright'][0];
+                console.log ('workTitle: ', workTitle);
                 console.log("coverImages right before syncEditWrites: ", coverImages);
                 syncEditWrites (theFiles, workImagesPath, workTitle, postText, models, copyright, coverImages, res);
               }

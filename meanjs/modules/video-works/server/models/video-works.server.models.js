@@ -21,6 +21,12 @@ var videoWorksSchema = new Schema ({
   },
   copyright: {
     type: String
+  },
+  workInfo: {
+    type: String
+  },
+  coverImageUrl: {
+    type: String
   }
 
 });

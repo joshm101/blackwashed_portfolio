@@ -1,0 +1,9 @@
+<input type="file" id="uploadCoverInput" style="display: none;" ngf-select="selectedCoverImage($file)" accept="image/*" ngf-max-height="4000" ngf-max-size="10MB">
+
+<md-button class="md-primary" style="height: 15px !important; font-weight: normal !important;">
+  <label class="select-photos-label" for="uploadCoverInput">Choose Cover Image</label>
+</md-button>
+
+<div ng-if="coverImage.length !== 0">
+  <cover-image-thumbnail image-url="coverImage[0].$ngfBlobUrl"></cover-image-thumbnail>
+</div>

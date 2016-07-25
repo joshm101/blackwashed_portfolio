@@ -1,0 +1,14 @@
+<div layout="row" flex="100" ng-repeat="director in directors track by $index" ng-if="$index % 2 === 0">
+  <div layout="column" flex="50" ng-repeat="i in [$index, $index + 1]" ng-if="directors[i] != null">
+    <md-input-container ng-if="$index % 2 === 0" style="margin-right: 10px;">
+      <label>Director</label>
+      <input ng-model="directors[i]">
+    </md-input-container>
+    <md-input-container div ng-if="$index % 2 !== 0">
+      <label>Director</label>
+      <input ng-model="directors[i]">
+    </md-input-container>
+  </div>
+</div>
+
+<md-button ng-click="addDirector()" style="margin-bottom: 35px;">Add Director</md-button>

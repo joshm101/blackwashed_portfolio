@@ -31,7 +31,7 @@
     <div class="md-dialog-container" id="myDialog">
       <md-dialog layout-padding flex="70" style="max-height: 80%;">
         <h3 style="margin-bottom: 20px;">Add Photo Work</h3>
-        <md-dialog-content>
+        <md-dialog-content style="background-color: white;">
           <add-photo-work-form models-form-input="modelsFormInput"
                                copyright="copyright"
                                photo-work-title="photoWorkTitle"
@@ -45,10 +45,34 @@
   </div>
 
   <div style="visibility: hidden">
+    <div class="md-dialog-container" id="addVideoWorkDialog">
+      <md-dialog layout-padding flex="70" style="max-height: 80%;">
+        <h3 style="margin-bottom: 20px;">Add Video Work</h3>
+        <md-dialog-content style="background-color: white;">
+          <add-video-work-form work-title="videoWorkTitle"
+                               video-url="videoUrl"
+                               copyright="copyright"
+                               post-text="postText"
+                               cast-form-input="castFormInput"
+                               editor-form-input="editedByFormInput"
+                               director-form-input="directedByFormInput"
+                               video-cover-image="videoCoverImage">
+
+          </add-video-work-form>
+
+        </md-dialog-content>
+        <md-dialog-actions>
+          <md-button class="md-primary" ng-click="submitVideoWork()">Submit</md-button>
+        </md-dialog-actions>
+      </md-dialog>
+    </div>
+  </div>
+
+  <div style="visibility: hidden">
     <div class="md-dialog-container" id="editFormDialog">
       <md-dialog layout-padding flex="70" style="max-height: 80%;">
         <h3 style="margin-bottom: 20px;">Edit Photo Work</h3>
-        <md-dialog-content>
+        <md-dialog-content style="background-color: white !important;">
           <edit-photo-work-form work="photoWorksArray[i]"></edit-photo-work-form>
         </md-dialog-content>
       </md-dialog>
@@ -56,15 +80,38 @@
   </div>
 
 
-  <div style="margin-left: 25%; margin-right: 25%;">
-    <div layout="column" layout-align="center start">
-      <div layout="row" ng-repeat="work in photoWorksArray track by $index" ng-if="$index % 2 === 0">
-        <div layout="column" ng-repeat="i in [$index, $index + 1]" ng-if="photoWorksArray[i] != null">
-          <photo-work work="photoWorksArray[i]" cover-image-url="photoWorksArray[i].coverImageUrl"></photo-work>
+  <div layout-align="center center">
+    <div layout="row" flex="100">
+
+      <div style="margin-left: 10%;" flex="50">
+        <div style="margin-bottom: 20px;" layout="row" layout-align="center center">
+          <h1>Photo Works</h1>
+        </div>
+        <div layout="column" layout-align="center start">
+          <div layout="row" ng-repeat="work in photoWorksArray track by $index" ng-if="$index % 2 === 0">
+            <div layout="column" ng-repeat="i in [$index, $index + 1]" ng-if="photoWorksArray[i] != null">
+              <photo-work work="photoWorksArray[i]" cover-image-url="photoWorksArray[i].coverImageUrl"></photo-work>
+            </div>
+          </div>
         </div>
       </div>
+
+      <div style="margin-right: 10%;" flex="50">
+        <div style="margin-bottom: 20px;" layout="row" layout-align="center center">
+          <h1>Video Works</h1>
+        </div>
+        <div layout="column" layout-align="center start">
+          <div layout="row" ng-repeat="work in videoWorksArray track by $index" ng-if="$index % 2 === 0">
+            <div layout="column" ng-repeat="i in [$index, $index + 1]" ng-if="videoWorksArray[i] != null">
+              <video-work work="videoWorksArray[i]"></video-work>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
+
 
   <div id="viewPhotoWorkContainer" ng-cloak></div>
 

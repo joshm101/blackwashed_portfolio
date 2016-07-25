@@ -44,8 +44,12 @@ html{
 	background-color: white;
 }
 
+.work-card-title{
+	font-size: 20px !important;
+}
+
 .photo-work-card-img{
-	max-width: 80%;
+	max-width: 100%;
 	display: block;
 	margin: 0 auto;
 }
@@ -59,6 +63,28 @@ html{
 }
 
 .photo-work-card-img figure:hover img{
+
+	opacity: 0.65;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translateZ(0) scale(1.0, 1.0);
+
+}
+
+.video-work-card-img{
+	max-width: 100%;
+	display: block;
+	margin: 0 auto;
+}
+
+.video-work-card-img img{
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translateZ(0) scale(1.0, 1.0);
+}
+
+.video-work-card-img figure:hover img{
 
 	opacity: 0.65;
 	-webkit-backface-visibility: hidden;

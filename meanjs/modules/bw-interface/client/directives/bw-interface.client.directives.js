@@ -3,16 +3,28 @@
 
   angular
     .module('bw-interface')
-    .directive('interfaceCyclerImage', interfaceCyclerImage)
-    .directive('addWorkFab', addWorkFab)
-    .directive('addPhotoWorkForm', addPhotoWorkForm)
-    .directive('uploadPicsModule', uploadPicsModule)
-    .directive('imageThumbnail', imageThumbnail)
-    .directive('modelsInput', modelsInput)
-    .directive('editModelsInput', editModelsInput)
-    .directive('editPhotoWorkForm', editPhotoWorkForm)
-    .directive('editUploadPicsModule', editUploadPicsModule)
-    .directive('editImageThumbnail', editImageThumbnail);
+    .directive ('interfaceCyclerImage', interfaceCyclerImage)
+    .directive ('addWorkFab', addWorkFab)
+    .directive ('addPhotoWorkForm', addPhotoWorkForm)
+    .directive ('uploadPicsModule', uploadPicsModule)
+    .directive ('imageThumbnail', imageThumbnail)
+    .directive ('modelsInput', modelsInput)
+    .directive ('editModelsInput', editModelsInput)
+    .directive ('editPhotoWorkForm', editPhotoWorkForm)
+    .directive ('editUploadPicsModule', editUploadPicsModule)
+    .directive ('editImageThumbnail', editImageThumbnail)
+    .directive ('addVideoWorkForm', addVideoWorkForm)
+    .directive ('castInput', castInput)
+    .directive ('directorInput', directorInput)
+    .directive ('editorInput', editorInput)
+    .directive ('uploadCoverImage', uploadCoverImage)
+    .directive ('coverImageThumbnail', coverImageThumbnail)
+    .directive ('editVideoWorkForm', editVideoWorkForm)
+    .directive ('editVideoCoverImage', editVideoCoverImage)
+    .directive ('editCastInput', editCastInput)
+    .directive ('editDirectorsInput', editDirectorsInput)
+    .directive ('editEditorsInput', editEditorsInput)
+    .directive ('editCoverImageThumbnail', editCoverImageThumbnail);
 
   interfaceCyclerImage.$inject = ['$rootScope', '$state', 'CyclerImages'];
   addWorkFab.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'CyclerImages'];
@@ -24,7 +36,280 @@
   editPhotoWorkForm.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'SelectedImages', 'EditImages'];
   editUploadPicsModule.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'SelectedImages', 'EditImages'];
   editImageThumbnail.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'SelectedImages', 'EditImages'];
+  addVideoWorkForm.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog'];
+  castInput.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog'];
+  directorInput.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog'];
+  editorInput.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog'];
+  uploadCoverImage.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'VideoCoverImage'];
+  coverImageThumbnail.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'VideoCoverImage'];
+  editVideoWorkForm.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'VideoCoverImage'];
+  editVideoCoverImage.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'VideoCoverImage'];
+  editCastInput.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'VideoCoverImage'];
+  editDirectorsInput.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'VideoCoverImage'];
+  editEditorsInput.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'VideoCoverImage'];
+  editCoverImageThumbnail.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'VideoCoverImage'];
 
+  function editCoverImageThumbnail ($rootScope, $state, $timeout, $mdDialog, VideoCoverImage) {
+    var directive = {
+      restrict: 'E',
+      scope: {
+        imageUrl: '='
+      },
+      link: function (scope) {
+
+      },
+      templateUrl: 'modules/bw-interface/client/views/edit-cover-image-thumbnail.html'
+    };
+
+    return directive;
+  }
+
+  function editVideoCoverImage ($rootScope, $state, $timeout, $mdDialog, VideoCoverImage) {
+    var directive = {
+      restrict: 'E',
+      scope: {
+        work: '='
+      },
+      link: function (scope) {
+        scope.coverImage = [];
+        scope.coverImageUrl = scope.work.coverImageUrl;
+        console.log("scope.coverImageUrl: ", scope.coverImageUrl);
+        scope.selectedCoverImage = function (file) {
+          if (file !== null){
+            console.log("file is: ", file);
+            scope.imageSelected = file;
+            VideoCoverImage.addImage (file);
+            scope.coverImageUrl = VideoCoverImage.image[0]['$ngfBlobUrl'];
+            $rootScope.videoCoverImage = VideoCoverImage.image;
+          }
+        };
+
+        $rootScope.$on ( 'VideoCoverImage.update', function () {
+          scope.coverImageUrl = VideoCoverImage.image[0]['$ngfBlobUrl'];
+          $rootScope.videoCoverImage = VideoCoverImage.image;
+        })
+      },
+      templateUrl: 'modules/bw-interface/client/views/edit-video-cover-image.html'
+    };
+
+    return directive;
+  }
+
+  function editVideoWorkForm ($rootScope, $state, $timeout, $mdDialog, VideoCoverImage) {
+    var directive = {
+      restrict: 'E',
+      scope: {
+        work: '=',
+        editCastInputModel: '=',
+        editDirectorsInputModel: '=',
+        editEditorsInputModel: '='
+      },
+      link: function (scope) {
+
+      },
+      templateUrl: 'modules/bw-interface/client/views/edit-video-work-form.html'
+    };
+
+    return directive;
+  }
+
+  function coverImageThumbnail ($rootScope, $state, $timeout, $mdDialog, VideoCoverImage) {
+    var directive = {
+      restrict: 'E',
+      scope: {
+        imageUrl: '='
+      },
+      link: function (scope) {
+        scope.removeImage = function (imageUrl) {
+          VideoCoverImage.removeImage();
+        }
+      },
+      templateUrl: 'modules/bw-interface/client/views/cover-image-thumbnail.html'
+    };
+
+    return directive;
+  }
+
+  function uploadCoverImage ($rootScope, $state, $timeout, $mdDialog, VideoCoverImage) {
+    var directive = {
+      restrict: 'E',
+      scope: {},
+      link: function (scope) {
+        scope.coverImage = [];
+        scope.selectedCoverImage = function (file) {
+          console.log("file is: ", file);
+          scope.imageSelected = file;
+          VideoCoverImage.addImage (file);
+          scope.coverImage = VideoCoverImage.image;
+          $rootScope.videoCoverImage = VideoCoverImage.image;
+        };
+
+        $rootScope.$on ( 'VideoCoverImage.update', function () {
+          scope.coverImage = VideoCoverImage.image;
+          $rootScope.videoCoverImage = VideoCoverImage.image;
+        })
+      },
+      templateUrl: 'modules/bw-interface/client/views/upload-cover-image.html'
+    };
+
+    return directive;
+  }
+
+  function editorInput ($rootScope, $state, $timeout, $mdDialog) {
+    var directive = {
+      restrict: 'E',
+      scope: {
+        editorFormInput: '='
+      },
+      link: function (scope) {
+        scope.editorNumber = 0;
+        scope.editors = [{name: 'editor_' + scope.editorNumber}];
+        scope.addEditor = function () {
+          scope.editors.push({name: 'editor_' + ++scope.editorNumber});
+        }
+      },
+      templateUrl: 'modules/bw-interface/client/views/editor-input.html'
+    };
+
+    return directive;
+  }
+
+  function directorInput ($rootScope, $state, $timeout, $mdDialog) {
+    var directive = {
+      restrict: 'E',
+      scope: {
+        directorFormInput: '='
+      },
+      link: function (scope) {
+        scope.directorNumber = 0;
+        scope.directors = [{name: 'director_' + scope.directorNumber}];
+        scope.addDirector = function () {
+          scope.directors.push({name: 'director_' + ++scope.directorNumber});
+        }
+      },
+      templateUrl: 'modules/bw-interface/client/views/director-input.html'
+    };
+
+    return directive;
+  }
+
+  function castInput ($rootScope, $state, $timeout, $mdDialog) {
+    var directive = {
+      restrict: 'E',
+      scope: {
+        castFormInput: '='
+      },
+      link: function (scope) {
+
+        scope.castNumber = 0;
+        scope.castMembers = [{name: 'cast_' + scope.castNumber}];
+        scope.addCastMember = function () {
+          scope.castMembers.push({name: 'cast_' + ++scope.castNumber});
+          console.log(scope.modelsFormInput);
+        }
+      },
+      templateUrl: 'modules/bw-interface/client/views/cast-input.html'
+
+    };
+
+    return directive;
+  }
+
+  function editEditorsInput ($rooTscope, $state, $timeout, $mdDialog) {
+    var directive = {
+      restrict: 'E',
+      scope: {
+        editorsFormInput: '=',
+        editors: '='
+      },
+      link: function (scope) {
+        var i = 0;
+        scope.editorNumber = 0;
+        for (var editor in scope.editorsFormInput) {
+          scope.editorsFormInput[editor] = scope.editors[i];
+          ++i;
+        }
+
+        scope.addEditor = function () {
+          scope.editors.push('');
+        };
+      },
+      templateUrl: 'modules/bw-interface/client/views/edit-editors-input.html'
+    };
+
+    return directive;
+  }
+
+  function editDirectorsInput ($rootScope, $state, $timeout, $mdDialog) {
+    var directive = {
+      restrict: 'E',
+      scope: {
+        directorsFormInput: '=',
+        directors: '='
+      },
+      link: function (scope) {
+        var i = 0;
+        scope.directorNumber = 0;
+        for (var director in scope.directorsFormInput) {
+          scope.directorsFormInput[director] = scope.directors[i];
+          ++i;
+        }
+        scope.addDirector = function () {
+          scope.directors.push('');
+        };
+      },
+      templateUrl: 'modules/bw-interface/client/views/edit-directors-input.html'
+    };
+
+    return directive;
+  }
+
+  function editCastInput ($rootScope, $state, $timeout, $mdDialog) {
+    var directive = {
+      restrict: 'E',
+      scope: {
+        castFormInput: '=',
+        cast: '='
+      },
+      link: function (scope) {
+        var i = 0;
+        scope.castNumber = 0;
+        console.log ("scope.cast: ", scope.cast);
+        for (var member in scope.castFormInput) {
+          scope.castFormInput[member] = scope.cast[i];
+          ++i;
+        }
+        scope.addCastMember = function() {
+          scope.cast.push('');
+        };
+      },
+      templateUrl: 'modules/bw-interface/client/views/edit-cast-input.html'
+    };
+
+    return directive;
+  }
+
+  function addVideoWorkForm ($rootScope, $state, $timeout, $mdDialog) {
+    var directive = {
+      restrict: 'E',
+      scope: {
+        workTitle: '=',
+        videoUrl: '=',
+        postText: '=',
+        copyright: '=',
+        editorFormInput: '=',
+        castFormInput: '=',
+        directorFormInput: '=',
+        videoCoverImage: '='
+      },
+      link: function (scope) {
+
+      },
+      templateUrl: 'modules/bw-interface/client/views/add-video-work-form.html'
+    };
+
+    return directive;
+  }
 
   function editImageThumbnail ($rootScope, $state, $timeout, $mdDialog, SelectedImages, EditImages) {
     var directive = {
@@ -226,28 +511,38 @@
       link: function (scope, $timeout) {
         console.log("ok");
 
-        //scope.fabController = function ($rootScope, $mdDialog, $timeout) {
-          var self = this;
-          self.hidden = false;
-          self.isOpen = false;
-          self.hover = false;
+
+        var self = this;
+        self.hidden = false;
+        self.isOpen = false;
+        self.hover = false;
 
 
-          scope.items = [
-            { name: 'Add Photo Work', direction: 'right', icon: 'photo_camera'},
-            { name: 'Add Video Work', direction: 'right', icon: 'videocam' }
-          ];
+        scope.items = [
+          { name: 'Add Photo Work', direction: 'right', icon: 'photo_camera'},
+          { name: 'Add Video Work', direction: 'right', icon: 'videocam' }
+        ];
 
-          scope.addPhotoWorkDialog = function (ev) {
-            $mdDialog.show({
-              controller: DialogController,
-              contentElement: '#myDialog',
-              parent: angular.element(document.body),
-              targetEvent: ev,
-              clickOutsideToClose: true
-            });
-          };
-        //};
+        scope.addPhotoWorkDialog = function (ev) {
+          $mdDialog.show({
+            controller: DialogController,
+            contentElement: '#myDialog',
+            parent: angular.element(document.body),
+            targetEvent: ev,
+            clickOutsideToClose: true
+          });
+        };
+
+        scope.addVideoWorkDialog = function (ev) {
+          $mdDialog.show({
+            controller: DialogController,
+            contentElement: '#addVideoWorkDialog',
+            parent: angular.element(document.body),
+            targetEvent: ev,
+            clickOutsideToClose: true
+          });
+        };
+
 
         function DialogController($rootScope, $mdDialog) {
           $rootScope.hide = function() {

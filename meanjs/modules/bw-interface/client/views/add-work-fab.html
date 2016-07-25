@@ -10,7 +10,14 @@
     </md-fab-trigger>
     <md-fab-actions>
       <div ng-repeat="item in items">
-        <md-button aria-label="{{item.name}}" ng-click="addPhotoWorkDialog($event)" class="md-fab md-raised md-mini">
+        <md-button ng-if="item.name == 'Add Photo Work'" aria-label="{{item.name}}" ng-click="addPhotoWorkDialog($event)" class="md-fab md-raised md-mini">
+          <md-tooltip md-direction="{{item.direction}}" md-visible="tooltipVisible"
+                      md-autohide="false">
+            {{item.name}}
+          </md-tooltip>
+          <md-icon class="material-icons">{{item.icon}}</md-icon>
+        </md-button>
+        <md-button ng-if="item.name == 'Add Video Work'" aria-label="{{item.name}}" ng-click="addVideoWorkDialog($event)" class="md-fab md-raised md-mini">
           <md-tooltip md-direction="{{item.direction}}" md-visible="tooltipVisible"
                       md-autohide="false">
             {{item.name}}

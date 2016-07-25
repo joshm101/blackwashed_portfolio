@@ -7,13 +7,34 @@
     .service('SelectedImages', SelectedImages)
     .service('ServerImages', ServerImages)
     .service('NewImages', NewImages)
-    .service('EditImages', EditImages);
+    .service('EditImages', EditImages)
+    .service('VideoCoverImage', VideoCoverImage);
 
   CyclerImages.$inject = ['$rootScope', '$http', 'Upload'];
   SelectedImages.$inject = ['$rootScope', '$http', 'Upload'];
   ServerImages.$inject = ['$rootScope', '$http', 'Upload'];
   NewImages.$inject = ['$rootScope', '$http', 'Upload'];
   EditImages.$inject = ['$rootScope', '$http', 'Upload'];
+  VideoCoverImage.$inject = ['$rootScope', '$http', 'Upload'];
+
+  function VideoCoverImage ($rootScope, $http, Upload) {
+    var service = {
+      image: [],
+      removeImage: function () {
+        service.image = [];
+        console.log("removeCoverImage service function");
+        console.log("service.image is: ", service.image);
+        $rootScope.$broadcast ( 'VideoCoverImage.update' );
+      },
+      addImage: function (file) {
+        service.image = [];
+        service.image.push (file);
+        $rootScope.$broadcast ( 'VideoCoverImage.update' );
+      }
+    };
+
+    return service;
+  }
 
   function NewImages ($rootScope, $http, Upload) {
     var service = {

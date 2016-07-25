@@ -1,0 +1,35 @@
+<md-content layout-padding style="background-color: white !important;">
+  <div>
+    <form name="addVideoWorkForm" layout="column">
+
+      <md-input-container>
+        <label>Title</label>
+        <input type="text" ng-model="workTitle">
+      </md-input-container>
+
+      <cast-input cast-form-input="castFormInput"></cast-input>
+
+      <director-input director-form-input="directorFormInput"></director-input>
+
+      <editor-input editor-form-input="editorFormInput"></editor-input>
+
+      <md-input-container class="md-block">
+        <label>Work Info</label>
+        <textarea ng-model="postText" ng-maxlength="500" rows="4"></textarea>
+      </md-input-container>
+
+      <md-input-container>
+        <label>Copyright</label>
+        <input type="text" ng-model="copyright">
+      </md-input-container>
+
+      <md-input-container>
+        <label>Video URL</label>
+        <input type="text" ng-model="videoUrl">
+      </md-input-container>
+
+      <upload-cover-image></upload-cover-image>
+
+    </form>
+  </div>
+</md-content>
