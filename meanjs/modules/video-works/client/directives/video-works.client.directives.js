@@ -3,14 +3,33 @@
 
   angular
     .module ('videoWorks')
-    .directive("videoWork", videoWork);
+    .directive("videoWork", videoWork)
+    .directive ("viewVideoWork", viewVideoWork);
 
   videoWork.$inject = ['$rootScope', '$http', '$timeout', '$mdDialog', '$mdMedia',
-                       '$mdToast', 'VideoWorks', 'VideoCoverImage', 'Upload'];
+                       '$mdToast', '$sce', 'VideoWorks', 'VideoCoverImage', 'Upload'];
+  viewVideoWork.$inject = ['$rootScope', '$http', '$timeout', '$mdDialog',
+                           '$mdMedia', '$mdToast', '$sce', 'VideoWorks', 'VideoCoverImage',
+                           'Upload'];
 
+  function viewVideoWork ($rootScope, $http, $timeout, $mdDialog, $mdMedia,
+                          $mdToast, $sce, VideoWorks, VideoCoverImage, Upload) {
+    var directive = {
+      restrict: 'E',
+      scope: {
+        work: '='
+      },
+      link: function (scope) {
+
+      },
+      templateUrl: 'modules/video-works/client/views/view-video-work.html'
+    };
+
+    return directive;
+  }
 
   function videoWork ($rootScope, $http, $timeout, $mdDialog, $mdMedia,
-                      $mdToast, VideoWorks, VideoCoverImage, Upload) {
+                      $mdToast, $sce, VideoWorks, VideoCoverImage, Upload) {
     var directive = {
       restrict: 'E',
       scope: {
@@ -19,8 +38,86 @@
       link: function (scope) {
         scope.customFullscreen = $mdMedia('xs') || $mdMedia ('sm');
         scope.coverImageUrl = scope.work.coverImageUrl;
-        scope.showVideoWork = function () {
+        scope.showVideoWork = function (ev) {
           console.log ('showVideoWork()');
+
+          var useFullScreen = ($mdMedia ('sm') || $mdMedia ('xs'))
+                              && scope.customFullscreen;
+          $rootScope.currentWork = scope.work;
+          $mdDialog.show ({
+            controller: function (scope, $mdDialog, $sce, work) {
+
+              console.log ('dialog controller');
+
+              // thanks to
+              // http://stackoverflow.com/a/23945027
+              function extractDomain(url) {
+                var domain;
+                //find & remove protocol (http, ftp, etc.) and get domain
+                if (url.indexOf("://") > -1) {
+                  domain = url.split('/')[2];
+                }
+                else {
+                  domain = url.split('/')[0];
+                }
+
+                //find & remove port number
+                domain = domain.split(':')[0];
+
+                return domain;
+              }
+
+              var domain = extractDomain (work.videoUrl);
+
+              console.log ("domain is: ", domain);
+
+              if (domain === 'youtube.com' ||
+                  domain === 'www.youtube.com') {
+
+                console.log ('youtube domain');
+                scope.domain = 'youtube';
+                var videoUrl = work.videoUrl.replace ("watch?v=", "embed/");
+                scope.videoUrl = $sce.trustAsResourceUrl (videoUrl);
+                console.log ("work.videoUrl: ", work.videoUrl);
+                console.log("scope.videoUrl: ", scope.videoUrl);
+              }
+
+              if (domain === 'vimeo.com' ||
+                  domain === 'www.vimeo.com') {
+                //player.vimeo.com/video/175738725
+                console.log ('vimeo domain');
+                var vimeoId = work.videoUrl.substring (
+                                  work.videoUrl.lastIndexOf('/') + 1);
+                var videoUrl = '//player.vimeo.com/video/' + vimeoId;
+                scope.videoUrl = $sce.trustAsResourceUrl (videoUrl);
+                console.log ("vimeo id:", vimeoId);
+                scope.domain = 'vimeo';
+
+                scope.vimeoId = vimeoId;
+              }
+
+              $rootScope.hide = function () {
+                $mdDialog.hide();
+              };
+
+              scope.cancel = function () {
+                $mdDialog.cancel();
+              };
+
+              $rootScope.answer = function (answer) {
+                $mdDialog.hide (answer);
+              }
+            },
+            locals: {
+              work: scope.work
+            },
+            templateUrl: 'modules/video-works/client/views/view-video-work.html',
+            parent: angular.element (document.body),
+            targetEvent: ev,
+            autoWrap: false,
+            clickOutsideToClose: true,
+            fullscreen: useFullScreen
+          });
         };
 
         scope.deleteVideoWork = function (work) {

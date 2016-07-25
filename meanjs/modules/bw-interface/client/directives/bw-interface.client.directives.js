@@ -26,6 +26,7 @@
     .directive ('editEditorsInput', editEditorsInput)
     .directive ('editCoverImageThumbnail', editCoverImageThumbnail);
 
+
   interfaceCyclerImage.$inject = ['$rootScope', '$state', 'CyclerImages'];
   addWorkFab.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'CyclerImages'];
   addPhotoWorkForm.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog'];
@@ -48,6 +49,7 @@
   editDirectorsInput.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'VideoCoverImage'];
   editEditorsInput.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'VideoCoverImage'];
   editCoverImageThumbnail.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'VideoCoverImage'];
+
 
   function editCoverImageThumbnail ($rootScope, $state, $timeout, $mdDialog, VideoCoverImage) {
     var directive = {
