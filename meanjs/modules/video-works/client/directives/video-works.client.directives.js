@@ -31,6 +31,9 @@
           scope.castModel = [];
           scope.directorsModel = [];
           scope.editorsModel = [];
+          scope.editors = scope.work.editedBy;
+          scope.directors = scope.work.directedBy;
+          scope.cast = scope.work.cast;
 
           console.log("scope.work is: ", scope.work);
 
@@ -111,23 +114,40 @@
               };
 
               $scope.work = work;
-              $scope.cast = cast;
-              $scope.editors = editors;
-              $scope.directors = directors;
+              $scope.cast = work.cast;
+              $scope.editors = work.editedBy;
+              $scope.directors = work.directedBy;
               $scope.castModel = castModel;
               $scope.editorsModel = editorsModel;
               $scope.directorsModel = directorsModel;
 
+
               var oldWorkTitle = work.title;
-              var oldCast = cast;
-              var oldEditors = editors;
-              var oldDirectors = directors;
+              console.log('oldWorkTitle: ', oldWorkTitle);
+              var oldCast = work.cast;
+              console.log("oldCast: ", oldCast);
+              var oldVideoUrl = work.videoUrl;
+              var oldEditors = work.editedBy;
+              var oldDirectors = work.directedBy;
+              var oldCopyright = work.copyright;
+              var oldWorkInfo = work.workInfo;
+              var oldCastModel = castModel;
+              var oldEditorsModel = editorsModel;
+              var oldDirectorsModel = directorsModel;
 
               $scope.cancelEdit = function () {
+                console.log("oldWorkTitle: ", oldWorkTitle);
+                console.log("oldCast: ", oldCast);
                 work.title = oldWorkTitle;
                 work.cast = oldCast;
                 work.editedBy = oldEditors;
                 work.directedBy = oldDirectors;
+                work.videoUrl = oldVideoUrl;
+                work.copyright = oldCopyright;
+                work.workInfo = oldWorkInfo;
+                $scope.castModel = oldCastModel;
+                $scope.directorsModel = oldDirectorsModel;
+                $scope.editorsModel = oldEditorsModel;
                 $mdDialog.cancel();
               };
 

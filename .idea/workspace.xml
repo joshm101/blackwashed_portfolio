@@ -136,6 +136,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/edit-photo-work.html" afterPath="$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/edit-photo-work.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/photo-works/client/views/photo-work.html" afterPath="$PROJECT_DIR$/meanjs/modules/photo-works/client/views/photo-work.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/photo-works/server/controllers/photo-works.server.controller.js" afterPath="$PROJECT_DIR$/meanjs/modules/photo-works/server/controllers/photo-works.server.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/video-works/client/directives/video-works.client.directives.js" afterPath="$PROJECT_DIR$/meanjs/modules/video-works/client/directives/video-works.client.directives.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/video-works/server/controllers/video-works.server.controller.js" afterPath="$PROJECT_DIR$/meanjs/modules/video-works/server/controllers/video-works.server.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/video-works/server/models/video-works.server.models.js" afterPath="$PROJECT_DIR$/meanjs/modules/video-works/server/models/video-works.server.models.js" />
     </list>
@@ -208,20 +209,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="video-works.client.directives.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="video-works.client.directives.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/meanjs/modules/video-works/client/directives/video-works.client.directives.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="126" column="42" selection-start-line="126" selection-start-column="42" selection-end-line="126" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.65456545">
+              <caret line="146" column="44" selection-start-line="146" selection-start-column="44" selection-end-line="146" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bw-interface.client.directives.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bw-interface.client.directives.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/directives/bw-interface.client.directives.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.559956">
+            <state vertical-scroll-proportion="0.0">
               <caret line="81" column="54" selection-start-line="81" selection-start-column="54" selection-end-line="81" selection-end-column="54" />
               <folding>
                 <element signature="e#10114#10550#0" expanded="false" />
@@ -368,11 +369,11 @@
         <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/edit-directors-input.html" />
         <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/edit-editors-input.html" />
         <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/edit-cover-image.html" />
-        <option value="$PROJECT_DIR$/meanjs/modules/video-works/client/directives/video-works.client.directives.js" />
         <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/edit-video-work-form.html" />
         <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/edit-cover-image-thumbnail.html" />
         <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/edit-video-cover-image.html" />
         <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/directives/bw-interface.client.directives.js" />
+        <option value="$PROJECT_DIR$/meanjs/modules/video-works/client/directives/video-works.client.directives.js" />
       </list>
     </option>
   </component>
@@ -1949,14 +1950,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/edit-video-work-form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.307692">
-          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/edit-cover-image-thumbnail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.2692308">
@@ -1964,14 +1957,6 @@
           <folding>
             <element signature="n#style#0;n#md-card#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/video-works/client/directives/video-works.client.directives.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="126" column="42" selection-start-line="126" selection-start-column="42" selection-end-line="126" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1991,9 +1976,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/edit-video-work-form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.307692">
+          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/directives/bw-interface.client.directives.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.559956">
+        <state vertical-scroll-proportion="0.0">
           <caret line="81" column="54" selection-start-line="81" selection-start-column="54" selection-end-line="81" selection-end-column="54" />
           <folding>
             <element signature="e#10114#10550#0" expanded="false" />
@@ -2001,6 +1994,14 @@
             <element signature="e#11241#11918#0" expanded="false" />
             <element signature="e#12019#12420#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/video-works/client/directives/video-works.client.directives.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65456545">
+          <caret line="146" column="44" selection-start-line="146" selection-start-column="44" selection-end-line="146" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>
