@@ -5,10 +5,12 @@
     .module ('videoWorks')
     .directive("videoWork", videoWork);
 
-  videoWork.$inject = ['$rootScope', '$http', '$timeout', '$mdDialog', '$mdMedia', '$mdToast', 'VideoWorks', 'VideoCoverImage'];
+  videoWork.$inject = ['$rootScope', '$http', '$timeout', '$mdDialog', '$mdMedia',
+                       '$mdToast', 'VideoWorks', 'VideoCoverImage', 'Upload'];
 
 
-  function videoWork ($rootScope, $http, $timeout, $mdDialog, $mdMedia, $mdToast, VideoWorks, VideoCoverImage) {
+  function videoWork ($rootScope, $http, $timeout, $mdDialog, $mdMedia,
+                      $mdToast, VideoWorks, VideoCoverImage, Upload) {
     var directive = {
       restrict: 'E',
       scope: {
@@ -21,8 +23,9 @@
           console.log ('showVideoWork()');
         };
 
-        scope.deleteVideoWork = function () {
+        scope.deleteVideoWork = function (work) {
           console.log ('deleteVideoWork()');
+          VideoWorks.deleteVideoWork (work);
         };
 
         scope.editVideoWork = function () {
@@ -75,11 +78,12 @@
               directors: scope.directors,
               castModel: scope.castModel,
               directorsModel: scope.directorsModel,
-              editorsModel: scope.editorsModel
+              editorsModel: scope.editorsModel,
+              coverImageUrl: scope.coverImageUrl
             },
             controller: function ($scope, $rootScope, $mdDialog, $mdToast,
                                   work, cast, editors, directors,
-                                  castModel, editorsModel, directorsModel) {
+                                  castModel, editorsModel, directorsModel, coverImageUrl) {
               var last = {
                 bottom: false,
                 top: true,
@@ -138,10 +142,13 @@
               $scope.cancelEdit = function () {
                 console.log("oldWorkTitle: ", oldWorkTitle);
                 console.log("oldCast: ", oldCast);
+                console.log ('$scope.cast: ', $scope.cast);
+                console.log ("$scope.directors: ", $scope.directors);
+                console.log ("$scope.editors: ", $scope.editors);
                 work.title = oldWorkTitle;
-                work.cast = oldCast;
-                work.editedBy = oldEditors;
-                work.directedBy = oldDirectors;
+                work.cast = $scope.cast;
+                work.editedBy = $scope.editors;
+                work.directedBy = $scope.directors;
                 work.videoUrl = oldVideoUrl;
                 work.copyright = oldCopyright;
                 work.workInfo = oldWorkInfo;
@@ -152,13 +159,65 @@
               };
 
               $scope.selectedCoverImage = function (file) {
-
+                VideoCoverImage.addImage (file);
               };
 
               $scope.submitEditedWork = function () {
-                if (VideoCoverImage.image.length === 0) {
-                  $mdToast.show ('coverImage');
-                  return;
+                console.log ('work.title: ', work.title);
+                console.log ('work.editedBy: ', work.editedBy);
+                console.log ('work.directedBy: ', work.directedBy);
+                console.log ('work.cast: ', work.cast);
+                console.log ('work.copyright: ', work.copyright);
+                console.log ('work.videoUrl: ', work.videoUrl);
+                console.log ('work.workInfo: ', work.workInfo);
+                console.log ('work.coverImageUrl: ', work.coverImageUrl);
+
+                if (VideoCoverImage.image.length !== 0) {
+                  // new cover image selected
+                  console.log('VideoCoverImage: ', VideoCoverImage.image);
+                  Upload.upload({
+                    url: '/api/video_works/edit_video_work',
+                    arrayKey: '',
+                    data: {
+                      file: VideoCoverImage.image[0],
+                      work: JSON.stringify (work)
+                    }
+                  }).then (function (resp) {
+                    console.log ("Success: ", resp);
+                    var edit = resp.data;
+                    console.log ('resp.data: ', edit);
+                    VideoWorks.addEdit (edit);
+                    work = edit;
+                    coverImageUrl = edit.coverImageUrl;
+                    $mdDialog.hide ();
+                  }, function (resp) {
+                    console.log ("resp.status: ", resp.status);
+                  }, function (evt) {
+                    console.log ("evt: ", evt);
+                  });
+                } else {
+
+                  // no new cover image selected
+                  Upload.upload ({
+                    url: '/api/video_works/edit_video_work',
+                    arrayKey: '',
+                    data: {
+                      file: {},
+                      work: JSON.stringify (work)
+                    }
+                  }).then (function (resp) {
+                    console.log ("Success: ", resp);
+                    var edit = resp.data;
+                    console.log ('resp.data: ', edit);
+                    VideoWorks.addEdit (edit);
+                    work = edit;
+                    coverImageUrl = edit.coverImageUrl;
+                    $mdDialog.hide ();
+                  }, function (resp) {
+                    console.log ("resp.status: ", resp.status);
+                  }, function (evt) {
+                    console.log ("evt: ", evt);
+                  });
                 }
 
               };

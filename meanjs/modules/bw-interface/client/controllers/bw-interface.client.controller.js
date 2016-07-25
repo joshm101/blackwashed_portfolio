@@ -137,6 +137,7 @@
         }
       }).then (function (resp) {
         console.log("Success: ", resp);
+        VideoWorks.addVideoWork (resp.data);
         $mdDialog.hide();
       }, function (resp) {
         console.log ("Error: ", resp);

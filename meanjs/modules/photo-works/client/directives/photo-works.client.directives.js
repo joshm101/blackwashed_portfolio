@@ -140,10 +140,19 @@
                 }
               };
 
+              for (var model in models) {
+                if (models[model] === '') models.splice (model, 1);
+              }
+
+              for (var model in modelsModel) {
+                if (modelsModel[model] === '') modelsModel.splice (model, 1);
+              }
+
               // set up scope variables for controller/dialog scope.
               $scope.work = work;
               $scope.models = models;
               $scope.modelsModel = modelsModel;
+
 
               var oldModels = $scope.work.models;
               var model = modelsModel;
@@ -167,7 +176,15 @@
                 work.models = oldModels;
                 work.postText = postText;
                 $scope.modelsModel = model;
-                $mdDialog.cancel();
+                for (var model in work.models) {
+                  if (work.models[model] === '') {
+                    work.models.splice (model, 1);
+                  }
+                }
+                for (model in modelsModel) {
+                  if (modelsModel[model] === '') modelsModel.splice (i, 1);
+                }
+                $mdDialog.hide();
               };
 
               // submit edits for updating photo work on back end.

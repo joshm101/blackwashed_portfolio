@@ -6,11 +6,11 @@
   </md-card-title>
   <md-card-content style="max-width: 400px; overflow: hidden;" layout-align="center center">
     <a href="#" class="video-work-card-img" ng-click="showVideoWork($event)">
-      <figure><img layout-align="center center" style="height: auto;" ng-src="{{coverImageUrl}}"/></figure>
+      <figure><img layout-align="center center" style="height: auto;" ng-src="{{work.coverImageUrl}}"/></figure>
     </a>
   </md-card-content>
   <md-card-actions>
-    <md-button style="color: #d7392c;" ng-click="deleteVideoWork($event)">Delete</md-button>
+    <md-button style="color: #d7392c;" ng-click="deleteVideoWork(work)">Delete</md-button>
     <md-button style="color: #ffb300;" ng-click="editVideoWork(work)">Edit</md-button>
   </md-card-actions>
 </md-card>
