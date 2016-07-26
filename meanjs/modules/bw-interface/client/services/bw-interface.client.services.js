@@ -264,6 +264,7 @@
           };
         }
         service.images.push(imageToPush);
+        $rootScope.$broadcast ( 'SelectedImages.update' );
         // console.log("file is: " + JSON.stringify(file));
       },
 
@@ -276,6 +277,12 @@
             service.images[i].coverImage = false;
           }
         }
+        $rootScope.$broadcast ( 'SelectedImages.update' );
+      },
+
+      reset: function () {
+        service.images = [];
+        $rootScope.$broadcast ( 'SelectedImages.update' );
       },
 
       removeImage: function (imgUrl) {
@@ -309,6 +316,7 @@
             service.images.splice(i, 1);
             console.log('imgUrl: ' + imgUrl);
             console.log('service.images: ' + service.images);
+            $rootScope.$broadcast ( 'SelectedImages.update' );
           }
         }
       }

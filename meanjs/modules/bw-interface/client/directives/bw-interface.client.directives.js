@@ -28,7 +28,8 @@
 
 
   interfaceCyclerImage.$inject = ['$rootScope', '$state', 'CyclerImages'];
-  addWorkFab.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'CyclerImages'];
+  addWorkFab.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog',
+                        'CyclerImages', 'VideoCoverImage', 'SelectedImages'];
   addPhotoWorkForm.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog'];
   uploadPicsModule.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'SelectedImages'];
   imageThumbnail.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'SelectedImages'];
@@ -454,18 +455,22 @@
   function uploadPicsModule ($rootScope, $state, $timeout, Upload, SelectedImages) {
     var directive = {
       restrict: 'E',
-      scope: {},
+      scope: {
+        serviceImages: '='
+      },
       link: function (scope) {
         console.log("ok");
+        scope.serviceImages = SelectedImages.images;
         scope.selected = function (files, errFiles) {
           scope.files = files;
           angular.forEach (scope.files, function (file) {
             console.log("file forEach " + JSON.stringify(file));
             console.log("file blob: " + file.$ngfBlobUrl);
             SelectedImages.addImage(file);
+            // scope.serviceImages = SelectedImages.images;
           });
         };
-        scope.serviceImages = SelectedImages.images;
+        // scope.serviceImages = SelectedImages.images;
       },
       templateUrl: 'modules/bw-interface/client/views/upload-pics-module.html'
     };
@@ -496,7 +501,8 @@
         modelsFormInput: '=',
         copyright: '=',
         photoWorkTitle: '=',
-        postText: '='
+        postText: '=',
+        photoWorkImages: '='
       },
       link: function(scope) {
         console.log("ok");
@@ -506,7 +512,7 @@
     return directive;
   }
 
-  function addWorkFab($rootScope, $state, $timeout, $mdDialog, CyclerImages) {
+  function addWorkFab($rootScope, $state, $timeout, $mdDialog, CyclerImages, VideoCoverImage, SelectedImages) {
     var directive = {
       restrict: 'E',
       scope: {},
@@ -531,7 +537,10 @@
             contentElement: '#myDialog',
             parent: angular.element(document.body),
             targetEvent: ev,
-            clickOutsideToClose: true
+            clickOutsideToClose: true,
+            onRemoving: function () {
+              SelectedImages.reset();
+            }
           });
         };
 
@@ -541,7 +550,10 @@
             contentElement: '#addVideoWorkDialog',
             parent: angular.element(document.body),
             targetEvent: ev,
-            clickOutsideToClose: true
+            clickOutsideToClose: true,
+            onShowing: function () {
+              VideoCoverImage.removeImage();
+            }
           });
         };
 

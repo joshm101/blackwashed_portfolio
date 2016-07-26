@@ -139,6 +139,13 @@
         console.log("Success: ", resp);
         VideoWorks.addVideoWork (resp.data);
         $mdDialog.hide();
+        $scope.editedByFormInput = [];
+        $scope.directedByFormInput = [];
+        $scope.castFormInput = [];
+        $scope.videoUrl = '';
+        $scope.copyright = [];
+        $scope.postText = '';
+        $scope.videoWorkTitle = '';
       }, function (resp) {
         console.log ("Error: ", resp);
       }, function (evt) {
@@ -147,6 +154,7 @@
 
     };
 
+    $scope.addPhotoWorkImages = [];
 
     $scope.getPhotoWorks = function () {
       PhotoWorks.getPhotoWorks();
@@ -195,6 +203,11 @@
         console.log("Success: " + resp);
         console.log(JSON.stringify(resp.data));
         PhotoWorks.addPhotoWork(resp.data);
+        $scope.postText = '';
+        $scope.photoWorkTitle = '';
+        $scope.copyright = '';
+        $scope.modelsFormInput = [];
+        SelectedImages.images = [];
         $mdDialog.hide();
 
       }, function (resp) {
@@ -224,6 +237,10 @@
       var temp = VideoWorks.videoWorks;
       $scope.videoWorksArray = temp;
       console.log ('$scope.videoWorksArray: ', $scope.videoWorksArray);
+    });
+
+    $scope.$on ( 'SelectedImages.update', function (event) {
+      $scope.addPhotoWorkImages = SelectedImages.images;
     });
   }
 
