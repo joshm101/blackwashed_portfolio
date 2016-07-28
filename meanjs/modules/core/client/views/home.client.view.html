@@ -1,20 +1,46 @@
 
 
-  <div layout-align="center center" flex="100">
-    <!--
-    <h2>Single Item</h2>
-    <slick class="slider single-item" current-index="index" responsive="breakpoints" slides-to-show=1 slides-to-scroll=1>
-      asdgsadgasdgasdg
-      <div ng-repeat="i in [1,2,3,4]"><h1>{{ i }}</h1></div>
-      <p>Current index: {{ index }}</p>
-    </slick>
-
-    -->
+  <div layout-align="center center" flex="100" style="height: 100%;">
     <div layout="row" layout-align="center center">
       <img ng-src="modules/images/client/img/logo/blackwashed_logo.png"/>
     </div>
-    <div ng-controller="SliderController" ng-init="getCyclerImages()">
-      <image-slider images="cyclerImages"></image-slider>
+    <div>
+      <div ng-controller="SliderController" ng-init="getCyclerImages()">
+        <image-slider id="slider-id" class="image-slider fade-in-animation" ng-class="{'fade-in': onLoaded}"  images="cyclerImages"></image-slider>
+
+
+      </div>
+      <div ng-controller="WorksController" ng-init="getWorks()" layout-align="center center">
+
+            <md-content layout-align="center center">
+              <md-grid-list class="portfolio-grid" md-gutter="0em" md-cols="2" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="4" md-row-height="4:3" layout-align="center center">
+                <md-grid-tile class="grid-item" ng-repeat="work in works">
+                  <div layout="column" layout-fill>
+                    <img class="grid-img"
+                         ng-src="{{work.coverImageUrl}}">
+                  </div>
+                </md-grid-tile>
+              </md-grid-list>
+            </md-content>
+
+              <!--
+              <div layout="row" style="width: 100%;" ng-repeat="work in works track by $index" ng-if="$index % 4 === 0">
+                <div style="width: 25%; max-width:400px;
+                          overflow-y: hidden; overflow-x: hidden"
+                     layout="column"
+                     ng-repeat="i in [$index, $index + 1, $index + 2, $index + 3]"
+                     ng-if="works[i] != null">
+                  <img flex-order="i" style="width: 100%;
+                                           height: auto !important;
+                                           display: block;"
+                       ng-src="{{works[i].coverImageUrl}}">
+                </div>
+              </div>-->
+
+
+
+      </div>
+
     </div>
   </div>
 

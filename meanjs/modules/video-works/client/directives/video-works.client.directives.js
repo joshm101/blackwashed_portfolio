@@ -48,6 +48,7 @@
             controller: function (scope, $mdDialog, $sce, work) {
 
               console.log ('dialog controller');
+              scope.workTitle = work.title;
 
               // thanks to
               // http://stackoverflow.com/a/23945027

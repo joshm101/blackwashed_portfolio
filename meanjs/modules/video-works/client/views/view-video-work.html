@@ -1,7 +1,16 @@
-<md-dialog style="height: 80%; width: 70%;" aria-label="viewVideoWorkDialog">
-  <md-dialog-content>
+<md-dialog style="height: 85%; width: 65%;" aria-label="viewVideoWorkDialog">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>{{workTitle}}</h2>
+      <span flex></span>
+      <md-button class="md-icon-button" ng-click="cancel()">
+        <md-icon>close</md-icon>
+      </md-button>
+    </div>
+  </md-toolbar>
+  <md-dialog-content style="height: 100%">
 
-    <div ng-if="domain === 'youtube'">
+    <div ng-if="domain === 'youtube'" style="width: 100%;">
       <div class="video-wrapper">
         <iframe align="middle" class="video-iframe" ng-src="{{videoUrl}}"
                 frameborder="0"
@@ -9,7 +18,7 @@
       </div>
     </div>
 
-    <div ng-if="domain === 'vimeo'">
+    <div ng-if="domain === 'vimeo'" style="width: 100%;">
       <div class="video-wrapper">
         <iframe align="middle" class="video-iframe"
                 ng-src="{{videoUrl}}"

@@ -333,6 +333,9 @@
             console.log("response: " + response);
             if(response.status === 200) {
               service.images = response.data;
+              service.images.forEach (function (image) {
+                image.cssClass = false;
+              });
               $rootScope.$broadcast ( 'images.update' );
               console.log(images);
               console.log("JSON stringify: " + JSON.stringify(response));

@@ -9,7 +9,8 @@ var validator    =  require ('validator'),
     ncp          =  require ('ncp').ncp,
     mongoose     =  require ('mongoose'),
     util         =  require ('util'),
-    VideoWorks   =  mongoose.model ('videoWorks');
+    VideoWorks   =  mongoose.model ('videoWorks'),
+    Works        =  mongoose.model ('works');
 
 ncp.limit = 16;
 
@@ -77,6 +78,7 @@ exports.addVideoWork = function (req, res) {
                                                               + workTitle + '/' + imageName;
                   console.log ('videoWork.coverImageUrl: ', videoWorkObject.coverImageUrl);
 
+
                   // create DB entry for the submited video work
                   var work = new VideoWorks (videoWorkObject);
                   work.save (function (err) {
@@ -84,7 +86,20 @@ exports.addVideoWork = function (req, res) {
                       console.log ("error saving to DB: ", err);
                     } else {
                       console.log ("successfully saved/created video work in DB");
-                      return res.status (200).send (work);
+                      var generalWork = {
+                        work_id: work._id,
+                        work_type: 'video',
+                        created: work.created
+                      };
+                      var generalWorkCreated = new Works (generalWork);
+                      generalWorkCreated.save (function (err) {
+                        if (err) {
+                          console.log ('error creating general work for: ', work);
+                        } else {
+                          console.log ('successfully saved/created general work in DB');
+                          return res.status (200).send (work);
+                        }
+                      });
                     }
                   });
                 }
@@ -114,12 +129,18 @@ exports.deleteVideoWork = function (req, res) {
         if (err) {
           console.log ('error deleting work folder: ', err);
         } else {
-          VideoWorks.remove ( {_id: identifier}, function (err, result) {
+          Works.remove ( {work_id: identifier}, function (err, result) {
             if (err) {
-              console.log ('error removing from DB: ', err);
+              console.log ('error removing general work from DB: ', err);
             } else {
-              console.log ("successfully removed videoWork from DB.");
-              return res.status (200).send ();
+              VideoWorks.remove ( {_id: identifier}, function (err, result) {
+                if (err) {
+                  console.log ('error removing from DB: ', err);
+                } else {
+                  console.log ("successfully removed videoWork from DB.");
+                  return res.status (200).send ();
+                }
+              });
             }
           });
         }

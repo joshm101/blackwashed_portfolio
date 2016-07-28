@@ -1,8 +1,10 @@
-<div class="content" flex="100">
-  <div class="slider" layout-align="center center" style="height: 700px; width: 100%;" flex="100">
-    <div class="slide" ng-repeat="image in images" ng-show="image.visible"  height="100%" flex="100" >
-      <img ng-src="{{image.path}}" ng-show="image.visible"/>
-    </div>
+<div class="content" flex="100" style="height: 100%">
+  <div class="slider-wrapper">
+    <ul  class="fade-in-animation slider" style="list-style: none; padding-left: 0; height: 100%" layout-align="center center" style=" width: 100%;" flex="100">
+      <li class="slide-animation slide" ng-class="{'slide-active': image.cssClass === true, 'slide-inactive': image.cssClass === false}" style="height: 100%;" ng-repeat="image in images" height="100%" flex="100" >
+        <img style="width: 100%; display: block; float: left;" ng-src="{{image.path}}" />
+      </li>
+    </ul>
     <div class="arrows">
       <i class="material-icons" ng-click="prev()">keyboard_arrow_left</i>
       <i class="material-icons" ng-click="next()">keyboard_arrow_right</i>

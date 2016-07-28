@@ -27,6 +27,10 @@ var videoWorksSchema = new Schema ({
   },
   coverImageUrl: {
     type: String
+  },
+  created: {
+    type: Date,
+    default: Date.now
   }
 
 });

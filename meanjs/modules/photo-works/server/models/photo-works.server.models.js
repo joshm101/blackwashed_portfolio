@@ -22,6 +22,10 @@ var photoWorksSchema = new Schema ({
   },
   postText : {
     type: String
+  },
+  created: {
+    type: Date,
+    default: Date.now
   }
 });
 

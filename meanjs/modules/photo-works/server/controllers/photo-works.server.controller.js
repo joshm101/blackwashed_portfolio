@@ -9,7 +9,8 @@ var validator    =  require ('validator'),
     util         =  require ('util'),
     mongoose     =  require ('mongoose'),
     ncp          =  require ('ncp').ncp,
-    PhotoWorks   =  mongoose.model('photoWorks');
+    PhotoWorks   =  mongoose.model ('photoWorks'),
+    Works        =  mongoose.model ('works');
 
 ncp.limit = 16;
 
@@ -174,7 +175,20 @@ function syncWrites(filesToWrite, workingPath, workTitle, postText, models, copy
                 } else {
                   console.log("successfully saved work to DB!");
                   imagesWritten = [];
-                  return res.status(200).send(work);
+                  var generalWorkObject = {
+                    work_id: work._id,
+                    work_type: 'photo',
+                    created: work.created
+                  };
+                  var generalWorkCreated = new Works (generalWorkObject);
+                  generalWorkCreated.save (function (err) {
+                    if (err) {
+                      console.log ("error creating general work for: ", work);
+                    } else {
+                      console.log ("successfully saved general work to DB");
+                      return res.status(200).send(work);
+                    }
+                  });
                 }
               });
             } else {
@@ -328,12 +342,19 @@ exports.deletePhotoWork = function (req, res) {
         if (err) {
           console.log("error deleting work folder: ", err);
         } else {
-          PhotoWorks.remove( {_id: identifier}, function (err, result) {
+          Works.remove ( {work_id: identifier}, function (err, result) {
             if (err) {
-              console.log("error removing from DB: ", err);
+              console.log ("error removing general work from DB for",
+                            workToDelete);
             } else {
-              console.log ("successfully removed photoWork " + title + " from DB!");
-              return res.status(200).send();
+              PhotoWorks.remove( {_id: identifier}, function (err, result) {
+                if (err) {
+                  console.log("error removing from DB: ", err);
+                } else {
+                  console.log ("successfully removed photoWork " + title + " from DB!");
+                  return res.status(200).send();
+                }
+              });
             }
           });
         }

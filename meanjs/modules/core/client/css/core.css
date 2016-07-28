@@ -49,3 +49,38 @@ a:hover .header-profile-image {
 .has-error .help-inline.error-text {
   display: inline;
 }
+
+section {
+	height: 100%;
+}
+
+body {
+
+}
+
+.grid-item{
+	padding: 0;
+
+
+	overflow: hidden;
+	margin: 0;
+}
+
+
+.grid-img{
+
+	height: 100%;
+	position: relative;
+	max-width: 100%;
+	width: 100%;
+	display: block;
+}
+
+.portfolio-grid {
+
+	width: 100% !important;
+	max-width: 1600px;
+	margin: 0 auto;
+	display: block;
+	clear: both;
+}
