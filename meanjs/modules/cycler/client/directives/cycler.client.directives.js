@@ -37,37 +37,36 @@
         });
 
         $rootScope.$on('$viewContentLoaded', function() {
-          console.log ("READY view view");
-          console.log("scope.images on viewContentLoaded: ", scope.images);
+          //console.log ("READY view view");
+          //console.log("scope.images on viewContentLoaded: ", scope.images);
           $rootScope.onLoaded = true;
 
           scope.currentIndex = 0; // Initially the index is at the first image
-          console.log ('scope.currentIndex: ', scope.currentIndex);
+          //console.log ('scope.currentIndex: ', scope.currentIndex);
           scope.justLoaded = true;
         });
 
 
-
         scope.justLoaded = true;
-        scope.next = function() {
+        scope.next = function(click) {
 
           var listItems = elem[0].childNodes[1].children[0].children;
-          console.log("scope.next");
+          //console.log("scope.next");
           if (typeof scope.images !== 'undefined') {
             if(scope.images.length === 1) {
-              console.log("scope.images.length: " + scope.images.length);
-              console.log ("scope.images.length === 1");
+             // console.log("scope.images.length: " + scope.images.length);
+             // console.log ("scope.images.length === 1");
               // if there's only one image to rotate through,
               // don't ever try and change the index and
               // keep the only image always visible.
               scope.currentIndex = 0;
-              console.log("scope.currentIndex: ", scope.currentIndex);
+             // console.log("scope.currentIndex: ", scope.currentIndex);
               // scope.images[scope.currentIndex].visible = true;
               scope.images[0].cssClass = true;
 
             } else {
-              console.log("scope.images.length: " + scope.images.length);
-              console.log ('elem is: ', elem[0].childNodes[1].children[0].children);
+             // console.log("scope.images.length: " + scope.images.length);
+             // console.log ('elem is: ', elem[0].childNodes[1].children[0].children);
               // scope.$watch is tripped when the page initially loads
               // and currentIndex is set to 0 because that is
               // technically a "change," meaning that this function,
@@ -79,9 +78,9 @@
 
                 for (var i = scope.images.length - 1; i >= 0; --i) {
                   scope.images[i].cssClass = false;
-                  console.log ('setting false');
+                //  console.log ('setting false');
                 }
-                console.log ('just loaded');
+               // console.log ('just loaded');
                 scope.justLoaded = false;
                 //scope.images[0].cssClass = true;
                 scope.currentIndex = 0;
@@ -90,9 +89,14 @@
                 // scope.images[scope.currentIndex].visible = true;
 
                 // $animate.addClass (scope.images[scope.currentIndex], 'slide-active');
+
               } else {
-                console.log ("else justLodaed");
+               // console.log ("else justLodaed");
                 scope.currentIndex < scope.images.length - 1 ? scope.currentIndex ++ : scope.currentIndex = 0;
+              }
+              if (click === 'yes-click') {
+                $timeout.cancel(timer);
+                sliderFunc();
               }
             }
           }
@@ -108,8 +112,8 @@
 
         scope.$watch('currentIndex', function () {
           if (typeof scope.images !== 'undefined') {
-            console.log("scope.images.length: " + scope.images.length);
-            console.log("scope.images: ", scope.images);
+           // console.log("scope.images.length: " + scope.images.length);
+           // console.log("scope.images: ", scope.images);
             /*
             for (var i = 0; i < scope.images.length; ++i) {
               if (i === scope.currentIndex) {
@@ -123,13 +127,13 @@
 
             for (var i = scope.images.length - 1; i >= 0; --i) {
               scope.images[i].cssClass = false;
-              console.log ('setting false');
+              //console.log ('setting false');
             }
-            console.log("scope.currentIndex !=undefined: " + scope.currentIndex);
+            //console.log("scope.currentIndex !=undefined: " + scope.currentIndex);
             // scope.images[scope.currentIndex].visible = true; // make the current image visible
             // $animate.addClass (scope.images[scope.currentIndex], 'slide-active');
             scope.images[scope.currentIndex].cssClass = true;
-            console.log ("scope.currentIndex is: ", scope.currentIndex);
+            //console.log ("scope.currentIndex is: ", scope.currentIndex);
 
           }
         });
@@ -138,12 +142,12 @@
 
         var sliderFunc = function() {
           timer = $timeout(function() {
-            scope.next();
+            scope.next('no_click');
             timer = $timeout(sliderFunc, 4000);
           },0);
         };
 
-        console.log ("typeof scope.images: ", typeof scope.images);
+        //console.log ("typeof scope.images: ", typeof scope.images);
 
         timer = $timeout (function () {
           sliderFunc();

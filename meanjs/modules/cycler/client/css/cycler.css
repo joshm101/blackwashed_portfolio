@@ -88,5 +88,11 @@
 .arrows{
 	position: absolute;
 	z-index: 10;
-	top: 20px;
+	bottom: 0;
+	left: 0;
+}
+
+.nav-arrow {
+	color: #808285;
+	opacity: 0.8
 }

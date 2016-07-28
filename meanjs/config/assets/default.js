@@ -15,7 +15,9 @@ module.exports = {
       js: [
         // bower:js
         'public/lib/angular/angular.js',
+        'public/lib/jquery/direction_aware_hover_effect/modernizr.custom.97074.js',
         'public/lib/jquery/dist/jquery.js',
+        'public/lib/jquery/direction_aware_hover_effect/jquery.hoverdir.js',
         'public/lib/angular-aria/angular-aria.js',
         'public/lib/angular-resource/angular-resource.js',
         'public/lib/angular-animate/angular-animate.js',

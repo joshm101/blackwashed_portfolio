@@ -29,16 +29,16 @@
       var temp = CyclerImages.images;
 
       $scope.cyclerImages = temp;
-      console.log ("$scope.cyclerImages.length: ", $scope.cyclerImages.length);
+     // console.log ("$scope.cyclerImages.length: ", $scope.cyclerImages.length);
       /*
       $scope.cyclerImages.forEach (function(image) {
         console.log ("for each");
         image.cssClass = false;
         console.log ('current image: ', image);
       });*/
-      console.log("images!: ", $scope.cyclerImages);
+     // console.log("images!: ", $scope.cyclerImages);
       //$scope.cyclerImages[0].cssClass = true;
-      console.log("cyclerImages: " + JSON.stringify($scope.cyclerImages));
+      //console.log("cyclerImages: " + JSON.stringify($scope.cyclerImages));
     });
 
 

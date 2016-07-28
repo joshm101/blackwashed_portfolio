@@ -1,0 +1,16 @@
+<div ng-mouseenter="mouseAction ($event)" ng-mouseleave="mouseAction ($event)" layout="column" layout-fill>
+  <a href="#">
+    <img class="grid-img"
+         ng-src="{{work.coverImageUrl}}">
+    <div class="hover-el">
+      <div class="hover-element-data-wrap">
+        <div class="hover-title">
+          <span>{{work.title}}</span>
+        </div>
+        <div class="hover-element-work-type">
+          <div class="work-type" ng-if="work.videoUrl">Video</div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>

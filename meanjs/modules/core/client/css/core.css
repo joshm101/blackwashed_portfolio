@@ -84,3 +84,116 @@ body {
 	display: block;
 	clear: both;
 }
+
+works-grid-item{
+	float: left;
+
+	background: #fff;
+
+	position: relative;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+works-grid-item a,
+works-grid-item a img {
+	display: block;
+	position: relative;
+}
+
+works-grid-item a {
+	overflow: hidden;
+}
+
+works-grid-item a div {
+	position: absolute;
+
+}
+
+.grid-ind-works a {
+	text-decoration: none;
+	color: white;
+}
+
+.hover-el{
+	background-color: red !important;
+	width: 100%;
+	height: 100%;
+}
+
+.hover-element-data-wrap {
+	padding: 24px 24px 0 24px;
+	display: block;
+	height: 100%;
+	font-size: 20px;
+	max-width: 100%;
+	overflow: hidden;
+	width: 100%;
+}
+
+.hover-title {
+	font-size: 1.5em;
+	width: 80%;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+
+.hover-element-work-type {
+	clear: both;
+	position: absolute;
+	bottom: 0;
+	float: right;
+	right: 0;
+	font-size: 0.9em;
+}
+
+.work-type{
+	bottom: 24px;
+	right: 24px;
+}
+
+@media only screen and (max-width: 729px) {
+	.hover-title {
+		font-size: 1em;
+		text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	}
+
+	.hover-element-work-type {
+		clear: both;
+		position: absolute;
+		bottom: 0;
+		float: right;
+		right: 0;
+		font-size: 0.7em;
+	}
+}
+
+@media only screen and (max-width: 499px) {
+	.hover-title {
+		font-size: 0.75em;
+		text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	}
+	.hover-element-data-wrap {
+		padding: 16px 16px 0 16px;
+		display: block;
+		height: 100%;
+		font-size: 20px;
+		max-width: 100%;
+		overflow: hidden;
+		width: 100%;
+	}
+	.hover-element-work-type {
+		clear: both;
+		position: absolute;
+		bottom: 0;
+		float: right;
+		right: 0;
+		font-size: 0.6em;
+	}
+	.work-type{
+		bottom: 16px;
+		right: 16px;
+	}
+}
+
+
+
+
