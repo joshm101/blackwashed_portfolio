@@ -1,0 +1,48 @@
+.view-video-wrapper{
+	height: 100%;
+
+	overflow-y: hidden;
+
+}
+
+.view-video-iframe{
+	height: 100%;
+	width: 100%;
+
+	overflow-y: hidden;
+}
+
+
+.view-video-dialog{
+	height:100%;
+
+	width:100%;
+	max-height:100%;
+	max-width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 0;
+	overflow-y: hidden;
+}
+
+.view-video-dialog::-webkit-scrollbar{
+	display: none;
+}
+
+.close-video-dialog-btn{
+	position: absolute;
+	right: 41px;
+	top: 35px;
+	font-size: 60px;
+	z-index: 1000;
+}
+
+.close-video-dialog-icon {
+	right: 41px;
+	top: 35px;
+	z-index: 1000;
+	color: white;
+	font-size: 60px;
+	font-weight: bold;
+}
