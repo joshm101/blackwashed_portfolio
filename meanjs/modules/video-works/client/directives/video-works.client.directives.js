@@ -48,7 +48,17 @@
             controller: function (scope, $mdDialog, $sce, work) {
 
               console.log ('dialog controller');
+
+              console.log ('work is: ', work);
               scope.workTitle = work.title;
+
+              scope.workInfo = work.workInfo;
+
+              scope.directors = work.directedBy;
+
+              scope.editors = work.editedBy;
+
+              scope.cast = work.cast;
 
               // thanks to
               // http://stackoverflow.com/a/23945027

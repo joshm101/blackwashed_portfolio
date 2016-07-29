@@ -1,4 +1,4 @@
-<md-dialog style="height: 85%; width: 65%;" aria-label="viewVideoWorkDialog">
+<md-dialog style="height: 85%; width: 65%;" flex="80" class="md-dynamic-height" aria-label="viewVideoWorkDialog">
   <md-toolbar>
     <div class="md-toolbar-tools">
       <h2>{{workTitle}}</h2>
@@ -29,8 +29,17 @@
       </div>
     </div>
 
-    <div>
-      Viewing Video Work
+    <div class="video-work-meta">
+      <div class="video-work-info">
+        {{workInfo}}
+      </div>
+      <div class="video-work-cast">
+        <ul>
+          <li ng-repeat="member in cast">
+            <b>{{member.join (', ')}}</b>
+          </li>
+        </ul>
+      </div>
     </div>
   </md-dialog-content>
 </md-dialog>

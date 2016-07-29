@@ -1,0 +1,36 @@
+<md-dialog aria-label="viewPhotos" class="view-photo-dialog _md-transition-in">
+  <md-dialog-content>
+
+    <div ng-if="images.length > 1">
+      <md-button class="left-arrow-btn md-icon-button"
+                 ng-click="prev($event)"
+>
+
+        <md-icon class="left-arrow-icon"
+
+>
+
+          keyboard_arrow_left
+        </md-icon>
+      </md-button>
+    </div>
+
+    <img class="view-photo-dialog-img"
+         ng-src="{{images[currentIndex].imageUrl}}">
+
+    <div ng-if="images.length > 1">
+      <md-button class="right-arrow-btn md-icon-button"
+                 ng-click="next($event)"
+>
+
+        <md-icon class="right-arrow-icon"
+
+>
+
+          keyboard_arrow_right
+        </md-icon>
+      </md-button>
+    </div>
+
+  </md-dialog-content>
+</md-dialog>

@@ -125,6 +125,53 @@
               clickOutsideToClose: true,
               fullscreen: true
             });
+          } else {
+            $mdDialog.show ({
+              controller: function (scope, event, $mdDialog, $sce, work) {
+
+                scope.currentIndex = 0;
+                console.log('dialog controller');
+                console.log("work is: ", work);
+                scope.workTitle = work.title;
+                scope.images = work.images;
+
+                scope.next = function (event) {
+                  console.log ("next()");
+                  scope.currentIndex + 1 === scope.images.length ? scope.currentIndex = 0 : scope.currentIndex++;
+                };
+
+                scope.prev = function (event) {
+                  console.log ('prev()');
+                  scope.currentIndex - 1 === -1 ? scope.currentIndex = scope.images.length - 1 : scope.currentIndex--;
+                };
+
+                $rootScope.hide = function () {
+                  $mdDialog.hide();
+                };
+
+                scope.cancel = function () {
+                  $mdDialog.cancel();
+                };
+
+                $rootScope.answer = function (answer) {
+                  $mdDialog.hide(answer);
+                }
+              },
+              locals: {
+                work: scope.work,
+                event: event,
+                element: elem
+              },
+              templateUrl: 'modules/works/client/views/view-photos.html',
+              parent: angular.element(document.body),
+              targetEvent: event,
+              onRemoving: function () {
+              },
+              autoWrap: false,
+              clickOutsideToClose: true,
+              closeTo: elem,
+              fullscreen: false
+            });
           }
 
         };

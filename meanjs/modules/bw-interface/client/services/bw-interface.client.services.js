@@ -232,10 +232,16 @@
             if (service.images[i].serverImage === false) {
               for (var j = 0; j < service.newImages.length; ++j) {
                 if (service.newImages[j].imageUrl === imgUrl) {
+                  console.log ('spliced');
+                  console.log ("service.newImages[j]: ", service.newImages[j]);
+                  console.log ("service.images[i]: ", service.images[i]);
                   service.newImages.splice(j, 1);
+                  service.newImageFiles.splice (j, 1);
+                  console.log ('service.newImages after splice: ', service.newImages);
                 }
               }
             }
+            console.log ("image spliced: ", service.images[i]);
             service.images.splice(i, 1);
             console.log("service.imagesToDelete: ", service.imagesToDelete);
           }
