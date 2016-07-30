@@ -9,7 +9,9 @@ module.exports = {
         'public/lib/bootstrap/dist/css/bootstrap-theme.css',
         'public/lib/angular-material/angular-material.css',
         'public/lib/slick-carousel/slick/slick.css',
-        'public/lib/slick-carousel/slick/slick-theme.css'
+        'public/lib/slick-carousel/slick/slick-theme.css',
+        'public/lib/mdi/css/materialdesignicons.css'
+
         // endbower
       ],
       js: [

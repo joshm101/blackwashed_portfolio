@@ -76,10 +76,50 @@ body {
 	display: block;
 }
 
+.social-media-links-comp {
+	top: 0;
+	left: 0;
+	position: absolute;
+	padding-left: 0 !important;
+
+}
+
+.social-media-links-mobile {
+	margin-bottom: -30px;
+	margin-top: 10px;
+}
+
+.links-list li{
+	display: inline;
+	width: 15px !important;
+}
+
+.links-list {
+	padding-left: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+.links-list md-icon{
+	font-size: 24px !important;
+	min-height: 12px !important;
+	min-width: 12px !important;
+	height: 15px !important;
+	width: 15px !important;
+}
+
+.links-list li button {
+	padding: 4px !important;
+	margin: 0 !important;
+}
+
+.social-media-links ul {
+	padding-left: 0 !important;
+}
+
 
 
 #portfolio-grid.ng-enter {
-	transition: 1s cubic-bezier(.98,.0001,.58,1) opacity;
+	transition: 0.85s cubic-bezier(.98,.0001,.58,1) opacity;
 	opacity:0;
 
 }

@@ -1,6 +1,7 @@
 (function (window) {
   'use strict';
 
+
   var applicationModuleName = 'mean';
 
   var service = {
@@ -14,7 +15,11 @@
   // Add a new vertical module
   function registerModule(moduleName, dependencies) {
     // Create angular module
-    angular.module(moduleName, dependencies || []);
+    angular.module(moduleName, dependencies || [])
+      .config (function ($mdIconProvider) {
+        $mdIconProvider
+          .defaultIconSet('lib/mdi/svg/mdi.svg');
+      });
 
     // Add the module to the AngularJS configuration file
     angular.module(applicationModuleName).requires.push(moduleName);
