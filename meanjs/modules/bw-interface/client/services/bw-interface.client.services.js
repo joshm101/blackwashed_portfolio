@@ -341,6 +341,7 @@
               service.images = response.data;
               service.images.forEach (function (image) {
                 image.cssClass = false;
+                service.images[0].cssClass = true;
               });
               $rootScope.$broadcast ( 'images.update' );
               console.log(images);

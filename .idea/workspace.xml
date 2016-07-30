@@ -182,6 +182,8 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/video_works/Vimeo Test/6e3c0653-007a-4dc3-87e0-39845344b62d.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/bw-interface/client/services/bw-interface.client.services.js" afterPath="$PROJECT_DIR$/meanjs/modules/bw-interface/client/services/bw-interface.client.services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/bw-interface/server/controllers/bw-interface.server.controller.js" afterPath="$PROJECT_DIR$/meanjs/modules/bw-interface/server/controllers/bw-interface.server.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/cycler/client/directives/cycler.client.directives.js" afterPath="$PROJECT_DIR$/meanjs/modules/cycler/client/directives/cycler.client.directives.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/video-works/client/css/video-works.css" afterPath="$PROJECT_DIR$/meanjs/modules/video-works/client/css/video-works.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/video-works/client/directives/video-works.client.directives.js" afterPath="$PROJECT_DIR$/meanjs/modules/video-works/client/directives/video-works.client.directives.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/video-works/client/views/view-video-work.html" afterPath="$PROJECT_DIR$/meanjs/modules/video-works/client/views/view-video-work.html" />
@@ -249,67 +251,51 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="SliderController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/meanjs/modules/cycler/client/controllers/SliderController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="photo-works.server.controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/server/controllers/photo-works.server.controller.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="447" column="36" selection-start-line="447" selection-start-column="36" selection-end-line="447" selection-end-column="36" />
+              <caret line="436" column="102" selection-start-line="436" selection-start-column="102" selection-end-line="436" selection-end-column="102" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bw-interface.client.services.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bw-interface.client.services.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/services/bw-interface.client.services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42954546">
-              <caret line="230" column="39" selection-start-line="230" selection-start-column="39" selection-end-line="230" selection-end-column="39" />
+            <state vertical-scroll-proportion="-12.896552">
+              <caret line="343" column="50" selection-start-line="343" selection-start-column="50" selection-end-line="343" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit-photo-work.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/edit-photo-work.html">
+      <file leaf-file-name="cycler.client.directives.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/meanjs/modules/cycler/client/directives/cycler.client.directives.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#md-dialog#0;n#!!top" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.45764577">
+              <caret line="61" column="33" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit-photo-work-form.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/edit-photo-work-form.html">
+      <file leaf-file-name="bw-interface.server.controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/server/controllers/bw-interface.server.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.9230769">
-              <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-              <folding>
-                <element signature="n#style#0;n#md-input-container#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit-upload-pics-module.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/edit-upload-pics-module.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="image-thumbnail.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/image-thumbnail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-19.793104">
+              <caret line="113" column="20" selection-start-line="113" selection-start-column="20" selection-end-line="113" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -320,6 +306,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-14.384615">
               <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="image-slider.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/meanjs/modules/cycler/client/views/image-slider.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.576923">
+              <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -362,7 +358,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/bw-interface.client.module.js" />
         <option value="$PROJECT_DIR$/meanjs/modules/photo-works/client/views/photo-work.html" />
         <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/edit-photo-work.html" />
         <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/edit-video-work.html" />
@@ -401,7 +396,6 @@
         <option value="$PROJECT_DIR$/meanjs/modules/cycler/client/css/cycler.css" />
         <option value="$PROJECT_DIR$/meanjs/modules/core/client/css/core.css" />
         <option value="$PROJECT_DIR$/meanjs/modules/cycler/client/views/image-slider.html" />
-        <option value="$PROJECT_DIR$/meanjs/modules/cycler/client/directives/cycler.client.directives.js" />
         <option value="$PROJECT_DIR$/meanjs/public/lib/jquery/direction_aware_hover_effect/jquery.hoverdir.js" />
         <option value="$PROJECT_DIR$/meanjs/modules/works/client/views/works-grid-item.html" />
         <option value="$PROJECT_DIR$/meanjs/modules/works/client/views/view-video.html" />
@@ -412,7 +406,9 @@
         <option value="$PROJECT_DIR$/meanjs/modules/works/client/css/works.css" />
         <option value="$PROJECT_DIR$/meanjs/modules/works/client/directives/works.client.directives.js" />
         <option value="$PROJECT_DIR$/meanjs/modules/photo-works/server/controllers/photo-works.server.controller.js" />
+        <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/server/controllers/bw-interface.server.controller.js" />
         <option value="$PROJECT_DIR$/meanjs/modules/bw-interface/client/services/bw-interface.client.services.js" />
+        <option value="$PROJECT_DIR$/meanjs/modules/cycler/client/directives/cycler.client.directives.js" />
       </list>
     </option>
   </component>
@@ -2162,30 +2158,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/cycler/client/views/image-slider.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/cycler/client/directives/cycler.client.directives.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="82" column="46" selection-start-line="82" selection-start-column="46" selection-end-line="82" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/server/controllers/bw-interface.server.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2878625">
-          <caret line="98" column="24" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/views/edit-models-input.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.230769">
@@ -2209,14 +2181,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/cycler/client/controllers/SliderController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/meanjs/modules/video-works/client/video-works.client.module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2230,8 +2194,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="52" selection-start-line="0" selection-start-column="52" selection-end-line="0" selection-end-column="52" />
           <folding>
-            <element signature="n#style#0;n#md-dialog#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#md-dialog-content#0;n#md-dialog#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-dialog#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#md-dialog-content#0;n#md-dialog#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2289,7 +2253,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2315,7 +2279,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#md-dialog#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-dialog#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2325,7 +2289,7 @@
         <state vertical-scroll-proportion="-3.9230769">
           <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
           <folding>
-            <element signature="n#style#0;n#md-input-container#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#md-input-container#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2335,7 +2299,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2356,6 +2320,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/server/controllers/photo-works.server.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="436" column="102" selection-start-line="436" selection-start-column="102" selection-end-line="436" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/cycler/client/controllers/SliderController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/cycler/client/views/image-slider.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.576923">
+          <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/server/controllers/bw-interface.server.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.793104">
+          <caret line="113" column="20" selection-start-line="113" selection-start-column="20" selection-end-line="113" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/client/directives/photo-works.client.directives.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-47.62069">
+          <caret line="213" column="50" selection-start-line="213" selection-start-column="50" selection-end-line="213" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/directives/bw-interface.client.directives.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.103448">
@@ -2372,26 +2376,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/client/directives/photo-works.client.directives.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-47.62069">
-          <caret line="213" column="50" selection-start-line="213" selection-start-column="50" selection-end-line="213" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/server/controllers/photo-works.server.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="447" column="36" selection-start-line="447" selection-start-column="36" selection-end-line="447" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/meanjs/modules/bw-interface/client/services/bw-interface.client.services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42954546">
-          <caret line="230" column="39" selection-start-line="230" selection-start-column="39" selection-end-line="230" selection-end-column="39" />
+        <state vertical-scroll-proportion="-12.896552">
+          <caret line="343" column="50" selection-start-line="343" selection-start-column="50" selection-end-line="343" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/cycler/client/directives/cycler.client.directives.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45764577">
+          <caret line="61" column="33" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
           <folding />
         </state>
       </provider>

@@ -31,13 +31,15 @@
         images: '='
       },
       link: function(scope, elem, attrs) {
-
+        scope.currentIndex = 0;
         elem.on ('load', function (){
-
+          scope.currentIndex = -1;
+          scope.currentIndex++;
+          console.log ('READY LOAD');
         });
 
         $rootScope.$on('$viewContentLoaded', function() {
-          //console.log ("READY view view");
+          console.log ("READY view view");
           //console.log("scope.images on viewContentLoaded: ", scope.images);
           $rootScope.onLoaded = true;
 
@@ -46,7 +48,9 @@
           scope.justLoaded = true;
         });
 
-
+        if (typeof scope.images !== 'undefined') {
+          scope.images[0].cssClass = true;
+        }
         scope.justLoaded = true;
         scope.next = function(click) {
 
@@ -65,38 +69,13 @@
               scope.images[0].cssClass = true;
 
             } else {
-             // console.log("scope.images.length: " + scope.images.length);
-             // console.log ('elem is: ', elem[0].childNodes[1].children[0].children);
-              // scope.$watch is tripped when the page initially loads
-              // and currentIndex is set to 0 because that is
-              // technically a "change," meaning that this function,
-              // scope.next, is triggered, so we get a premature
-              // index increment. This means that the first image
-              // is skipped on the first rotation through the images.
-              // the boolean justLoaded fixes that issue.
-              if (scope.justLoaded === true) {
+              scope.currentIndex < scope.images.length - 1 ? scope.currentIndex ++ : scope.currentIndex = 0;
 
-                for (var i = scope.images.length - 1; i >= 0; --i) {
-                  scope.images[i].cssClass = false;
-                //  console.log ('setting false');
-                }
-               // console.log ('just loaded');
-                scope.justLoaded = false;
-                //scope.images[0].cssClass = true;
-                scope.currentIndex = 0;
-                scope.images[scope.currentIndex].cssClass = true;
-
-                // scope.images[scope.currentIndex].visible = true;
-
-                // $animate.addClass (scope.images[scope.currentIndex], 'slide-active');
-
-              } else {
-               // console.log ("else justLodaed");
-                scope.currentIndex < scope.images.length - 1 ? scope.currentIndex ++ : scope.currentIndex = 0;
-              }
               if (click === 'yes-click') {
-                $timeout.cancel(timer);
+                console.log ('timer is: ', timer);
+                $timeout.cancel (timer);
                 sliderFunc();
+                //$timeout.cancel(timer);
               }
             }
           }
@@ -133,6 +112,7 @@
             // scope.images[scope.currentIndex].visible = true; // make the current image visible
             // $animate.addClass (scope.images[scope.currentIndex], 'slide-active');
             scope.images[scope.currentIndex].cssClass = true;
+            console.log ('scope.images[0].cssClass: ', scope.images[0].cssClass);
             //console.log ("scope.currentIndex is: ", scope.currentIndex);
 
           }
@@ -140,11 +120,13 @@
 
         var timer;
 
+
+
         var sliderFunc = function() {
           timer = $timeout(function() {
             scope.next('no_click');
-            timer = $timeout(sliderFunc, 4000);
-          },0);
+            sliderFunc();
+          }, 4000);
         };
 
         //console.log ("typeof scope.images: ", typeof scope.images);
@@ -154,7 +136,7 @@
         }, 200);
 
 
-        scope.currentIndex = 0;
+        //scope.currentIndex = 0;
 
 
         scope.$on('$destroy', function() {

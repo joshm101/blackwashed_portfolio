@@ -66,7 +66,8 @@ exports.uploadCyclerImage = function (req, res) {
       var file = files.file[0];
       var contentType = file.headers['content-type'];
       var extension = file.path.substring(file.path.lastIndexOf('.'));
-      var destPath = '../../../images/server/images/cycler_images/' + uuid.v4() + extension;
+      var fileName = uuid.v4() + extension;
+      var destPath = '../../../images/server/images/cycler_images/' + fileName;
       var oldPath = files.file[0].path;
 
       var content;
@@ -74,14 +75,14 @@ exports.uploadCyclerImage = function (req, res) {
       // get the path to save the uploaded image
       var resolvedPath = path.resolve(process.cwd(), 'modules');
       resolvedPath = path.resolve(resolvedPath, 'bw-interface/client/img/cycler_images/');
-      resolvedPath = 'modules/images/client/img/cycler_images/';
+      var relativePath = 'modules/images/client/img/cycler_images/' + fileName;
 
-      var destFile = uuid.v4() + extension;
-      var fileToWrite = resolvedPath + destFile;
+      var destFile = fileName;
+      var fileToWrite = path.resolve (resolvedPath, fileName);
 
 
       // create new image in the mongoose model
-      var image = new CyclerImages ({ path: fileToWrite, owner: "josh" });
+      var image = new CyclerImages ({ path: fileName, owner: "josh" });
 
       console.log("image is: " + image);
       // save the image in the mongoose model DB
@@ -114,13 +115,6 @@ exports.uploadCyclerImage = function (req, res) {
             console.log("error: " + err);
           } else {
             console.log("success!");
-            CyclerImages.find({ path: fileToWrite}, function (err, images) {
-              if (err) {
-                console.log ("error: " + err);
-              } else {
-                console.log("result: " + images);
-              }
-            });
             res.status(200).send(imageObject);
           }
         });
