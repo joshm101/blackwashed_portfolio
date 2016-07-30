@@ -70,6 +70,57 @@
 	right: 0 !important;
 }
 
+@media
+screen and ( max-width: 1090px),
+screen and (min-width: 960px) {
+	.work-delete-btn{
+		min-width: 40px !important;
+	}
+	.work-edit-btn {
+		min-width: 40px !important;
+	}
+	.work-action-buttons {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media screen and (max-width: 822px) {
+	.work-card-title {
+		font-size: 16px !important;
+	}
+}
+
+@media screen and (max-width: 959px) {
+
+	.work-delete-btn {
+		min-width: 88px !important;
+	}
+
+	.work-edit-btn {
+		min-width: 88px !important;
+	}
+
+	.work-action-buttons {
+		margin: 8px;
+	}
+}
+
+@media screen and (min-width: 1091px) {
+
+	.work-delete-btn {
+		min-width: 88px !important;
+	}
+
+	.work-edit-btn {
+		min-width: 88px !important;
+	}
+
+	.work-action-buttons {
+		margin: 8px;
+	}
+}
+
 
 
 .left-arrow-icon{

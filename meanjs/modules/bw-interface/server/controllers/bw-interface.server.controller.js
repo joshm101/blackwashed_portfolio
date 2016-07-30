@@ -74,7 +74,7 @@ exports.uploadCyclerImage = function (req, res) {
 
       // get the path to save the uploaded image
       var resolvedPath = path.resolve(process.cwd(), 'modules');
-      resolvedPath = path.resolve(resolvedPath, 'bw-interface/client/img/cycler_images/');
+      resolvedPath = path.resolve(resolvedPath, 'images/client/img/cycler_images/');
       var relativePath = 'modules/images/client/img/cycler_images/' + fileName;
 
       var destFile = fileName;
@@ -82,7 +82,7 @@ exports.uploadCyclerImage = function (req, res) {
 
 
       // create new image in the mongoose model
-      var image = new CyclerImages ({ path: fileName, owner: "josh" });
+      var image = new CyclerImages ({ path: relativePath, owner: "josh" });
 
       console.log("image is: " + image);
       // save the image in the mongoose model DB
