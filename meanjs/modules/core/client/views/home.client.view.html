@@ -13,10 +13,10 @@
 
       </div>
       <div layout-align="center">
-        <div ng-controller="WorksController" style="max-width: 1600px; margin: 0 auto;" ng-init="getWorks()" layout-align="center center">
+        <div ng-controller="WorksController" style="max-width: 1600px; margin: 0 auto;" ng-init="getWorks();" layout-align="center center">
 
-          <md-content layout-align="center center">
-            <md-grid-list id="portfolio-grid" md-gutter="0em" md-cols="2" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="4" md-row-height="4:3" layout-align="center center">
+          <md-content class="grid-wrapper" layout-align="center center">
+            <md-grid-list ng-if="bool" id="portfolio-grid" md-gutter="0em" md-cols="2" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="4" md-row-height="4:3" layout-align="center center">
               <md-grid-tile class="grid-item" ng-repeat="work in works">
                 <works-grid-item class="grid-ind-works" work="work"></works-grid-item>
               </md-grid-tile>
@@ -45,6 +45,7 @@
 
     </div>
   </div>
+
 
 
 

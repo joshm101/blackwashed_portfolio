@@ -15,12 +15,15 @@
 
     $scope.getWorks = function () {
       console.log('getWorks controller');
+      $scope.bool = false;
       Works.getWorks();
+      console.log ('bool: ', $scope.bool);
     };
 
 
     $scope.$on ( 'works.update', function (event){
       $scope.works = Works.works;
+      $scope.bool = true;
       console.log ("$scope.works is: ", $scope.works);
     });
   }

@@ -76,13 +76,31 @@ body {
 	display: block;
 }
 
-.portfolio-grid {
 
+
+#portfolio-grid.ng-enter {
+	transition: 1s cubic-bezier(.98,.0001,.58,1) opacity;
+	opacity:0;
+
+}
+#portfolio-grid.ng-enter.ng-enter-active {
+	opacity:1;
+}
+
+
+#portfolio-grid {
+	background-color: white !important;
 	width: 100% !important;
 	max-width: 1600px;
 	margin: 0 auto;
 	display: block;
 	clear: both;
+}
+
+.grid-wrapper{
+	background-color: white;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
 }
 
 works-grid-item{

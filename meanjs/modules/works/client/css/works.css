@@ -45,6 +45,7 @@
 	color: white;
 	font-size: 60px;
 	font-weight: bold;
+	text-shadow: 0px 2px 10px #000000;
 }
 
 .left-arrow-btn {
@@ -69,6 +70,8 @@
 	right: 0 !important;
 }
 
+
+
 .left-arrow-icon{
 	text-shadow: 0px 2px 10px #000000;
 	color: white;
@@ -89,14 +92,15 @@
 
 .view-photo-dialog {
 
-	max-width: 80%;
-	max-height: 100%;
+	max-width: 70%;
+	max-height: 80%;
 }
 
 
 .view-photo-dialog-img {
 	max-width: 100%;
 	max-height: 100%;
+
 
 
 }

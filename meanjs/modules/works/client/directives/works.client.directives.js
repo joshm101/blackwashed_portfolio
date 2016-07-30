@@ -47,7 +47,6 @@
             $mdDialog.show ({
               controller: function (scope, event, $mdDialog, $sce, work) {
 
-
                 console.log ('dialog controller');
                 console.log ("work is: ", work);
                 scope.workTitle = work.title;
@@ -123,6 +122,7 @@
               },
               autoWrap: false,
               clickOutsideToClose: true,
+              closeTo: elem,
               fullscreen: true
             });
           } else {

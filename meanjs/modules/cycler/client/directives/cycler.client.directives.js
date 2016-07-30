@@ -133,7 +133,7 @@
 
         timer = $timeout (function () {
           sliderFunc();
-        }, 200);
+        }, 300);
 
 
         //scope.currentIndex = 0;
