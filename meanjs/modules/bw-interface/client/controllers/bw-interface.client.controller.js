@@ -6,12 +6,12 @@
     .controller('InterfaceController', InterfaceController);
     // .controller('fabController', fabController);
 
-  InterfaceController.$inject = ['$scope', '$rootScope', 'Upload', '$mdDialog',
+  InterfaceController.$inject = ['$scope', '$rootScope', '$state', 'Upload', '$mdDialog',
                                  '$mdToast', '$http', 'CyclerImages',
                                  'SelectedImages', 'PhotoWorks', 'VideoWorks'];
   // fabController.$inject = ['$scope', '$rootScope', '$mdDialog', '$http', '$timeout'];
 
-  function InterfaceController ($scope, $rootScope, Upload, $mdDialog,
+  function InterfaceController ($scope, $rootScope, $state, Upload, $mdDialog,
                                 $mdToast, $http, CyclerImages,
                                 SelectedImages, PhotoWorks, VideoWorks) {
 
@@ -119,6 +119,15 @@
 
     $scope.deleteImage = function () {
 
+    };
+
+    $scope.signOut = function () {
+      $http.get ('/api/auth/signout')
+        .then (function (resp) {
+          if (resp.status === 200) {
+            $state.go ('home');
+          }
+        });
     };
 
     $scope.submitVideoWork = function () {

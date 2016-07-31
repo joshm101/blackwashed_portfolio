@@ -7,6 +7,7 @@ var path = require('path'),
   errorHandler = require(path.resolve('./modules/core/server/controllers/errors.server.controller')),
   mongoose = require('mongoose'),
   passport = require('passport'),
+  util     = require ('util'),
   User = mongoose.model('User');
 
 // URLs for which user can't be redirected on signin
@@ -21,15 +22,30 @@ var noReturnUrls = [
 exports.signup = function (req, res) {
   // For security measurement we remove the roles from the req.body object
   delete req.body.roles;
+     User.find({}).remove().exec();
+  var users = User.find({}, function (err, users) {
+    if (err) {
+      console.log ("error accessing users DB: ", err);
+    } else {
+      // only two users allowed.
+      if (users.length === 2) {
+        return res.status (403).send();
+      }
+    }
+  });
+  delete req.body.confirmPassword;
+  console.log ('req.body: ', util.inspect (req.body));
+
 
   // Init user and add missing fields
   var user = new User(req.body);
+  user.isNew = true;
   user.provider = 'local';
-  user.displayName = user.firstName + ' ' + user.lastName;
 
   // Then save the user
   user.save(function (err) {
     if (err) {
+      console.log ('error: ', err);
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
       });
@@ -55,6 +71,7 @@ exports.signup = function (req, res) {
 exports.signin = function (req, res, next) {
   passport.authenticate('local', function (err, user, info) {
     if (err || !user) {
+      console.log ("error: ", err);
       res.status(400).send(info);
     } else {
       // Remove sensitive data before login

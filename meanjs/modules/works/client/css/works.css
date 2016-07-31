@@ -160,6 +160,8 @@ screen and (min-width: 960px) {
 	width: 100%;
 	display: block !important;
 	-webkit-transform: translateZ(0) scale(1.0, 1.0);
+	-moz-transform: translateZ(0) scale(1.0, 1.0);
+	-o-transform: translateZ(0) scale(1.0, 1.0);
 
 
 }

@@ -28,39 +28,13 @@ var validateLocalStrategyEmail = function (email) {
  * User Schema
  */
 var UserSchema = new Schema({
-  firstName: {
-    type: String,
-    trim: true,
-    default: '',
-    validate: [validateLocalStrategyProperty, 'Please fill in your first name']
-  },
-  lastName: {
-    type: String,
-    trim: true,
-    default: '',
-    validate: [validateLocalStrategyProperty, 'Please fill in your last name']
-  },
-  displayName: {
-    type: String,
-    trim: true
-  },
   email: {
     type: String,
-    index: {
-      unique: true,
-      sparse: true // For this to work on a previously indexed field, the index must be dropped & the application restarted.
-    },
+    unique: true,
     lowercase: true,
     trim: true,
     default: '',
     validate: [validateLocalStrategyEmail, 'Please fill a valid email address']
-  },
-  username: {
-    type: String,
-    unique: 'Username already exists',
-    required: 'Please fill in a username',
-    lowercase: true,
-    trim: true
   },
   password: {
     type: String,
@@ -120,11 +94,12 @@ UserSchema.pre('save', function (next) {
  */
 UserSchema.pre('validate', function (next) {
   if (this.provider === 'local' && this.password && this.isModified('password')) {
+    /*
     var result = owasp.test(this.password);
     if (result.errors.length) {
       var error = result.errors.join(' ');
       this.invalidate('password', error);
-    }
+    }*/
   }
 
   next();

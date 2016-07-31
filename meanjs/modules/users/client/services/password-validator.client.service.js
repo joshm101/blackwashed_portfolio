@@ -24,7 +24,7 @@
     }
 
     function getPopoverMsg() {
-      var popoverMsg = 'Please enter a passphrase or password with 10 or more characters, numbers, lowercase, uppercase, and special characters.';
+      var popoverMsg = 'Six or more characters.';
 
       return popoverMsg;
     }

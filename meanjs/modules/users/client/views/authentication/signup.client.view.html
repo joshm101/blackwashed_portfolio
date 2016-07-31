@@ -1,3 +1,54 @@
+<div layout-align="center center" flex="100" style="height: 100%;">
+  <div layout="row" layout-align="center center">
+    <img ng-src="modules/images/client/img/logo/blackwashed_logo.png"/>
+  </div>
+  <md-content layout-fill layout-align="center center">
+    <div layout="row" style="margin-top: 10%;" layout-align="center center">
+
+        <div layout="column" layout-align="center center">
+          <div layout="row" layout-align="center center" style="margin-bottom: 40px;">
+            <h2>Sign Up</h2>
+          </div>
+          <form ng-submit="vm.signup(vm.userForm.$valid)" style="width: 90%;" name="vm.userForm" ng-submit="vm.signup (vm.userForm.$valid)" class="signin" autocomplete="off">
+            <md-input-container style="width: 100%;">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" ng-model="vm.credentials.email" lowercase>
+            </md-input-container>
+            <md-input-container style="width: 100%;">
+              <div>
+                <md-tooltip style="position: absolute; margin-top: 30px" md-delay="vm.passwordTooltip.delayTooltip">
+                  {{vm.getPopoverMsg()}}
+                </md-tooltip>
+                <label for="password">Password</label>
+
+                <input type="password" id="password" name="password" ng-model="vm.credentials.password" ng-click="vm.showTip = true;" password-validator>
+
+              </div>
+
+            </md-input-container>
+            <md-input-container style="width: 100%;">
+              <label for="confirm-password">Confirm Password</label>
+              <input type="password" id="confirm-password" name="confirm-password" ng-model="vm.credentials.confirmPassword">
+            </md-input-container>
+            <div layout="row" layout-align="center center" style="margin-top: 30px;">
+              <md-button type="submit" class="md-primary md-raised">Submit</md-button>
+            </div>
+          </form>
+        </div>
+
+    </div>
+
+
+  </md-content>
+
+</div>
+
+
+
+
+
+<!--
+
 <div>
   <h3 class="col-md-12 text-center">Or sign up using your email</h3>
   <div class="col-xs-offset-2 col-xs-8 col-md-offset-4 col-md-4">
@@ -58,3 +109,5 @@
     </form>
   </div>
 </div>
+
+-->

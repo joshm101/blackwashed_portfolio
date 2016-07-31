@@ -35,7 +35,11 @@
       })
       .state('bw-interface', {
         url: '/bw/interface',
-        templateUrl: 'modules/bw-interface/client/views/bw-interface.client.view.html'
+        templateUrl: 'modules/bw-interface/client/views/bw-interface.client.view.html',
+        data: {
+          roles: ['user', 'admin'],
+          pageTitle: 'Chat'
+        }
       })
       .state('not-found', {
         url: '/not-found',
