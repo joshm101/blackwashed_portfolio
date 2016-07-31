@@ -1,9 +1,14 @@
 <md-dialog aria-label="editPhotoWorkForm" layout-padding flex="70" style="max-height: 80%;">
   <h2 style="margin-bottom: 20px;">Edit Photo Work</h2>
-  <md-dialog-content style="background-color: white !important;">
-    <md-content layout-padding style="background-color: white;">
-      <edit-photo-work-form work="work" edit-models-input-model="modelsModel"></edit-photo-work-form>
-    </md-content>
+  <md-dialog-content>
+      <md-content layout-padding style="background-color: white !important;">
+        <form>
+          <edit-photo-work-form work="work" edit-models-input-model="modelsModel"></edit-photo-work-form>
+        </form>
+
+      </md-content>
+
+
   </md-dialog-content>
   <md-dialog-actions>
     <md-button style="color: #d7392c;" ng-click="cancelEdit($event)">Cancel</md-button>

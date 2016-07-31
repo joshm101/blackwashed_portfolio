@@ -7,13 +7,13 @@
     .directive ("viewVideoWork", viewVideoWork);
 
   videoWork.$inject = ['$rootScope', '$http', '$timeout', '$mdDialog', '$mdMedia',
-                       '$mdToast', '$sce', 'VideoWorks', 'VideoCoverImage', 'Upload'];
+                       '$mdToast', '$sce', 'VideoWorks', 'PhotoWorks', 'VideoCoverImage', 'Upload'];
   viewVideoWork.$inject = ['$rootScope', '$http', '$timeout', '$mdDialog',
-                           '$mdMedia', '$mdToast', '$sce', 'VideoWorks', 'VideoCoverImage',
+                           '$mdMedia', '$mdToast', '$sce', 'VideoWorks', 'PhotoWorks', 'VideoCoverImage',
                            'Upload'];
 
   function viewVideoWork ($rootScope, $http, $timeout, $mdDialog, $mdMedia,
-                          $mdToast, $sce, VideoWorks, VideoCoverImage, Upload) {
+                          $mdToast, $sce, VideoWorks, PhotoWorks, VideoCoverImage, Upload) {
     var directive = {
       restrict: 'E',
       scope: {
@@ -29,13 +29,13 @@
   }
 
   function videoWork ($rootScope, $http, $timeout, $mdDialog, $mdMedia,
-                      $mdToast, $sce, VideoWorks, VideoCoverImage, Upload) {
+                      $mdToast, $sce, VideoWorks, PhotoWorks, VideoCoverImage, Upload) {
     var directive = {
       restrict: 'E',
       scope: {
         work: '='
       },
-      link: function (scope) {
+      link: function (scope, elem, attr) {
         scope.customFullscreen = $mdMedia('xs') || $mdMedia ('sm');
         scope.coverImageUrl = scope.work.coverImageUrl;
         scope.showVideoWork = function (ev) {
@@ -215,13 +215,49 @@
               }
               $scope.showSimpleToast = function(error) {
                 var pinTo = $scope.getToastPosition();
-                if (error === 'coverImage') {
+                if (error === 'images') {
                   $mdToast.show(
                     $mdToast.simple()
-                      .textContent('Please add a cover image.')
+                      .textContent('Please add at least one image.')
                       .position(pinTo )
                       .hideDelay(3000)
                   );
+                } else {
+                  if (error === 'title') {
+                    $mdToast.show (
+                      $mdToast.simple()
+                        .textContent ('Another work with that title already exists.')
+                        .position (pinTo)
+                        .hideDelay (3000)
+                    );
+                  } else {
+                    if (error === 'video-image') {
+                      $mdToast.show(
+                        $mdToast.simple()
+                          .textContent('Please add a cover image.')
+                          .position(pinTo )
+                          .hideDelay(3000)
+                      );
+                    } else {
+                      if (error === 'missing-title') {
+                        $mdToast.show(
+                          $mdToast.simple()
+                            .textContent('Please add a title.')
+                            .position(pinTo )
+                            .hideDelay(3000)
+                        );
+                      } else {
+                        if (error === 'video-url') {
+                          $mdToast.show(
+                            $mdToast.simple()
+                              .textContent('Please add a video URL.')
+                              .position(pinTo )
+                              .hideDelay(3000)
+                          );
+                        }
+                      }
+                    }
+                  }
                 }
               };
 
@@ -279,6 +315,40 @@
                 console.log ('work.videoUrl: ', work.videoUrl);
                 console.log ('work.workInfo: ', work.workInfo);
                 console.log ('work.coverImageUrl: ', work.coverImageUrl);
+
+
+                if (angular.equals([], $rootScope.videoCoverImage)){
+                  console.log('Must add at least one image');
+                  $scope.showSimpleToast('video-image');
+                  return;
+                } else {
+
+                  if (work.title === '') {
+                    $scope.showSimpleToast ('missing-title');
+                    return;
+                  } else {
+                    // check if the entered work title already exists
+                    // (another work with the same name already exists).
+                    for (var i = 0; i < PhotoWorks.photoWorks.length; ++i) {
+                      if (PhotoWorks.photoWorks[i].title === $scope.photoWorkTitle) {
+                        $scope.showSimpleToast('title');
+                        return;
+                      }
+                    }
+                    for (var i = 0; i < VideoWorks.videoWorks.length; ++i) {
+                      if (VideoWorks.videoWorks[i].title === $scope.photoWorkTitle) {
+                        $scope.showSimpleToast('title');
+                        return;
+                      }
+                    }
+
+                    if (work.videoUrl === '') {
+                      $scope.showSimpleToast ('video-url');
+                      return;
+                    }
+                  }
+
+                }
 
                 if (VideoCoverImage.image.length !== 0) {
                   // new cover image selected

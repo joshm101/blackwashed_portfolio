@@ -159,6 +159,18 @@ function syncWrites(filesToWrite, workingPath, workTitle, postText, models, copy
               console.log("copyright: " + copyright);
               console.log("coverImageUrl: ", coverImageUrl);
 
+              for (var i = 0; i < imagesWritten.length; ++i) {
+                if (coverImageUrl === imagesWritten[i].imageUrl) {
+                  var temp = imagesWritten[0];
+                  var imageObj = {
+                    imageUrl: coverImageUrl,
+                    coverImage: true
+                  };
+                  imagesWritten[0] = imageObj;
+                  imagesWritten[i] = temp;
+                }
+              }
+
               // file array filesToWrite is empty,
               // all files have been written, create
               // DB entry.
@@ -238,6 +250,13 @@ function syncEditWrites (filesToWrite, workingPath, workTitle, postText, models,
         work.postText = postText;
         work.images = editImagesToSave;
         work.coverImageUrl = chosenCoverImage;
+        for (var i = 0; i < work.images.length; ++i) {
+          if (work.coverImageUrl === work.images[i].imageUrl) {
+            var temp = work.images[0];
+            work.images[0] = work.images[i];
+            work.images[i] = temp;
+          }
+        }
         work.save (function (err) {
           if (err) {
             console.log("error saving work to DB: ", err);
@@ -574,6 +593,13 @@ exports.editPhotoWork = function (req, res) {
                   work.copyright = copyright;
                   work.images = serverImageObjects;
                   work.coverImageUrl = chosenCoverImage;
+                  for (var i = 0; i < work.images.length; ++i) {
+                    if (work.images[i].imageUrl === work.coverImageUrl) {
+                      var temp = work.images[0];
+                      work.images[0] = work.images[i];
+                      work.images[i] = temp;
+                    }
+                  }
                   work.postText = postText;
                   work.save (function (err) {
                     if (err) {
@@ -585,7 +611,7 @@ exports.editPhotoWork = function (req, res) {
                       oldWorkPath = path.resolve (oldWorkPath, oldTitle);
                       rmdir (oldWorkPath, fs, function (err) {
                         if (err) {
-                          console.log ("error dedleting old work path: ", err);
+                          console.log ("error deleting old work path: ", err);
                         } else {
                           console.log ("successfully removed old work directory");
                           imagesWritten = [];
@@ -622,6 +648,13 @@ exports.editPhotoWork = function (req, res) {
             work.images= serverImageObjects;
             work.postText = postText;
             work.coverImageUrl = chosenCoverImage;
+            for (var i = 0; i < work.images.length; ++i) {
+              if (work.images[i].imageUrl === work.coverImageUrl) {
+                var temp = work.images[0];
+                work.images[0] = work.images[i];
+                work.images[i] = temp;
+              }
+            }
             work.save (function (err) {
               if (err) {
                 console.log ("error saving edit to DB: ", err);

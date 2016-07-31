@@ -1,12 +1,14 @@
 <md-dialog aria-label="editVideoWorkForm" layout-padding flex="70" style="max-height: 80%;">
   <h2 style="margin-bottom: 20px;">Edit Video Work</h2>
-  <md-dialog-content style="background-color: white !important;">
-    <md-content layout-padding style="background-color: white;">
-      <edit-video-work-form work="work"
-                            edit-cast-input-model="castModel"
-                            edit-directors-input-model="directorsModel"
-                            edit-editors-input-model="editorsModel"></edit-video-work-form>
+  <md-dialog-content >
+    <md-content layout-padding style="background-color: white !important;">
+
+        <edit-video-work-form work="work"
+                              edit-cast-input-model="castModel"
+                              edit-directors-input-model="directorsModel"
+                              edit-editors-input-model="editorsModel"></edit-video-work-form>
     </md-content>
+
   </md-dialog-content>
   <md-dialog-actions>
     <md-button style="color: #d7392c;" ng-click="cancelEdit($event)">Cancel</md-button>

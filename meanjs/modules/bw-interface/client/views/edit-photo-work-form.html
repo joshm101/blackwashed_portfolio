@@ -1,15 +1,19 @@
-<md-input-container style="width: 100% !important; margin-top: 25px; margin-left: -9px;">
-  <label>Work Title</label>
-  <input type="text" ng-model="work.title">
-</md-input-container>
-<edit-models-input models-form-input="editModelsInputModel" models="work.models"></edit-models-input>
-<md-input-container class="md-block">
-  <label>Work Info</label>
-  <textarea ng-model="work.postText" ng-maxlength="500" rows="4"></textarea>
-</md-input-container>
-<md-input-container style="width: 100% !important;">
-  <label>Copyright</label>
-  <input type="text" ng-model="work.copyright">
-</md-input-container>
-<edit-upload-pics-module work="work"></edit-upload-pics-module>
+
+
+  <md-input-container style="width: 100% !important; margin-top: 25px; margin-left: -9px;">
+    <label>Work Title</label>
+    <input type="text" ng-model="work.title">
+  </md-input-container>
+  <edit-models-input models-form-input="editModelsInputModel" models="work.models"></edit-models-input>
+  <md-input-container class="md-block">
+    <label>Work Info</label>
+    <textarea ng-model="work.postText" ng-maxlength="500" rows="4"></textarea>
+  </md-input-container>
+  <md-input-container style="width: 100% !important;">
+    <label>Copyright</label>
+    <input type="text" ng-model="work.copyright">
+  </md-input-container>
+  <edit-upload-pics-module work="work"></edit-upload-pics-module>
+
+
 

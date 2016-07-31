@@ -45,6 +45,42 @@
             .position(pinTo )
             .hideDelay(3000)
         );
+      } else {
+        if (error === 'title') {
+          $mdToast.show (
+            $mdToast.simple()
+              .textContent ('Another work with that title already exists.')
+              .position (pinTo)
+              .hideDelay (3000)
+          );
+        } else {
+          if (error === 'video-image') {
+            $mdToast.show(
+              $mdToast.simple()
+                .textContent('Please add a cover image.')
+                .position(pinTo )
+                .hideDelay(3000)
+            );
+          } else {
+            if (error === 'missing-title') {
+              $mdToast.show(
+                $mdToast.simple()
+                  .textContent('Please add a title.')
+                  .position(pinTo )
+                  .hideDelay(3000)
+              );
+            } else {
+              if (error === 'video-url') {
+                $mdToast.show(
+                  $mdToast.simple()
+                    .textContent('Please add a video URL.')
+                    .position(pinTo )
+                    .hideDelay(3000)
+                );
+              }
+            }
+          }
+        }
       }
     };
 
@@ -97,9 +133,40 @@
 
       console.log ('videoCoverImage: ', $rootScope.videoCoverImage);
 
+      if (angular.equals([], $rootScope.videoCoverImage)){
+        console.log('Must add at least one image');
+        $scope.showSimpleToast('video-image');
+        return;
+      } else {
 
+        if ($scope.videoWorkTitle === '') {
+          $scope.showSimpleToast ('missing-title');
+          return;
+        } else {
+          // check if the entered work title already exists
+          // (another work with the same name already exists).
+          for (var i = 0; i < PhotoWorks.photoWorks.length; ++i) {
+            if (PhotoWorks.photoWorks[i].title === $scope.photoWorkTitle) {
+              $scope.showSimpleToast('title');
+              return;
+            }
+          }
+          for (var i = 0; i < VideoWorks.videoWorks.length; ++i) {
+            if (VideoWorks.videoWorks[i].title === $scope.photoWorkTitle) {
+              $scope.showSimpleToast('title');
+              return;
+            }
+          }
 
+          if ($scope.videoUrl === '') {
+            $scope.showSimpleToast ('video-url');
+            return;
+          }
+        }
 
+      }
+
+      console.log ('typeof videoCoverImage ', typeof $rootScope.videoCoverImage);
 
       var castArray = [];
       for (var member in $scope.castFormInput) {
@@ -176,6 +243,22 @@
         console.log('Must add at least one image');
         $scope.showSimpleToast('images');
         return;
+      } else {
+
+        // check if the entered work title already exists
+        // (another work with the same name already exists).
+        for (var i = 0; i < PhotoWorks.photoWorks.length; ++i) {
+          if (PhotoWorks.photoWorks[i].title === $scope.photoWorkTitle) {
+            $scope.showSimpleToast ('title');
+            return;
+          }
+        }
+        for (var i = 0; i < VideoWorks.videoWorks.length; ++i) {
+          if (VideoWorks.videoWorks[i].title === $scope.photoWorkTitle) {
+            $scope.showSimpleToast ('title');
+            return;
+          }
+        }
       }
 
       var modelsArray = [];

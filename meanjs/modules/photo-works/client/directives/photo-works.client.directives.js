@@ -6,7 +6,7 @@
     .directive('viewPhotoWork', viewPhotoWork)
     .directive('workImage', workImage);
 
-  photoWork.$inject = ['$rootScope', '$http', '$mdDialog', '$mdMedia', '$mdToast', 'PhotoWorks', 'EditImages', 'Upload'];
+  photoWork.$inject = ['$rootScope', '$http', '$mdDialog', '$mdMedia', '$mdToast', 'PhotoWorks', 'VideoWorks', 'EditImages', 'Upload'];
   viewPhotoWork.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', '$mdMedia', 'SelectedImages', 'PhotoWorks'];
   workImage.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', '$mdMedia', 'SelectedImages', 'PhotoWorks'];
 
@@ -41,14 +41,14 @@
     return directive;
   }
 
-  function photoWork ($rootScope, $http, $mdDialog, $mdMedia, $mdToast, PhotoWorks, EditImages, Upload) {
+  function photoWork ($rootScope, $http, $mdDialog, $mdMedia, $mdToast, PhotoWorks, VideoWorks, EditImages, Upload) {
     var directive = {
       restrict: 'E',
       scope: {
         coverImageUrl: '=',
         work: '='
       },
-      link: function (scope, $mdToast) {
+      link: function (scope, elem, attr) {
 
 
 
@@ -136,7 +136,44 @@
                       .textContent('Please add at least one image.')
                       .position(pinTo )
                       .hideDelay(3000)
+                      .parent ($mdDialog)
                   );
+                } else {
+                  if (error === 'title') {
+                    $mdToast.show (
+                      $mdToast.simple()
+                        .textContent ('Another work with that title already exists.')
+                        .position (pinTo)
+                        .hideDelay (3000)
+                    );
+                  } else {
+                    if (error === 'video-image') {
+                      $mdToast.show(
+                        $mdToast.simple()
+                          .textContent('Please add a cover image.')
+                          .position(pinTo )
+                          .hideDelay(3000)
+                      );
+                    } else {
+                      if (error === 'missing-title') {
+                        $mdToast.show(
+                          $mdToast.simple()
+                            .textContent('Please add a title.')
+                            .position(pinTo )
+                            .hideDelay(3000)
+                        );
+                      } else {
+                        if (error === 'video-url') {
+                          $mdToast.show(
+                            $mdToast.simple()
+                              .textContent('Please add a video URL.')
+                              .position(pinTo )
+                              .hideDelay(3000)
+                          );
+                        }
+                      }
+                    }
+                  }
                 }
               };
 
@@ -192,6 +229,27 @@
                 if (EditImages.images.length === 0) {
                   $scope.showSimpleToast('images');
                   return;
+                } else {
+
+                  if (work.title === '') {
+                    $scope.showSimpleToast ('missing-title');
+                    return;
+                  }
+
+                  // check if the entered work title already exists
+                  // (another work with the same name already exists).
+                  for (var i = 0; i < PhotoWorks.photoWorks.length; ++i) {
+                    if (PhotoWorks.photoWorks[i].title === $scope.photoWorkTitle) {
+                      $scope.showSimpleToast ('title');
+                      return;
+                    }
+                  }
+                  for (var i = 0; i < VideoWorks.videoWorks.length; ++i) {
+                    if (VideoWorks.videoWorks[i].title === $scope.photoWorkTitle) {
+                      $scope.showSimpleToast ('title');
+                      return;
+                    }
+                  }
                 }
                 console.log("submit edited work");
                 console.log("work.models: ", work.models);

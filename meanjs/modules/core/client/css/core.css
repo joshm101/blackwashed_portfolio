@@ -7,7 +7,7 @@ body{
 }
 
 .content {
-  margin-top: 50px;
+
 }
 .undecorated-link:hover {
   text-decoration: none;
@@ -51,7 +51,7 @@ a:hover .header-profile-image {
 }
 
 section {
-	height: 100%;
+
 }
 
 body {
@@ -74,6 +74,10 @@ body {
 	max-width: 100%;
 	width: 100%;
 	display: block;
+	-webkit-transform: translateZ(0) scale(1.0, 1.0);
+	transform: translateZ(0) scale(1.0, 1.0);
+	-moz-transform: translateZ(0) scale(1.0, 1.0);
+	-o-transform: translateZ(0) scale(1.0, 1.0);
 }
 
 .social-media-links-comp {
@@ -85,7 +89,7 @@ body {
 }
 
 .social-media-links-mobile {
-	margin-bottom: -30px;
+
 	margin-top: 10px;
 }
 
@@ -129,7 +133,6 @@ body {
 
 
 #portfolio-grid {
-	background-color: white !important;
 	width: 100% !important;
 	max-width: 1600px;
 	margin: 0 auto;
@@ -208,6 +211,8 @@ works-grid-item a div {
 	right: 24px;
 }
 
+
+
 @media only screen and (max-width: 729px) {
 	.hover-title {
 		font-size: 1em;
@@ -250,6 +255,15 @@ works-grid-item a div {
 		bottom: 16px;
 		right: 16px;
 	}
+}
+
+md-grid-tile{
+
+	transition: all 650ms ease-out 50ms;
+}
+
+.grid-wrapper md-grid-list{
+	overflow: hidden;
 }
 
 
