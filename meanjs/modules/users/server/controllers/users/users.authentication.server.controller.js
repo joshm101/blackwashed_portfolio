@@ -22,47 +22,51 @@ var noReturnUrls = [
 exports.signup = function (req, res) {
   // For security measurement we remove the roles from the req.body object
   delete req.body.roles;
-     User.find({}).remove().exec();
-  var users = User.find({}, function (err, users) {
+     //User.find({}).remove().exec();
+  User.find({}, function (err, users) {
     if (err) {
       console.log ("error accessing users DB: ", err);
     } else {
+      console.log ('users: ', util.inspect (users));
+      console.log ('users.length: ', users.length);
       // only two users allowed.
       if (users.length === 2) {
         return res.status (403).send();
+      } else {
+        delete req.body.confirmPassword;
+        console.log ('req.body: ', util.inspect (req.body));
+
+
+        // Init user and add missing fields
+        var user = new User(req.body);
+        user.isNew = true;
+        user.provider = 'local';
+
+        // Then save the user
+        user.save(function (err) {
+          if (err) {
+            console.log ('error: ', err);
+            return res.status(400).send({
+              message: errorHandler.getErrorMessage(err)
+            });
+          } else {
+            // Remove sensitive data before login
+            user.password = undefined;
+            user.salt = undefined;
+
+            req.login(user, function (err) {
+              if (err) {
+                res.status(400).send(err);
+              } else {
+                res.json(user);
+              }
+            });
+          }
+        });
       }
     }
   });
-  delete req.body.confirmPassword;
-  console.log ('req.body: ', util.inspect (req.body));
 
-
-  // Init user and add missing fields
-  var user = new User(req.body);
-  user.isNew = true;
-  user.provider = 'local';
-
-  // Then save the user
-  user.save(function (err) {
-    if (err) {
-      console.log ('error: ', err);
-      return res.status(400).send({
-        message: errorHandler.getErrorMessage(err)
-      });
-    } else {
-      // Remove sensitive data before login
-      user.password = undefined;
-      user.salt = undefined;
-
-      req.login(user, function (err) {
-        if (err) {
-          res.status(400).send(err);
-        } else {
-          res.json(user);
-        }
-      });
-    }
-  });
 };
 
 /**
