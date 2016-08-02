@@ -36,6 +36,7 @@
         work: '='
       },
       link: function (scope, elem, attr) {
+
         scope.customFullscreen = $mdMedia('xs') || $mdMedia ('sm');
         scope.coverImageUrl = scope.work.coverImageUrl;
         scope.showVideoWork = function (ev) {
@@ -105,6 +106,16 @@
                 scope.domain = 'vimeo';
 
                 scope.vimeoId = vimeoId;
+              }
+
+              if (domain === 'facebook.com' ||
+                  domain === 'www.facebook.com') {
+                scope.videoUrl = 'https://www.facebook.com/plugins/video.php?href=' + work.videoUrl;
+                scope.videoUrl = $sce.trustAsResourceUrl (scope.videoUrl);
+                scope.domain = 'facebook';
+                console.log ('work.videoUrl: ', work.videoUrl);
+                console.log ('scope.videoUrl: ', scope.videoUrl);
+
               }
 
               $rootScope.hide = function () {
@@ -368,6 +379,13 @@
                     work = edit;
                     coverImageUrl = edit.coverImageUrl;
                     $mdDialog.hide ();
+                    (function(d, s, id) {
+                      var js, fjs = d.getElementsByTagName(s)[0];
+                      if (d.getElementById(id)) return;
+                      js = d.createElement(s); js.id = id;
+                      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+                      fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));
                   }, function (resp) {
                     console.log ("resp.status: ", resp.status);
                   }, function (evt) {
@@ -391,6 +409,13 @@
                     work = edit;
                     coverImageUrl = edit.coverImageUrl;
                     $mdDialog.hide ();
+                    (function(d, s, id) {
+                      var js, fjs = d.getElementsByTagName(s)[0];
+                      if (d.getElementById(id)) return;
+                      js = d.createElement(s); js.id = id;
+                      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+                      fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));
                   }, function (resp) {
                     console.log ("resp.status: ", resp.status);
                   }, function (evt) {

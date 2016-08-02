@@ -58,6 +58,20 @@ body {
 
 }
 
+.bw-footer {
+	text-align: center;
+}
+
+.footer-link {
+	text-decoration: none !important;
+	color: white !important;
+}
+
+.footer-img {
+	display: block;
+	margin: auto;
+}
+
 .grid-item{
 	padding: 0;
 

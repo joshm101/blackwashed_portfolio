@@ -2,18 +2,18 @@
   'use strict';
 
   angular
-    .module('bw-interface', ['ngFileUpload', 'ngMaterial', 'core', 'photoWorks', 'videoWorks'])
+    .module('bw-interface', ['ngFileUpload', 'ngMaterial', 'core', 'photoWorks', 'videoWorks', 'about'])
     .controller('InterfaceController', InterfaceController);
     // .controller('fabController', fabController);
 
   InterfaceController.$inject = ['$scope', '$rootScope', '$state', 'Upload', '$mdDialog',
                                  '$mdToast', '$http', 'CyclerImages',
-                                 'SelectedImages', 'PhotoWorks', 'VideoWorks'];
+                                 'SelectedImages', 'PhotoWorks', 'VideoWorks', 'AboutPageService', 'AboutImage'];
   // fabController.$inject = ['$scope', '$rootScope', '$mdDialog', '$http', '$timeout'];
 
   function InterfaceController ($scope, $rootScope, $state, Upload, $mdDialog,
                                 $mdToast, $http, CyclerImages,
-                                SelectedImages, PhotoWorks, VideoWorks) {
+                                SelectedImages, PhotoWorks, VideoWorks, AboutPageService, AboutImage) {
 
     var last = {
       bottom: false,
@@ -38,49 +38,47 @@
     }
     $scope.showSimpleToast = function(error) {
       var pinTo = $scope.getToastPosition();
-      if (error === 'images') {
-        $mdToast.show(
-          $mdToast.simple()
-            .textContent('Please add at least one image.')
-            .position(pinTo )
-            .hideDelay(3000)
-        );
-      } else {
-        if (error === 'title') {
+      switch (error) {
+        case ('images'):
+          $mdToast.show(
+            $mdToast.simple()
+              .textContent('Please add at least one image.')
+              .position(pinTo )
+              .hideDelay(3000)
+          );
+          break;
+        case ('title'):
           $mdToast.show (
             $mdToast.simple()
               .textContent ('Another work with that title already exists.')
               .position (pinTo)
               .hideDelay (3000)
           );
-        } else {
-          if (error === 'video-image') {
-            $mdToast.show(
-              $mdToast.simple()
-                .textContent('Please add a cover image.')
-                .position(pinTo )
-                .hideDelay(3000)
-            );
-          } else {
-            if (error === 'missing-title') {
-              $mdToast.show(
-                $mdToast.simple()
-                  .textContent('Please add a title.')
-                  .position(pinTo )
-                  .hideDelay(3000)
-              );
-            } else {
-              if (error === 'video-url') {
-                $mdToast.show(
-                  $mdToast.simple()
-                    .textContent('Please add a video URL.')
-                    .position(pinTo )
-                    .hideDelay(3000)
-                );
-              }
-            }
-          }
-        }
+          break;
+        case ('video-image'):
+          $mdToast.show(
+            $mdToast.simple()
+              .textContent('Please add a cover image.')
+              .position(pinTo )
+              .hideDelay(3000)
+          );
+          break;
+        case ('missing-title'):
+          $mdToast.show(
+            $mdToast.simple()
+              .textContent('Please add a title.')
+              .position(pinTo )
+              .hideDelay(3000)
+          );
+          break;
+        case ('video-url'):
+          $mdToast.show(
+            $mdToast.simple()
+              .textContent('Please add a video URL.')
+              .position(pinTo )
+              .hideDelay(3000)
+          );
+          break;
       }
     };
 
@@ -115,6 +113,7 @@
       CyclerImages.getCyclerImages();
       PhotoWorks.getPhotoWorks();
       VideoWorks.getVideoWorks();
+      AboutPageService.getAbout();
     };
 
     $scope.deleteImage = function () {
@@ -128,6 +127,84 @@
             $state.go ('home');
           }
         });
+    };
+
+    $scope.editAbout = function () {
+      $mdDialog.show ({
+        controller: function (scope) {
+          console.log ("ok");
+          console.log ('AboutPageService.about: ', AboutPageService.about);
+          scope.imageUrl = '';
+          scope.aboutText = '';
+          if (AboutPageService.about.length === 0) {
+            scope.aboutPage = {};
+            console.log ('null');
+            scope.imageUrl = '';
+          } else {
+            //console.log ('AboutPageService.about: ', AboutPageService.)
+            scope.aboutPage = AboutPageService.about[0];
+            scope.aboutText = scope.aboutPage.text;
+            scope.imageUrl = scope.aboutPage.imageUrl;
+          }
+
+          scope.submit = function () {
+            // new image was selected, we will need to upload
+            if (AboutImage.newImage.length > 0) {
+              Upload.upload({
+                url: '/api/about/edit_about_page',
+                arrayKey: '',
+                data: {
+                  file: AboutImage.newImage[0],
+                  aboutText: scope.aboutText
+                }
+              }).then (function (resp) {
+                console.log ('success');
+                console.log ('resp: ', resp);
+                AboutPageService.updateAbout (resp.data);
+                $mdDialog.hide()
+              }, function (resp) {
+                console.log ('error: ', resp);
+              }, function (evt) {
+                console.log('status: ', evt);
+              });
+            } else {
+              // no new image selected, submit text
+              Upload.upload ({
+                url: '/api/about/edit_about_page',
+                arrayKey: '',
+                data: {
+                  aboutText: scope.aboutText
+                }
+              }).then (function (resp) {
+                console.log ('success');
+                console.log ('resp: ', resp);
+                AboutPageService.updateAbout (resp.data);
+                $mdDialog.hide()
+              }, function (resp) {
+                console.log ('error: ', resp);
+              }, function (evt) {
+                console.log ('status: ', evt);
+              });
+            }
+          };
+
+          $rootScope.hide = function () {
+            $mdDialog.hide();
+          };
+
+          scope.cancel = function () {
+            $mdDialog.cancel();
+          };
+
+          $rootScope.answer = function (answer) {
+            $mdDialog.hide(answer);
+          }
+        },
+        templateUrl: 'modules/bw-interface/client/views/edit-about.html',
+        parent: angular.element (document.body),
+        clickOutsideToClose: true,
+        fullscreen: false
+      });
     };
 
     $scope.submitVideoWork = function () {
@@ -253,21 +330,27 @@
         $scope.showSimpleToast('images');
         return;
       } else {
+        if ($scope.photoWorkTitle === '') {
+          $scope.showSimpleToast ('missing-title');
+          return;
+        } else {
 
-        // check if the entered work title already exists
-        // (another work with the same name already exists).
-        for (var i = 0; i < PhotoWorks.photoWorks.length; ++i) {
-          if (PhotoWorks.photoWorks[i].title === $scope.photoWorkTitle) {
-            $scope.showSimpleToast ('title');
-            return;
+          // check if the entered work title already exists
+          // (another work with the same name already exists).
+          for (var i = 0; i < PhotoWorks.photoWorks.length; ++i) {
+            if (PhotoWorks.photoWorks[i].title === $scope.photoWorkTitle) {
+              $scope.showSimpleToast ('title');
+              return;
+            }
+          }
+          for (var i = 0; i < VideoWorks.videoWorks.length; ++i) {
+            if (VideoWorks.videoWorks[i].title === $scope.photoWorkTitle) {
+              $scope.showSimpleToast ('title');
+              return;
+            }
           }
         }
-        for (var i = 0; i < VideoWorks.videoWorks.length; ++i) {
-          if (VideoWorks.videoWorks[i].title === $scope.photoWorkTitle) {
-            $scope.showSimpleToast ('title');
-            return;
-          }
-        }
+
       }
 
       var modelsArray = [];

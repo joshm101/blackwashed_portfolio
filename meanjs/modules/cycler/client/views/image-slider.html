@@ -4,9 +4,11 @@
       <li class="slide-animation slide" ng-class="{'slide-active': image.cssClass === true, 'slide-inactive': image.cssClass === false}" style="height: 100%;" ng-repeat="image in images" height="100%" flex="100" >
         <img style="width: 100%; display: block; float: left;" ng-src="{{image.path}}" />
       </li>
-      <div class="arrows">
-        <i class="nav-arrow material-icons" ng-click="prev()">keyboard_arrow_left</i>
-        <i class="nav-arrow material-icons" ng-click="next('yes-click')">keyboard_arrow_right</i>
+      <div class="arrow-left">
+        <i class="nav-arrow nav-left material-icons" ng-click="prev()">keyboard_arrow_left</i>
+      </div>
+      <div class="arrow-right">
+        <i class="nav-arrow nav-right material-icons" ng-click="next('yes-click')">keyboard_arrow_right</i>
       </div>
     </ul>
 

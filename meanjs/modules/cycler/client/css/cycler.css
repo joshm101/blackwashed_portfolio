@@ -90,10 +90,36 @@
 }
 
 .arrows{
-	position: absolute;
 	z-index: 10;
+	position: absolute;
+	bottom: 0;
+
+}
+
+.arrow-left{
+	z-index: 10;
+	position: absolute;
 	bottom: 0;
 	left: 0;
+}
+
+.arrow-right{
+	z-index: 10;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.nav-left {
+
+
+	left: 0 !important;
+}
+
+.nav-right {
+
+
+	right: 0 !important;
 }
 
 .nav-arrow {

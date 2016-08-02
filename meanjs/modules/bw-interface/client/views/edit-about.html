@@ -1,0 +1,18 @@
+<md-dialog aria-label="editAboutDialog" style="width: 60%; max-width: 625px;">
+  <md-toolbar style="background-color: transparent; color: black;" layout-align="center center">
+    Edit About Page
+  </md-toolbar>
+  <md-dialog-content style="width: 100%;">
+    <md-content style="background-color: white;" layout-padding layout-fill>
+      <md-input-container class="md-block" style="width: 100%;">
+        <label>About You</label>
+        <textarea ng-model="aboutText" md-maxlength="2000" rows="5" required></textarea>
+      </md-input-container>
+      <edit-about-image image-url="imageUrl"></edit-about-image>
+    </md-content>
+  </md-dialog-content>
+  <md-dialog-actions>
+    <md-button ng-click="cancel()">Cancel</md-button>
+    <md-button ng-click="submit()">Submit</md-button>
+  </md-dialog-actions>
+</md-dialog>

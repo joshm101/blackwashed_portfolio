@@ -98,6 +98,13 @@
                   scope.vimeoId = vimeoId;
                 }
 
+                if (domain === 'facebook.com' ||
+                    domain === 'www.facebook.com') {
+                  scope.videoUrl = 'https://www.facebook.com/plugins/video.php?href=' + work.videoUrl;
+                  scope.videoUrl = $sce.trustAsResourceUrl (scope.videoUrl);
+                  scope.domain = 'facebook';
+                }
+
                 $rootScope.hide = function () {
                   $mdDialog.hide();
                 };
@@ -123,7 +130,7 @@
               autoWrap: false,
               clickOutsideToClose: true,
               closeTo: elem,
-              fullscreen: true
+              fullscreen: false
             });
           } else {
             $mdDialog.show ({

@@ -29,6 +29,12 @@
       </div>
     </div>
 
+    <div ng-if="domain === 'facebook'" style="width: 100%;">
+      <div class="">
+        <iframe ng-src="{{videoUrl}}" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+      </div>
+    </div>
+
     <div class="video-work-meta">
       <div class="video-work-info">
         {{workInfo}}
@@ -43,3 +49,4 @@
     </div>
   </md-dialog-content>
 </md-dialog>
+

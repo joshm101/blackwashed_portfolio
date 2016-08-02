@@ -1,9 +1,9 @@
-<md-dialog class="view-video-dialog md-dialog-fullscreen" style="width: 100%; height: 100%;" aria-label="viewVideo">
+<md-dialog class="view-video-dialog" style="width: 80%; max-width: 1200px; height: 80%;" aria-label="viewVideo">
   <md-dialog-content style="height: 100%; width: 100%">
     <md-button class="md-icon-button close-video-dialog-btn" ng-click="cancel()">
       <md-icon class="close-video-dialog-icon">close</md-icon>
     </md-button>
-    <div ng-if="domain === 'youtube'" style="width: 100%; height: 100%;">
+    <div ng-if="domain === 'youtube'" >
       <div class="view-video-wrapper">
         <iframe align="middle" class="view-video-iframe" ng-src="{{videoUrl}}"
 
@@ -12,7 +12,7 @@
       </div>
     </div>
 
-    <div ng-if="domain === 'vimeo'" style="width: 100%; height: 100%;">
+    <div ng-if="domain === 'vimeo'" >
       <div class="view-video-wrapper">
         <iframe align="middle" class="view-video-iframe"
 
@@ -21,6 +21,12 @@
                 webkitallowfullscreen
                 mozallowfullscreen
                 allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div ng-if="domain === 'facebook'" >
+      <div class="view-video-wrapper">
+        <iframe class="view-video-iframe" ng-src="{{videoUrl}}" frameborder="0" scrolling="no" allowTransparency="true" allowFullScreen="true"></iframe>
       </div>
     </div>
   </md-dialog-content>

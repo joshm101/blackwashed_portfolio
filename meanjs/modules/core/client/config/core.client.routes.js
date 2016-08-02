@@ -33,6 +33,11 @@
         controller: 'HomeController',
         controllerAs: 'vm'
       })
+      .state('about', {
+        url: '/about',
+        templateUrl: 'modules/core/client/views/about.client.view.html',
+        controller: 'AboutController'
+      })
       .state('bw-interface', {
         url: '/bw/interface',
         templateUrl: 'modules/bw-interface/client/views/bw-interface.client.view.html',

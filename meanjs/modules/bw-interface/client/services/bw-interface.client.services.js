@@ -3,12 +3,13 @@
 
   angular
     .module('bw-interface')
-    .service('CyclerImages', CyclerImages)
-    .service('SelectedImages', SelectedImages)
-    .service('ServerImages', ServerImages)
-    .service('NewImages', NewImages)
-    .service('EditImages', EditImages)
-    .service('VideoCoverImage', VideoCoverImage);
+    .service ('CyclerImages', CyclerImages)
+    .service ('SelectedImages', SelectedImages)
+    .service ('ServerImages', ServerImages)
+    .service ('NewImages', NewImages)
+    .service ('EditImages', EditImages)
+    .service ('VideoCoverImage', VideoCoverImage)
+    .service ('AboutImage', AboutImage);
 
   CyclerImages.$inject = ['$rootScope', '$http', 'Upload'];
   SelectedImages.$inject = ['$rootScope', '$http', 'Upload'];
@@ -16,6 +17,26 @@
   NewImages.$inject = ['$rootScope', '$http', 'Upload'];
   EditImages.$inject = ['$rootScope', '$http', 'Upload'];
   VideoCoverImage.$inject = ['$rootScope', '$http', 'Upload'];
+  AboutImage.$inject = ['$rootScope', '$http', 'Upload'];
+
+  function AboutImage ($rootScope, $http, Upload) {
+    var service = {
+      image: [],
+      newImage: [],
+      removeImage: function () {
+        service.image = [];
+        $rootScope.$broadcast ( 'AboutImage.update' );
+      },
+      addImage: function (file) {
+        service.image = [];
+        service.newImage = [];
+        service.newImage.push (file);
+        $rootScope.$broadcast ( 'AboutImage.update' );
+      }
+    };
+
+    return service;
+  }
 
   function VideoCoverImage ($rootScope, $http, Upload) {
     var service = {

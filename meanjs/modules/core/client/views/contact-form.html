@@ -1,0 +1,32 @@
+<md-dialog style="width: 60%; max-width: 625px;">
+  <md-toolbar style="background-color: transparent; color: black;" layout-align="center center">
+    Contact Blackwashed
+  </md-toolbar>
+  <md-dialog-content style="width: 100%;">
+      <md-content layout-padding layout-align="center center">
+        <div layout="row" layout-align="center center">
+          <div layout="column" style="width: 80%;" layout-align="center center">
+            <form style="width: 100%;">
+              <md-input-container style="width: 100%;" layout-align="center center">
+                <label>Your Email Address</label>
+                <input type="text" required>
+              </md-input-container>
+              <md-input-container style="width: 100%;" layout-align="center center">
+                <label>Subject</label>
+                <input type="text" required>
+              </md-input-container>
+              <md-input-container class="md-block" style="width: 100%;">
+                <label>Message</label>
+                <textarea ng-model="message" md-maxlength="1000" rows="5" required></textarea>
+              </md-input-container>
+            </form>
+          </div>
+        </div>
+      </md-content>
+  </md-dialog-content>
+  <md-dialog-actions>
+    <md-button ng-click="cancel()">Cancel</md-button>
+    <md-button>Submit</md-button>
+  </md-dialog-actions>
+</md-dialog>
+

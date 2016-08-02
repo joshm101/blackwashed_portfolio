@@ -24,7 +24,9 @@
     .directive ('editCastInput', editCastInput)
     .directive ('editDirectorsInput', editDirectorsInput)
     .directive ('editEditorsInput', editEditorsInput)
-    .directive ('editCoverImageThumbnail', editCoverImageThumbnail);
+    .directive ('editCoverImageThumbnail', editCoverImageThumbnail)
+    .directive ('editAboutImage', editAboutImage)
+    .directive ('editAboutImageThumbnail', editAboutImageThumbnail);
 
 
   interfaceCyclerImage.$inject = ['$rootScope', '$state', 'CyclerImages'];
@@ -50,7 +52,46 @@
   editDirectorsInput.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'VideoCoverImage'];
   editEditorsInput.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'VideoCoverImage'];
   editCoverImageThumbnail.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'VideoCoverImage'];
+  editAboutImage.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'AboutImage'];
+  editAboutImageThumbnail.$inject = ['$rootScope', '$state', '$timeout', '$mdDialog', 'AboutImage'];
 
+  function editAboutImageThumbnail ($rootScope, $state, $timeout, $mdDialog, AboutImage) {
+    var directive = {
+      restrict: 'E',
+      scope: {
+        imageUrl: '='
+      },
+      link: function (scope) {
+
+      },
+      templateUrl: 'modules/bw-interface/client/views/edit-about-image-thumbnail.html'
+    };
+
+    return directive;
+  }
+
+  function editAboutImage ($rootScope, $state, $timeout, $mdDialog, AboutImage) {
+    var directive = {
+      restrict: 'E',
+      scope: {
+        imageUrl: '='
+      },
+      link: function (scope) {
+        scope.image = [];
+        scope.selectedAboutImage = function (file) {
+          if (file !== null) {
+            scope.imageSelected = file;
+            AboutImage.addImage(file);
+            console.log (AboutImage.newImage);
+            scope.imageUrl = AboutImage.newImage[0]['$ngfBlobUrl'];
+          }
+        }
+      },
+      templateUrl: 'modules/bw-interface/client/views/edit-about-image.html'
+    };
+
+    return directive;
+  }
 
   function editCoverImageThumbnail ($rootScope, $state, $timeout, $mdDialog, VideoCoverImage) {
     var directive = {

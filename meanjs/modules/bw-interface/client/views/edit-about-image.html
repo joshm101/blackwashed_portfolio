@@ -1,0 +1,9 @@
+<input type="file" id="uploadAboutInput" style="display: none;" ngf-select="selectedAboutImage($file)" accept="image/*" ngf-max-height="4000" ngf-max-size="10MB">
+
+<md-button class="md-primary" style="height: 15px !important; font-weight: normal !important;">
+  <label class="select-photos-label" for="uploadAboutInput">Choose Image</label>
+</md-button>
+
+<div ng-if="imageUrl !== '';">
+  <edit-about-image-thumbnail image-url="imageUrl"></edit-about-image-thumbnail>
+</div>
