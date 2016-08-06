@@ -7,10 +7,12 @@
   SliderController.$inject = ['$scope', '$rootScope', '$http', 'CyclerImages'];
 
   function SliderController ($scope, $rootScope, $http, CyclerImages, $ngAnimate ) {
+    $scope.loadedBool = false;
     $scope.onLoaded = {};
     CyclerImages.getCyclerImages();
     $scope.getCyclerImages = function() {
       console.log("service: " + CyclerImages);
+      //angular.element (document.querySelector('body')).removeClass('preload');
       //CyclerImages.getCyclerImages();
     };
     angular.element(document).ready(function ($scope) {
@@ -26,6 +28,8 @@
 
     $scope.$on( 'images.update', function(event) {
       var temp = CyclerImages.images;
+      $scope.loadedBool = true;
+
 
       $scope.cyclerImages = temp;
      // console.log ("$scope.cyclerImages.length: ", $scope.cyclerImages.length);

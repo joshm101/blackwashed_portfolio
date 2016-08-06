@@ -15,6 +15,7 @@
           .then (function (res) {
             if (res.status === 200) {
               service.about = res.data;
+              $rootScope.$broadcast ( 'AboutPageService.update' );
               console.log ('service.about: ', service.about);
             }
           });
@@ -23,6 +24,8 @@
       updateAbout: function (edit) {
         service.about = [];
         service.about.push (edit);
+
+        $rootScope.$broadcast ( 'AboutPageService.update' );
       }
     };
 

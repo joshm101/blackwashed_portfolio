@@ -133,13 +133,14 @@
 
         timer = $timeout (function () {
           sliderFunc();
-        }, 300);
+        }, 500);
 
 
         //scope.currentIndex = 0;
 
 
         scope.$on('$destroy', function() {
+          console.log ('destroy');
           $timeout.cancel(timer); // when the scope is getting destroyed, cancel the timer
         });
       },

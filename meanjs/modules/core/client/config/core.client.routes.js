@@ -29,6 +29,7 @@
     $stateProvider
       .state('home', {
         url: '/',
+        cache: false,
         templateUrl: 'modules/core/client/views/home.client.view.html',
         controller: 'HomeController',
         controllerAs: 'vm'

@@ -5,11 +5,11 @@
     .module('core')
     .controller('HomeController', HomeController);
   HomeController.$inject = ['$scope', '$rootScope', '$state', 'Upload',
-                            '$mdDialog', '$mdToast', '$http'];
+                            '$mdDialog', '$mdToast', '$http', 'AboutPageService'];
 
-  function HomeController($scope, $rootScope, $state, Upload, $mdDialog, $mdToast, $http) {
+  function HomeController($scope, $rootScope, $state, Upload, $mdDialog, $mdToast, $http, AboutPageService, $ngAnimate) {
     var vm = this;
-
+    $scope.show = false;
     $scope.contact = function (ev) {
       console.log ("scope.contact");
       $mdDialog.show({
@@ -39,5 +39,33 @@
     $scope.about = function () {
       $state.go ('about');
     };
+
+    $scope.getAboutPage = function () {
+      AboutPageService.getAbout();
+    };
+
+    $scope.goHome = function () {
+      //$state.go ('home');
+      /*
+      $state.transitionTo('home', {}, {
+        reload: true
+      }).then(function() {
+        $scope.hideContent = true;
+        return $timeout(function () {
+          return $scope.hideContent = false;
+        }, 1);
+      });*/
+
+      window.location.href = '/';
+    };
+
+
+
+    $scope.$on ( 'AboutPageService.update', function () {
+      $scope.aboutObject = AboutPageService.about;
+      console.log ('update aboutpageservice');
+      console.log ('$scope.aboutObject: ', $scope.aboutObject);
+      $scope.show = true;
+    });
   }
 }());

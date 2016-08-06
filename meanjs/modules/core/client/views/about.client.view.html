@@ -1,5 +1,102 @@
 <div layout-align="center center" flex="100" style="height: 100%;">
-  <div layout="row" layout-align="center center">
-    <img ng-src="modules/images/client/img/logo/blackwashed_logo.png"/>
+  <div layout="row" layout-align="center center" ng-controller="HomeController">
+    <img ng-click="goHome()" ng-src="modules/images/client/img/logo/blackwashed_logo.png"/>
   </div>
 </div>
+
+<div class="social-media-links-comp" hide-sm hide-xs>
+  <ul class="links-list" layout-align="center center">
+    <li>
+      <md-button aria-label="facebook" class="md-icon-button">
+        <a href="https://www.facebook.com/BlackwashedLA/">
+          <md-icon md-svg-icon="facebook-box"></md-icon>
+        </a>
+      </md-button>
+    </li>
+    <li>
+      <md-button aria-label="instagram" class="md-icon-button">
+        <a href="https://www.instagram.com/blackwashed/">
+          <md-icon md-svg-icon="instagram"></md-icon>
+        </a>
+      </md-button>
+    </li>
+    <li>
+      <md-button aria-label="twitter" class="md-icon-button">
+        <a href="https://twitter.com/BLKWSHD">
+          <md-icon md-svg-icon="twitter"></md-icon>
+        </a>
+      </md-button>
+    </li>
+    <li>
+      <md-button aria-label="tumblr" class="md-icon-button">
+        <a href="https://blackwasheddotcom.tumblr.com/">
+          <md-icon md-svg-icon="tumblr"></md-icon>
+        </a>
+      </md-button>
+    </li>
+  </ul>
+</div>
+<div class="social-media-links-mobile" style="margin-bottom: -40px;" hide-gt-sm layout="row" layout-align="center center">
+  <ul class="links-list" layout-align="center center">
+    <li>
+      <md-button aria-label="mFacebook" class="md-icon-button">
+        <a href="https://www.facebook.com/BlackwashedLA/">
+          <md-icon md-svg-icon="facebook-box"></md-icon>
+        </a>
+      </md-button>
+    </li>
+    <li>
+      <md-button aria-label="mInstagram" class="md-icon-button">
+        <a href="https://www.instagram.com/blackwashed/">
+          <md-icon md-svg-icon="instagram"></md-icon>
+        </a>
+      </md-button>
+    </li>
+    <li>
+      <md-button aria-label="mTwitter" class="md-icon-button">
+        <a href="https://twitter.com/BLKWSHD">
+          <md-icon md-svg-icon="twitter"></md-icon>
+        </a>
+      </md-button>
+    </li>
+    <li>
+      <md-button aria-label="mTumblr" class="md-icon-button">
+        <a href="https://blackwasheddotcom.tumblr.com/">
+          <md-icon md-svg-icon="tumblr"></md-icon>
+        </a>
+      </md-button>
+    </li>
+  </ul>
+</div>
+
+<div ng-controller="HomeController" ng-init="getAboutPage()" style="padding-top: 120px;">
+
+
+
+
+  <div class="about-wrapper" style="width: 85%; max-width: 900px; margin-left: auto; margin-right: auto;">
+    <img class="show-image" ng-if="show" ng-src="{{aboutObject[0].imageUrl}}" style="width: 100%; height: auto;">
+    <div class="show-about-text" ng-if="show" style="margin: -30px 0 0 15px !important; text-indent:0 !important; white-space: pre-line; line-height: 1.8em;">
+      <br>
+      {{aboutObject[0].text}}
+      <br>
+    </div>
+  </div>
+
+
+
+
+  <div flex="100" class="bw-footer" style="width: 100%; height: 30px !important; background-color: black; position: fixed; bottom: 0;" layout-align="center center">
+    <div class="footer-links-wrap" style="height: 100%;">
+      <ul style="list-style-type: none; padding: 0 !important; margin-left: 8px !important; height: 100% !important; line-height: 30px !important;">
+        <li style="display: inline;">
+          <a href="#" class="footer-link" style="margin-right: 20px !important;" ng-click="about()">About</a>
+        </li>
+        <li style="display: inline;">
+          <a href="#" class="footer-link" style="margin-left: 20px !important;" ng-click="contact($event)">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+

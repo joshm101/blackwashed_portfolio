@@ -327,6 +327,27 @@
                 console.log ('work.workInfo: ', work.workInfo);
                 console.log ('work.coverImageUrl: ', work.coverImageUrl);
 
+                for (var i = 0; i < work.directedBy.length; ++i) {
+                  if (work.directedBy[i] === '' || work.directedBy[i].match(/^\s*$/)) {
+                    work.directedBy.splice(i, 1);
+                    i = 0;
+                  }
+                }
+
+                for (var i = 0; i < work.editedBy.length; ++i) {
+                  if (work.editedBy[i] === '' || work.editedBy[i].match(/^\s*$/)) {
+                    work.editedBy.splice(i, 1);
+                    i = 0;
+                  }
+                }
+
+                for (var i = 0; i < work.cast.length; ++i) {
+                  if (work.cast[i] === '' || work.cast[i].match(/^\s*$/)) {
+                    work.cast.splice(i, 1);
+                    i = 0;
+                  }
+                }
+
 
                 if (angular.equals([], $rootScope.videoCoverImage)){
                   console.log('Must add at least one image');
