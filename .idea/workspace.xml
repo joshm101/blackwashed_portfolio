@@ -250,11 +250,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="core.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="core.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/meanjs/modules/core/client/css/core.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.5">
-              <caret line="799" column="1" selection-start-line="799" selection-start-column="1" selection-end-line="799" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.11995516">
+              <caret line="1007" column="9" selection-start-line="1007" selection-start-column="9" selection-end-line="1007" selection-end-column="11" />
               <folding>
                 <element signature="e#2002#2075#0" expanded="false" />
                 <element signature="e#2104#2127#0" expanded="false" />
@@ -263,40 +263,29 @@
                 <element signature="e#2286#2428#0" expanded="false" />
                 <element signature="e#2452#2504#0" expanded="false" />
                 <element signature="e#2529#2561#0" expanded="false" />
-                <element signature="e#4440#5535#0" expanded="false" />
-                <element signature="e#5537#6632#0" expanded="false" />
                 <element signature="e#6634#7729#0" expanded="false" />
-                <element signature="e#7731#8639#0" expanded="false" />
-                <element signature="e#8641#9548#0" expanded="false" />
-                <element signature="e#9550#10457#0" expanded="false" />
                 <element signature="e#10459#11273#0" expanded="false" />
                 <element signature="e#11275#12089#0" expanded="false" />
-                <element signature="e#12091#13009#0" expanded="false" />
-                <element signature="e#13011#14103#0" expanded="false" />
-                <element signature="e#14105#15197#0" expanded="false" />
-                <element signature="e#15199#16294#0" expanded="false" />
-                <element signature="e#16296#17390#0" expanded="false" />
-                <element signature="e#17392#18486#0" expanded="false" />
-                <element signature="e#18488#19582#0" expanded="false" />
-                <element signature="e#19584#20678#0" expanded="false" />
-                <element signature="e#20680#21774#0" expanded="false" />
-                <element signature="e#21776#22870#0" expanded="false" />
-                <element signature="e#22872#23966#0" expanded="false" />
-                <element signature="e#23968#25062#0" expanded="false" />
-                <element signature="e#25064#26158#0" expanded="false" />
-                <element signature="e#26160#27254#0" expanded="false" />
-                <element signature="e#27256#28351#0" expanded="false" />
-                <element signature="e#28355#29448#0" expanded="false" />
+                <element signature="e#15945#17037#0" expanded="false" />
+                <element signature="e#18136#19230#0" expanded="false" />
+                <element signature="e#19232#20326#0" expanded="false" />
+                <element signature="e#20328#21422#0" expanded="false" />
+                <element signature="e#21424#22518#0" expanded="false" />
+                <element signature="e#22520#23614#0" expanded="false" />
+                <element signature="e#23616#24710#0" expanded="false" />
+                <element signature="e#25808#26902#0" expanded="false" />
+                <element signature="e#26904#27998#0" expanded="false" />
+                <element signature="e#30194#31287#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/meanjs/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20987654">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state vertical-scroll-proportion="-17.0">
+              <caret line="27" column="53" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -418,8 +407,8 @@
         <option value="$PROJECT_DIR$/meanjs/modules/core/client/views/home.client.view.html" />
         <option value="$PROJECT_DIR$/meanjs/modules/cycler/client/css/cycler.css" />
         <option value="$PROJECT_DIR$/meanjs/modules/works/client/views/works-grid-item.html" />
-        <option value="$PROJECT_DIR$/meanjs/modules/core/client/css/core.css" />
         <option value="$PROJECT_DIR$/meanjs/.gitignore" />
+        <option value="$PROJECT_DIR$/meanjs/modules/core/client/css/core.css" />
       </list>
     </option>
   </component>
@@ -1658,9 +1647,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19270833" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19270833" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2053,10 +2042,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.0">
+          <caret line="27" column="53" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/meanjs/modules/core/client/css/core.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.5">
-          <caret line="799" column="1" selection-start-line="799" selection-start-column="1" selection-end-line="799" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.11995516">
+          <caret line="1007" column="9" selection-start-line="1007" selection-start-column="9" selection-end-line="1007" selection-end-column="11" />
           <folding>
             <element signature="e#2002#2075#0" expanded="false" />
             <element signature="e#2104#2127#0" expanded="false" />
@@ -2065,39 +2062,20 @@
             <element signature="e#2286#2428#0" expanded="false" />
             <element signature="e#2452#2504#0" expanded="false" />
             <element signature="e#2529#2561#0" expanded="false" />
-            <element signature="e#4440#5535#0" expanded="false" />
-            <element signature="e#5537#6632#0" expanded="false" />
             <element signature="e#6634#7729#0" expanded="false" />
-            <element signature="e#7731#8639#0" expanded="false" />
-            <element signature="e#8641#9548#0" expanded="false" />
-            <element signature="e#9550#10457#0" expanded="false" />
             <element signature="e#10459#11273#0" expanded="false" />
             <element signature="e#11275#12089#0" expanded="false" />
-            <element signature="e#12091#13009#0" expanded="false" />
-            <element signature="e#13011#14103#0" expanded="false" />
-            <element signature="e#14105#15197#0" expanded="false" />
-            <element signature="e#15199#16294#0" expanded="false" />
-            <element signature="e#16296#17390#0" expanded="false" />
-            <element signature="e#17392#18486#0" expanded="false" />
-            <element signature="e#18488#19582#0" expanded="false" />
-            <element signature="e#19584#20678#0" expanded="false" />
-            <element signature="e#20680#21774#0" expanded="false" />
-            <element signature="e#21776#22870#0" expanded="false" />
-            <element signature="e#22872#23966#0" expanded="false" />
-            <element signature="e#23968#25062#0" expanded="false" />
-            <element signature="e#25064#26158#0" expanded="false" />
-            <element signature="e#26160#27254#0" expanded="false" />
-            <element signature="e#27256#28351#0" expanded="false" />
-            <element signature="e#28355#29448#0" expanded="false" />
+            <element signature="e#15945#17037#0" expanded="false" />
+            <element signature="e#18136#19230#0" expanded="false" />
+            <element signature="e#19232#20326#0" expanded="false" />
+            <element signature="e#20328#21422#0" expanded="false" />
+            <element signature="e#21424#22518#0" expanded="false" />
+            <element signature="e#22520#23614#0" expanded="false" />
+            <element signature="e#23616#24710#0" expanded="false" />
+            <element signature="e#25808#26902#0" expanded="false" />
+            <element signature="e#26904#27998#0" expanded="false" />
+            <element signature="e#30194#31287#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20987654">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>

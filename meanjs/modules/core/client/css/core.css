@@ -320,7 +320,7 @@ works-grid-item a div {
 	.hover-directors {
 		width: 100%;
 		position: absolute;
-		top: 220px;
+		top: 197px;
 		font-size: 0.8em;
 	}
 
@@ -390,7 +390,7 @@ works-grid-item a div {
 	.hover-directors {
 		width: 100%;
 		position: absolute;
-		top: 200px;
+		top: 185px;
 		font-size: 0.8em;
 	}
 
@@ -541,7 +541,7 @@ works-grid-item a div {
 	.hover-directors {
 		width: 100%;
 		position: absolute;
-		top: 220px;
+		top: 225px;
 		font-size: 0.8em;
 	}
 
@@ -600,7 +600,7 @@ works-grid-item a div {
 	.hover-directors {
 		width: 100%;
 		position: absolute;
-		top: 170px;
+		top: 208px;
 		font-size: 0.7em;
 	}
 
@@ -659,7 +659,7 @@ works-grid-item a div {
 	.hover-directors {
 		width: 100%;
 		position: absolute;
-		top: 180px;
+		top: 182px;
 		font-size: 0.7em;
 	}
 
@@ -825,7 +825,131 @@ works-grid-item a div {
 	.hover-directors {
 		width: 100%;
 		position: absolute;
-		top: 195px;
+		top: 208px;
+		font-size: 0.8em;
+	}
+
+	.hover-editors {
+		width: 100%;
+		position: absolute;
+		top: 165px;
+		font-size: 0.7em;
+	}
+
+	.hover-element-work-type {
+		clear: both;
+		position: absolute;
+		bottom: 0;
+		float: right;
+		right: 0;
+		font-size: 0.7em;
+	}
+
+	.hover-copyright {
+		position: absolute;
+		font-size: 0.6em;
+		width: 80%;
+		bottom: 24px;
+		left: 16px;
+		text-shadow: rgba(0,0,0,.01) 0 0 1px;
+
+	}
+
+	.work-type{
+		bottom: 24px;
+		right: 24px;
+	}
+}
+
+@media only screen and (max-width: 789px) {
+	.hover-title {
+		font-size: 1.2em;
+		line-height: 23px;
+		text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	}
+
+	.models-list,.cast-list {
+		width: 80%;
+		position: absolute;
+		top: 30px;
+		padding-left: 0 !important;
+	}
+
+	.cast-list md-grid-tile figure{
+		font-size: 0.8em !important;
+		justify-content: flex-start !important;
+	}
+
+	.person {
+		font-size: 0.65em;
+	}
+
+	.hover-directors {
+		width: 100%;
+		position: absolute;
+		top: 200px;
+		font-size: 0.8em;
+	}
+
+	.hover-editors {
+		width: 100%;
+		position: absolute;
+		top: 165px;
+		font-size: 0.7em;
+	}
+
+	.hover-element-work-type {
+		clear: both;
+		position: absolute;
+		bottom: 0;
+		float: right;
+		right: 0;
+		font-size: 0.7em;
+	}
+
+	.hover-copyright {
+		position: absolute;
+		font-size: 0.6em;
+		width: 80%;
+		bottom: 24px;
+		left: 16px;
+		text-shadow: rgba(0,0,0,.01) 0 0 1px;
+
+	}
+
+	.work-type{
+		bottom: 24px;
+		right: 24px;
+	}
+}
+
+@media only screen and (max-width: 740px) {
+	.hover-title {
+		font-size: 1.2em;
+		line-height: 23px;
+		text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	}
+
+	.models-list,.cast-list {
+		width: 80%;
+		position: absolute;
+		top: 30px;
+		padding-left: 0 !important;
+	}
+
+	.cast-list md-grid-tile figure{
+		font-size: 0.8em !important;
+		justify-content: flex-start !important;
+	}
+
+	.person {
+		font-size: 0.65em;
+	}
+
+	.hover-directors {
+		width: 100%;
+		position: absolute;
+		top: 193px;
 		font-size: 0.8em;
 	}
 
@@ -874,7 +998,7 @@ works-grid-item a div {
 	.hover-directors {
 		width: 100%;
 		position: absolute;
-		top: 175px;
+		top: 191px;
 		font-size: 0.7em;
 	}
 
@@ -1003,8 +1127,8 @@ works-grid-item a div {
 
 @media only screen and (max-width: 600px) {
 	.hover-title {
-		font-size: 0.8em;
-		line-height: 15px;
+		font-size: 0.9em;
+		line-height: 20px;
 		text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	}
 	.person {
@@ -1015,7 +1139,7 @@ works-grid-item a div {
 		width: 100%;
 		position: absolute;
 		top: 160px;
-		font-size: 0.6em;
+		font-size: 0.7em;
 	}
 
 	.hover-editors {
@@ -1033,7 +1157,7 @@ works-grid-item a div {
 	}
 
 	.cast-list md-grid-tile figure{
-		font-size: 0.6em !important;
+		font-size: 0.7em !important;
 		justify-content: flex-start !important;
 	}
 
@@ -1052,12 +1176,12 @@ works-grid-item a div {
 		bottom: 0;
 		float: right;
 		right: 0;
-		font-size: 0.5em;
+		font-size: 0.6em;
 	}
 
 	.hover-copyright {
 		position: absolute;
-		font-size: 0.5em;
+		font-size: 0.6em;
 		width: 80%;
 		bottom: 16px;
 		left: 16px;
@@ -1504,7 +1628,7 @@ works-grid-item a div {
 	.hover-directors {
 		width: 100%;
 		position: absolute;
-		top: 120px;
+		top: 115px;
 		font-size: 0.5em;
 	}
 
@@ -1714,7 +1838,7 @@ works-grid-item a div {
 	.hover-directors {
 		width: 100%;
 		position: absolute;
-		top: 100px;
+		top: 95px;
 		font-size: 0.5em;
 	}
 
@@ -1784,7 +1908,7 @@ works-grid-item a div {
 	.hover-directors {
 		width: 100%;
 		position: absolute;
-		top: 95px;
+		top: 92px;
 		font-size: 0.45em;
 	}
 
