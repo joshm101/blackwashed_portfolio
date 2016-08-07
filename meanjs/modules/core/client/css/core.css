@@ -600,15 +600,8 @@ works-grid-item a div {
 	.hover-directors {
 		width: 100%;
 		position: absolute;
-		top: 180px;
+		top: 170px;
 		font-size: 0.7em;
-	}
-
-	.hover-directors {
-		width: 100%;
-		position: absolute;
-		top: 210px;
-		font-size: 0.8em;
 	}
 
 	.hover-editors {
@@ -670,13 +663,6 @@ works-grid-item a div {
 		font-size: 0.7em;
 	}
 
-	.hover-directors {
-		width: 100%;
-		position: absolute;
-		top: 185px;
-		font-size: 0.7em;
-	}
-
 	.hover-editors {
 		width: 100%;
 		position: absolute;
@@ -711,8 +697,60 @@ works-grid-item a div {
 
 @media only screen and (max-width: 959px) {
 	.hover-title {
-		font-size: 1.2em;
-		line-height: 23px;
+		font-size: 1.3em;
+		line-height: 27px;
+		width: 80%;
+		text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	}
+
+	.cast-list md-grid-tile figure{
+		font-size: 0.9em !important;
+		justify-content: flex-start !important;
+	}
+
+	.models-list,.cast-list {
+		width: 80%;
+		position: absolute;
+		top: 85px !important;
+		padding-left: 0 !important;
+	}
+
+	.hover-directors {
+		width: 100%;
+		position: absolute;
+		top: 250px;
+		font-size: 0.9em;
+	}
+
+	.hover-copyright {
+		position: absolute;
+		font-size: 0.7em;
+		width: 80%;
+		bottom: 24px;
+		left: 16px;
+		text-shadow: rgba(0,0,0,.01) 0 0 1px;
+
+	}
+
+	.hover-element-work-type {
+		clear: both;
+		position: absolute;
+		bottom: 0;
+		float: right;
+		right: 0;
+		font-size: 0.7em;
+	}
+
+	.work-type{
+		bottom: 24px;
+		right: 24px;
+	}
+}
+
+@media only screen and (max-width: 880px) {
+	.hover-title {
+		font-size: 1.4em;
+		line-height: 25px;
 		width: 80%;
 		text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	}
@@ -732,7 +770,7 @@ works-grid-item a div {
 	.hover-directors {
 		width: 100%;
 		position: absolute;
-		top: 240px;
+		top: 230px;
 		font-size: 0.8em;
 	}
 
@@ -787,7 +825,7 @@ works-grid-item a div {
 	.hover-directors {
 		width: 100%;
 		position: absolute;
-		top: 200px;
+		top: 195px;
 		font-size: 0.8em;
 	}
 
@@ -893,6 +931,76 @@ works-grid-item a div {
 	}
 }
 
+@media only screen and (max-width: 630px) {
+	.hover-title {
+		font-size: 1em;
+		line-height: 20px;
+		text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	}
+	.person {
+		font-size: 0.55em;
+	}
+
+	.hover-directors {
+		width: 100%;
+		position: absolute;
+		top: 165px;
+		font-size: 0.7em;
+	}
+
+	.hover-editors {
+		width: 100%;
+		position: absolute;
+		top: 90px;
+		font-size: 0.4em;
+	}
+
+	.models-list,.cast-list {
+		width: 80%;
+		position: absolute;
+		top: 55px !important;
+		padding-left: 0 !important;
+	}
+
+	.cast-list md-grid-tile figure{
+		font-size: 0.7em !important;
+		justify-content: flex-start !important;
+	}
+
+	.hover-element-data-wrap {
+		padding: 16px 16px 0 16px;
+		display: block;
+		height: 100%;
+		font-size: 20px;
+		max-width: 100%;
+		overflow: hidden;
+		width: 100%;
+	}
+	.hover-element-work-type {
+		clear: both;
+		position: absolute;
+		bottom: 0;
+		float: right;
+		right: 0;
+		font-size: 0.6em;
+	}
+
+	.hover-copyright {
+		position: absolute;
+		font-size: 0.6em;
+		width: 80%;
+		bottom: 16px;
+		left: 16px;
+		text-shadow: rgba(0,0,0,.01) 0 0 1px;
+
+	}
+
+	.work-type{
+		bottom: 16px;
+		right: 16px;
+	}
+}
+
 @media only screen and (max-width: 600px) {
 	.hover-title {
 		font-size: 0.8em;
@@ -906,14 +1014,14 @@ works-grid-item a div {
 	.hover-directors {
 		width: 100%;
 		position: absolute;
-		top: 165px;
+		top: 160px;
 		font-size: 0.6em;
 	}
 
 	.hover-editors {
 		width: 100%;
 		position: absolute;
-		top: 90px;
+		top: 100px;
 		font-size: 0.4em;
 	}
 
@@ -1033,7 +1141,7 @@ works-grid-item a div {
 	}
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 554px) {
 	.hover-title {
 		font-size: 0.7em;
 		line-height: 14px;
@@ -1046,7 +1154,497 @@ works-grid-item a div {
 	.hover-directors {
 		width: 100%;
 		position: absolute;
-		top: 112px;
+		top: 150px;
+		font-size: 0.5em;
+	}
+
+	.hover-editors {
+		width: 100%;
+		position: absolute;
+		top: 90px;
+		font-size: 0.4em;
+	}
+
+	.models-list,.cast-list {
+		width: 80%;
+		position: absolute;
+		top: 38px !important;
+		padding-left: 0 !important;
+	}
+
+	.cast-list md-grid-tile figure{
+		font-size: 0.5em !important;
+		justify-content: flex-start !important;
+	}
+
+	.hover-element-data-wrap {
+		padding: 16px 16px 0 16px;
+		display: block;
+		height: 100%;
+		font-size: 20px;
+		max-width: 100%;
+		overflow: hidden;
+		width: 100%;
+	}
+	.hover-element-work-type {
+		clear: both;
+		position: absolute;
+		bottom: 0;
+		float: right;
+		right: 0;
+		font-size: 0.4em;
+	}
+
+	.hover-copyright {
+		position: absolute;
+		font-size: 0.4em;
+		width: 80%;
+		bottom: 16px;
+		left: 16px;
+		text-shadow: rgba(0,0,0,.01) 0 0 1px;
+
+	}
+
+	.work-type{
+		bottom: 16px;
+		right: 16px;
+	}
+}
+
+@media only screen and (max-width: 522px) {
+	.hover-title {
+		font-size: 0.7em;
+		line-height: 14px;
+		text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	}
+	.person {
+		font-size: 0.55em;
+	}
+
+	.hover-directors {
+		width: 100%;
+		position: absolute;
+		top: 140px;
+		font-size: 0.5em;
+	}
+
+	.hover-editors {
+		width: 100%;
+		position: absolute;
+		top: 90px;
+		font-size: 0.4em;
+	}
+
+	.models-list,.cast-list {
+		width: 80%;
+		position: absolute;
+		top: 38px !important;
+		padding-left: 0 !important;
+	}
+
+	.cast-list md-grid-tile figure{
+		font-size: 0.5em !important;
+		justify-content: flex-start !important;
+	}
+
+	.hover-element-data-wrap {
+		padding: 16px 16px 0 16px;
+		display: block;
+		height: 100%;
+		font-size: 20px;
+		max-width: 100%;
+		overflow: hidden;
+		width: 100%;
+	}
+	.hover-element-work-type {
+		clear: both;
+		position: absolute;
+		bottom: 0;
+		float: right;
+		right: 0;
+		font-size: 0.4em;
+	}
+
+	.hover-copyright {
+		position: absolute;
+		font-size: 0.4em;
+		width: 80%;
+		bottom: 16px;
+		left: 16px;
+		text-shadow: rgba(0,0,0,.01) 0 0 1px;
+
+	}
+
+	.work-type{
+		bottom: 16px;
+		right: 16px;
+	}
+}
+
+@media only screen and (max-width: 508px) {
+	.hover-title {
+		font-size: 0.7em;
+		line-height: 14px;
+		text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	}
+	.person {
+		font-size: 0.55em;
+	}
+
+	.hover-directors {
+		width: 100%;
+		position: absolute;
+		top: 135px;
+		font-size: 0.5em;
+	}
+
+	.hover-editors {
+		width: 100%;
+		position: absolute;
+		top: 90px;
+		font-size: 0.4em;
+	}
+
+	.models-list,.cast-list {
+		width: 80%;
+		position: absolute;
+		top: 38px !important;
+		padding-left: 0 !important;
+	}
+
+	.cast-list md-grid-tile figure{
+		font-size: 0.5em !important;
+		justify-content: flex-start !important;
+	}
+
+	.hover-element-data-wrap {
+		padding: 16px 16px 0 16px;
+		display: block;
+		height: 100%;
+		font-size: 20px;
+		max-width: 100%;
+		overflow: hidden;
+		width: 100%;
+	}
+	.hover-element-work-type {
+		clear: both;
+		position: absolute;
+		bottom: 0;
+		float: right;
+		right: 0;
+		font-size: 0.4em;
+	}
+
+	.hover-copyright {
+		position: absolute;
+		font-size: 0.4em;
+		width: 80%;
+		bottom: 16px;
+		left: 16px;
+		text-shadow: rgba(0,0,0,.01) 0 0 1px;
+
+	}
+
+	.work-type{
+		bottom: 16px;
+		right: 16px;
+	}
+}
+
+@media only screen and (max-width: 486px) {
+	.hover-title {
+		font-size: 0.7em;
+		line-height: 14px;
+		text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	}
+	.person {
+		font-size: 0.55em;
+	}
+
+	.hover-directors {
+		width: 100%;
+		position: absolute;
+		top: 135px;
+		font-size: 0.5em;
+	}
+
+	.hover-editors {
+		width: 100%;
+		position: absolute;
+		top: 90px;
+		font-size: 0.4em;
+	}
+
+	.models-list,.cast-list {
+		width: 80%;
+		position: absolute;
+		top: 38px !important;
+		padding-left: 0 !important;
+	}
+
+	.cast-list md-grid-tile figure{
+		font-size: 0.5em !important;
+		justify-content: flex-start !important;
+	}
+
+	.hover-element-data-wrap {
+		padding: 16px 16px 0 16px;
+		display: block;
+		height: 100%;
+		font-size: 20px;
+		max-width: 100%;
+		overflow: hidden;
+		width: 100%;
+	}
+	.hover-element-work-type {
+		clear: both;
+		position: absolute;
+		bottom: 0;
+		float: right;
+		right: 0;
+		font-size: 0.4em;
+	}
+
+	.hover-copyright {
+		position: absolute;
+		font-size: 0.4em;
+		width: 80%;
+		bottom: 16px;
+		left: 16px;
+		text-shadow: rgba(0,0,0,.01) 0 0 1px;
+
+	}
+
+	.work-type{
+		bottom: 16px;
+		right: 16px;
+	}
+}
+
+@media only screen and (max-width: 472px) {
+	.hover-title {
+		font-size: 0.7em;
+		line-height: 14px;
+		text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	}
+	.person {
+		font-size: 0.55em;
+	}
+
+	.hover-directors {
+		width: 100%;
+		position: absolute;
+		top: 118px;
+		font-size: 0.5em;
+	}
+
+	.hover-editors {
+		width: 100%;
+		position: absolute;
+		top: 90px;
+		font-size: 0.4em;
+	}
+
+	.models-list,.cast-list {
+		width: 80%;
+		position: absolute;
+		top: 38px !important;
+		padding-left: 0 !important;
+	}
+
+	.cast-list md-grid-tile figure{
+		font-size: 0.5em !important;
+		justify-content: flex-start !important;
+	}
+
+	.hover-element-data-wrap {
+		padding: 16px 16px 0 16px;
+		display: block;
+		height: 100%;
+		font-size: 20px;
+		max-width: 100%;
+		overflow: hidden;
+		width: 100%;
+	}
+	.hover-element-work-type {
+		clear: both;
+		position: absolute;
+		bottom: 0;
+		float: right;
+		right: 0;
+		font-size: 0.4em;
+	}
+
+	.hover-copyright {
+		position: absolute;
+		font-size: 0.4em;
+		width: 80%;
+		bottom: 16px;
+		left: 16px;
+		text-shadow: rgba(0,0,0,.01) 0 0 1px;
+
+	}
+
+	.work-type{
+		bottom: 16px;
+		right: 16px;
+	}
+}
+
+@media only screen and (max-width: 458px) {
+	.hover-title {
+		font-size: 0.7em;
+		line-height: 14px;
+		text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	}
+	.person {
+		font-size: 0.55em;
+	}
+
+	.hover-directors {
+		width: 100%;
+		position: absolute;
+		top: 120px;
+		font-size: 0.5em;
+	}
+
+	.hover-editors {
+		width: 100%;
+		position: absolute;
+		top: 90px;
+		font-size: 0.4em;
+	}
+
+	.models-list,.cast-list {
+		width: 80%;
+		position: absolute;
+		top: 38px !important;
+		padding-left: 0 !important;
+	}
+
+	.cast-list md-grid-tile figure{
+		font-size: 0.5em !important;
+		justify-content: flex-start !important;
+	}
+
+	.hover-element-data-wrap {
+		padding: 16px 16px 0 16px;
+		display: block;
+		height: 100%;
+		font-size: 20px;
+		max-width: 100%;
+		overflow: hidden;
+		width: 100%;
+	}
+	.hover-element-work-type {
+		clear: both;
+		position: absolute;
+		bottom: 0;
+		float: right;
+		right: 0;
+		font-size: 0.4em;
+	}
+
+	.hover-copyright {
+		position: absolute;
+		font-size: 0.4em;
+		width: 80%;
+		bottom: 16px;
+		left: 16px;
+		text-shadow: rgba(0,0,0,.01) 0 0 1px;
+
+	}
+
+	.work-type{
+		bottom: 16px;
+		right: 16px;
+	}
+}
+
+@media only screen and (max-width: 434px) {
+	.hover-title {
+		font-size: 0.7em;
+		line-height: 14px;
+		text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	}
+	.person {
+		font-size: 0.55em;
+	}
+
+	.hover-directors {
+		width: 100%;
+		position: absolute;
+		top: 110px;
+		font-size: 0.5em;
+	}
+
+	.hover-editors {
+		width: 100%;
+		position: absolute;
+		top: 90px;
+		font-size: 0.4em;
+	}
+
+	.models-list,.cast-list {
+		width: 80%;
+		position: absolute;
+		top: 38px !important;
+		padding-left: 0 !important;
+	}
+
+	.cast-list md-grid-tile figure{
+		font-size: 0.5em !important;
+		justify-content: flex-start !important;
+	}
+
+	.hover-element-data-wrap {
+		padding: 16px 16px 0 16px;
+		display: block;
+		height: 100%;
+		font-size: 20px;
+		max-width: 100%;
+		overflow: hidden;
+		width: 100%;
+	}
+	.hover-element-work-type {
+		clear: both;
+		position: absolute;
+		bottom: 0;
+		float: right;
+		right: 0;
+		font-size: 0.4em;
+	}
+
+	.hover-copyright {
+		position: absolute;
+		font-size: 0.4em;
+		width: 80%;
+		bottom: 16px;
+		left: 16px;
+		text-shadow: rgba(0,0,0,.01) 0 0 1px;
+
+	}
+
+	.work-type{
+		bottom: 16px;
+		right: 16px;
+	}
+}
+
+@media only screen and (max-width: 420px) {
+	.hover-title {
+		font-size: 0.7em;
+		line-height: 14px;
+		text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	}
+	.person {
+		font-size: 0.55em;
+	}
+
+	.hover-directors {
+		width: 100%;
+		position: absolute;
+		top: 105px;
 		font-size: 0.5em;
 	}
 
@@ -1200,7 +1798,7 @@ works-grid-item a div {
 	.models-list,.cast-list {
 		width: 80%;
 		position: absolute;
-		top: 34px !important;
+		top: 38px !important;
 		padding-left: 0 !important;
 	}
 

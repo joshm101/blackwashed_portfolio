@@ -187,18 +187,8 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/video_works/Video Works Test/71501773-0621-48db-88b9-bb893c27a829.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/meanjs/modules/images/client/img/video_works/Vimeo Test/6e3c0653-007a-4dc3-87e0-39845344b62d.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/about/client/services/about.client.services.js" afterPath="$PROJECT_DIR$/meanjs/modules/about/client/services/about.client.services.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/core/client/config/core.client.routes.js" afterPath="$PROJECT_DIR$/meanjs/modules/core/client/config/core.client.routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/core/client/controllers/home.client.controller.js" afterPath="$PROJECT_DIR$/meanjs/modules/core/client/controllers/home.client.controller.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/.gitignore" afterPath="$PROJECT_DIR$/meanjs/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/core/client/css/core.css" afterPath="$PROJECT_DIR$/meanjs/modules/core/client/css/core.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/core/client/views/about.client.view.html" afterPath="$PROJECT_DIR$/meanjs/modules/core/client/views/about.client.view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/core/client/views/contact-form.html" afterPath="$PROJECT_DIR$/meanjs/modules/core/client/views/contact-form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/core/client/views/home.client.view.html" afterPath="$PROJECT_DIR$/meanjs/modules/core/client/views/home.client.view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/cycler/client/controllers/SliderController.js" afterPath="$PROJECT_DIR$/meanjs/modules/cycler/client/controllers/SliderController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/cycler/client/css/cycler.css" afterPath="$PROJECT_DIR$/meanjs/modules/cycler/client/css/cycler.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/cycler/client/directives/cycler.client.directives.js" afterPath="$PROJECT_DIR$/meanjs/modules/cycler/client/directives/cycler.client.directives.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/video-works/client/directives/video-works.client.directives.js" afterPath="$PROJECT_DIR$/meanjs/modules/video-works/client/directives/video-works.client.directives.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/works/client/views/works-grid-item.html" afterPath="$PROJECT_DIR$/meanjs/modules/works/client/views/works-grid-item.html" />
     </list>
     <ignored path="oscar_portfolio.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -222,7 +212,7 @@
       <file leaf-file-name="home.client.view.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/meanjs/modules/core/client/views/home.client.view.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.384615">
+            <state vertical-scroll-proportion="0.0">
               <caret line="107" column="169" selection-start-line="107" selection-start-column="169" selection-end-line="107" selection-end-column="169" />
               <folding>
                 <element signature="n#style#0;n#div#2;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -234,7 +224,7 @@
       <file leaf-file-name="contact-form.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/meanjs/modules/core/client/views/contact-form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.076923">
+            <state vertical-scroll-proportion="0.0">
               <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
               <folding>
                 <element signature="n#style#0;n#md-dialog#0;n#!!top" expanded="true" />
@@ -249,7 +239,7 @@
       <file leaf-file-name="works-grid-item.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/meanjs/modules/works/client/views/works-grid-item.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.769231">
+            <state vertical-scroll-proportion="0.0">
               <caret line="17" column="113" selection-start-line="17" selection-start-column="113" selection-end-line="17" selection-end-column="113" />
               <folding>
                 <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#a#0;n#div#0;n#!!top" expanded="true" />
@@ -260,11 +250,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="core.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="core.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/meanjs/modules/core/client/css/core.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27578476">
-              <caret line="1048" column="12" selection-start-line="1048" selection-start-column="12" selection-end-line="1048" selection-end-column="12" />
+            <state vertical-scroll-proportion="-11.5">
+              <caret line="799" column="1" selection-start-line="799" selection-start-column="1" selection-end-line="799" selection-end-column="1" />
               <folding>
                 <element signature="e#2002#2075#0" expanded="false" />
                 <element signature="e#2104#2127#0" expanded="false" />
@@ -273,11 +263,41 @@
                 <element signature="e#2286#2428#0" expanded="false" />
                 <element signature="e#2452#2504#0" expanded="false" />
                 <element signature="e#2529#2561#0" expanded="false" />
+                <element signature="e#4440#5535#0" expanded="false" />
+                <element signature="e#5537#6632#0" expanded="false" />
                 <element signature="e#6634#7729#0" expanded="false" />
                 <element signature="e#7731#8639#0" expanded="false" />
-                <element signature="e#8641#9643#0" expanded="false" />
-                <element signature="e#10649#11463#0" expanded="false" />
+                <element signature="e#8641#9548#0" expanded="false" />
+                <element signature="e#9550#10457#0" expanded="false" />
+                <element signature="e#10459#11273#0" expanded="false" />
+                <element signature="e#11275#12089#0" expanded="false" />
+                <element signature="e#12091#13009#0" expanded="false" />
+                <element signature="e#13011#14103#0" expanded="false" />
+                <element signature="e#14105#15197#0" expanded="false" />
+                <element signature="e#15199#16294#0" expanded="false" />
+                <element signature="e#16296#17390#0" expanded="false" />
+                <element signature="e#17392#18486#0" expanded="false" />
+                <element signature="e#18488#19582#0" expanded="false" />
+                <element signature="e#19584#20678#0" expanded="false" />
+                <element signature="e#20680#21774#0" expanded="false" />
+                <element signature="e#21776#22870#0" expanded="false" />
+                <element signature="e#22872#23966#0" expanded="false" />
+                <element signature="e#23968#25062#0" expanded="false" />
+                <element signature="e#25064#26158#0" expanded="false" />
+                <element signature="e#26160#27254#0" expanded="false" />
+                <element signature="e#27256#28351#0" expanded="false" />
+                <element signature="e#28355#29448#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/meanjs/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.20987654">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -315,7 +335,7 @@
       <file leaf-file-name="cycler.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/meanjs/modules/cycler/client/css/cycler.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.5">
+            <state vertical-scroll-proportion="0.0">
               <caret line="84" column="17" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
               <folding />
             </state>
@@ -327,16 +347,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="142" column="34" selection-start-line="142" selection-start-column="34" selection-end-line="142" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.client.controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/meanjs/modules/core/client/controllers/home.client.controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="58" column="33" selection-start-line="58" selection-start-column="33" selection-end-line="58" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -359,7 +369,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/meanjs/modules/photo-works/client/directives/photo-works.client.directives.js" />
         <option value="$PROJECT_DIR$/meanjs/modules/photo-works/server/controllers/photo-works.server.controller.js" />
         <option value="$PROJECT_DIR$/meanjs/modules/photo-works/client/css/photo-works.css" />
         <option value="$PROJECT_DIR$/meanjs/modules/users/client/views/authentication/authentication.client.view.html" />
@@ -410,6 +419,7 @@
         <option value="$PROJECT_DIR$/meanjs/modules/cycler/client/css/cycler.css" />
         <option value="$PROJECT_DIR$/meanjs/modules/works/client/views/works-grid-item.html" />
         <option value="$PROJECT_DIR$/meanjs/modules/core/client/css/core.css" />
+        <option value="$PROJECT_DIR$/meanjs/.gitignore" />
       </list>
     </option>
   </component>
@@ -449,8 +459,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1648,18 +1658,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19270833" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19270833" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30866808" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1680,13 +1690,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/users/client/users.client.module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/meanjs/modules/core/server/views/layout.server.view.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-26.461538">
@@ -1964,7 +1967,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.9454546">
           <caret line="146" column="36" selection-start-line="146" selection-start-column="36" selection-end-line="146" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1994,7 +1996,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/meanjs/modules/core/client/views/home.client.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.384615">
+        <state vertical-scroll-proportion="0.0">
           <caret line="107" column="169" selection-start-line="107" selection-start-column="169" selection-end-line="107" selection-end-column="169" />
           <folding>
             <element signature="n#style#0;n#div#2;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -2004,7 +2006,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/meanjs/modules/core/client/views/contact-form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.076923">
+        <state vertical-scroll-proportion="0.0">
           <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
           <folding>
             <element signature="n#style#0;n#md-dialog#0;n#!!top" expanded="true" />
@@ -2033,7 +2035,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/meanjs/modules/cycler/client/css/cycler.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.5">
+        <state vertical-scroll-proportion="0.0">
           <caret line="84" column="17" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
           <folding />
         </state>
@@ -2041,7 +2043,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/meanjs/modules/works/client/views/works-grid-item.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.769231">
+        <state vertical-scroll-proportion="0.0">
           <caret line="17" column="113" selection-start-line="17" selection-start-column="113" selection-end-line="17" selection-end-column="113" />
           <folding>
             <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#div#0;n#a#0;n#div#0;n#!!top" expanded="true" />
@@ -2053,8 +2055,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/meanjs/modules/core/client/css/core.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27578476">
-          <caret line="1048" column="12" selection-start-line="1048" selection-start-column="12" selection-end-line="1048" selection-end-column="12" />
+        <state vertical-scroll-proportion="-11.5">
+          <caret line="799" column="1" selection-start-line="799" selection-start-column="1" selection-end-line="799" selection-end-column="1" />
           <folding>
             <element signature="e#2002#2075#0" expanded="false" />
             <element signature="e#2104#2127#0" expanded="false" />
@@ -2063,11 +2065,39 @@
             <element signature="e#2286#2428#0" expanded="false" />
             <element signature="e#2452#2504#0" expanded="false" />
             <element signature="e#2529#2561#0" expanded="false" />
+            <element signature="e#4440#5535#0" expanded="false" />
+            <element signature="e#5537#6632#0" expanded="false" />
             <element signature="e#6634#7729#0" expanded="false" />
             <element signature="e#7731#8639#0" expanded="false" />
-            <element signature="e#8641#9643#0" expanded="false" />
-            <element signature="e#10649#11463#0" expanded="false" />
+            <element signature="e#8641#9548#0" expanded="false" />
+            <element signature="e#9550#10457#0" expanded="false" />
+            <element signature="e#10459#11273#0" expanded="false" />
+            <element signature="e#11275#12089#0" expanded="false" />
+            <element signature="e#12091#13009#0" expanded="false" />
+            <element signature="e#13011#14103#0" expanded="false" />
+            <element signature="e#14105#15197#0" expanded="false" />
+            <element signature="e#15199#16294#0" expanded="false" />
+            <element signature="e#16296#17390#0" expanded="false" />
+            <element signature="e#17392#18486#0" expanded="false" />
+            <element signature="e#18488#19582#0" expanded="false" />
+            <element signature="e#19584#20678#0" expanded="false" />
+            <element signature="e#20680#21774#0" expanded="false" />
+            <element signature="e#21776#22870#0" expanded="false" />
+            <element signature="e#22872#23966#0" expanded="false" />
+            <element signature="e#23968#25062#0" expanded="false" />
+            <element signature="e#25064#26158#0" expanded="false" />
+            <element signature="e#26160#27254#0" expanded="false" />
+            <element signature="e#27256#28351#0" expanded="false" />
+            <element signature="e#28355#29448#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20987654">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
