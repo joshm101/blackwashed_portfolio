@@ -253,8 +253,8 @@
       <file leaf-file-name="core.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/meanjs/modules/core/client/css/core.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.11995516">
-              <caret line="1007" column="9" selection-start-line="1007" selection-start-column="9" selection-end-line="1007" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.5336323">
+              <caret line="294" column="10" selection-start-line="294" selection-start-column="10" selection-end-line="294" selection-end-column="10" />
               <folding>
                 <element signature="e#2002#2075#0" expanded="false" />
                 <element signature="e#2104#2127#0" expanded="false" />
@@ -263,10 +263,20 @@
                 <element signature="e#2286#2428#0" expanded="false" />
                 <element signature="e#2452#2504#0" expanded="false" />
                 <element signature="e#2529#2561#0" expanded="false" />
+                <element signature="e#4440#5535#0" expanded="false" />
+                <element signature="e#5537#6632#0" expanded="false" />
                 <element signature="e#6634#7729#0" expanded="false" />
+                <element signature="e#7731#8639#0" expanded="false" />
+                <element signature="e#8641#9548#0" expanded="false" />
+                <element signature="e#9550#10457#0" expanded="false" />
                 <element signature="e#10459#11273#0" expanded="false" />
                 <element signature="e#11275#12089#0" expanded="false" />
+                <element signature="e#12091#13009#0" expanded="false" />
+                <element signature="e#13011#13929#0" expanded="false" />
+                <element signature="e#13931#14849#0" expanded="false" />
+                <element signature="e#14851#15943#0" expanded="false" />
                 <element signature="e#15945#17037#0" expanded="false" />
+                <element signature="e#17039#18134#0" expanded="false" />
                 <element signature="e#18136#19230#0" expanded="false" />
                 <element signature="e#19232#20326#0" expanded="false" />
                 <element signature="e#20328#21422#0" expanded="false" />
@@ -2052,8 +2062,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/meanjs/modules/core/client/css/core.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11995516">
-          <caret line="1007" column="9" selection-start-line="1007" selection-start-column="9" selection-end-line="1007" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.5336323">
+          <caret line="294" column="10" selection-start-line="294" selection-start-column="10" selection-end-line="294" selection-end-column="10" />
           <folding>
             <element signature="e#2002#2075#0" expanded="false" />
             <element signature="e#2104#2127#0" expanded="false" />
@@ -2062,10 +2072,20 @@
             <element signature="e#2286#2428#0" expanded="false" />
             <element signature="e#2452#2504#0" expanded="false" />
             <element signature="e#2529#2561#0" expanded="false" />
+            <element signature="e#4440#5535#0" expanded="false" />
+            <element signature="e#5537#6632#0" expanded="false" />
             <element signature="e#6634#7729#0" expanded="false" />
+            <element signature="e#7731#8639#0" expanded="false" />
+            <element signature="e#8641#9548#0" expanded="false" />
+            <element signature="e#9550#10457#0" expanded="false" />
             <element signature="e#10459#11273#0" expanded="false" />
             <element signature="e#11275#12089#0" expanded="false" />
+            <element signature="e#12091#13009#0" expanded="false" />
+            <element signature="e#13011#13929#0" expanded="false" />
+            <element signature="e#13931#14849#0" expanded="false" />
+            <element signature="e#14851#15943#0" expanded="false" />
             <element signature="e#15945#17037#0" expanded="false" />
+            <element signature="e#17039#18134#0" expanded="false" />
             <element signature="e#18136#19230#0" expanded="false" />
             <element signature="e#19232#20326#0" expanded="false" />
             <element signature="e#20328#21422#0" expanded="false" />
