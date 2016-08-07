@@ -1046,7 +1046,7 @@ works-grid-item a div {
 	.hover-directors {
 		width: 100%;
 		position: absolute;
-		top: 108px;
+		top: 112px;
 		font-size: 0.5em;
 	}
 
@@ -1060,7 +1060,7 @@ works-grid-item a div {
 	.models-list,.cast-list {
 		width: 80%;
 		position: absolute;
-		top: 35px !important;
+		top: 38px !important;
 		padding-left: 0 !important;
 	}
 
@@ -1105,8 +1105,8 @@ works-grid-item a div {
 
 @media only screen and (max-width: 388px) {
 	.hover-title {
-		font-size: 0.6em;
-		line-height: 12px;
+		font-size: 0.7em;
+		line-height: 14px;
 		text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	}
 	.person {
@@ -1130,7 +1130,7 @@ works-grid-item a div {
 	.models-list,.cast-list {
 		width: 80%;
 		position: absolute;
-		top: 34px !important;
+		top: 36px !important;
 		padding-left: 0 !important;
 	}
 
@@ -1174,6 +1174,78 @@ works-grid-item a div {
 }
 
 @media only screen and (max-width: 366px) {
+	.hover-title {
+		font-size: 0.7em;
+		line-height: 14px;
+		text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	}
+	.person {
+		font-size: 0.55em;
+	}
+
+	.hover-directors {
+		width: 100%;
+		position: absolute;
+		top: 95px;
+		font-size: 0.45em;
+	}
+
+	.hover-editors {
+		width: 100%;
+		position: absolute;
+		top: 90px;
+		font-size: 0.4em;
+	}
+
+	.models-list,.cast-list {
+		width: 80%;
+		position: absolute;
+		top: 34px !important;
+		padding-left: 0 !important;
+	}
+
+	.cast-list md-grid-tile figure{
+		font-size: 0.45em !important;
+		justify-content: flex-start !important;
+	}
+
+	.hover-element-data-wrap {
+		padding: 16px 16px 0 16px;
+		display: block;
+		height: 100%;
+		font-size: 20px;
+		max-width: 100%;
+		overflow: hidden;
+		width: 100%;
+	}
+	.hover-element-work-type {
+		clear: both;
+		position: absolute;
+		bottom: 0;
+		float: right;
+		right: 0;
+		font-size: 0.2em;
+	}
+
+	.hover-copyright {
+		position: absolute;
+		font-size: 0.2em;
+		width: 80%;
+		bottom: 12px;
+		left: 16px;
+		text-shadow: rgba(0,0,0,.01) 0 0 1px;
+
+	}
+
+	.work-type{
+		bottom: 12px;
+		right: 16px;
+	}
+}
+
+
+
+@media only screen and (max-width: 340px) {
 	.hover-title {
 		font-size: 0.6em;
 		line-height: 12px;
@@ -1242,7 +1314,6 @@ works-grid-item a div {
 		right: 16px;
 	}
 }
-
 md-grid-tile{
 
 	transition: all 650ms ease-out 50ms;
