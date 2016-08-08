@@ -42,6 +42,7 @@
           console.log ('viewWork');
           if (scope.work.videoUrl) {
             var body =  $('section');
+
             console.log ('body: ', body);
             body.css ('overflow', 'hidden');
             $mdDialog.show ({
@@ -50,6 +51,10 @@
                 console.log ('dialog controller');
                 console.log ("work is: ", work);
                 scope.workTitle = work.title;
+                scope.cast = work.cast;
+                scope.joinedCast = scope.cast.join (', ');
+                scope.directors = work.directedBy.join (', ');
+                scope.postInfo = work.workInfo
 
                 // thanks to
                 // http://stackoverflow.com/a/23945027
@@ -141,6 +146,7 @@
                 console.log("work is: ", work);
                 scope.workTitle = work.title;
                 scope.images = work.images;
+
 
                 scope.next = function (event) {
                   console.log ("next()");

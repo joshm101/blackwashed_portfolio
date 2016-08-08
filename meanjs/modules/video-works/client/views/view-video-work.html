@@ -35,14 +35,16 @@
       </div>
     </div>
 
+
+
     <div class="video-work-meta">
       <div class="video-work-info">
         {{workInfo}}
       </div>
       <div class="video-work-cast">
         <ul>
-          <li ng-repeat="member in cast">
-            <b>{{member.join (', ')}}</b>
+          <li ng-repeat="member in work.cast">
+            <b>{{member}}</b>
           </li>
         </ul>
       </div>

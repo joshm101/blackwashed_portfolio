@@ -58,6 +58,12 @@
           console.log("work is: ", work);
 
           EditImages.images = [];
+          EditImages.newImages = [];
+          EditImages.imagesToDelete = [];
+          EditImages.newImageFiles = [];
+          EditImages.serverImages = [];
+          EditImages.chosenCoverImage = '';
+
 
           // on edit click, add images already apart
           // of the photo work to the EditImages service
@@ -177,31 +183,20 @@
                 }
               };
 
-              for (var model in models) {
-                if (models[model] === '') models.splice (model, 1);
-              }
-
-              for (var model in modelsModel) {
-                if (modelsModel[model] === '') modelsModel.splice (model, 1);
-              }
-
               // set up scope variables for controller/dialog scope.
               $scope.work = work;
               $scope.models = models;
               $scope.modelsModel = modelsModel;
 
 
+              // set up variables to hold data before
+              // any edits to restore in case of a
+              // cancelled edit.
               var oldModels = $scope.work.models;
               var model = modelsModel;
               var workTitle = $scope.work.title;
               var postText = $scope.work.postText;
               var copyright = $scope.work.copyright;
-
-              console.log("modelsModel dialog show: ", modelsModel);
-
-              console.log("models is: ", models);
-
-              console.log("scope.models: ", $scope.models);
 
               $scope.addModel = function (event) {
                 $scope.modelsModel.push( {name: 'model_' + ++modelNumber} )
@@ -250,6 +245,13 @@
                       return;
                     }
                   }
+
+                  for (var i = 0; i < work.models.length; ++i) {
+                    if (work.models[i] === '' || work.models[i].match(/^\s*$/)) {
+                      work.models.splice(i, 1);
+                      i = 0;
+                    }
+                  }
                 }
                 console.log("submit edited work");
                 console.log("work.models: ", work.models);
@@ -259,6 +261,26 @@
                 console.log("EditImages.images: ", EditImages.images);
                 console.log("EditImages.newImages: ", EditImages.newImages);
                 console.log("EditImages.imagesToDelete: ", EditImages.imagesToDelete);
+
+                var editObject = {
+                  newImages: EditImages.newImages,
+                  chosenCoverImage: EditImages.chosenCoverImage,
+
+                  // DB entry identifier for easy lookup
+                  identifier: work._id,
+
+                  // photo work images that were already on server
+                  serverImages: EditImages.serverImages,
+
+                  // any server images that need to be deleted after
+                  // the edit
+                  imagesToDelete: EditImages.imagesToDelete,
+                  workTitle: work.title,
+                  postText: work.postText,
+                  copyright: work.copyright,
+                  models: work.models
+                };
+
                 Upload.upload({
                   url: '/api/photo_works/edit_photo_work',
 
@@ -270,22 +292,7 @@
                     // file key needs to be set to any new image files
                     // as new image files require an upload
                     file: EditImages.newImageFiles,
-                    newImages: EditImages.newImages,
-                    chosenCoverImage: EditImages.chosenCoverImage,
-
-                    // DB entry identifier for easy lookup
-                    identifier: work._id,
-
-                    // photo work images that were already on server
-                    serverImages: EditImages.serverImages,
-
-                    // any server images that need to be deleted after
-                    // the edit
-                    imagesToDelete: EditImages.imagesToDelete,
-                    workTitle: work.title,
-                    postText: work.postText,
-                    copyright: work.copyright,
-                    models: work.models
+                    editObject: JSON.stringify (editObject)
                   }
                 }).then (function (resp) {
                   console.log("Success: ", resp);

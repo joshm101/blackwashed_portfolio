@@ -7,26 +7,23 @@
         <div class="hover-title">
           <span>{{work.title}}</span>
         </div>
+
         <div ng-if="!work.videoUrl" class="hover-models">
-          <ul class="models-list" style="list-style: none;">
-            <li ng-repeat="model in work.models" class="person">
+          <md-grid-list class="cast-list" md-row-height-sm="17px" md-row-height-gt-sm="17px" md-row-height-xs="11px;" md-row-height-gt-xs="15px" md-cols="1" md-gutter="0em">
+            <md-grid-tile ng-repeat="model in work.models">
               {{model}}
-            </li>
-          </ul>
+            </md-grid-tile>
+          </md-grid-list>
         </div>
+
         <div ng-if="work.videoUrl" class="hover-cast">
           <md-grid-list class="cast-list" md-row-height-sm="17px" md-row-height-gt-sm="17px" md-row-height-xs="11px;" md-row-height-gt-xs="15px" md-cols="2" md-gutter="0em">
             <md-grid-tile ng-repeat="member in work.cast">
               {{member}}
             </md-grid-tile>
           </md-grid-list>
-          <!--
-          <ul class="cast-list" style="list-style: none;">
-            <li ng-repeat="member in work.cast" class="person">
-              {{member}}
-            </li>
-          </ul>-->
         </div>
+
         <div class="hover-directors" ng-if="work.directedBy" style="width: 100%;">
           <div ng-if="work.directedBy.length > 0" style="width: 100%;">
             <div ng-if="work.directedBy.length > 2">
