@@ -15,6 +15,33 @@
       $mdDialog.show({
         controller: function (scope) {
           scope.message = '';
+          scope.subject = '';
+          scope.senderEmail = '';
+          scope.senderName = '';
+          scope.senderPhoneNumber = '';
+
+          scope.sendEmail = function () {
+            console.log ('message is: ', scope.message);
+            console.log ('subject is: ', scope.subject);
+            console.log ('senderEmail is: ', scope.senderEmail);
+            console.log ('senderPhoneNumber is: ', scope.senderPhoneNumber);
+            console.log ('senderName is: ', scope.senderName);
+            var emailObject = {
+              message: scope.message,
+              subject: scope.subject,
+              senderEmail: scope.senderEmail,
+              senderName: scope.senderName,
+              senderPhoneNumber: scope.senderPhoneNumber
+            };
+            $http.post ('/api/email/send_email', emailObject)
+              .then (function (resp) {
+                if (resp.status === 200) {
+                  console.log ('successfully sent email!');
+                } else {
+                  console.log ('error sending email');
+                }
+              });
+          };
 
           $rootScope.hide = function () {
             $mdDialog.hide();
@@ -42,6 +69,10 @@
 
     $scope.getAboutPage = function () {
       AboutPageService.getAbout();
+    };
+
+    $scope.sendEmail = function () {
+
     };
 
     $scope.goHome = function () {

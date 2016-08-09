@@ -1,4 +1,4 @@
-<md-dialog style="height: 85%; width: 65%;" flex="80" class="md-dynamic-height" aria-label="viewVideoWorkDialog">
+<md-dialog style="height: 85%; width: 65%; max-width: 1200px !important;" flex="80" class="md-dynamic-height" aria-label="viewVideoWorkDialog">
   <md-toolbar>
     <div class="md-toolbar-tools">
       <h2>{{workTitle}}</h2>
@@ -11,16 +11,16 @@
   <md-dialog-content style="height: 100%">
 
     <div ng-if="domain === 'youtube'" style="width: 100%;">
-      <div class="video-wrapper">
-        <iframe align="middle" class="video-iframe" ng-src="{{videoUrl}}"
+      <div class="view-video-wrapper">
+        <iframe align="middle" class="view-video-iframe-int" ng-src="{{videoUrl}}"
                 frameborder="0"
                 allowfullscreen></iframe>
       </div>
     </div>
 
     <div ng-if="domain === 'vimeo'" style="width: 100%;">
-      <div class="video-wrapper">
-        <iframe align="middle" class="video-iframe"
+      <div class="view-video-wrapper">
+        <iframe align="middle" class="view-video-iframe-int"
                 ng-src="{{videoUrl}}"
                 frameborder="0"
                 webkitallowfullscreen
@@ -30,24 +30,47 @@
     </div>
 
     <div ng-if="domain === 'facebook'" style="width: 100%;">
-      <div class="">
-        <iframe ng-src="{{videoUrl}}" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+      <div class="view-video-wrapper">
+        <iframe class="view-video-iframe-int" ng-src="{{videoUrl}}" frameborder="0" scrolling="no" allowTransparency="true" allowFullScreen="true"></iframe>
       </div>
     </div>
 
 
 
     <div class="video-work-meta">
-      <div class="video-work-info">
+      <div class="video-work-info" style="margin-bottom: 10px;">
         {{workInfo}}
       </div>
-      <div class="video-work-cast">
-        <ul>
-          <li ng-repeat="member in work.cast">
-            <b>{{member}}</b>
-          </li>
-        </ul>
+      <div class="video-work-cast-interface">
+        <b>Cast:</b>
+        <br>
+        <md-grid-list md-row-height-sm="17px" md-row-height-gt-sm="18px" md-row-height-xs="11px;" md-row-height-gt-xs="15px" md-cols="2" md-gutter="0em">
+          <md-grid-tile ng-repeat="member in cast">
+            {{member}}
+          </md-grid-tile>
+        </md-grid-list>
       </div>
+      <div class="video-work-crew-interface">
+        <b>Directed by:</b>
+        <br>
+        <md-grid-list md-row-height-sm="17px" md-row-height-gt-sm="17px" md-row-height-xs="11px;" md-row-height-gt-xs="15px" md-cols="2" md-gutter="0em">
+          <md-grid-tile ng-repeat="director in directors">
+            {{director}}
+          </md-grid-tile>
+        </md-grid-list>
+      </div>
+
+      <div class="video-work-crew-interface">
+        <b>Edited by:</b>
+        <br>
+        <md-grid-list md-row-height-sm="17px" md-row-height-gt-sm="17px" md-row-height-xs="11px;" md-row-height-gt-xs="15px" md-cols="2" md-gutter="0em">
+          <md-grid-tile ng-repeat="editor in editors">
+            {{editor}}
+          </md-grid-tile>
+        </md-grid-list>
+      </div>
+
+      <b>{{copyright}}</b>
     </div>
   </md-dialog-content>
 </md-dialog>

@@ -12,15 +12,16 @@
       </md-button>
     </div>
 
-    <img class="view-photo-dialog-img"
-         ng-src="{{images[currentIndex].imageUrl}}">
+      <img class="view-photo-dialog-img"
+           ng-src="{{images[currentIndex].imageUrl}}">
+
+
 
     <div ng-if="images.length > 1">
       <md-button class="right-arrow-btn md-icon-button"
                  ng-click="next($event)">
 
         <md-icon class="right-arrow-icon">
-
           keyboard_arrow_right
         </md-icon>
       </md-button>

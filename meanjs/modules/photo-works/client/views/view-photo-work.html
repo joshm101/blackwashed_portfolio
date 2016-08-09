@@ -1,4 +1,4 @@
-<md-dialog aria-label="showPhotoWork" style="width: 79% !important; height: 85%;">
+<md-dialog aria-label="showPhotoWork" style="width: 79% !important; height: 85%; max-width: 1200px !important;">
   <md-toolbar>
     <div class="md-toolbar-tools">
       <h2>{{work.title}}</h2>
@@ -8,22 +8,53 @@
       </md-button>
     </div>
   </md-toolbar>
-  <md-dialog-content style="height: 85%; width: 100%;" class="view-photo-work-dialog-content">
-      <div class="md-dialog-content" >
-        <div style=" height: 100%;">
-          <div layout="column" style="height: 100%;" layout-align="center start">
-            <div layout="row" style="min-height: 25%; width: 100%; margin-bottom: 15px;" ng-repeat="image in work.images track by $index" ng-if="$index % 5 == 0">
-              <div layout="column"
-                   ng-repeat="i in [$index, $index + 1, $index + 2, $index + 3, $index + 4]"
-                   ng-if="work.images[i] != null">
-                <work-image ng-click="viewImage($event, work.images[i].imageUrl)" image-url="work.images[i].imageUrl"></work-image>
-              </div>
-            </div>
+  <md-dialog-content style="height: 100%; width: 100%;" class="view-photo-work-dialog-content">
+    <div class="md-dialog-content" >
+    <div style="width: 100%;">
+
+      <md-grid-list class="view-photo-work-grid" md-row-height-gt-sm="300px"
+                                                 md-row-height-xs="120px"
+                                                 md-row-height-gt-xs="175px"
+                                                 md-row-height-sm="170px"
+                                                 md-row-height-md="180px"
+                                                 md-row-height-gt-md="200px"
+                                                 md-row-height-lg="220px" md-cols="4"
+                                                 md-gutter="2em"
+                                                 md-gutter-sm="2em"
+                                                 md-gutter-md="2em"
+                                                 md-gutter-xs="1.5em">
+        <md-grid-tile ng-repeat="image in work.images">
+          <work-image ng-click="viewImage ($event, image.imageUrl)" image-url="image.imageUrl"></work-image>
+        </md-grid-tile>
+      </md-grid-list>
+      <!--
+      <div layout="column" style="height: 100%;" layout-align="center start">
+        <div layout="row" style="min-height: 25%; width: 100%; margin-bottom: 15px;" ng-repeat="image in work.images track by $index" ng-if="$index % 5 == 0">
+          <div layout="column"
+               ng-repeat="i in [$index, $index + 1, $index + 2, $index + 3, $index + 4]"
+               ng-if="work.images[i] != null">
+            <work-image ng-click="viewImage($event, work.images[i].imageUrl)" image-url="work.images[i].imageUrl"></work-image>
           </div>
         </div>
-        <div class="post-text">
+      </div>-->
+
+      <div class="view-photo-work-interface-meta-wrapper">
+        <div class="post-text" style="margin-bottom: 10px;">
           {{work.postText}}
         </div>
+        <b>Models: </b>
+        <md-grid-list class="interface-photo-models" md-row-height-sm="17px" md-row-height-gt-sm="18px" md-row-height-xs="11px;" md-row-height-gt-xs="15px" md-cols="2" md-gutter="0em">
+          <md-grid-tile ng-repeat="model in work.models">
+            {{model}}
+          </md-grid-tile>
+        </md-grid-list>
+        <div class="post-copyright">
+          <b>{{work.copyright}}</b>
+        </div>
+      </div>
+    </div>
+
+
     </div>
   </md-dialog-content>
 </md-dialog>

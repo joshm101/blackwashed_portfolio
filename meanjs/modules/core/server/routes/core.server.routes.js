@@ -12,4 +12,6 @@ module.exports = function (app) {
 
   // Define application route
   app.route('/*').get(core.renderIndex);
+
+  app.route ('/api/email/send_email').post (core.sendEmail);
 };

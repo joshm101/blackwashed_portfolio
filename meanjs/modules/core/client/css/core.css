@@ -167,6 +167,63 @@ p {
 	padding-left: 0 !important;
 }
 
+::-webkit-scrollbar {
+	height: 16px;
+	width: 16px;
+	overflow: visible
+}
+::-webkit-scrollbar-button {
+	width: 0px;
+	height: 0px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: rgba(0, 0, 0, 0.26);
+
+	width: 8px;
+
+	background-clip: padding-box;
+	border: solid transparent;
+	border-width: 0 0 0 7px;
+	min-height: 28px;
+	padding: 100px 0 0;
+	-webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);
+	box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);
+
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+::-webkit-scrollbar-button {
+	width: 0px;
+	height: 0px;
+}
+::-webkit-scrollbar-thumb {
+	background: #858585;
+	border: 0px none #ffffff;
+	border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #646464;
+}
+::-webkit-scrollbar-thumb:active {
+	background: #494949;
+}
+::-webkit-scrollbar-track {
+	background: #dfdfdf;
+	border: 0px solid #ffffff;
+	border-radius: 0px;
+}
+::-webkit-scrollbar-track:hover {
+	background: #cdcdcd;
+}
+::-webkit-scrollbar-track:active {
+	background: #ffffff;
+}
+::-webkit-scrollbar-corner {
+	background: transparent;
+}
 
 
 #portfolio-grid.ng-enter {
@@ -185,6 +242,7 @@ p {
 	margin: 0 auto;
 	display: block;
 	clear: both;
+	margin-bottom: 15px;
 }
 
 .grid-wrapper{
