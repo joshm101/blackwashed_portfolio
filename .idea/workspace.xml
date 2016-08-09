@@ -227,6 +227,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/core/client/views/home.client.view.html" afterPath="$PROJECT_DIR$/meanjs/modules/core/client/views/home.client.view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/core/server/controllers/core.server.controller.js" afterPath="$PROJECT_DIR$/meanjs/modules/core/server/controllers/core.server.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/core/server/routes/core.server.routes.js" afterPath="$PROJECT_DIR$/meanjs/modules/core/server/routes/core.server.routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/cycler/client/directives/cycler.client.directives.js" afterPath="$PROJECT_DIR$/meanjs/modules/cycler/client/directives/cycler.client.directives.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/photo-works/client/css/photo-works.css" afterPath="$PROJECT_DIR$/meanjs/modules/photo-works/client/css/photo-works.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/photo-works/client/directives/photo-works.client.directives.js" afterPath="$PROJECT_DIR$/meanjs/modules/photo-works/client/directives/photo-works.client.directives.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/meanjs/modules/photo-works/client/views/view-photo-work.html" afterPath="$PROJECT_DIR$/meanjs/modules/photo-works/client/views/view-photo-work.html" />
@@ -261,20 +262,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="works.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/meanjs/modules/works/client/css/works.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.581819">
-              <caret line="274" column="22" selection-start-line="274" selection-start-column="20" selection-end-line="274" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="core.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="core.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/meanjs/modules/core/client/css/core.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.94206256">
+            <state vertical-scroll-proportion="-14.781818">
               <caret line="746" column="18" selection-start-line="746" selection-start-column="18" selection-end-line="746" selection-end-column="18" />
               <folding>
                 <element signature="e#2104#2127#0" expanded="false" />
@@ -308,6 +299,16 @@
                 <element signature="e#31314#32409#0" expanded="false" />
                 <element signature="e#32411#33504#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cycler.client.directives.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/meanjs/modules/cycler/client/directives/cycler.client.directives.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6666667">
+              <caret line="88" column="23" selection-start-line="88" selection-start-column="23" selection-end-line="88" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -448,7 +449,6 @@
         <option value="$PROJECT_DIR$/meanjs/modules/about/client/services/about.client.services.js" />
         <option value="$PROJECT_DIR$/meanjs/modules/core/server/views/index.server.view.html" />
         <option value="$PROJECT_DIR$/meanjs/modules/core/client/config/core.client.routes.js" />
-        <option value="$PROJECT_DIR$/meanjs/modules/cycler/client/directives/cycler.client.directives.js" />
         <option value="$PROJECT_DIR$/meanjs/modules/cycler/client/controllers/SliderController.js" />
         <option value="$PROJECT_DIR$/meanjs/modules/cycler/client/css/cycler.css" />
         <option value="$PROJECT_DIR$/meanjs/.gitignore" />
@@ -473,6 +473,7 @@
         <option value="$PROJECT_DIR$/meanjs/modules/core/server/controllers/core.server.controller.js" />
         <option value="$PROJECT_DIR$/meanjs/modules/core/client/views/about.client.view.html" />
         <option value="$PROJECT_DIR$/meanjs/modules/core/client/css/core.css" />
+        <option value="$PROJECT_DIR$/meanjs/modules/cycler/client/directives/cycler.client.directives.js" />
       </list>
     </option>
   </component>
@@ -2673,14 +2674,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/cycler/client/directives/cycler.client.directives.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="142" column="34" selection-start-line="142" selection-start-column="34" selection-end-line="142" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/meanjs/modules/works/client/views/view-video.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.65384614">
@@ -2779,7 +2772,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/meanjs/modules/core/client/css/core.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.94206256">
+        <state vertical-scroll-proportion="-14.781818">
           <caret line="746" column="18" selection-start-line="746" selection-start-column="18" selection-end-line="746" selection-end-column="18" />
           <folding>
             <element signature="e#2104#2127#0" expanded="false" />
@@ -2813,6 +2806,14 @@
             <element signature="e#31314#32409#0" expanded="false" />
             <element signature="e#32411#33504#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/cycler/client/directives/cycler.client.directives.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6666667">
+          <caret line="88" column="23" selection-start-line="88" selection-start-column="23" selection-end-line="88" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>

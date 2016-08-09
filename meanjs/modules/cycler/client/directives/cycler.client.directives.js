@@ -85,6 +85,8 @@
 
         scope.prev = function() {
           scope.currentIndex > 0 ? scope.currentIndex-- : scope.currentIndex = scope.images.length - 1;
+          $timeout.cancel (timer);
+          sliderFunc();
         };
 
         scope.defaultClass = 'slide';
