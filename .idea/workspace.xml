@@ -271,11 +271,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="core.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="core.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/meanjs/modules/core/client/css/core.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.7454545">
-              <caret line="192" column="0" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.94206256">
+              <caret line="746" column="18" selection-start-line="746" selection-start-column="18" selection-end-line="746" selection-end-column="18" />
               <folding>
                 <element signature="e#2104#2127#0" expanded="false" />
                 <element signature="e#2143#2189#0" expanded="false" />
@@ -287,7 +287,6 @@
                 <element signature="e#7759#8854#0" expanded="false" />
                 <element signature="e#8856#9764#0" expanded="false" />
                 <element signature="e#9766#10673#0" expanded="false" />
-                <element signature="e#10675#11582#0" expanded="false" />
                 <element signature="e#11584#12398#0" expanded="false" />
                 <element signature="e#12400#13214#0" expanded="false" />
                 <element signature="e#13216#14134#0" expanded="false" />
@@ -394,10 +393,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="about.client.view.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="about.client.view.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/meanjs/modules/core/client/views/about.client.view.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.057174888">
+            <state vertical-scroll-proportion="-1.9615384">
               <caret line="6" column="55" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
@@ -468,12 +467,12 @@
         <option value="$PROJECT_DIR$/meanjs/modules/works/client/views/view-video.html" />
         <option value="$PROJECT_DIR$/meanjs/modules/works/client/css/works.css" />
         <option value="$PROJECT_DIR$/meanjs/modules/core/client/views/home.client.view.html" />
-        <option value="$PROJECT_DIR$/meanjs/modules/core/client/css/core.css" />
         <option value="$PROJECT_DIR$/meanjs/modules/core/server/routes/core.server.routes.js" />
         <option value="$PROJECT_DIR$/meanjs/modules/core/client/views/contact-form.html" />
         <option value="$PROJECT_DIR$/meanjs/modules/core/client/controllers/home.client.controller.js" />
         <option value="$PROJECT_DIR$/meanjs/modules/core/server/controllers/core.server.controller.js" />
         <option value="$PROJECT_DIR$/meanjs/modules/core/client/views/about.client.view.html" />
+        <option value="$PROJECT_DIR$/meanjs/modules/core/client/css/core.css" />
       </list>
     </option>
   </component>
@@ -2701,46 +2700,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/meanjs/modules/core/client/css/core.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.7454545">
-          <caret line="192" column="0" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
-          <folding>
-            <element signature="e#2104#2127#0" expanded="false" />
-            <element signature="e#2143#2189#0" expanded="false" />
-            <element signature="e#2203#2265#0" expanded="false" />
-            <element signature="e#2286#2428#0" expanded="false" />
-            <element signature="e#2452#2504#0" expanded="false" />
-            <element signature="e#2529#2561#0" expanded="false" />
-            <element signature="e#6662#7757#0" expanded="false" />
-            <element signature="e#7759#8854#0" expanded="false" />
-            <element signature="e#8856#9764#0" expanded="false" />
-            <element signature="e#9766#10673#0" expanded="false" />
-            <element signature="e#10675#11582#0" expanded="false" />
-            <element signature="e#11584#12398#0" expanded="false" />
-            <element signature="e#12400#13214#0" expanded="false" />
-            <element signature="e#13216#14134#0" expanded="false" />
-            <element signature="e#15056#15974#0" expanded="false" />
-            <element signature="e#15976#17068#0" expanded="false" />
-            <element signature="e#17070#18162#0" expanded="false" />
-            <element signature="e#18164#19256#0" expanded="false" />
-            <element signature="e#19258#20353#0" expanded="false" />
-            <element signature="e#20355#21449#0" expanded="false" />
-            <element signature="e#21451#22545#0" expanded="false" />
-            <element signature="e#22547#23641#0" expanded="false" />
-            <element signature="e#23643#24737#0" expanded="false" />
-            <element signature="e#24739#25833#0" expanded="false" />
-            <element signature="e#25835#26929#0" expanded="false" />
-            <element signature="e#26931#28025#0" expanded="false" />
-            <element signature="e#28027#29121#0" expanded="false" />
-            <element signature="e#29123#30217#0" expanded="false" />
-            <element signature="e#30219#31312#0" expanded="false" />
-            <element signature="e#31314#32409#0" expanded="false" />
-            <element signature="e#32411#33504#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/meanjs/modules/photo-works/client/views/view-photo-work.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.5384617">
@@ -2810,10 +2769,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/meanjs/modules/core/client/views/about.client.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.057174888">
+        <state vertical-scroll-proportion="-1.9615384">
           <caret line="6" column="55" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
           <folding>
             <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/meanjs/modules/core/client/css/core.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.94206256">
+          <caret line="746" column="18" selection-start-line="746" selection-start-column="18" selection-end-line="746" selection-end-column="18" />
+          <folding>
+            <element signature="e#2104#2127#0" expanded="false" />
+            <element signature="e#2143#2189#0" expanded="false" />
+            <element signature="e#2203#2265#0" expanded="false" />
+            <element signature="e#2286#2428#0" expanded="false" />
+            <element signature="e#2452#2504#0" expanded="false" />
+            <element signature="e#2529#2561#0" expanded="false" />
+            <element signature="e#6662#7757#0" expanded="false" />
+            <element signature="e#7759#8854#0" expanded="false" />
+            <element signature="e#8856#9764#0" expanded="false" />
+            <element signature="e#9766#10673#0" expanded="false" />
+            <element signature="e#11584#12398#0" expanded="false" />
+            <element signature="e#12400#13214#0" expanded="false" />
+            <element signature="e#13216#14134#0" expanded="false" />
+            <element signature="e#15056#15974#0" expanded="false" />
+            <element signature="e#15976#17068#0" expanded="false" />
+            <element signature="e#17070#18162#0" expanded="false" />
+            <element signature="e#18164#19256#0" expanded="false" />
+            <element signature="e#19258#20353#0" expanded="false" />
+            <element signature="e#20355#21449#0" expanded="false" />
+            <element signature="e#21451#22545#0" expanded="false" />
+            <element signature="e#22547#23641#0" expanded="false" />
+            <element signature="e#23643#24737#0" expanded="false" />
+            <element signature="e#24739#25833#0" expanded="false" />
+            <element signature="e#25835#26929#0" expanded="false" />
+            <element signature="e#26931#28025#0" expanded="false" />
+            <element signature="e#28027#29121#0" expanded="false" />
+            <element signature="e#29123#30217#0" expanded="false" />
+            <element signature="e#30219#31312#0" expanded="false" />
+            <element signature="e#31314#32409#0" expanded="false" />
+            <element signature="e#32411#33504#0" expanded="false" />
           </folding>
         </state>
       </provider>

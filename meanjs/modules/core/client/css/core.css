@@ -718,7 +718,7 @@ works-grid-item a div {
 		width: 100%;
 		position: absolute;
 		top: 182px;
-		font-size: 0.7em;
+		font-size: 0.8em;
 	}
 
 	.hover-editors {
@@ -730,7 +730,7 @@ works-grid-item a div {
 
 	.hover-copyright {
 		position: absolute;
-		font-size: 0.6em;
+		font-size: 0.7em;
 		width: 80%;
 		bottom: 16px;
 		left: 16px;
@@ -744,7 +744,7 @@ works-grid-item a div {
 		bottom: 0;
 		float: right;
 		right: 0;
-		font-size: 0.6em;
+		font-size: 0.7em;
 	}
 
 	.work-type{
