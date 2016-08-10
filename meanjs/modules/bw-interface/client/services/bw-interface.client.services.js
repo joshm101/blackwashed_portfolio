@@ -90,6 +90,8 @@
           coverImage: coverImage
         };
 
+        if (service.images.length === 0) imageToPush.coverImage = true;
+
         // maintain the new image on the general
         // newImages service array
         service.newImages.push (imageToPush);

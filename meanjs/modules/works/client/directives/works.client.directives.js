@@ -53,8 +53,10 @@
                 scope.workTitle = work.title;
                 scope.cast = work.cast;
                 scope.joinedCast = scope.cast.join (', ');
-                scope.directors = work.directedBy.join (', ');
-                scope.postInfo = work.workInfo
+                scope.directors = work.directedBy;
+                scope.postInfo = work.workInfo;
+                scope.editors = work.editedBy;
+                scope.copyright = work.copyright;
 
                 // thanks to
                 // http://stackoverflow.com/a/23945027

@@ -24,6 +24,14 @@
 
 }
 
+.video-work-crew-grid figure {
+	justify-content: flex-start;
+}
+
+.video-work-crew-grid {
+	margin-bottom: 15px;
+}
+
 .video-work-cast {
 	margin-bottom: 10px !important;
 }
@@ -32,17 +40,26 @@
 	margin-bottom: 10px !important;
 }
 
+.video-work-editors {
+	margin-bottom: 10px !important;
+}
+
+.work-copyright {
+	margin-top: 20px;
+	font-size: 0.8em;
+}
+
 .view-video-dialog-meta-wrapper {
-	margin-left: 30px;
-	margin-bottom: 30px;
-	margin-right: 30px;
+	margin-left: 40px;
+	margin-bottom: 40px;
+	margin-right: 40px;
 }
 
 .view-video-dialog-meta-wrapper-yt {
-	margin-top: 30px;
-	margin-left: 30px;
-	margin-bottom: 30px;
-	margin-right: 30px;
+	margin-top: 40px;
+	margin-left: 40px;
+	margin-bottom: 40px;
+	margin-right: 40px;
 }
 
 .view-video-dialog-title {
@@ -111,6 +128,8 @@ screen and (min-width: 960px) {
 		margin-right: auto;
 	}
 }
+
+
 
 @media screen and (max-width: 822px) {
 	.work-card-title {

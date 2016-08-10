@@ -23,14 +23,45 @@
           </span>
 
           </div>
-          <div class="video-work-cast" ng-if="cast.length > 0">
-            <span ng-if="cast.length > 2 || cast.length < 2">Cast: {{joinedCast}}</span>
-            <span ng-if="cast.length === 2">Cast: {{cast.join(' & ')}}</span>
+          <div ng-if="cast.length > 0">
+            <b>Cast: </b>
+            <md-grid-list class="video-work-crew-grid" md-cols="2" md-row-height-xs="17px"
+                          md-row-height-gt-xs="18px"
+                          md-row-height-sm="18px"
+                          md-row-height="17px"
+                          md-row-height-gt-sm="18px" md-gutter="0em" style="max-width: 500px;">
+              <md-grid-tile ng-repeat="member in cast">
+                {{member}}
+              </md-grid-tile>
+            </md-grid-list>
           </div>
 
-          <div class="video-work-directors" ng-if="directors.length > 0">
-            <span>Directed by: {{directors}}</span>
+          <div ng-if="directors.length > 0">
+            <b>Directed by: </b>
+            <md-grid-list class="video-work-crew-grid" md-cols="2" md-row-height-xs="17px"
+                          md-row-height-gt-xs="18px"
+                          md-row-height="17px"
+                          md-row-height-sm="18px"
+                          md-row-height-gt-sm="18px" md-gutter="0em" style="max-width: 500px;">
+              <md-grid-tile ng-repeat="director in directors">
+                {{director}}
+              </md-grid-tile>
+            </md-grid-list>
           </div>
+
+          <div ng-if="editors.length > 0">
+            <b>Edited by: </b>
+            <md-grid-list class="video-work-crew-grid" md-cols="2" md-row-height-xs="17px"
+                          md-row-height-gt-xs="18px"
+                          md-row-height-sm="18px"
+                          md-row-heigt="17px"
+                          md-row-height-gt-sm="18px" md-gutter="0em" style="max-width: 500px;">
+              <md-grid-tile ng-repeat="editor in editors">
+                {{editor}}
+              </md-grid-tile>
+            </md-grid-list>
+          </div>
+
 
           <div class="work-information">
             <span>{{postInfo}}</span>
@@ -62,13 +93,43 @@
           </span>
 
           </div>
-          <div class="video-work-cast" ng-if="cast.length > 0">
-            <span ng-if="cast.length > 2 || cast.length < 2">Cast: {{joinedCast}}</span>
-            <span ng-if="cast.length === 2">Cast: {{cast.join(' & ')}}</span>
+          <div ng-if="cast.length > 0">
+            <b>Cast: </b>
+            <md-grid-list class="video-work-crew-grid" md-cols="2" md-row-height-xs="17px"
+                          md-row-height-gt-xs="18px"
+                          md-row-height-sm="18px"
+                          md-row-height="17px"
+                          md-row-height-gt-sm="18px" md-gutter="0em" style="max-width: 500px;">
+              <md-grid-tile ng-repeat="member in cast">
+                {{member}}
+              </md-grid-tile>
+            </md-grid-list>
           </div>
 
-          <div class="video-work-directors" ng-if="directors.length > 0">
-            <span>Directed by: {{directors}}</span>
+          <div ng-if="directors.length > 0">
+            <b>Directed by: </b>
+            <md-grid-list class="video-work-crew-grid" md-cols="2" md-row-height-xs="17px"
+                          md-row-height-gt-xs="18px"
+                          md-row-height="17px"
+                          md-row-height-sm="18px"
+                          md-row-height-gt-sm="18px" md-gutter="0em" style="max-width: 500px;">
+              <md-grid-tile ng-repeat="director in directors">
+                {{director}}
+              </md-grid-tile>
+            </md-grid-list>
+          </div>
+
+          <div ng-if="editors.length > 0">
+            <b>Edited by: </b>
+            <md-grid-list class="video-work-crew-grid" md-cols="2" md-row-height-xs="17px"
+                          md-row-height-gt-xs="18px"
+                          md-row-height-sm="18px"
+                          md-row-heigt="17px"
+                          md-row-height-gt-sm="18px" md-gutter="0em" style="max-width: 500px;">
+              <md-grid-tile ng-repeat="editor in editors">
+                {{editor}}
+              </md-grid-tile>
+            </md-grid-list>
           </div>
 
           <div class="work-information">
@@ -98,17 +159,52 @@
           </span>
 
           </div>
-          <div class="video-work-cast" ng-if="cast.length > 0">
-            <span ng-if="cast.length > 2 || cast.length < 2">Cast: {{joinedCast}}</span>
-            <span ng-if="cast.length === 2">Cast: {{cast.join(' & ')}}</span>
+
+          <div ng-if="cast.length > 0">
+            <b>Cast: </b>
+            <md-grid-list class="video-work-crew-grid" md-cols="2" md-row-height-xs="17px"
+                          md-row-height-gt-xs="18px"
+                          md-row-height-sm="18px"
+                          md-row-height="17px"
+                          md-row-height-gt-sm="18px" md-gutter="0em" style="max-width: 500px;">
+              <md-grid-tile ng-repeat="member in cast">
+                {{member}}
+              </md-grid-tile>
+            </md-grid-list>
           </div>
 
-          <div class="video-work-directors" ng-if="directors.length > 0">
-            <span>Directed by: {{directors}}</span>
+          <div ng-if="directors.length > 0">
+            <b>Directed by: </b>
+            <md-grid-list class="video-work-crew-grid" md-cols="2" md-row-height-xs="17px"
+                          md-row-height-gt-xs="18px"
+                          md-row-height="17px"
+                          md-row-height-sm="18px"
+                          md-row-height-gt-sm="18px" md-gutter="0em" style="max-width: 500px;">
+              <md-grid-tile ng-repeat="director in directors">
+                {{director}}
+              </md-grid-tile>
+            </md-grid-list>
+          </div>
+
+          <div ng-if="editors.length > 0">
+            <b>Edited by: </b>
+            <md-grid-list class="video-work-crew-grid" md-cols="2" md-row-height-xs="17px"
+                          md-row-height-gt-xs="18px"
+                          md-row-height-sm="18px"
+                          md-row-heigt="17px"
+                          md-row-height-gt-sm="18px" md-gutter="0em" style="max-width: 500px;">
+              <md-grid-tile ng-repeat="editor in editors">
+                {{editor}}
+              </md-grid-tile>
+            </md-grid-list>
           </div>
 
           <div class="work-information">
             <span>{{postInfo}}</span>
+          </div>
+
+          <div ng-if="copyright" class="work-copyright">
+            <span>{{copyright}}</span>
           </div>
         </div>
       </div>
