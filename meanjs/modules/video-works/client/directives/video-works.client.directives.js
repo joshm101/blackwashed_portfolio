@@ -276,6 +276,9 @@
               $scope.castModel = castModel;
               $scope.editorsModel = editorsModel;
               $scope.directorsModel = directorsModel;
+              $scope.bwUploading = {
+                visibility: 'hidden'
+              };
 
 
               var oldWorkTitle = work.title;
@@ -380,6 +383,7 @@
                 }
 
                 if (VideoCoverImage.image.length !== 0) {
+                  $scope.bwUploading.visibility = 'visible';
                   // new cover image selected
                   console.log('VideoCoverImage: ', VideoCoverImage.image);
                   Upload.upload({
@@ -396,6 +400,9 @@
                     VideoWorks.addEdit (edit);
                     work = edit;
                     coverImageUrl = edit.coverImageUrl;
+                    $scope.uploadProgress = 0;
+                    $scope.bwUploading.visibility = 'hidden';
+                    VideoCoverImage.image = [];
                     $mdDialog.hide ();
                     (function(d, s, id) {
                       var js, fjs = d.getElementsByTagName(s)[0];
@@ -408,6 +415,7 @@
                     console.log ("resp.status: ", resp.status);
                   }, function (evt) {
                     console.log ("evt: ", evt);
+                    $scope.uploadProgress = (evt.loaded / evt.total) * 100;
                   });
                 } else {
 

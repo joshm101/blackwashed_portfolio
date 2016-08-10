@@ -1,129 +1,132 @@
-
+<md-content style="background-color: white;">
 <div ng-controller="HomeController" cache-view="false">
-  <div layout-align="center center" flex="100" style="height: 100%;">
-    <div layout="row" layout-align="center center">
-      <img ng-src="modules/images/client/img/logo/blackwashed_logo.png"/>
-    </div>
-    <div class="social-media-links-comp" style="top: 1.1%;" hide-sm hide-xs>
-      <ul class="links-list" layout-align="center center">
-        <li>
-          <md-button aria-label="facebook" class="md-icon-button">
-            <a href="https://www.facebook.com/BlackwashedLA/">
-              <md-icon md-svg-icon="facebook-box"></md-icon>
-            </a>
-          </md-button>
-        </li>
-        <li>
-          <md-button aria-label="instagram" class="md-icon-button">
-            <a href="https://www.instagram.com/blackwashed/">
-              <md-icon md-svg-icon="instagram"></md-icon>
-            </a>
-          </md-button>
-        </li>
-        <li>
-          <md-button aria-label="twitter" class="md-icon-button">
-            <a href="https://twitter.com/BLKWSHD">
-              <md-icon md-svg-icon="twitter"></md-icon>
-            </a>
-          </md-button>
-        </li>
-        <li>
-          <md-button aria-label="tumblr" class="md-icon-button">
-            <a href="https://blackwasheddotcom.tumblr.com/">
-              <md-icon md-svg-icon="tumblr"></md-icon>
-            </a>
-          </md-button>
-        </li>
-      </ul>
-    </div>
-    <div class="social-media-links-mobile" hide-gt-sm layout="row" layout-align="center center">
-      <ul class="links-list" layout-align="center center">
-        <li>
-          <md-button aria-label="mFacebook" class="md-icon-button">
-            <a href="https://www.facebook.com/BlackwashedLA/">
-              <md-icon md-svg-icon="facebook-box"></md-icon>
-            </a>
-          </md-button>
-        </li>
-        <li>
-          <md-button aria-label="mInstagram" class="md-icon-button">
-            <a href="https://www.instagram.com/blackwashed/">
-              <md-icon md-svg-icon="instagram"></md-icon>
-            </a>
-          </md-button>
-        </li>
-        <li>
-          <md-button aria-label="mTwitter" class="md-icon-button">
-            <a href="https://twitter.com/BLKWSHD">
-              <md-icon md-svg-icon="twitter"></md-icon>
-            </a>
-          </md-button>
-        </li>
-        <li>
-          <md-button aria-label="mTumblr" class="md-icon-button">
-            <a href="https://blackwasheddotcom.tumblr.com/">
-              <md-icon md-svg-icon="tumblr"></md-icon>
-            </a>
-          </md-button>
-        </li>
-      </ul>
-    </div>
-    <div>
-      <div ng-controller="SliderController" ng-init="getCyclerImages()">
-        <image-slider id="slider-id" ng-if="loadedBool" class="image-slider fade-in-animation" ng-class="{'fade-in': onLoaded}"  images="cyclerImages"></image-slider>
 
-
+    <div layout-align="center center" flex="100" style="height: 100%;">
+      <div layout="row" layout-align="center center">
+        <img ng-src="modules/images/client/img/logo/blackwashed_logo.png"/>
       </div>
-      <div style="background-color: white !important; margin-bottom: 30px;" layout-align="center">
-        <div ng-controller="WorksController" style="max-width: 1600px; margin: 0 auto;" ng-init="getWorks();" layout-align="center center">
-
-          <md-content class="grid-wrapper" layout-align="center center">
-            <md-grid-list ng-if="bool" id="portfolio-grid" md-gutter="0em" md-cols="2" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="4" md-row-height="4:3" layout-align="center center">
-              <md-grid-tile class="grid-item" ng-repeat="work in works">
-                <works-grid-item class="grid-ind-works" work="work"></works-grid-item>
-              </md-grid-tile>
-            </md-grid-list>
-          </md-content>
-
-          <!--
-          <div layout="row" style="width: 100%;" ng-repeat="work in works track by $index" ng-if="$index % 4 === 0">
-            <div style="width: 25%; max-width:400px;
-                      overflow-y: hidden; overflow-x: hidden"
-                 layout="column"
-                 ng-repeat="i in [$index, $index + 1, $index + 2, $index + 3]"
-                 ng-if="works[i] != null">
-              <img flex-order="i" style="width: 100%;
-                                       height: auto !important;
-                                       display: block;"
-                   ng-src="{{works[i].coverImageUrl}}">
-            </div>
-          </div>-->
-
+      <div class="social-media-links-comp" hide-sm hide-xs>
+        <ul class="links-list" layout-align="center center">
+          <li>
+            <md-button aria-label="facebook" class="md-icon-button">
+              <a href="https://www.facebook.com/BlackwashedLA/">
+                <md-icon md-svg-icon="facebook-box"></md-icon>
+              </a>
+            </md-button>
+          </li>
+          <li>
+            <md-button aria-label="instagram" class="md-icon-button">
+              <a href="https://www.instagram.com/blackwashed/">
+                <md-icon md-svg-icon="instagram"></md-icon>
+              </a>
+            </md-button>
+          </li>
+          <li>
+            <md-button aria-label="twitter" class="md-icon-button">
+              <a href="https://twitter.com/BLKWSHD">
+                <md-icon md-svg-icon="twitter"></md-icon>
+              </a>
+            </md-button>
+          </li>
+          <li>
+            <md-button aria-label="tumblr" class="md-icon-button">
+              <a href="https://blackwasheddotcom.tumblr.com/">
+                <md-icon md-svg-icon="tumblr"></md-icon>
+              </a>
+            </md-button>
+          </li>
+        </ul>
+      </div>
+      <div class="social-media-links-mobile" hide-gt-sm layout="row" layout-align="center center">
+        <ul class="links-list" layout-align="center center">
+          <li>
+            <md-button aria-label="mFacebook" class="md-icon-button">
+              <a href="https://www.facebook.com/BlackwashedLA/">
+                <md-icon md-svg-icon="facebook-box"></md-icon>
+              </a>
+            </md-button>
+          </li>
+          <li>
+            <md-button aria-label="mInstagram" class="md-icon-button">
+              <a href="https://www.instagram.com/blackwashed/">
+                <md-icon md-svg-icon="instagram"></md-icon>
+              </a>
+            </md-button>
+          </li>
+          <li>
+            <md-button aria-label="mTwitter" class="md-icon-button">
+              <a href="https://twitter.com/BLKWSHD">
+                <md-icon md-svg-icon="twitter"></md-icon>
+              </a>
+            </md-button>
+          </li>
+          <li>
+            <md-button aria-label="mTumblr" class="md-icon-button">
+              <a href="https://blackwasheddotcom.tumblr.com/">
+                <md-icon md-svg-icon="tumblr"></md-icon>
+              </a>
+            </md-button>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <div ng-controller="SliderController" ng-init="getCyclerImages()">
+          <image-slider id="slider-id" ng-if="loadedBool" class="image-slider fade-in-animation" ng-class="{'fade-in': onLoaded}"  images="cyclerImages"></image-slider>
 
 
         </div>
+        <div style="background-color: white !important; margin-bottom: 30px;" layout-align="center">
+          <div ng-controller="WorksController" style="max-width: 1600px; margin: 0 auto;" ng-init="getWorks();" layout-align="center center">
+
+            <md-content class="grid-wrapper" layout-align="center center">
+              <md-grid-list ng-if="bool" id="portfolio-grid" md-gutter="0em" md-cols="2" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="4" md-row-height="4:3" layout-align="center center">
+                <md-grid-tile class="grid-item" ng-repeat="work in works">
+                  <works-grid-item class="grid-ind-works" work="work"></works-grid-item>
+                </md-grid-tile>
+              </md-grid-list>
+            </md-content>
+
+            <!--
+            <div layout="row" style="width: 100%;" ng-repeat="work in works track by $index" ng-if="$index % 4 === 0">
+              <div style="width: 25%; max-width:400px;
+                        overflow-y: hidden; overflow-x: hidden"
+                   layout="column"
+                   ng-repeat="i in [$index, $index + 1, $index + 2, $index + 3]"
+                   ng-if="works[i] != null">
+                <img flex-order="i" style="width: 100%;
+                                         height: auto !important;
+                                         display: block;"
+                     ng-src="{{works[i].coverImageUrl}}">
+              </div>
+            </div>-->
 
 
-      </div>
-      <div flex="100" class="bw-footer" style="width: 100%; height: 30px !important; background-color: black; position: fixed; bottom: 0; z-index: 10" layout-align="center center">
-        <div class="footer-links-wrap" style="height: 100%; ">
-          <ul style="list-style-type: none; padding: 0 !important; margin-left: 8px !important; height: 100% !important; line-height: 30px !important;">
-            <li style="display: inline;">
-              <a href="#" class="footer-link" style="margin-right: 20px !important;" ng-click="about()">About</a>
-            </li>
-            <li style="display: inline;">
-              <a href="#" class="footer-link" style="margin-left: 20px !important;" ng-click="contact($event)">Contact</a>
-            </li>
-          </ul>
+
+          </div>
+
+
         </div>
+        <div flex="100" class="bw-footer" style="width: 100%; height: 30px !important; background-color: black; position: fixed; bottom: 0; z-index: 10" layout-align="center center">
+          <div class="footer-links-wrap" style="height: 100%; ">
+            <ul style="list-style-type: none; padding: 0 !important; margin-left: 8px !important; height: 100% !important; line-height: 30px !important;">
+              <li style="display: inline;">
+                <a href="#" class="footer-link" style="margin-right: 20px !important;" ng-click="about()">About</a>
+              </li>
+              <li style="display: inline;">
+                <a href="#" class="footer-link" style="margin-left: 20px !important;" ng-click="contact($event)">Contact</a>
+              </li>
+            </ul>
+          </div>
 
 
+        </div>
       </div>
+
+
     </div>
 
-
-  </div>
 </div>
+</md-content>
 
 
 

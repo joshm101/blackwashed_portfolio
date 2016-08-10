@@ -97,6 +97,9 @@
 
     $scope.postText = '';
 
+    $scope.bwUploading = {
+      visibility: 'hidden'
+    };
 
     $scope.upload = function (file) {
       console.log("file is: " + JSON.stringify(file));
@@ -281,6 +284,8 @@
         copyright: $scope.copyright,
         videoUrl: $scope.videoUrl
       };
+
+      $scope.bwUploading.visibility = 'visible';
       Upload.upload({
         url: '/api/video_works/add_video_work',
         arrayKey: '',
@@ -291,6 +296,8 @@
       }).then (function (resp) {
         console.log("Success: ", resp);
         VideoWorks.addVideoWork (resp.data);
+        $scope.progressBarValue = 0;
+        $scope.bwUploading.visibility = 'hidden';
         $mdDialog.hide();
         $scope.editedByFormInput = [];
         $scope.directedByFormInput = [];
@@ -303,6 +310,7 @@
         console.log ("Error: ", resp);
       }, function (evt) {
         console.log ('progress: ', evt);
+        $scope.progressBarValue = (evt.loaded / evt.total) * 100;
       });
 
     };
@@ -321,6 +329,7 @@
       console.log("copyright: " + $scope.copyright);
       console.log("photoWorkTitle: " + $scope.photoWorkTitle);
       console.log("SelectedImages: " + JSON.stringify(SelectedImages.images));
+      $scope.progressBarValue = 0;
 
       var models = $scope.modelsFormInput;
 
@@ -359,6 +368,8 @@
         modelsArray.push(models[model]);
       }
 
+      $scope.bwUploading.visibility = 'visible';
+
       // upload inputted fields including pictures
       Upload.upload({
         url: '/api/photo_works/add_photo_work',
@@ -387,8 +398,11 @@
 
       }, function (resp) {
         console.log("error status: " + resp.status);
+        $scope.progressBarValue = 0;
+        $scope.bwUploading.visibility = 'hidden';
       }, function (evt) {
-        console.log("evt: " + evt);
+        console.log("evt: ", evt);
+        $scope.progressBarValue = (evt.loaded / evt.total) * 100;
       });
     };
 

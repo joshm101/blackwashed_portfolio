@@ -15,10 +15,10 @@ exports.sendEmail = function (req, res) {
   console.log ('process.env.BLACKWASHED_EMAIL_PREFIX: ', process.env.BLACKWASHED_EMAIL_PREFIX);
   console.log ('process.env.BLACKWASHED_EMAIL_PW: ', process.env.BLACKWASHED_EMAIL_PW);
   var emailObject = req.body;
-  var messageHtml = '<b>Name:</b>' + emailObject.senderName
-                    + '<b>Phone Number:</b>' + emailObject.senderPhoneNumber
-                    + '<b>Email: </b>' + emailObject.senderEmail
-                    + '<div>' + emailObject.message + '</div>';
+  var messageHtml = '<div><b>Name: </b>' + emailObject.senderName + '</div>'
+                    + '<div><b>Phone Number: </b>' + emailObject.senderPhoneNumber + '</div>'
+                    + '<div style="margin-bottom: 20px;"><b>Email: </b>' + emailObject.senderEmail + '</div>'
+                    + '<div style="white-space: pre-line; line-height: 1.3em; width: 100%; max-width: 600px;">' + emailObject.message + '</div>';
   var mailOptions = {
     from: emailObject.senderEmail, // sender address
     to: 'blackwashed.portfolio@gmail.com', // list of receivers

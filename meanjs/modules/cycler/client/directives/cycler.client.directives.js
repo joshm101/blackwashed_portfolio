@@ -128,7 +128,7 @@
           timer = $timeout(function() {
             scope.next('no_click');
             sliderFunc();
-          }, 4000);
+          }, 5000);
         };
 
         //console.log ("typeof scope.images: ", typeof scope.images);

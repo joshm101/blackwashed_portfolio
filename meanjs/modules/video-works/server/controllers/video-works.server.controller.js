@@ -201,16 +201,21 @@ exports.editVideoWork = function (req, res) {
                                   work.coverImageUrl.lastIndexOf ('/') );
                       work.coverImageUrl = 'modules/images/client/img/video_works/' +
                                             work.title + '/' + fileName;
-                      work.save (function (err) {
+                      rmdir (oldDirectory, function (err) {
                         if (err) {
-                          console.log ("error saving edit to DB: ", err);
+                          console.log ("error removing old directory: ", err);
                         } else {
-                          console.log ("successfully saved edit to DB");
-                          return res.status (200).send (work);
+                          work.save (function (err) {
+                            if (err) {
+                              console.log ("error saving edit to DB: ", err);
+                            } else {
+                              console.log ("successfully saved edit to DB");
+                              return res.status (200).send (work);
+                            }
+                          });
                         }
                       });
                     }
-
                   });
                 }
               });

@@ -104,7 +104,6 @@
         return false;
       }
 
-      console.log ('vm.credentials: ', vm.credentials);
 
       $http.post('/api/auth/signin', vm.credentials).success(function (response) {
         // If successful we assign the response to the global user model

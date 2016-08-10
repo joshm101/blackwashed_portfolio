@@ -2,7 +2,9 @@
 
 <div ng-controller="InterfaceController" ng-init="initializePage()" layout-fill>
   <div layout="row" layout-align="center center">
-    <img ng-src="modules/images/client/img/logo/blackwashed_logo.png"/>
+    <a ng-href="/" href="/">
+      <img ng-src="modules/images/client/img/logo/blackwashed_logo.png"/>
+    </a>
   </div>
   <md-button style="position: absolute; left: 0; top: 6%;" ng-click="editAbout()">Edit About Page</md-button>
   <md-button  ng-click="signOut()"
@@ -48,6 +50,7 @@
                                photo-work-images="addPhotoWorkImages"></add-photo-work-form>
         </md-dialog-content>
         <md-dialog-actions>
+          <md-progress-linear ng-style="bwUploading" style="float: left;" md-mode="determinate" value="{{progressBarValue}}"></md-progress-linear>
           <md-button class="md-primary" ng-click="submitPhotoWork()">Submit</md-button>
         </md-dialog-actions>
       </md-dialog>
@@ -72,6 +75,7 @@
 
         </md-dialog-content>
         <md-dialog-actions>
+          <md-progress-linear ng-style="bwUploading" style="float: left;" md-mode="determinate" value="{{progressBarValue}}"></md-progress-linear>
           <md-button class="md-primary" ng-click="submitVideoWork()">Submit</md-button>
         </md-dialog-actions>
       </md-dialog>

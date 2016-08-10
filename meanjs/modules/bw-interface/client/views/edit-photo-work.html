@@ -11,6 +11,7 @@
 
   </md-dialog-content>
   <md-dialog-actions>
+    <md-progress-linear ng-style="bwUploadingEdit" style="float: left;" md-mode="determinate" value="{{uploadProgress}}"></md-progress-linear>
     <md-button style="color: #d7392c;" ng-click="cancelEdit($event)">Cancel</md-button>
     <md-button class="md-primary" ng-click="submitEditedWork($event)">Submit</md-button>
   </md-dialog-actions>

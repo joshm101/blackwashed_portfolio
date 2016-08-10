@@ -120,6 +120,9 @@
                 right: true
               };
               $scope.toastPosition = angular.extend({},last);
+              $scope.bwUploadingEdit = {
+                visibility: 'hidden'
+              };
               $scope.getToastPosition = function() {
                 sanitizePosition();
                 return Object.keys($scope.toastPosition)
@@ -281,6 +284,12 @@
                   models: work.models
                 };
 
+                if (EditImages.newImageFiles.length > 0) {
+                  $scope.bwUploadingEdit = {
+                    visibility: 'visible'
+                  };
+                }
+
                 Upload.upload({
                   url: '/api/photo_works/edit_photo_work',
 
@@ -308,6 +317,7 @@
                   console.log("error status: ", resp.status);
                 }, function (evt) {
                   console.log("evt: ", evt);
+                  $scope.uploadProgress = (evt.loaded / evt.total) * 100;
                 });
 
               };

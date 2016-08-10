@@ -1,27 +1,29 @@
-<md-dialog style="width: 60%; max-width: 625px; background-color: white;">
+
+<md-dialog id="contact-form-dialog" style="width: 80%; max-width: 625px; background-color: white;">
+  <md-content style="background-color: white;">
   <md-toolbar style="background-color: transparent; color: black;" layout-align="center center">
     Contact Blackwashed
   </md-toolbar>
-  <md-dialog-content style="width: 100%; background-color: white !important;">
-      <md-content layout-padding layout-align="center center" style="background-color: white !important;">
+  <md-dialog-content id="contact-form-dialog-content" style="width: 100%; background-color: white !important;">
+
         <div layout="row" layout-align="center center" style="background-color: white !important;">
-          <div layout="column" style="width: 80%;" layout-align="center center">
+          <div layout="column" style="width: 85%;" layout-align="center center">
             <form style="width: 100%;">
               <md-input-container style="width: 100%;" layout-align="center center">
                 <label>Your Email Address</label>
-                <input type="text" required ng-model="senderEmail">
+                <input type="text" ng-bind-html required ng-model="senderEmail">
               </md-input-container>
               <md-input-container style="width: 100%;" layout-align="center center">
                 <label>Name</label>
-                <input type="text" required ng-model="senderName">
+                <input type="text" ng-bind-html required ng-model="senderName">
               </md-input-container>
               <md-input-container style="width: 100%" layout-align="center center">
                 <label>Phone Number</label>
-                <input type="text" ng-model="senderPhoneNumber">
+                <input type="text" ng-bind-html ng-model="senderPhoneNumber">
               </md-input-container>
               <md-input-container style="width: 100%;" layout-align="center center">
                 <label>Subject</label>
-                <input type="text" ng-model="subject">
+                <input type="text" ng-model="subject" ng-bind-html>
               </md-input-container>
               <md-input-container class="md-block" style="width: 100%;">
                 <label>Message</label>
@@ -29,16 +31,30 @@
                           md-maxlength="1000"
                           rows="5"
                           required
-                          ng-model="message"></textarea>
+                          ng-bind-html
+                          ng-model="message"
+                          style="line-height: 20px !important"></textarea>
               </md-input-container>
             </form>
           </div>
         </div>
-      </md-content>
+
   </md-dialog-content>
+  </md-content>
   <md-dialog-actions>
-    <md-button ng-click="cancel()">Cancel</md-button>
-    <md-button ng-click="sendEmail()">Submit</md-button>
+    <md-button ng-disabled="isDisabled" ng-click="cancel()">Cancel</md-button>
+    <md-button ng-disabled="isDisabled" ng-click="sendEmail()">
+                                       <div class="submit-text"
+                                            ng-style="submitButtonStyle">Submit</div>
+                        <md-progress-circular class="contact-form-progress"
+                                              md-diameter="20px"
+                                              md-mode="indeterminate"
+                                              ng-style="submitProgressStyle">
+
+                        </md-progress-circular>
+    </md-button>
   </md-dialog-actions>
+
 </md-dialog>
+
 

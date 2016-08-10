@@ -16,9 +16,12 @@
   function registerModule(moduleName, dependencies) {
     // Create angular module
     angular.module(moduleName, dependencies || [])
-      .config (function ($mdIconProvider) {
+      .config (function ($mdIconProvider, $mdThemingProvider) {
         $mdIconProvider
           .defaultIconSet('lib/mdi/svg/mdi.svg');
+        $mdThemingProvider.theme('default')
+          .primaryPalette('indigo')
+          .accentPalette('green');
       });
 
     // Add the module to the AngularJS configuration file
