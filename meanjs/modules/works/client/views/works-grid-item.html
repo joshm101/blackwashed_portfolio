@@ -9,7 +9,7 @@
         </div>
 
         <div ng-if="!work.videoUrl" class="hover-models">
-          <md-grid-list class="cast-list" md-row-height-sm="17px" md-row-height-gt-sm="17px" md-row-height-xs="11px;" md-row-height-gt-xs="15px" md-cols="1" md-gutter="0em">
+          <md-grid-list class="cast-list" md-row-height-sm="20px" md-row-height-gt-sm="20px" md-row-height-xs="11px;" md-row-height-gt-xs="20px" md-cols="1" md-gutter="0em">
             <md-grid-tile ng-repeat="model in work.models">
               {{model}}
             </md-grid-tile>
@@ -17,7 +17,7 @@
         </div>
 
         <div ng-if="work.videoUrl" class="hover-cast">
-          <md-grid-list class="cast-list" md-row-height-sm="17px" md-row-height-gt-sm="17px" md-row-height-xs="11px;" md-row-height-gt-xs="15px" md-cols="2" md-gutter="0em">
+          <md-grid-list class="cast-list" md-row-height-sm="20px" md-row-height-gt-sm="20px" md-row-height-xs="11px;" md-row-height-gt-xs="20px" md-cols="2" md-gutter="0em">
             <md-grid-tile ng-repeat="member in work.cast">
               {{member}}
             </md-grid-tile>
