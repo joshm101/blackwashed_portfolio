@@ -2,6 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34662935-5a07-46a3-b620-329138995bb0" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/images/client/img/photo_works/My Photo Work/0295224f-ce62-486f-9f76-70acbd4a53bb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/images/client/img/photo_works/My Photo Work/1aeeab31-c59f-4c0b-905f-acb4f2602b37.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/images/client/img/photo_works/My Photo Work/5da36955-b01a-4102-9580-0f832bf15c6b.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/images/client/img/photo_works/My Photo Work/5f190dad-c182-41d5-ab8c-aa535808d06e.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/images/client/img/photo_works/My Photo Work/6b691be9-98d4-4087-9cca-202b2b379920.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/images/client/img/photo_works/My Photo Work/6bb645c1-6c20-4dff-94a4-46068cb9000a.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/images/client/img/photo_works/My Photo Work/6f1c403b-f60e-4cfa-aeaf-460f73b1f17a.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/images/client/img/photo_works/My Photo Work/b787c620-8362-4613-9d91-1d56656be859.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/images/client/img/photo_works/My Photo Work/c0c88f9d-f526-47b5-bb65-4af62faa06d6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/images/client/img/photo_works/My Photo Work/ef300a5c-0e0f-42b8-8181-745182ba09b6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/images/client/img/photo_works/My Photo Work/fa1cd12b-7f62-4ed1-b259-8ce1a2004411.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/images/client/img/video_works/Feed Me - Stay Focused/e5829076-6c08-44e0-adb1-9b8b4aa46d4b.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/images/client/img/video_works/How to Stay Safe During a Traffic Stop/935d4623-c94f-432b-b949-80e63a5302b1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/images/client/img/video_works/When Bae Wants to Smash/b22548bb-6d86-40f4-99f7-5afb5947b9c6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/images/client/img/video_works/fdshsd/3847be67-940d-4c68-93b5-9a540b787499.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
@@ -324,7 +339,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="cycler" />
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -342,7 +357,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="cycler" />
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -364,7 +379,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="cycler" />
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -372,7 +387,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -597,9 +612,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="863" y="0" width="1052" height="1047" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22779922" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22779922" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30843115" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
