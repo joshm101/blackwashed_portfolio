@@ -401,7 +401,7 @@ var videoWorks = (function (app) {
   'use strict';
 
   angular
-    .module('bw-interface', ['ngFileUpload', 'ngMaterial', 'core', 'photoWorks', 'videoWorks', 'about'])
+    .module('bw-interface')
     .controller('InterfaceController', InterfaceController);
     // .controller('fabController', fabController);
 
@@ -2244,8 +2244,7 @@ var videoWorks = (function (app) {
   angular
     .module('core')
     .controller('HomeController', HomeController);
-  HomeController.$inject = ['$scope', '$rootScope', '$state', 'Upload',
-                            '$mdDialog', '$mdToast', '$http', 'AboutPageService'];
+
 
   function HomeController($scope, $rootScope, $state, Upload, $mdDialog, $mdToast, $http, AboutPageService, $ngAnimate) {
     var last = {
@@ -2465,6 +2464,9 @@ var videoWorks = (function (app) {
       $scope.show = true;
     });
   }
+
+  HomeController.$inject = ['$scope', '$rootScope', '$state', 'Upload',
+    '$mdDialog', '$mdToast', '$http', 'AboutPageService'];
 }());
 
 (function () {
