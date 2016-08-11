@@ -1,9 +1,15 @@
 <md-dialog class="view-video-dialog" style="width: 80%; max-width: 1200px; height: 82% !important;" aria-label="viewVideo">
   <md-dialog-content style="height: 100%; width: 100%; position: relative;">
 
-      <md-button class="md-icon-button close-video-dialog-btn" style="position: absolute !important;" ng-click="cancel()">
+      <md-button ng-if="domain !== 'facebook'" class="md-icon-button close-video-dialog-btn" style="position: absolute !important;" ng-click="cancel()">
         <md-icon class="close-video-dialog-icon">close</md-icon>
       </md-button>
+
+    <md-button ng-if="domain === 'facebook'" class="md-icon-button close-video-dialog-btn-fb" style="position: absolute !important;" ng-click="cancel()">
+      <md-icon class="close-video-dialog-icon-fb">close</md-icon>
+    </md-button>
+
+
       <div ng-if="domain === 'youtube'" >
         <div class="view-video-wrapper">
           <md-progress-circular
