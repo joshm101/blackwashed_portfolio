@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('bw-interface', ['ngFileUpload', 'ngMaterial', 'core', 'photoWorks', 'videoWorks', 'about'])
+    .module('bw-interface')
     .controller('InterfaceController', InterfaceController);
     // .controller('fabController', fabController);
 
