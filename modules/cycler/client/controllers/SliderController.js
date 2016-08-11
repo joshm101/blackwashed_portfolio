@@ -1,7 +1,7 @@
 (function () {
   'use strict';
   angular
-    .module('cycler', ['ngMaterial', 'ngAnimate'])
+    .module('cycler')
     .controller('SliderController', SliderController);
 
   SliderController.$inject = ['$scope', '$rootScope', '$http', 'CyclerImages'];

@@ -6,7 +6,7 @@
 
   var service = {
     applicationModuleName: applicationModuleName,
-    applicationModuleVendorDependencies: ['ngResource', 'ngAnimate', 'ngMessages', 'ui.router', 'ui.bootstrap', 'angularFileUpload', 'ngMaterial', 'slick'],
+    applicationModuleVendorDependencies: ['ngResource', 'ngAnimate', 'ngMessages', 'ui.router', 'ui.bootstrap', 'angularFileUpload', 'ngMaterial'],
     registerModule: registerModule
   };
 
@@ -119,7 +119,7 @@ var bw_interface = (function (app) {
 (function (app) {
   'use strict';
 
-  app.registerModule('cycler');
+  app.registerModule('cycler', ['ngMaterial', 'ngAnimate']);
 }(ApplicationConfiguration));
 
 var images = (function (app) {
@@ -2888,7 +2888,7 @@ var videoWorks = (function (app) {
 (function () {
   'use strict';
   angular
-    .module('cycler', ['ngMaterial', 'ngAnimate'])
+    .module('cycler')
     .controller('SliderController', SliderController);
 
   SliderController.$inject = ['$scope', '$rootScope', '$http', 'CyclerImages'];

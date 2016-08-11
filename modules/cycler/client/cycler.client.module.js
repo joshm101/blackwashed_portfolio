@@ -1,5 +1,5 @@
 (function (app) {
   'use strict';
 
-  app.registerModule('cycler');
+  app.registerModule('cycler', ['ngMaterial', 'ngAnimate']);
 }(ApplicationConfiguration));
