@@ -8,8 +8,6 @@ module.exports = {
         'public/lib/bootstrap/dist/css/bootstrap.css',
         'public/lib/bootstrap/dist/css/bootstrap-theme.css',
         'public/lib/angular-material/angular-material.css',
-        'public/lib/slick-carousel/slick/slick.css',
-        'public/lib/slick-carousel/slick/slick-theme.css',
         'public/lib/mdi/css/materialdesignicons.css'
 
         // endbower
@@ -25,8 +23,6 @@ module.exports = {
         'public/lib/angular-animate/angular-animate.js',
         'public/lib/angular-material/angular-material.js',
         'public/lib/angular-messages/angular-messages.js',
-        'public/lib/angular-slick/dist/slick.js',
-        'public/lib/slick-carousel/slick/slick.js',
         'public/lib/flow.js/dist/flow.js',
         'public/lib/ng-file-upload/ng-file-upload.js',
         'public/lib/ng-flow/dist/ng-flow.js',
