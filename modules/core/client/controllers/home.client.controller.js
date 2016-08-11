@@ -4,8 +4,7 @@
   angular
     .module('core')
     .controller('HomeController', HomeController);
-  HomeController.$inject = ['$scope', '$rootScope', '$state', 'Upload',
-                            '$mdDialog', '$mdToast', '$http', 'AboutPageService'];
+
 
   function HomeController($scope, $rootScope, $state, Upload, $mdDialog, $mdToast, $http, AboutPageService, $ngAnimate) {
     var last = {
@@ -225,4 +224,7 @@
       $scope.show = true;
     });
   }
+
+  HomeController.$inject = ['$scope', '$rootScope', '$state', 'Upload',
+    '$mdDialog', '$mdToast', '$http', 'AboutPageService'];
 }());
