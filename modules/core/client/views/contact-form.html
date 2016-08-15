@@ -9,7 +9,7 @@
         <div layout="row" layout-align="center center" style="background-color: white !important;">
           <div layout="column" style="width: 85%;" layout-align="center center">
             <form style="width: 100%;">
-              <md-input-container style="width: 100%;" layout-align="center center">
+              <md-input-container style="width: 100%;" layout-align="center center" md-autofocus>
                 <label>Your Email Address</label>
                 <input type="text" ng-bind-html required ng-model="senderEmail">
               </md-input-container>
@@ -46,12 +46,7 @@
     <md-button ng-disabled="isDisabled" ng-click="sendEmail()">
                                        <div class="submit-text"
                                             ng-style="submitButtonStyle">Submit</div>
-                        <md-progress-circular class="contact-form-progress"
-                                              md-diameter="20px"
-                                              md-mode="indeterminate"
-                                              ng-style="submitProgressStyle">
 
-                        </md-progress-circular>
     </md-button>
   </md-dialog-actions>
 
