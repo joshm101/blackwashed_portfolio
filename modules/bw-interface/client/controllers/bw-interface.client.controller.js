@@ -102,7 +102,6 @@
     };
 
     $scope.upload = function (file) {
-      console.log("file is: " + JSON.stringify(file));
       CyclerImages.uploadCyclerImage(file);
     };
 
@@ -112,7 +111,6 @@
     };
 
     $scope.initializePage = function () {
-      console.log("initializePage()");
       CyclerImages.getCyclerImages();
       PhotoWorks.getPhotoWorks();
       VideoWorks.getVideoWorks();
@@ -135,16 +133,12 @@
     $scope.editAbout = function () {
       $mdDialog.show ({
         controller: function (scope) {
-          console.log ("ok");
-          console.log ('AboutPageService.about: ', AboutPageService.about);
           scope.imageUrl = '';
           scope.aboutText = '';
           if (AboutPageService.about.length === 0) {
             scope.aboutPage = {};
-            console.log ('null');
             scope.imageUrl = '';
           } else {
-            //console.log ('AboutPageService.about: ', AboutPageService.)
             scope.aboutPage = AboutPageService.about[0];
             scope.aboutText = scope.aboutPage.text;
             scope.imageUrl = scope.aboutPage.imageUrl;
@@ -161,14 +155,10 @@
                   aboutText: scope.aboutText
                 }
               }).then (function (resp) {
-                console.log ('success');
-                console.log ('resp: ', resp);
                 AboutPageService.updateAbout (resp.data);
                 $mdDialog.hide()
               }, function (resp) {
-                console.log ('error: ', resp);
               }, function (evt) {
-                console.log('status: ', evt);
               });
             } else {
               // no new image selected, submit text
@@ -179,14 +169,10 @@
                   aboutText: scope.aboutText
                 }
               }).then (function (resp) {
-                console.log ('success');
-                console.log ('resp: ', resp);
                 AboutPageService.updateAbout (resp.data);
                 $mdDialog.hide()
               }, function (resp) {
-                console.log ('error: ', resp);
               }, function (evt) {
-                console.log ('status: ', evt);
               });
             }
           };
@@ -211,19 +197,7 @@
     };
 
     $scope.submitVideoWork = function () {
-      console.log("submitting video work");
-      console.log ('postText: ', $scope.postText);
-      console.log ('castFormInput: ', $scope.castFormInput);
-      console.log ('copyright: ', $scope.copyright);
-      console.log ('videoWorkTitle: ', $scope.videoWorkTitle);
-      console.log ('editorFormInput: ', $scope.editedByFormInput);
-      console.log ('directorFormInput: ', $scope.directedByFormInput);
-      console.log ('videoUrl: ', $scope.videoUrl);
-
-      console.log ('videoCoverImage: ', $rootScope.videoCoverImage);
-
       if (angular.equals([], $rootScope.videoCoverImage)){
-        console.log('Must add at least one image');
         $scope.showSimpleToast('video-image');
         return;
       } else {
@@ -254,8 +228,6 @@
         }
 
       }
-
-      console.log ('typeof videoCoverImage ', typeof $rootScope.videoCoverImage);
 
       var castArray = [];
       for (var member in $scope.castFormInput) {
@@ -294,7 +266,6 @@
           videoWork: JSON.stringify (videoWork)
         }
       }).then (function (resp) {
-        console.log("Success: ", resp);
         VideoWorks.addVideoWork (resp.data);
         $scope.progressBarValue = 0;
         $scope.bwUploading.visibility = 'hidden';
@@ -307,9 +278,7 @@
         $scope.postText = '';
         $scope.videoWorkTitle = '';
       }, function (resp) {
-        console.log ("Error: ", resp);
       }, function (evt) {
-        console.log ('progress: ', evt);
         $scope.progressBarValue = (evt.loaded / evt.total) * 100;
       });
 
@@ -319,23 +288,15 @@
 
     $scope.getPhotoWorks = function () {
       PhotoWorks.getPhotoWorks();
-      console.log("photoWorks: " + PhotoWorks.photoWorks);
     };
 
     $scope.submitPhotoWork = function (event) {
-      console.log("submitting");
-      console.log("postText: ", $scope.postText);
-      console.log("modeslFormInput: " + JSON.stringify($scope.modelsFormInput));
-      console.log("copyright: " + $scope.copyright);
-      console.log("photoWorkTitle: " + $scope.photoWorkTitle);
-      console.log("SelectedImages: " + JSON.stringify(SelectedImages.images));
       $scope.progressBarValue = 0;
 
       var models = $scope.modelsFormInput;
 
 
       if (angular.equals([], SelectedImages.images)){
-        console.log('Must add at least one image');
         $scope.showSimpleToast('images');
         return;
       } else {
@@ -364,7 +325,6 @@
 
       var modelsArray = [];
       for (var model in models) {
-        console.log("models: " + models[model]);
         modelsArray.push(models[model]);
       }
 
@@ -386,8 +346,6 @@
           models: modelsArray
         }
       }).then (function (resp) {
-        console.log("Success: " + resp);
-        console.log(JSON.stringify(resp.data));
         PhotoWorks.addPhotoWork(resp.data);
         $scope.postText = '';
         $scope.photoWorkTitle = '';
@@ -397,11 +355,9 @@
         $mdDialog.hide();
 
       }, function (resp) {
-        console.log("error status: " + resp.status);
         $scope.progressBarValue = 0;
         $scope.bwUploading.visibility = 'hidden';
       }, function (evt) {
-        console.log("evt: ", evt);
         $scope.progressBarValue = (evt.loaded / evt.total) * 100;
       });
     };
@@ -409,23 +365,16 @@
     $scope.$on( 'images.update', function(event) {
       var temp = CyclerImages.images;
       $scope.cyclerImages = temp;
-      console.log("temp!: ", temp);
-
-      console.log("cyclerImages: " + JSON.stringify($scope.cyclerImages));
     });
 
     $scope.$on ( 'photoWorks.update', function (event) {
-      console.log("scope.on photoWorks.update");
       var temp = PhotoWorks.photoWorks;
       $scope.photoWorksArray = temp;
-      console.log('$scope.photoWorksArray = ' + $scope.photoWorksArray);
     });
 
     $scope.$on ( 'videoWorks.update', function (event) {
-      console.log ("scope.on videoWorks.update");
       var temp = VideoWorks.videoWorks;
       $scope.videoWorksArray = temp;
-      console.log ('$scope.videoWorksArray: ', $scope.videoWorksArray);
     });
 
     $scope.$on ( 'SelectedImages.update', function (event) {

@@ -16,7 +16,6 @@
             if (res.status === 200) {
               service.about = res.data;
               $rootScope.$broadcast ( 'AboutPageService.update' );
-              console.log ('service.about: ', service.about);
             }
           });
       },

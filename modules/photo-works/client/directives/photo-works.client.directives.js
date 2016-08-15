@@ -55,8 +55,6 @@
         scope.coverImage = PhotoWorks.coverImage;
         scope.customFullscreen = $mdMedia('xs') || $mdMedia('sm');
         scope.editPhotoWork = function (work) {
-          console.log("work is: ", work);
-
           EditImages.images = [];
           EditImages.newImages = [];
           EditImages.imagesToDelete = [];
@@ -68,7 +66,6 @@
           // on edit click, add images already apart
           // of the photo work to the EditImages service
           for (var i = 0; i < work.images.length; ++i) {
-            console.log("work.images[i]: ", work.images[i]);
 
             // if the image we are currently look at
             // is the cover image
@@ -87,7 +84,6 @@
 
           // iterate through the currently set models for the photo work
           for (var i = 0; i < work.models.length; ++i) {
-            console.log('work.models[i]: ', work.models[i]);
 
             // push each model onto the data model for              // this for loop might be unnecessary
             // models input on photo work
@@ -256,15 +252,6 @@
                     }
                   }
                 }
-                console.log("submit edited work");
-                console.log("work.models: ", work.models);
-                console.log("work.title: ", work.title);
-                console.log("work.postText: ", work.postText);
-                console.log("EditImages.chosenCoverImage: ", EditImages.chosenCoverImage);
-                console.log("EditImages.images: ", EditImages.images);
-                console.log("EditImages.newImages: ", EditImages.newImages);
-                console.log("EditImages.imagesToDelete: ", EditImages.imagesToDelete);
-
                 var editObject = {
                   newImages: EditImages.newImages,
                   chosenCoverImage: EditImages.chosenCoverImage,
@@ -304,7 +291,6 @@
                     editObject: JSON.stringify (editObject)
                   }
                 }).then (function (resp) {
-                  console.log("Success: ", resp);
                   var newWork = resp.data;
                   for (var i = 0; i < PhotoWorks.photoWorks.length; ++i) {
                     if (PhotoWorks.photoWorks[i]._id === newWork._id) {
@@ -314,9 +300,7 @@
                   $mdDialog.cancel();
                   EditImages.reset();
                 }, function (resp) {
-                  console.log("error status: ", resp.status);
                 }, function (evt) {
-                  console.log("evt: ", evt);
                   $scope.uploadProgress = (evt.loaded / evt.total) * 100;
                 });
 
@@ -340,26 +324,20 @@
         };
 
         scope.deletePhotoWork = function (ev) {
-          console.log("scope.work: ", scope.work);
           PhotoWorks.deletePhotoWork(scope.work);
         };
 
         scope.showPhotoWork = function (ev) {
-          console.log("showPhotoWork()");
           var useFullScreen = ($mdMedia('sm') || $mdMedia('xs')) && scope.customFullscreen;
-          console.log(scope.work);
           $rootScope.currentWork = scope.work;
           $mdDialog.show({
             controller: function (scope, $mdDialog, work) {
               scope.work = work;
 
               scope.viewImage = function(event, imageUrl) {
-                console.log("viewImage");
-                console.log("imageUrl: ", imageUrl);
                 $mdDialog.show({
                   controllerAs: 'ViewImageController',
                   controller: function ($mdDialog, scope, work) {
-                    console.log("imageUrl controller: ", imageUrl);
                     scope.imageUrl = imageUrl;
 
                     scope.closeDialog = function () {
@@ -388,7 +366,6 @@
                 $mdDialog.hide();
               };
               scope.cancel = function () {
-                console.log("cancel");
                 $mdDialog.cancel();
               };
               $rootScope.answer = function (answer) {

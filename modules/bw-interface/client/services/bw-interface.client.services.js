@@ -43,8 +43,6 @@
       image: [],
       removeImage: function () {
         service.image = [];
-        console.log("removeCoverImage service function");
-        console.log("service.image is: ", service.image);
         $rootScope.$broadcast ( 'VideoCoverImage.update' );
       },
       addImage: function (file) {
@@ -81,7 +79,6 @@
       newImageFiles: [],
       imagesToDelete: [],
       addNewImage: function (file, imageUrl, serverImage, coverImage) {
-        console.log ('addNewImage EditImages service function');
 
         // create the new image object
         var imageToPush = {
@@ -117,7 +114,6 @@
       },
 
       addImage: function (imageUrl, serverImage, coverImage) {
-        console.log("addImage EditImages service function");
 
 
         var imageToPush = {
@@ -140,9 +136,6 @@
       // set cover image to the image
       // with passed in imgUrl
       setCoverImage: function (imgUrl) {
-        console.log("setCoverImage EditImages: ", imgUrl);
-        console.log("service.images.length: ", service.images.length);
-        console.log("service.images: ", service.images);
 
         // iterate through all the images currently in the
         // edit form, both new (to be uploaded) and old (server images)
@@ -150,7 +143,6 @@
 
           // if we have a match
           if (service.images[i].imageUrl === imgUrl) {
-            console.log("match");
             // set coverImage field of current image
             // in overall images array to true.
             service.images[i].coverImage = true;
@@ -195,9 +187,6 @@
                   service.images[1].coverImage = true;
                   for (var j = 0; j < service.serverImages.length; ++j) {
                     if (service.serverImages[j].imageUrl === service.images[1].imageUrl) {
-                      console.log ('server cover image true');
-                      console.log ('j is: ', j);
-                      console.log ('url: ', service.serverImages[j].imageUrl);
                       service.chosenCoverImage = service.serverImages[j].imageUrl;
 
                       service.serverImages[j].coverImage = true;
@@ -221,8 +210,6 @@
                   for (var j = 0; j < service.serverImages.length; ++j) {
                     if (service.serverImages[j].imageUrl === service.images[0].imageUrl) {
                       service.serverImages[j].coverImage = true;
-                      console.log ('server cover image true');
-                      console.log ('url: ', service.serverImages[j].imageUrl);
                       service.chosenCoverImage = service.serverImages[j].coverImage;
                     }
                   }
@@ -240,12 +227,9 @@
             // was set to cover image
             if (service.images[i].serverImage === true) {
               service.imagesToDelete.push(service.images[i]);
-              console.log("imagesToDelete");
               for (var j = 0; j < service.serverImages.length; ++j) {
-                console.log ("checking server images");
                 if (service.images[i].imageUrl === service.serverImages[j].imageUrl) {
                   service.serverImages.splice (j, 1);
-                  console.log("spliced server image");
                 }
               }
             }
@@ -255,18 +239,12 @@
             if (service.images[i].serverImage === false) {
               for (var j = 0; j < service.newImages.length; ++j) {
                 if (service.newImages[j].imageUrl === imgUrl) {
-                  console.log ('spliced');
-                  console.log ("service.newImages[j]: ", service.newImages[j]);
-                  console.log ("service.images[i]: ", service.images[i]);
                   service.newImages.splice(j, 1);
                   service.newImageFiles.splice (j, 1);
-                  console.log ('service.newImages after splice: ', service.newImages);
                 }
               }
             }
-            console.log ("image spliced: ", service.images[i]);
             service.images.splice(i, 1);
-            console.log("service.imagesToDelete: ", service.imagesToDelete);
           }
         }
       }
@@ -279,7 +257,6 @@
     var service = {
       images: [],
       addImage: function(file) {
-        console.log("addImage service function");
         var imageToPush;
         if (service.images.length === 0) {
           imageToPush = {
@@ -294,11 +271,9 @@
         }
         service.images.push(imageToPush);
         $rootScope.$broadcast ( 'SelectedImages.update' );
-        // console.log("file is: " + JSON.stringify(file));
       },
 
       setCoverImage: function (imgUrl) {
-        console.log("setCoverImage()");
         for (var i = 0; i < service.images.length; ++i) {
           if (service.images[i].file['$ngfBlobUrl'] === imgUrl) {
             service.images[i].coverImage = true;
@@ -315,9 +290,6 @@
       },
 
       removeImage: function (imgUrl) {
-        console.log("imgUrl is: " + imgUrl);
-        console.log("service.images: " + JSON.stringify(service.images));
-
         for (var i = 0; i < service.images.length; ++i) {
           if (service.images[i].file['$ngfBlobUrl'] === imgUrl) {
             if (service.images[i].coverImage === true) {
@@ -343,8 +315,6 @@
               }
             }
             service.images.splice(i, 1);
-            console.log('imgUrl: ' + imgUrl);
-            console.log('service.images: ' + service.images);
             $rootScope.$broadcast ( 'SelectedImages.update' );
           }
         }
@@ -359,7 +329,6 @@
       getCyclerImages: function () {
         $http.get('/api/images/get_cycler_images')
           .then (function (response) {
-            console.log("response: " + response);
             if(response.status === 200) {
               service.images = response.data;
               service.images.forEach (function (image) {
@@ -367,41 +336,27 @@
                 service.images[0].cssClass = true;
               });
               $rootScope.$broadcast ( 'images.update' );
-              console.log(images);
-              console.log("JSON stringify: " + JSON.stringify(response));
             }
           });
       },
 
       uploadCyclerImage: function (file) {
-        console.log("$scope.upload");
-        console.log("file: " + JSON.stringify(file));
         Upload.upload({
           url: '/api/images/upload_cycler_image',
           data: {file: file}
         }).then (function (resp) {
-          console.log('Success: ' + resp.config.data.file.name + 'uploaded. Response: ' +resp.data);
-          console.log(JSON.stringify(resp.data));
           service.images.push(resp.data);
           $rootScope.$broadcast( 'images.update' );
           // file = '';
         }, function (resp) {
-          console.log('Error status:  ' + resp.status);
         }, function (evt) {
           var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
-          if (evt.config.data.file !== null){
-            console.log("progress: " + progressPercentage + '% ' + evt.config.data.file.name);
-          }
         });
       },
 
       deleteCyclerImage: function (imagePath) {
-        console.log("$scope.deleteImage");
-        console.log("imagePath: " + imagePath);
         $http.delete('/api/images/delete_cycler_image', {params: {imagePath: imagePath}})
           .then (function (response) {
-            console.log("response: " + JSON.stringify(response));
-
             // only delete on successful server-side deletion
             if(response.status === 200) {
               // worst case performance O(n) because we have to

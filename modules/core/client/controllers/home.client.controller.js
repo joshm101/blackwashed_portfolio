@@ -82,7 +82,6 @@
     $scope.messageSent = false;
     $scope.show = false;
     $scope.contact = function (ev) {
-      console.log ("scope.contact");
       $mdDialog.show({
         controller: function (scope) {
           scope.messageSent = false;
@@ -103,11 +102,6 @@
             scope.isDisabled = true;
             scope.submitProgressStyle.visibility = 'visible';
             scope.submitButtonStyle.visibility = 'hidden';
-            console.log ('message is: ', scope.message);
-            console.log ('subject is: ', scope.subject);
-            console.log ('senderEmail is: ', scope.senderEmail);
-            console.log ('senderPhoneNumber is: ', scope.senderPhoneNumber);
-            console.log ('senderName is: ', scope.senderName);
             if (scope.senderEmail === '' || typeof scope.senderEmail === 'undefined') {
               $scope.showSimpleToast('email');
               scope.submitProgressStyle.visibility = 'hidden';
@@ -147,14 +141,12 @@
             $http.post ('/api/email/send_email', emailObject)
               .then (function (resp) {
                 if (resp.status === 200) {
-                  console.log ('successfully sent email!');
                   scope.submitProgressStyle.visibility = 'hidden';
                   scope.submitButtonStyle.visibility = 'visible';
                   scope.isDisabled = false;
                   scope.messageSent = true;
                   $mdDialog.hide();
                 } else {
-                  console.log ('error sending email');
                 }
               });
           };
@@ -219,8 +211,6 @@
 
     $scope.$on ( 'AboutPageService.update', function () {
       $scope.aboutObject = AboutPageService.about;
-      console.log ('update aboutpageservice');
-      console.log ('$scope.aboutObject: ', $scope.aboutObject);
       $scope.show = true;
     });
   }

@@ -10,16 +10,9 @@
     $scope.loadedBool = false;
     $scope.onLoaded = {};
     CyclerImages.getCyclerImages();
-    $scope.getCyclerImages = function() {
-      console.log("service: " + CyclerImages);
-      //angular.element (document.querySelector('body')).removeClass('preload');
-      //CyclerImages.getCyclerImages();
-    };
     angular.element(document).ready(function ($scope) {
-      //document.getElementById('slider-id').innerHTML = 'Hello';
-      //$scope.onLoaded = true;
 
-      console.log ("READY");
+
 
 
 
@@ -32,16 +25,6 @@
 
 
       $scope.cyclerImages = temp;
-     // console.log ("$scope.cyclerImages.length: ", $scope.cyclerImages.length);
-      /*
-      $scope.cyclerImages.forEach (function(image) {
-        console.log ("for each");
-        image.cssClass = false;
-        console.log ('current image: ', image);
-      });*/
-     // console.log("images!: ", $scope.cyclerImages);
-      //$scope.cyclerImages[0].cssClass = true;
-      //console.log("cyclerImages: " + JSON.stringify($scope.cyclerImages));
     });
 
 

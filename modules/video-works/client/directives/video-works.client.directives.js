@@ -40,17 +40,12 @@
         scope.customFullscreen = $mdMedia('xs') || $mdMedia ('sm');
         scope.coverImageUrl = scope.work.coverImageUrl;
         scope.showVideoWork = function (ev) {
-          console.log ('showVideoWork()');
 
           var useFullScreen = ($mdMedia ('sm') || $mdMedia ('xs'))
                               && scope.customFullscreen;
           $rootScope.currentWork = scope.work;
           $mdDialog.show ({
             controller: function (scope, $mdDialog, $sce, work) {
-
-              console.log ('dialog controller');
-
-              console.log ('work is: ', work);
               scope.workTitle = work.title;
               scope.workInfo = work.workInfo;
               scope.directors = work.directedBy;
@@ -78,28 +73,21 @@
 
               var domain = extractDomain (work.videoUrl);
 
-              console.log ("domain is: ", domain);
-
               if (domain === 'youtube.com' ||
                   domain === 'www.youtube.com') {
 
-                console.log ('youtube domain');
                 scope.domain = 'youtube';
                 var videoUrl = work.videoUrl.replace ("watch?v=", "embed/");
                 scope.videoUrl = $sce.trustAsResourceUrl (videoUrl);
-                console.log ("work.videoUrl: ", work.videoUrl);
-                console.log("scope.videoUrl: ", scope.videoUrl);
               }
 
               if (domain === 'vimeo.com' ||
                   domain === 'www.vimeo.com') {
                 //player.vimeo.com/video/175738725
-                console.log ('vimeo domain');
                 var vimeoId = work.videoUrl.substring (
                                   work.videoUrl.lastIndexOf('/') + 1);
                 var videoUrl = '//player.vimeo.com/video/' + vimeoId;
                 scope.videoUrl = $sce.trustAsResourceUrl (videoUrl);
-                console.log ("vimeo id:", vimeoId);
                 scope.domain = 'vimeo';
 
                 scope.vimeoId = vimeoId;
@@ -110,8 +98,6 @@
                 scope.videoUrl = 'https://www.facebook.com/plugins/video.php?href=' + work.videoUrl;
                 scope.videoUrl = $sce.trustAsResourceUrl (scope.videoUrl);
                 scope.domain = 'facebook';
-                console.log ('work.videoUrl: ', work.videoUrl);
-                console.log ('scope.videoUrl: ', scope.videoUrl);
 
               }
 
@@ -140,12 +126,12 @@
         };
 
         scope.deleteVideoWork = function (work) {
-          console.log ('deleteVideoWork()');
+
           VideoWorks.deleteVideoWork (work);
         };
 
         scope.editVideoWork = function () {
-          console.log ('editVideoWork()');
+
 
           scope.castModel = [];
           scope.directorsModel = [];
@@ -154,11 +140,11 @@
           scope.directors = scope.work.directedBy;
           scope.cast = scope.work.cast;
 
-          console.log("scope.work is: ", scope.work);
+
 
           // iterate through the currently set models for the photo work
           for (var i = 0; i < scope.work.cast.length; ++i) {
-            console.log('work.cast[i]: ', scope.work.cast[i]);
+
 
             // push each cast member onto the data model for              // this for loop might be unnecessary
             // cast input on video work
@@ -168,7 +154,6 @@
 
           // iterate through the currently set models for the photo work
           for (var i = 0; i < scope.work.directedBy.length; ++i) {
-            console.log('work.directors[i]: ', scope.work.directedBy[i]);
 
             // push each director onto the data model for              // this for loop might be unnecessary
             // directors input on video work
@@ -178,7 +163,6 @@
 
           // iterate through the currently set models for the photo work
           for (var i = 0; i < scope.work.editedBy.length; ++i) {
-            console.log('work.editors[i]: ', scope.work.editedBy[i]);
 
             // push each editor onto the data model for              // this for loop might be unnecessary
             // editors input on vide work
@@ -282,9 +266,7 @@
 
 
               var oldWorkTitle = work.title;
-              console.log('oldWorkTitle: ', oldWorkTitle);
               var oldCast = work.cast;
-              console.log("oldCast: ", oldCast);
               var oldVideoUrl = work.videoUrl;
               var oldEditors = work.editedBy;
               var oldDirectors = work.directedBy;
@@ -295,11 +277,6 @@
               var oldDirectorsModel = directorsModel;
 
               $scope.cancelEdit = function () {
-                console.log("oldWorkTitle: ", oldWorkTitle);
-                console.log("oldCast: ", oldCast);
-                console.log ('$scope.cast: ', $scope.cast);
-                console.log ("$scope.directors: ", $scope.directors);
-                console.log ("$scope.editors: ", $scope.editors);
                 work.title = oldWorkTitle;
                 work.cast = $scope.cast;
                 work.editedBy = $scope.editors;
@@ -318,14 +295,6 @@
               };
 
               $scope.submitEditedWork = function () {
-                console.log ('work.title: ', work.title);
-                console.log ('work.editedBy: ', work.editedBy);
-                console.log ('work.directedBy: ', work.directedBy);
-                console.log ('work.cast: ', work.cast);
-                console.log ('work.copyright: ', work.copyright);
-                console.log ('work.videoUrl: ', work.videoUrl);
-                console.log ('work.workInfo: ', work.workInfo);
-                console.log ('work.coverImageUrl: ', work.coverImageUrl);
 
                 for (var i = 0; i < work.directedBy.length; ++i) {
                   if (work.directedBy[i] === '' || work.directedBy[i].match(/^\s*$/)) {
@@ -350,7 +319,6 @@
 
 
                 if (angular.equals([], $rootScope.videoCoverImage)){
-                  console.log('Must add at least one image');
                   $scope.showSimpleToast('video-image');
                   return;
                 } else {
@@ -385,7 +353,6 @@
                 if (VideoCoverImage.image.length !== 0) {
                   $scope.bwUploading.visibility = 'visible';
                   // new cover image selected
-                  console.log('VideoCoverImage: ', VideoCoverImage.image);
                   Upload.upload({
                     url: '/api/video_works/edit_video_work',
                     arrayKey: '',
@@ -394,9 +361,7 @@
                       work: JSON.stringify (work)
                     }
                   }).then (function (resp) {
-                    console.log ("Success: ", resp);
                     var edit = resp.data;
-                    console.log ('resp.data: ', edit);
                     VideoWorks.addEdit (edit);
                     work = edit;
                     coverImageUrl = edit.coverImageUrl;
@@ -412,9 +377,7 @@
                       fjs.parentNode.insertBefore(js, fjs);
                     }(document, 'script', 'facebook-jssdk'));
                   }, function (resp) {
-                    console.log ("resp.status: ", resp.status);
                   }, function (evt) {
-                    console.log ("evt: ", evt);
                     $scope.uploadProgress = (evt.loaded / evt.total) * 100;
                   });
                 } else {
@@ -428,9 +391,7 @@
                       work: JSON.stringify (work)
                     }
                   }).then (function (resp) {
-                    console.log ("Success: ", resp);
                     var edit = resp.data;
-                    console.log ('resp.data: ', edit);
                     VideoWorks.addEdit (edit);
                     work = edit;
                     coverImageUrl = edit.coverImageUrl;
@@ -443,9 +404,7 @@
                       fjs.parentNode.insertBefore(js, fjs);
                     }(document, 'script', 'facebook-jssdk'));
                   }, function (resp) {
-                    console.log ("resp.status: ", resp.status);
                   }, function (evt) {
-                    console.log ("evt: ", evt);
                   });
                 }
 

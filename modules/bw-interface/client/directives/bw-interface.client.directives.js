@@ -82,7 +82,6 @@
           if (file !== null) {
             scope.imageSelected = file;
             AboutImage.addImage(file);
-            console.log (AboutImage.newImage);
             scope.imageUrl = AboutImage.newImage[0]['$ngfBlobUrl'];
           }
         }
@@ -117,10 +116,8 @@
       link: function (scope) {
         scope.coverImage = [];
         scope.coverImageUrl = scope.work.coverImageUrl;
-        console.log("scope.coverImageUrl: ", scope.coverImageUrl);
         scope.selectedCoverImage = function (file) {
           if (file !== null){
-            console.log("file is: ", file);
             scope.imageSelected = file;
             VideoCoverImage.addImage (file);
             scope.coverImageUrl = VideoCoverImage.image[0]['$ngfBlobUrl'];
@@ -181,7 +178,6 @@
       link: function (scope) {
         scope.coverImage = [];
         scope.selectedCoverImage = function (file) {
-          console.log("file is: ", file);
           scope.imageSelected = file;
           VideoCoverImage.addImage (file);
           scope.coverImage = VideoCoverImage.image;
@@ -249,7 +245,6 @@
         scope.castMembers = [{name: 'cast_' + scope.castNumber}];
         scope.addCastMember = function () {
           scope.castMembers.push({name: 'cast_' + ++scope.castNumber});
-          console.log(scope.modelsFormInput);
         }
       },
       templateUrl: 'modules/bw-interface/client/views/cast-input.html'
@@ -318,7 +313,6 @@
       link: function (scope) {
         var i = 0;
         scope.castNumber = 0;
-        console.log ("scope.cast: ", scope.cast);
         for (var member in scope.castFormInput) {
           scope.castFormInput[member] = scope.cast[i];
           ++i;
@@ -387,9 +381,7 @@
         scope.serviceImages = EditImages.images;
         scope.editSelected = function (files, badFiles) {
           scope.files = files;
-          console.log("scope.files: ", scope.files);
           for (var i = 0; i < scope.files.length; ++i) {
-            console.log("url: ", scope.files[i]['$ngfBlobUrl']);
             EditImages.addNewImage(scope.files[i], scope.files[i]['$ngfBlobUrl'], false, false);
           }
         };
@@ -408,8 +400,6 @@
         editModelsInputModel: '='
       },
       link: function (scope) {
-        console.log("work is: ", scope.work);
-        console.log("editModelsInputModel is: ", scope.editModelsInputModel);
 
       },
       templateUrl: 'modules/bw-interface/client/views/edit-photo-work-form.html'
@@ -428,8 +418,6 @@
       link: function (scope) {
         var i = 0;
         scope.modelNumber = 0;
-        console.log("scope.models: " + scope.models);
-        console.log("scope.modelsFormInput: ", scope.modelsFormInput);
         for (var model in scope.modelsFormInput) {
           scope.modelsFormInput[model] = scope.models[i];
           ++i;
@@ -458,7 +446,6 @@
         scope.models = [{name: 'model_' + scope.modelNumber}];
         scope.addModel = function (event) {
           scope.models.push({name: 'model ' + ++scope.modelNumber});
-          console.log(scope.modelsFormInput);
         };
       },
       templateUrl: 'modules/bw-interface/client/views/models-input.html'
@@ -474,11 +461,8 @@
         coverImage: '='
       },
       link: function (scope) {
-        console.log("okay");
 
         scope.removeImage = function (imgUrl) {
-          console.log("imgUrl is: " + imgUrl);
-
           SelectedImages.removeImage(imgUrl);
         };
 
@@ -500,13 +484,10 @@
         serviceImages: '='
       },
       link: function (scope) {
-        console.log("ok");
         scope.serviceImages = SelectedImages.images;
         scope.selected = function (files, errFiles) {
           scope.files = files;
           angular.forEach (scope.files, function (file) {
-            console.log("file forEach " + JSON.stringify(file));
-            console.log("file blob: " + file.$ngfBlobUrl);
             SelectedImages.addImage(file);
             // scope.serviceImages = SelectedImages.images;
           });
@@ -546,7 +527,6 @@
         photoWorkImages: '='
       },
       link: function(scope) {
-        console.log("ok");
       },
       templateUrl: 'modules/bw-interface/client/views/add-photo-work-form.html'
     };
@@ -558,7 +538,6 @@
       restrict: 'E',
       scope: {},
       link: function (scope, $timeout) {
-        console.log("ok");
 
 
         var self = this;
@@ -601,14 +580,12 @@
 
         function DialogController($rootScope, $mdDialog) {
           $rootScope.hide = function() {
-            console.log("$mdDialog: " + JSON.stringify($mdDialog));
             $mdDialog.hide();
           };
           $rootScope.cancel = function() {
             $mdDialog.cancel();
           };
           $rootScope.answer = function(answer) {
-            console.log("answer: " + answer);
             $mdDialog.hide(answer);
           };
         }

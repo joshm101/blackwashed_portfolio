@@ -33,7 +33,6 @@
       getVideoWorks: function () {
         $http.get ('/api/video_works/get_video_works')
           .then (function (resp) {
-            console.log ('response is: ', resp);
             service.videoWorks = resp.data;
             $rootScope.$broadcast ( 'videoWorks.update' );
         });
