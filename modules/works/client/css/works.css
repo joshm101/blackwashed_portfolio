@@ -97,7 +97,7 @@
 
 	.close-video-dialog-icon-fb {
 		position: absolute;
-		z-index: 1000;
+		z-index: 10000;
 		top: 8px;
 		right: 8px;
 		color: white;
