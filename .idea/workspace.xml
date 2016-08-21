@@ -6,6 +6,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/core/client/views/about.client.view.html" afterPath="$PROJECT_DIR$/modules/core/client/views/about.client.view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/core/client/views/home.client.view.html" afterPath="$PROJECT_DIR$/modules/core/client/views/home.client.view.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/core/server/views/layout.server.view.html" afterPath="$PROJECT_DIR$/modules/core/server/views/layout.server.view.html" />
     </list>
     <ignored path="oscar_portfolio.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,16 +57,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.client.controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modules/core/client/controllers/header.client.controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="about.client.controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/core/client/controllers/about.client.controller.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -79,8 +70,8 @@
       <file leaf-file-name="layout.server.view.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/core/server/views/layout.server.view.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="114" selection-start-line="30" selection-start-column="62" selection-end-line="30" selection-end-column="114" />
+            <state vertical-scroll-proportion="-11.115385">
+              <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -96,25 +87,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="about.client.view.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="about.client.view.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modules/core/client/views/about.client.view.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17327294">
-              <caret line="9" column="64" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
+            <state vertical-scroll-proportion="-20.26923">
+              <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="51" />
               <folding>
                 <element signature="n#style#0;n#md-content#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#md-content#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#md-content#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.client.view.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.server.view.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/core/server/views/index.server.view.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.client.view.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/modules/core/client/views/home.client.view.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.2692308">
-              <caret line="5" column="62" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
-              <folding />
+            <state vertical-scroll-proportion="0.4428086">
+              <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#md-content#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -195,8 +199,8 @@
         <option value="$PROJECT_DIR$/modules/core/client/controllers/home.client.controller.js" />
         <option value="$PROJECT_DIR$/modules/core/client/views/contact-form.html" />
         <option value="$PROJECT_DIR$/modules/core/server/views/layout.server.view.html" />
-        <option value="$PROJECT_DIR$/modules/core/client/views/home.client.view.html" />
         <option value="$PROJECT_DIR$/modules/core/client/views/about.client.view.html" />
+        <option value="$PROJECT_DIR$/modules/core/client/views/home.client.view.html" />
       </list>
     </option>
   </component>
@@ -1427,7 +1431,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1169" height="1047" extended-state="0" />
+    <frame x="-7" y="0" width="1169" height="1047" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33391154" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1506,13 +1510,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/core/server/views/index.server.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1800,14 +1797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/core/server/views/layout.server.view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="114" selection-start-line="30" selection-start-column="62" selection-end-line="30" selection-end-column="114" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/robots.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1816,21 +1805,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/core/client/views/home.client.view.html">
+    <entry file="file://$PROJECT_DIR$/modules/core/server/views/index.server.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2692308">
-          <caret line="5" column="62" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/core/server/views/layout.server.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.115385">
+          <caret line="17" column="52" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/core/client/views/about.client.view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17327294">
-          <caret line="9" column="64" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
+        <state vertical-scroll-proportion="-20.26923">
+          <caret line="40" column="23" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="51" />
           <folding>
             <element signature="n#style#0;n#md-content#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#md-content#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#div#0;n#md-content#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/core/client/views/home.client.view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4428086">
+          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#md-content#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
