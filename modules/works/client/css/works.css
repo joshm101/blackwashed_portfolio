@@ -68,6 +68,19 @@
 
 
 @media screen and (min-width: 435px) {
+	.view-video-dialog-meta-wrapper {
+		margin-left: 40px;
+		margin-bottom: 40px;
+		margin-right: 40px;
+	}
+
+	.view-video-dialog-meta-wrapper-yt {
+		margin-top: 40px;
+		margin-left: 40px;
+		margin-bottom: 40px;
+		margin-right: 40px;
+	}
+
 	.close-video-dialog-btn{
 		position: absolute !important;
 		right: 5px; !important;
@@ -116,6 +129,18 @@
 }
 
 @media screen and (max-width: 435px) {
+	.view-video-dialog-meta-wrapper {
+		margin-left: 25px;
+		margin-bottom: 40px;
+		margin-right: 25px;
+	}
+
+	.view-video-dialog-meta-wrapper-yt {
+		margin-top: 40px;
+		margin-left: 25px;
+		margin-bottom: 40px;
+		margin-right: 25px;
+	}
 	.close-video-dialog-btn{
 		position: absolute !important;
 		right: 5px; !important;
