@@ -21,7 +21,7 @@ exports.sendEmail = function (req, res) {
                     + '<div style="white-space: pre-line; line-height: 1.3em; width: 100%; max-width: 600px;">' + emailObject.message + '</div>';
   var mailOptions = {
     from: emailObject.senderEmail, // sender address
-    to: 'blackwashed.portfolio@gmail.com', // list of receivers
+    to: process.env.BLACKWASHED_TO, // list of receivers
     subject: emailObject.subject, // Subject line
     text: '', // plaintext body
     html: messageHtml // html body
