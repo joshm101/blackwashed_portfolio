@@ -89,6 +89,8 @@ p {
 	transform: translateZ(0) scale(1.0, 1.0);
 	-moz-transform: translateZ(0) scale(1.0, 1.0);
 	-o-transform: translateZ(0) scale(1.0, 1.0);
+	float: left;
+	padding-left: 10px;
 }
 
 .show-image.ng-enter {
@@ -103,7 +105,7 @@ p {
 
 .show-about-text.ng-enter{
 	transition: .45s cubic-bezier(.1, .0001, .58, 1) opacity;
-	transition-delay: .65s;
+	transition-delay: .45s;
 	opacity: 0;
 }
 
@@ -111,6 +113,16 @@ p {
 	opacity: 1;
 }
 
+.show-about-text{
+	display: inline-block;
+	width: 48%;
+	text-align: start;
+}
+
+.about-wrapper{
+	display: inline-block;
+	text-align: center;
+}
 
 .grid-img{
 
