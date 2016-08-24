@@ -58,6 +58,10 @@ body {
 
 }
 
+.sm-link-anchor {
+	display: inline-block;
+}
+
 .bw-footer {
 	text-align: center;
 }
@@ -65,6 +69,8 @@ body {
 .footer-link {
 	text-decoration: none !important;
 	color: white !important;
+	height: 100%;
+	display: inline-block;
 }
 
 .footer-img {

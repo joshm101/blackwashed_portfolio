@@ -15,7 +15,7 @@ var validator     = require('validator'),
 ncp.limit = 16;
 
 exports.getAllWorks = function (req, res) {
-  Works.find().sort ( {created: -1}).exec(function (err, works) {
+  Works.find().sort ( {created: 1}).exec(function (err, works) {
     if (err) {
       console.log ("could not find anything in Works DB ", err);
     } else {
